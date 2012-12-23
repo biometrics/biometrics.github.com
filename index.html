@@ -7,14 +7,14 @@
     <meta name="description" content="">
     <meta name="author" content="OpenBiometrics.org">
     <link href="css/bootstrap.min.css" rel="stylesheet">
-	 <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
-	 <link href="css/font-awesome.css" rel="stylesheet">
-	 <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
-	 <!--[if lt IE 8]>
-	  <link href="css/font-awesome-ie7.css" rel="stylesheet">
+    <link href="css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link href="css/font-awesome.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <!--[if lt IE 8]>
+      <link href="css/font-awesome-ie7.css" rel="stylesheet">
     <![endif]-->
     <link href="css/base.css" rel="stylesheet">
-	 <link href="css/blue.css" rel="stylesheet">
+    <link href="css/blue.css" rel="stylesheet">
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -27,58 +27,79 @@
 <body>
 
 <div class="navbar navbar-fixed-top">
-	<div class="navbar-inner">
-		<div class="container">
-			<a class="btn btn-primary btn-dropnav" data-toggle="collapse" data-target=".nav-collapse">
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-				<span class="icon-bar"></span>
-			</a>
-			<a class="brand" href="#">OpenBR</a>
-			<div class="nav-collapse collapse">
-				<ul class="nav pull-right">
-					<li class="active"><a href="http://openbiometrics.org">Home</a></li>
-					<li><a href="https://github.com/biometrics/openbr">Source</a></li>
-					<li><a href="doxygen/html/index.html">Documentation</a></li>
-				</ul>
-			</div><!-- /.navbar-collapse -->
-		</div><!-- /.container -->
-	</div><!-- /.navbar-inner -->
-</div><!-- /.navbar -->
+  <div class="navbar-inner">
+    <div class="container">
+      <a class="btn btn-primary btn-dropnav" data-toggle="collapse" data-target=".nav-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </a>
+      <a class="brand" href="#">OpenBR</a>
+      <div class="nav-collapse collapse">
+        <ul class="nav pull-right">
+          <li class="active"><a href="http://openbiometrics.org">Home</a></li>
+          <li><a href="https://github.com/biometrics/openbr">Source</a></li>
+          <li><a href="doxygen/html/index.html">Documentation</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="container-fluid">
+  <div class="row-fluid">
+    <div class="span10">
+      <div class="row-fluid">
+        <div class="span2">
+          <p class="lead">OpenBR</p>
+          <p>Open Source Biometric Recognition and Evaluation</p>
+        </div>
+        <div class="span8">
+          <blockquote>
+            <p class="lead">
+               OpenBR is a toolkit for biometric recognition and evaluation.
+               Supported use cases include training new recognition algorithms, interfacing with commercial systems, and measuring algorithm performance.
+               Free algorithms are also available for specific modalities including face recognition, face gender & age estimation, face quality, and document classification.
+            </p>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+    <div class="span2">
+      <h4>Latest Download</h4>
+      <p><small>Today</small></p>
+      <p>0.1.0 - alpha</p>
+      <ul>
+        <li><a href="https://github.com/biometrics/openbr/archive/master.zip">Source</a></li>
+      </ul>
+    </div>
+  </div>
+</div>
 
 <div id="landing">
-	<div class="container">  
-		<div class="row">
-			<div class="span8 offset2 txt-middle">
-				<div id="myCarousel" class="carousel slide">
-					<div class="carousel-inner">
-						<div class="active item"><img alt="" src="http://quickimage.it/800x300"></div>
-						<div class="item"><img alt="" src="http://quickimage.it/800x300"></div>
-						<div class="item"><img alt="" src="http://quickimage.it/800x300"></div>
-					</div>
-					<a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="icon-chevron-left"></i></a>
-					<a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-chevron-right"></i></a>
-				</div> <!-- ./myCarousel -->
-				<h2>Reproducible Biometric Evaluations</h2>	
-	 			<p>OpenBR is an end-to-end system for running biometric evaluations in
-					an accessible, reproducible, and transparent way.  OpenBR supports
-					both the NIST <a href="http://www.nist.gov/itl/iad/ig/frvt-home.cfm">FRVT</a>
-					<a href="http://www.nist.gov/itl/iad/ig/frvt-2012.cfm">2012</a> and 
-					<a href="http://www.nist.gov/itl/iad/ig/frvt-2006.cfm">2006</a> APIs.</p>
-			</div><!-- span8 -->
-		</div><!-- /.row -->
-	</div><!-- /.container -->
-</div><!-- /.landing -->
-	
-<div id="headline">
-	<div class="container">  
-		<div class="row">
-			<div class="span12 txt-middle">	  
-         <h2>OpenBR - Opensource Biometrics Recognition and Evaluation</h2>
-			</div><!-- /.span12 -->
-		</div><!-- row -->
-	</div><!-- /.container -->
-</div><!-- /.headline -->
+  <div class="container">
+    <div class="row">
+      <div class="span8 offset2 txt-middle">
+        <div id="myCarousel" class="carousel slide">
+          <div class="carousel-inner">
+            <div class="active item"><img alt="" src="http://quickimage.it/800x300"></div>
+            <div class="item"><img alt="" src="http://quickimage.it/800x300"></div>
+            <div class="item"><img alt="" src="http://quickimage.it/800x300"></div>
+          </div>
+          <a class="carousel-control left" href="#myCarousel" data-slide="prev"><i class="icon-chevron-left"></i></a>
+          <a class="carousel-control right" href="#myCarousel" data-slide="next"><i class="icon-chevron-right"></i></a>
+        </div>
+        <h2>Reproducible Biometric Evaluations</h2>
+        <p>OpenBR is an end-to-end system for running biometric evaluations in an accessible, reproducible, and transparent way.
+           OpenBR supports both the NIST <a href="http://www.nist.gov/itl/iad/ig/frvt-home.cfm">FRVT</a>
+                                         <a href="http://www.nist.gov/itl/iad/ig/frvt-2012.cfm">2012</a> and
+                                         <a href="http://www.nist.gov/itl/iad/ig/frvt-2006.cfm">2006</a> APIs.</p>
+        </div>
+      </div>
+  </div>
+</div>
 
 <div id="content">
 <div class="container">
@@ -88,7 +109,7 @@
 			<h2 class="sub">Development</h2>
 			<p>OpenBR is written in C/C++ and follows the <a href="http://semver.org">Semantic Versioning</a> convention for publishing releases. The project uses the <a href="http://www.cmake.org">CMake</a> build system and depends on <a href="http://qt-project.org">Qt 4.8</a> and <a href="http://opencv.org">OpenCV 2.4.3</a>.  OpenBR supports both the NIST 
 <a href="http://www.nist.gov/itl/iad/ig/frvt-home.cfm">FRVT </a>
-<a href="http://www.nist.gov/itl/iad/ig/frvt-2012.cfm">2012</a> and 
+<a href="http://www.nist.gov/itl/iad/ig/frvt-2012.cfm">2012</a> and
 <a href="http://www.nist.gov/itl/iad/ig/frvt-2006.cfm">2006</a> APIs.</p>
 		</div><div class="span4">
 		<a class="thumbnail" href="https://github.com/biometrics/openbr"><img alt="OpenBR" src="img/glyphicons_043_group-300x150.png" width="300" height="150"></a>
@@ -122,27 +143,27 @@ and installation instructions for:
 </p>
 <p>OpenBR is licensed under the Apache 2.0 open source license.</p>
 <a href="https://github.com/biometrics/openbr" class="btn btn-primary btn-action">Get Started Now <i class="icon-arrow-right"></i></a>
-			</div><!-- /.callout -->
-		</div><!-- span12 -->
-	</div><!-- /.row -->
+                        </div><!-- /.callout -->
+                </div><!-- span12 -->
+        </div><!-- /.row -->
 </div><!-- /.container -->
 
 </div><!-- /.content -->
 
 <div id="footer">
-	<div class="container">
-		<div class="row"></div>	  
-	</div>	  
-</div>	
+        <div class="container">
+                <div class="row"></div>
+        </div>
+</div>
 
 <div id="copywrite">
-	<div class="container">
-		<div class="row">
-			<div class="span12">
-			<p>&copy; 2012 OpenBR<span id="totop" class="pull-right">Back to Top <i class="icon-arrow-up"></i></span></p>			
-			</div>		  
-		</div>	  
-	</div>	  
+        <div class="container">
+                <div class="row">
+                        <div class="span12">
+                        <p>&copy; 2012 OpenBR<span id="totop" class="pull-right">Back to Top <i class="icon-arrow-up"></i></span></p>
+                        </div>
+                </div>
+        </div>
 </div>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
@@ -151,13 +172,13 @@ and installation instructions for:
 <script>
 $(document).ready(function(){
       $("#totop").click(function () {
-		$("body, html").animate({
-		  scrollTop: 0
-	    }, 300);
-		return false;
-	  }); 
-	});
-</script>	
+                $("body, html").animate({
+                  scrollTop: 0
+            }, 300);
+                return false;
+          });
+        });
+</script>
 
 </body>
 </html>
