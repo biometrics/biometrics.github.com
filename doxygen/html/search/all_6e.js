@@ -1,0 +1,20 @@
+var searchData=
+[
+  ['name',['name',['../structbr_1_1File.html#abc29e461e01cc0c712944f8f47f91331',1,'br::File::name()'],['../classbr_1_1Object.html#a2b0a198f837184bf6fff555cee3ce770',1,'br::Object::name()']]],
+  ['names',['names',['../structbr_1_1FileList.html#ae7c5e2c8b65666c19dc04a3d749b32f6',1,'br::FileList::names()'],['../structbr_1_1Factory.html#abd0aabd0ca4e5fe17d1cdedea71f3623',1,'br::Factory::names()']]],
+  ['nametransform',['NameTransform',['../classNameTransform.html',1,'']]],
+  ['nec3compare',['NEC3Compare',['../classNEC3Compare.html',1,'']]],
+  ['nec3enroll',['NEC3Enroll',['../classNEC3Enroll.html',1,'']]],
+  ['nec3initializer',['NEC3Initializer',['../classNEC3Initializer.html',1,'']]],
+  ['neighbors',['Neighbors',['../classNeighbors.html',1,'']]],
+  ['nlmeansdenoising',['NLMeansDenoising',['../classNLMeansDenoising.html',1,'']]],
+  ['normalize',['Normalize',['../classNormalize.html',1,'']]],
+  ['normtype',['NormType',['../classNormalize.html#ad4bb8dabdbf8ad75e34220cc666b59ca',1,'Normalize']]],
+  ['notimplemented',['NOTIMPLEMENTED',['../structEstimator.html#a067ad65f9cf4478da4cf5b93a931da5e',1,'Estimator']]],
+  ['nt4compare',['NT4Compare',['../classNT4Compare.html',1,'']]],
+  ['nt4context',['NT4Context',['../structNT4Context.html',1,'']]],
+  ['nt4detectface',['NT4DetectFace',['../classNT4DetectFace.html',1,'']]],
+  ['nt4enrollface',['NT4EnrollFace',['../classNT4EnrollFace.html',1,'']]],
+  ['nt4enrolliris',['NT4EnrollIris',['../classNT4EnrollIris.html',1,'']]],
+  ['nt4initializer',['NT4Initializer',['../classNT4Initializer.html',1,'']]]
+];
