@@ -169,10 +169,7 @@
 <script src="js/bootstrap.min.js"></script>
 <script>
   $(document).ready(function() {
-    $("#totop").click(function () {
-      $("body, html").animate({ scrollTop: 0 }, 300);
-      return false;
-    });
+    $('.carousel').carousel({ interval: 2000 });
   });
 </script>
 
