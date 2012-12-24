@@ -1,7 +1,7 @@
 var searchData=
 [
   ['abbreviations',['abbreviations',['../classbr_1_1Context.html#af0925d7572149d0b54076442217d199b',1,'br::Context']]],
-  ['about',['about',['../classbr_1_1Context.html#a463894e38855330be8e8eacc13b2b55c',1,'br::Context::about()'],['../about.html',1,'(Global Namespace)']]],
+  ['about',['about',['../classbr_1_1Context.html#a463894e38855330be8e8eacc13b2b55c',1,'br::Context']]],
   ['absdiff',['AbsDiff',['../classAbsDiff.html',1,'']]],
   ['addtransform',['addTransform',['../classaddTransform.html',1,'']]],
   ['affine',['Affine',['../classAffine.html',1,'']]],
