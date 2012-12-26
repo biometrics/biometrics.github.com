@@ -66,7 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -159,17 +159,14 @@ Macros</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:ga09b65c23714beab0c8a5790a5323afeb"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="ga09b65c23714beab0c8a5790a5323afeb"></a>
-QDebug&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__plugin__sdk.html#ga09b65c23714beab0c8a5790a5323afeb">operator&lt;&lt;</a> (QDebug dbg, const <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
-<tr class="memdesc:ga09b65c23714beab0c8a5790a5323afeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints <a class="el" href="structbr_1_1File.html#a0e49867d18a9f873ea42aa2a36e40e59" title="A stringified version of the file with metadata.">br::File::flat()</a> to <code>stderr</code>. <br/></td></tr>
+<tr class="memitem:ga09b65c23714beab0c8a5790a5323afeb"><td class="memItemLeft" align="right" valign="top">QDebug&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__plugin__sdk.html#ga09b65c23714beab0c8a5790a5323afeb">operator&lt;&lt;</a> (QDebug dbg, const <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
+<tr class="memdesc:ga09b65c23714beab0c8a5790a5323afeb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Prints <a class="el" href="structbr_1_1File.html#a0e49867d18a9f873ea42aa2a36e40e59" title="A stringified version of the file with metadata.">br::File::flat()</a> to <code>stderr</code>.  <a href="#ga09b65c23714beab0c8a5790a5323afeb"></a><br/></td></tr>
 <tr class="separator:ga09b65c23714beab0c8a5790a5323afeb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac3eefdeadb747ae18bcbb5c68fa05411"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gac3eefdeadb747ae18bcbb5c68fa05411"></a>
-QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__plugin__sdk.html#gac3eefdeadb747ae18bcbb5c68fa05411">operator&lt;&lt;</a> (QDataStream &amp;stream, const <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
-<tr class="memdesc:gac3eefdeadb747ae18bcbb5c68fa05411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the file to a stream. <br/></td></tr>
+<tr class="memitem:gac3eefdeadb747ae18bcbb5c68fa05411"><td class="memItemLeft" align="right" valign="top">QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__plugin__sdk.html#gac3eefdeadb747ae18bcbb5c68fa05411">operator&lt;&lt;</a> (QDataStream &amp;stream, const <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
+<tr class="memdesc:gac3eefdeadb747ae18bcbb5c68fa05411"><td class="mdescLeft">&#160;</td><td class="mdescRight">Serializes the file to a stream.  <a href="#gac3eefdeadb747ae18bcbb5c68fa05411"></a><br/></td></tr>
 <tr class="separator:gac3eefdeadb747ae18bcbb5c68fa05411"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacd565fa907f0c015b372de32ca173c7e"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="gacd565fa907f0c015b372de32ca173c7e"></a>
-QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__plugin__sdk.html#gacd565fa907f0c015b372de32ca173c7e">operator&gt;&gt;</a> (QDataStream &amp;stream, <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
-<tr class="memdesc:gacd565fa907f0c015b372de32ca173c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializes the file from a stream. <br/></td></tr>
+<tr class="memitem:gacd565fa907f0c015b372de32ca173c7e"><td class="memItemLeft" align="right" valign="top">QDataStream &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__plugin__sdk.html#gacd565fa907f0c015b372de32ca173c7e">operator&gt;&gt;</a> (QDataStream &amp;stream, <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
+<tr class="memdesc:gacd565fa907f0c015b372de32ca173c7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializes the file from a stream.  <a href="#gacd565fa907f0c015b372de32ca173c7e"></a><br/></td></tr>
 <tr class="separator:gacd565fa907f0c015b372de32ca173c7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3925ef2ecf2a607c344ae0f2e5a8a253"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__cpp__plugin__sdk.html#ga3925ef2ecf2a607c344ae0f2e5a8a253">IsClassifier</a> (const QString &amp;algorithm)</td></tr>
 <tr class="memdesc:ga3925ef2ecf2a607c344ae0f2e5a8a253"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if the algorithm is a classifier, <code>false</code> otherwise.  <a href="#ga3925ef2ecf2a607c344ae0f2e5a8a253"></a><br/></td></tr>
@@ -194,8 +191,58 @@ Variables</h2></td></tr>
 <p>Plugin API for developing new algorithms. </p>
 <div class="fragment"><div class="line"><span class="preprocessor">#include &lt;openbr_plugin.h&gt;</span></div>
 </div><!-- fragment --><dl class="section user"><dt>Development</dt><dd>Plugins should be developed in <code>sdk/plugins/</code>. See this folder for numerous examples of existing plugins to follow when writing your own. Plugins may optionally include a <code>.cmake</code> file to control build configuration.</dd></dl>
-<dl class="section user"><dt>Documentation</dt><dd>Plugin documentation should include at least three lines providing the plugin abstraction, a brief explanation, and author. If multiple authors are specified, the last author is assumed to be the current maintainer of the plugin. Plugin authors are encouraged to <code>\cite</code> relevant papers by adding them to <code>share/openbr/openbr.bib</code>. </dd></dl>
-<h2 class="groupheader">Macro Definition Documentation</h2>
+<dl class="section user"><dt>Documentation</dt><dd>Plugin documentation should include at least three lines providing the plugin abstraction, a brief explanation, and author. If multiple authors are specified, the last author is assumed to be the current maintainer of the plugin. Plugin authors are encouraged to <code>\cite</code> relevant papers by adding them to <code>share/openbr/openbr.bib</code>.</dd></dl>
+<h1><a class="anchor" id="examples"></a>
+Examples</h1>
+<ul>
+<li><a class="el" href="group__cpp__plugin__sdk.html#cpp_compare_faces">Compare Faces</a> </li>
+</ul>
+<h2><a class="anchor" id="cpp_compare_faces"></a>
+Compare Faces</h2>
+<p><a class="el" href="group__cli.html">Command Line Interface Equivalent</a> </p>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;openbr_plugin.h&gt;</span></div>
+<div class="line"></div>
+<div class="line"><span class="keyword">static</span> <span class="keywordtype">void</span> printTemplate(<span class="keyword">const</span> <a class="code" href="structbr_1_1Template.html" title="A list of matrices associated with a file.">br::Template</a> &amp;t)</div>
+<div class="line">{</div>
+<div class="line">    printf(<span class="stringliteral">&quot;%s eyes: (%d, %d) (%d, %d)\n&quot;</span>,</div>
+<div class="line">           qPrintable(t.<a class="code" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a>.<a class="code" href="structbr_1_1File.html#a5a82962b4e77435323352ef77597016a" title="Returns the file&#39;s base name and extension.">fileName</a>()),</div>
+<div class="line">           t.<a class="code" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a>.<a class="code" href="structbr_1_1File.html#aae74f637889be0678ea0a7a49b04d7b1" title="Returns an int value for the key, throwing an error if the key does not exist.">getInt</a>(<span class="stringliteral">&quot;Affine_0_X&quot;</span>), t.<a class="code" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a>.<a class="code" href="structbr_1_1File.html#aae74f637889be0678ea0a7a49b04d7b1" title="Returns an int value for the key, throwing an error if the key does not exist.">getInt</a>(<span class="stringliteral">&quot;Affine_0_Y&quot;</span>),</div>
+<div class="line">           t.<a class="code" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a>.<a class="code" href="structbr_1_1File.html#aae74f637889be0678ea0a7a49b04d7b1" title="Returns an int value for the key, throwing an error if the key does not exist.">getInt</a>(<span class="stringliteral">&quot;Affine_1_X&quot;</span>), t.<a class="code" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a>.<a class="code" href="structbr_1_1File.html#aae74f637889be0678ea0a7a49b04d7b1" title="Returns an int value for the key, throwing an error if the key does not exist.">getInt</a>(<span class="stringliteral">&quot;Affine_1_Y&quot;</span>));</div>
+<div class="line">}</div>
+<div class="line"></div>
+<div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
+<div class="line">{</div>
+<div class="line">    <a class="code" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">br::Context::initialize</a>(argc, argv);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Retrieve classes for enrolling and comparing templates using the FaceRecognition algorithm</span></div>
+<div class="line">    QSharedPointer&lt;br::Transform&gt; transform = <a class="code" href="classbr_1_1Transform.html#a288735edc17ea66b5c27fff9675c7d44" title="Retrieve an algorithm&#39;s transform.">br::Transform::fromAlgorithm</a>(<span class="stringliteral">&quot;FaceRecognition&quot;</span>);</div>
+<div class="line">    QSharedPointer&lt;br::Distance&gt; distance = <a class="code" href="classbr_1_1Distance.html#a3a9475db3a6026690c5418f9f9aedbec" title="Retrieve an algorithm&#39;s distance.">br::Distance::fromAlgorithm</a>(<span class="stringliteral">&quot;FaceRecognition&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Initialize templates</span></div>
+<div class="line">    <a class="code" href="structbr_1_1Template.html" title="A list of matrices associated with a file.">br::Template</a> queryA(<span class="stringliteral">&quot;../data/MEDS/img/S354-01-t10_01.jpg&quot;</span>);</div>
+<div class="line">    <a class="code" href="structbr_1_1Template.html" title="A list of matrices associated with a file.">br::Template</a> queryB(<span class="stringliteral">&quot;../data/MEDS/img/S386-04-t10_01.jpg&quot;</span>);</div>
+<div class="line">    <a class="code" href="structbr_1_1Template.html" title="A list of matrices associated with a file.">br::Template</a> target(<span class="stringliteral">&quot;../data/MEDS/img/S354-02-t10_01.jpg&quot;</span>);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Enroll templates</span></div>
+<div class="line">    queryA &gt;&gt; *transform;</div>
+<div class="line">    queryB &gt;&gt; *transform;</div>
+<div class="line">    target &gt;&gt; *transform;</div>
+<div class="line"></div>
+<div class="line">    printTemplate(queryA);</div>
+<div class="line">    printTemplate(queryB);</div>
+<div class="line">    printTemplate(target);</div>
+<div class="line"></div>
+<div class="line">    <span class="comment">// Compare templates</span></div>
+<div class="line">    <span class="keywordtype">float</span> comparisonA = distance-&gt;compare(target, queryA);</div>
+<div class="line">    <span class="keywordtype">float</span> comparisonB = distance-&gt;compare(target, queryB);</div>
+<div class="line"></div>
+<div class="line">    printf(<span class="stringliteral">&quot;Genuine match score: %.3f\n&quot;</span>, comparisonA); <span class="comment">// Scores above 1 are strong matches</span></div>
+<div class="line">    printf(<span class="stringliteral">&quot;Impostor match score: %.3f\n&quot;</span>, comparisonB); <span class="comment">// Scores below 0.5 are strong non-matches</span></div>
+<div class="line"></div>
+<div class="line">    <a class="code" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c" title="Call once at the end of the application to deallocate global variables.">br::Context::finalize</a>();</div>
+<div class="line">    <span class="keywordflow">return</span> 0;</div>
+<div class="line">}</div>
+</div><!-- fragment --><h2 class="groupheader">Macro Definition Documentation</h2>
 <a class="anchor" id="gae58c6e0509de323f131f9a457f99d569"></a>
 <div class="memitem">
 <div class="memproto">
@@ -232,16 +279,16 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Helper macro for use with <a href="http://doc.qt.digia.com/qt/properties.html">Q_PROPERTY</a>.</p>
 <p><b>Example:</b> <br/>
  Note the symmetry between <code>BR_PROPERTY</code> and <code>Q_PROPERTY</code>. </p>
-<div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="classRemoveTransform.html" title="Removes the matrix from the template at the specified index.">RemoveTransform</a> : <span class="keyword">public</span> UntrainableMetaTransform</div>
+<div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="classRemoveTransform.html" title="Removes the matrix from the template at the specified index.">RemoveTransform</a> : <span class="keyword">public</span> <a class="code" href="classbr_1_1UntrainableMetaTransform.html#a2e3c5bde3b1f814e95df21f50ba7918c">UntrainableMetaTransform</a></div>
 <div class="line">{</div>
 <div class="line">    Q_OBJECT</div>
-<div class="line">    Q_PROPERTY(<span class="keywordtype">int</span> index READ get_index WRITE set_index RESET reset_index STORED <span class="keyword">false</span>)</div>
-<div class="line">    <a class="code" href="group__cpp__plugin__sdk.html#gae58c6e0509de323f131f9a457f99d569">BR_PROPERTY</a>(<span class="keywordtype">int</span>, index, 0)</div>
+<div class="line">    Q_PROPERTY(<span class="keywordtype">int</span> <a class="code" href="classRemoveTransform.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> READ get_index WRITE set_index RESET reset_index STORED <span class="keyword">false</span>)</div>
+<div class="line">    <a class="code" href="group__cpp__plugin__sdk.html#gae58c6e0509de323f131f9a457f99d569">BR_PROPERTY</a>(<span class="keywordtype">int</span>, <a class="code" href="classRemoveTransform.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>, 0)</div>
 <div class="line"></div>
-<div class="line">    void project(const Template &amp;src, Template &amp;dst)<span class="keyword"> const</span></div>
+<div class="line">    void <a class="code" href="classRemoveTransform.html#acbb92d8f6f2fbe0fed640550e90d0e9b" title="Apply the transform.">project</a>(const Template &amp;src, Template &amp;dst)<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        dst = src;</div>
-<div class="line">        dst.removeAt(index);</div>
+<div class="line">        dst.removeAt(<a class="code" href="classRemoveTransform.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"></div>
@@ -277,16 +324,16 @@ Variables</h2></td></tr>
 </div><!-- fragment --><p>Macro to register a <a class="el" href="structbr_1_1Factory.html" title="For run time construction of objects from strings.">br::Factory</a> plugin.</p>
 <p><b>Example:</b> <br/>
  Note the use of <code>Q_OBJECT</code> at the beginning of the class declaration and <code>BR_REGISTER</code> after the class declaration. </p>
-<div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="classRemoveTransform.html" title="Removes the matrix from the template at the specified index.">RemoveTransform</a> : <span class="keyword">public</span> UntrainableMetaTransform</div>
+<div class="fragment"><div class="line"><span class="keyword">class </span><a class="code" href="classRemoveTransform.html" title="Removes the matrix from the template at the specified index.">RemoveTransform</a> : <span class="keyword">public</span> <a class="code" href="classbr_1_1UntrainableMetaTransform.html#a2e3c5bde3b1f814e95df21f50ba7918c">UntrainableMetaTransform</a></div>
 <div class="line">{</div>
 <div class="line">    Q_OBJECT</div>
-<div class="line">    Q_PROPERTY(<span class="keywordtype">int</span> index READ get_index WRITE set_index RESET reset_index STORED <span class="keyword">false</span>)</div>
-<div class="line">    <a class="code" href="group__cpp__plugin__sdk.html#gae58c6e0509de323f131f9a457f99d569">BR_PROPERTY</a>(<span class="keywordtype">int</span>, index, 0)</div>
+<div class="line">    Q_PROPERTY(<span class="keywordtype">int</span> <a class="code" href="classRemoveTransform.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a> READ get_index WRITE set_index RESET reset_index STORED <span class="keyword">false</span>)</div>
+<div class="line">    <a class="code" href="group__cpp__plugin__sdk.html#gae58c6e0509de323f131f9a457f99d569">BR_PROPERTY</a>(<span class="keywordtype">int</span>, <a class="code" href="classRemoveTransform.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>, 0)</div>
 <div class="line"></div>
-<div class="line">    void project(const Template &amp;src, Template &amp;dst)<span class="keyword"> const</span></div>
+<div class="line">    void <a class="code" href="classRemoveTransform.html#acbb92d8f6f2fbe0fed640550e90d0e9b" title="Apply the transform.">project</a>(const Template &amp;src, Template &amp;dst)<span class="keyword"> const</span></div>
 <div class="line"><span class="keyword">    </span>{</div>
 <div class="line">        dst = src;</div>
-<div class="line">        dst.removeAt(index);</div>
+<div class="line">        dst.removeAt(<a class="code" href="classRemoveTransform.html#a750b5d744c39a06bfb13e6eb010e35d0">index</a>);</div>
 <div class="line">    }</div>
 <div class="line">};</div>
 <div class="line"></div>
@@ -378,6 +425,90 @@ Variables</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="ga09b65c23714beab0c8a5790a5323afeb"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QDebug operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">QDebug&#160;</td>
+          <td class="paramname"><em>dbg</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structbr_1_1File.html">File</a> &amp;&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Prints <a class="el" href="structbr_1_1File.html#a0e49867d18a9f873ea42aa2a36e40e59" title="A stringified version of the file with metadata.">br::File::flat()</a> to <code>stderr</code>. </p>
+
+</div>
+</div>
+<a class="anchor" id="gac3eefdeadb747ae18bcbb5c68fa05411"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QDataStream &amp; operator&lt;&lt; </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="structbr_1_1File.html">File</a> &amp;&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Serializes the file to a stream. </p>
+
+</div>
+</div>
+<a class="anchor" id="gacd565fa907f0c015b372de32ca173c7e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QDataStream &amp; operator&gt;&gt; </td>
+          <td>(</td>
+          <td class="paramtype">QDataStream &amp;&#160;</td>
+          <td class="paramname"><em>stream</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="structbr_1_1File.html">File</a> &amp;&#160;</td>
+          <td class="paramname"><em>file</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Deserializes the file from a stream. </p>
+
+</div>
+</div>
 <a class="anchor" id="gace6661b93f88cc98bb2c13ed2f1f80ac"></a>
 <div class="memitem">
 <div class="memproto">
@@ -426,7 +557,7 @@ Variables</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 23 2012 21:32:30 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 26 2012 14:37:57 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

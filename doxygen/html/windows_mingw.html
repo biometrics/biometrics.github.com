@@ -65,7 +65,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,7 +84,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">Windows 7 - MingGW-w64 2.0 - x64 </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><ol type="1">
+<div class="textblock"><p>Installation from source with MinGW-w64.</p>
+<ol type="1">
 <li><a href="http://sourceforge.net/projects/mingw-w64/files/Toolchains%20targetting%20Win64/Personal%20Builds/rubenvb/gcc-4.7-release/x86_64-w64-mingw32-gcc-4.7.2-release-win64_rubenvb.7z/download">Download MinGW-w64 GCC 4.7.2</a> and unarchive.<ol type="a">
 <li>Use the free open source program <a href="http://www.7-zip.org/">7-Zip</a> to unarchive.</li>
 <li>Copy "x86_64-w64-mingw32-gcc-4.7.2-release-win64_rubenvb\mingw64" to "C:\".</li>
@@ -120,13 +121,16 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </ol>
 </li>
 <li>Create a <a href="github.com">GitHub</a> account and follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.<ol type="a">
-<li>Launch "Git Bash" and clone OpenBR: <div class="fragment"><div class="line">$ git clone https:<span class="comment">//github.com/biometrics/openbr.git</span></div>
-<div class="line">$ cd /c</div>
+<li>Launch "Git Bash" and clone OpenBR: <div class="fragment"><div class="line">$ cd /c</div>
+<div class="line">$ git clone https:<span class="comment">//github.com/biometrics/openbr.git</span></div>
+<div class="line">$ cd openbr</div>
+<div class="line">$ git submodule init</div>
+<div class="line">$ git submodule update</div>
 </div><!-- fragment --></li>
 </ol>
 </li>
 <li>Finally time to build OpenBR:<ol type="a">
-<li>Double-click "C:\mingw64\mingw64env.cmd" and enter: <div class="fragment"><div class="line">$ cd C:\mm</div>
+<li>Double-click "C:\mingw64\mingw64env.cmd" and enter: <div class="fragment"><div class="line">$ cd C:\openbr</div>
 <div class="line">$ mkdir build-mingw64</div>
 <div class="line">$ cd build-mingw64</div>
 <div class="line">$ cmake -G <span class="stringliteral">&quot;MinGW Makefiles&quot;</span> -D CMAKE_RC_COMPILER=<span class="stringliteral">&quot;C:/mingw64/bin/windres.exe&quot;</span> -D OpenCV_DIR=<span class="stringliteral">&quot;C:\OpenCV-2.4.3-mingw64\build&quot;</span> -D QT_QMAKE_EXECUTABLE=<span class="stringliteral">&quot;C:\qt-everywhere-opensource-src-4.8.4\bin\qmake&quot;</span> ..</div>
@@ -136,7 +140,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </li>
 <li>To package OpenBR:<ol type="a">
 <li><a href="http://prdownloads.sourceforge.net/nsis/nsis-2.46-setup.exe?download">Download NSIS 2.46</a> and install.</li>
-<li>Double-click "C:\mingw64\mingw64env.cmd" and enter: <div class="fragment"><div class="line">$ cd C:\mm\build-mingw64</div>
+<li>Double-click "C:\mingw64\mingw64env.cmd" and enter: <div class="fragment"><div class="line">$ cd C:\openbr\build-mingw64</div>
 <div class="line">$ mingw32-make package</div>
 </div><!-- fragment --> </li>
 </ol>
@@ -145,7 +149,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 23 2012 21:32:30 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 26 2012 14:37:56 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

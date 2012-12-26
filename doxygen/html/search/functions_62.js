@@ -34,6 +34,6 @@ var searchData=
   ['br_5ftrain',['br_train',['../group__c__sdk.html#ga98d4618a89e995c916c5c07f6aab55bb',1,'br_train(const char *input, const char *model):&#160;openbr.cpp'],['../group__c__sdk.html#ga98d4618a89e995c916c5c07f6aab55bb',1,'br_train(const char *input, const char *model=&quot;&quot;):&#160;openbr.cpp']]],
   ['br_5ftrain_5fn',['br_train_n',['../group__c__sdk.html#ga93864532e6a8e53a7f6bbf9ea3ab2e39',1,'br_train_n(int num_inputs, const char *inputs[], const char *model):&#160;openbr.cpp'],['../group__c__sdk.html#ga93864532e6a8e53a7f6bbf9ea3ab2e39',1,'br_train_n(int num_inputs, const char *inputs[], const char *model=&quot;&quot;):&#160;openbr.cpp']]],
   ['br_5fversion',['br_version',['../group__c__sdk.html#ga80e30689b43b6ae4d10a6036c12161f7',1,'br_version():&#160;openbr.cpp'],['../group__c__sdk.html#ga80e30689b43b6ae4d10a6036c12161f7',1,'br_version():&#160;openbr.cpp']]],
-  ['build',['build',['../classbr_1_1Kernel.html#a4726d783bffb2903eadd019c679aa761',1,'br::Kernel']]],
+  ['build',['build',['../classbr_1_1Kernel.html#a4726d783bffb2903eadd019c679aa761',1,'br::Kernel::build()'],['../classstitchTransform.html#aeeada74a83b8b9e6be0e574cc6df3fc5',1,'stitchTransform::build()'],['../classsumTransform.html#aa5a40048a352247b0a9caa4b8d8b1a1d',1,'sumTransform::build()']]],
   ['bytes',['bytes',['../structbr_1_1Template.html#ae9a95268261b397cae87b47a59b7e3cb',1,'br::Template::bytes()'],['../structbr_1_1TemplateList.html#ad278de6e30c1ac035af0a1bf30a8eef1',1,'br::TemplateList::bytes()']]]
 ];

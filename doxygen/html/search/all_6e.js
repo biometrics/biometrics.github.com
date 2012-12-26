@@ -1,20 +1,26 @@
 var searchData=
 [
+  ['n',['n',['../classEnsureChannels.html#a76f11d9a0a47b94f72c2d0e77fb32240',1,'EnsureChannels::n()'],['../classDup.html#a76f11d9a0a47b94f72c2d0e77fb32240',1,'Dup::n()']]],
   ['name',['name',['../structbr_1_1File.html#abc29e461e01cc0c712944f8f47f91331',1,'br::File::name()'],['../classbr_1_1Object.html#a2b0a198f837184bf6fff555cee3ce770',1,'br::Object::name()']]],
   ['names',['names',['../structbr_1_1FileList.html#ae7c5e2c8b65666c19dc04a3d749b32f6',1,'br::FileList::names()'],['../structbr_1_1Factory.html#abd0aabd0ca4e5fe17d1cdedea71f3623',1,'br::Factory::names()']]],
   ['nametransform',['NameTransform',['../classNameTransform.html',1,'']]],
+  ['navierstokes',['NavierStokes',['../classInpaint.html#a2a3c0067e44c5ef3210a256d06c16b0fa0592bc959f4386b8f026661bd1244bff',1,'Inpaint']]],
   ['nec3compare',['NEC3Compare',['../classNEC3Compare.html',1,'']]],
   ['nec3enroll',['NEC3Enroll',['../classNEC3Enroll.html',1,'']]],
   ['nec3initializer',['NEC3Initializer',['../classNEC3Initializer.html',1,'']]],
   ['neighbors',['Neighbors',['../classNeighbors.html',1,'']]],
   ['nlmeansdenoising',['NLMeansDenoising',['../classNLMeansDenoising.html',1,'']]],
   ['normalize',['Normalize',['../classNormalize.html',1,'']]],
-  ['normtype',['NormType',['../classNormalize.html#ad4bb8dabdbf8ad75e34220cc666b59ca',1,'Normalize']]],
+  ['normtype',['NormType',['../classNormalize.html#ad4bb8dabdbf8ad75e34220cc666b59ca',1,'Normalize::NormType()'],['../classNormalize.html#a030b66c73c4942da6e89187c69b3968b',1,'Normalize::normType()']]],
   ['notimplemented',['NOTIMPLEMENTED',['../structEstimator.html#a067ad65f9cf4478da4cf5b93a931da5e',1,'Estimator']]],
   ['nt4compare',['NT4Compare',['../classNT4Compare.html',1,'']]],
-  ['nt4context',['NT4Context',['../structNT4Context.html',1,'']]],
-  ['nt4detectface',['NT4DetectFace',['../classNT4DetectFace.html',1,'']]],
-  ['nt4enrollface',['NT4EnrollFace',['../classNT4EnrollFace.html',1,'']]],
-  ['nt4enrolliris',['NT4EnrollIris',['../classNT4EnrollIris.html',1,'']]],
-  ['nt4initializer',['NT4Initializer',['../classNT4Initializer.html',1,'']]]
+  ['nt4context',['NT4Context',['../structNT4Context.html',1,'NT4Context'],['../structNT4Context.html#a9de64c12849ae18b3825e71b09d9076c',1,'NT4Context::NT4Context()']]],
+  ['nt4detectface',['NT4DetectFace',['../classNT4DetectFace.html',1,'NT4DetectFace'],['../classNT4DetectFace.html#a4edc0de60290cb06f129377527140d28',1,'NT4DetectFace::NT4DetectFace()']]],
+  ['nt4enrollface',['NT4EnrollFace',['../classNT4EnrollFace.html',1,'NT4EnrollFace'],['../classNT4EnrollFace.html#a9f176a9d5472e265eccbe6c9a93e6426',1,'NT4EnrollFace::NT4EnrollFace()']]],
+  ['nt4enrolliris',['NT4EnrollIris',['../classNT4EnrollIris.html',1,'NT4EnrollIris'],['../classNT4EnrollIris.html#a61fbed1f6460715ed986687e27eb9c3c',1,'NT4EnrollIris::NT4EnrollIris()']]],
+  ['nt4initializer',['NT4Initializer',['../classNT4Initializer.html',1,'']]],
+  ['nu_5fsvc',['NU_SVC',['../classSVM.html#a1d1cfd8ffb84e947f82999c682b666a7aca90881af01036a7221b791eb08d03fc',1,'SVM']]],
+  ['nu_5fsvr',['NU_SVR',['../classSVM.html#a1d1cfd8ffb84e947f82999c682b666a7a9e113c85baa91dc44fe128028e384309',1,'SVM']]],
+  ['null',['null',['../classLBP.html#abbb937ed76fb783c2b951f1990976ac6',1,'LBP']]],
+  ['numtransitions',['numTransitions',['../classLBP.html#a878b4ec8789f13c37c2d1429c733fea2',1,'LBP']]]
 ];

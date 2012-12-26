@@ -66,7 +66,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -86,11 +86,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>Command line application for running algorithms and evaluating results. </p>
 <p>The easiest and fastest way to leverage the project, we use it all the time! Commands are designed to mirror the <a class="el" href="group__c__sdk.html">C SDK</a> and are evaluated in the order they are entered. To get started, try running: </p>
 <div class="fragment"><div class="line">$ br -help</div>
-</div><!-- fragment --><p>See <a class="el" href="examples.html">Examples</a> for common use cases. </p>
-</div><!-- contents -->
+</div><!-- fragment --><h1><a class="anchor" id="cli_examples"></a>
+Examples</h1>
+<ul>
+<li><a class="el" href="group__cli.html">Compare Faces</a></li>
+<li><a class="el" href="group__cli.html">Evaluate Face Recognition</a> </li>
+</ul>
+
+
+<h3><a class="anchor" id="cli_compare_faces"></a>Compare Faces</h3><div class="textblock"><a class="el" href="group__cpp__plugin__sdk.html#cpp_compare_faces">Source Equivalent</a> </p>
+<div class="fragment"><div class="line">$ br -algorithm FaceRecognition \</div>
+<div class="line">     -compare ../data/MEDS/img/S354-01-t10_01.jpg ../data/MEDS/img/S354-02-t10_01.jpg \</div>
+<div class="line">     -compare ../data/MEDS/img/S354-01-t10_01.jpg ../data/MEDS/img/S386-04-t10_01.jpg</div>
+</div><!-- fragment --> </div>
+
+<h3><a class="anchor" id="cli_evaluate_face_recognition"></a>Evaluate Face Recognition</h3><div class="textblock"><a class="el" href="group__c__sdk.html#c_evaluate_face_recognition">Source Equivalent</a> </p>
+<div class="fragment"><div class="line">$ br -algorithm FaceRecognition -path ../data/MEDS/img/ \</div>
+<div class="line">     -enroll ../data/MEDS/sigset/MEDS_frontal_target.xml target.gal \</div>
+<div class="line">     -enroll ../data/MEDS/sigset/MEDS_frontal_query.xml query.gal \</div>
+<div class="line">     -compare target.gal query.gal scores.mtx \</div>
+<div class="line">     -makeMask ../data/MEDS/sigset/MEDS_frontal_target.xml ../data/MEDS/sigset/MEDS_frontal_query.xml MEDS.mask \</div>
+<div class="line">     -eval scores.mtx MEDS.mask Algorithm_Dataset/FaceRecognition_MEDS.csv \</div>
+<div class="line">     -eval ../data/MEDS/simmat/COTS_MEDS.mtx MEDS.mask Algorithm_Dataset/COTS_MEDS.csv \</div>
+<div class="line">     -plot Algorithm_Dataset/FaceRecognition_MEDS.csv Algorithm_Dataset/COTS_MEDS.csv MEDS</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 23 2012 21:32:30 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 26 2012 14:37:57 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

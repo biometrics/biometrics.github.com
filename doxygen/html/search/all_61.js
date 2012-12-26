@@ -1,14 +1,17 @@
 var searchData=
 [
+  ['a',['a',['../classbr_1_1Distance.html#a4aec1a5be9d9a4a394a2e49e9744286e',1,'br::Distance::a()'],['../classContrastEq.html#a4aec1a5be9d9a4a394a2e49e9744286e',1,'ContrastEq::a()'],['../classscaleTransform.html#a1031d0e0a97a340abfe0a6ab9e831045',1,'scaleTransform::a()'],['../class__QuantizeTransform.html#a4aec1a5be9d9a4a394a2e49e9744286e',1,'_QuantizeTransform::a()'],['../classQuantize.html#a4aec1a5be9d9a4a394a2e49e9744286e',1,'Quantize::a()']]],
   ['abbreviations',['abbreviations',['../classbr_1_1Context.html#af0925d7572149d0b54076442217d199b',1,'br::Context']]],
   ['about',['about',['../classbr_1_1Context.html#a463894e38855330be8e8eacc13b2b55c',1,'br::Context']]],
   ['absdiff',['AbsDiff',['../classAbsDiff.html',1,'']]],
   ['addtransform',['addTransform',['../classaddTransform.html',1,'']]],
   ['affine',['Affine',['../classAffine.html',1,'']]],
-  ['algorithm',['Algorithm',['../classCryptographicHash.html#a5e41188f16a381c8915a17a22228e691',1,'CryptographicHash']]],
+  ['algorithm',['Algorithm',['../classCryptographicHash.html#a5e41188f16a381c8915a17a22228e691',1,'CryptographicHash::Algorithm()'],['../classbr_1_1Context.html#aff4db78b998f0ea2c2ec732d4ac6d204',1,'br::Context::algorithm()'],['../classCryptographicHash.html#acc4ba09a6333be056db50ed15007518c',1,'CryptographicHash::algorithm()']]],
   ['algorithms',['Algorithms',['../classAlgorithms.html',1,'']]],
   ['aligned',['aligned',['../classMemoryGalleries.html#ab2979e6a99a7ce449cf1ac0674f9a1e1',1,'MemoryGalleries']]],
   ['aligneddata',['alignedData',['../structbr_1_1TemplateList.html#a1700bbe63da007a0fa71339cb6eb9c1d',1,'br::TemplateList']]],
+  ['all',['all',['../classFlood.html#a079dcbdd2091a68f31680127732bba45',1,'Flood']]],
+  ['alpha',['alpha',['../classBlend.html#ab1551d8043c2aa4410fb7dbb1fe3be7b',1,'Blend']]],
   ['and',['And',['../classAnd.html',1,'']]],
   ['append',['append',['../structbr_1_1File.html#a7233b6fb2a409e55d715e0121f63604e',1,'br::File::append(const QHash&lt; QString, QVariant &gt; &amp;localMetadata)'],['../structbr_1_1File.html#a1d3a50bf498efea1d1ea16aa357781a4',1,'br::File::append(const File &amp;other)']]],
   ['appendlandmark',['appendLandmark',['../structbr_1_1File.html#a353ec2ccd6742b0daccfdaa82f2ae524',1,'br::File']]],
@@ -17,6 +20,6 @@ var searchData=
   ['appendrois',['appendROIs',['../structbr_1_1File.html#abf9f7cb754bb9dd0ac21c4124657c8c6',1,'br::File']]],
   ['argument',['argument',['../classbr_1_1Object.html#a0f8215c6f392882dbfd83d0269e5149a',1,'br::Object']]],
   ['arguments',['arguments',['../classbr_1_1Object.html#a3aecaf7fde11a268a31861a05b918291',1,'br::Object']]],
-  ['asefeyes',['ASEFEyes',['../classASEFEyes.html',1,'']]],
-  ['axis',['Axis',['../classFlip.html#ae3996976d8ffb3e58d88f58227473f8e',1,'Flip']]]
+  ['asefeyes',['ASEFEyes',['../classASEFEyes.html',1,'ASEFEyes'],['../classASEFEyes.html#a80486cba9b39d8a3c465f407dd1c9a00',1,'ASEFEyes::ASEFEyes()']]],
+  ['axis',['Axis',['../classFlip.html#ae3996976d8ffb3e58d88f58227473f8e',1,'Flip::Axis()'],['../classFlip.html#a7aa405af4ce808b4f3839b252d26c9e8',1,'Flip::axis()']]]
 ];

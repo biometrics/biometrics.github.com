@@ -73,7 +73,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
      onmouseover="return searchBox.OnSearchSelectShow()"
      onmouseout="return searchBox.OnSearchSelectHide()"
      onkeydown="return searchBox.OnSearchSelectKey(event)">
-<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Pages</a></div>
+<a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(0)"><span class="SelectionMark">&#160;</span>All</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(1)"><span class="SelectionMark">&#160;</span>Classes</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(2)"><span class="SelectionMark">&#160;</span>Namespaces</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(3)"><span class="SelectionMark">&#160;</span>Functions</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(4)"><span class="SelectionMark">&#160;</span>Variables</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(5)"><span class="SelectionMark">&#160;</span>Typedefs</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(6)"><span class="SelectionMark">&#160;</span>Enumerations</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(7)"><span class="SelectionMark">&#160;</span>Enumerator</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(8)"><span class="SelectionMark">&#160;</span>Properties</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(9)"><span class="SelectionMark">&#160;</span>Friends</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(10)"><span class="SelectionMark">&#160;</span>Groups</a><a class="SelectItem" href="javascript:void(0)" onclick="searchBox.OnSelectItem(11)"><span class="SelectionMark">&#160;</span>Pages</a></div>
 
 <!-- iframe showing the search results (closed by default) -->
 <div id="MSearchResultsWindow">
@@ -84,11 +84,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><b>br</b></li><li class="navelem"><a class="el" href="structbr_1_1Factory.html">Factory</a></li>  </ul>
+<li class="navelem"><a class="el" href="namespacebr.html">br</a></li><li class="navelem"><a class="el" href="structbr_1_1Factory.html">Factory</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="structbr_1_1Factory-members.html">List of all members</a>  </div>
@@ -100,30 +101,30 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>For run time construction of objects from strings.  
  <a href="structbr_1_1Factory.html#details">More...</a></p>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
+Public Member Functions</h2></td></tr>
+<tr class="memitem:a46897d623329bc053554b177cb28d43c"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#a46897d623329bc053554b177cb28d43c">~Factory</a> ()</td></tr>
+<tr class="separator:a46897d623329bc053554b177cb28d43c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a29d279804426b29027d33974fe3b2c85"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a29d279804426b29027d33974fe3b2c85"></a>
-static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#a29d279804426b29027d33974fe3b2c85">make</a> (const <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
-<tr class="memdesc:a29d279804426b29027d33974fe3b2c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a plugin from a file. <br/></td></tr>
+<tr class="memitem:a29d279804426b29027d33974fe3b2c85"><td class="memItemLeft" align="right" valign="top">static T *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#a29d279804426b29027d33974fe3b2c85">make</a> (const <a class="el" href="structbr_1_1File.html">File</a> &amp;file)</td></tr>
+<tr class="memdesc:a29d279804426b29027d33974fe3b2c85"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs a plugin from a file.  <a href="#a29d279804426b29027d33974fe3b2c85"></a><br/></td></tr>
 <tr class="separator:a29d279804426b29027d33974fe3b2c85"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8d78577048a12f5cbf5d4e8299e33831"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a8d78577048a12f5cbf5d4e8299e33831"></a>
-static QList&lt; QSharedPointer&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#a8d78577048a12f5cbf5d4e8299e33831">makeAll</a> ()</td></tr>
-<tr class="memdesc:a8d78577048a12f5cbf5d4e8299e33831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs all the available plugins. <br/></td></tr>
+<tr class="memitem:a8d78577048a12f5cbf5d4e8299e33831"><td class="memItemLeft" align="right" valign="top">static QList&lt; QSharedPointer&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#a8d78577048a12f5cbf5d4e8299e33831">makeAll</a> ()</td></tr>
+<tr class="memdesc:a8d78577048a12f5cbf5d4e8299e33831"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs all the available plugins.  <a href="#a8d78577048a12f5cbf5d4e8299e33831"></a><br/></td></tr>
 <tr class="separator:a8d78577048a12f5cbf5d4e8299e33831"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abd0aabd0ca4e5fe17d1cdedea71f3623"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abd0aabd0ca4e5fe17d1cdedea71f3623"></a>
-static QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#abd0aabd0ca4e5fe17d1cdedea71f3623">names</a> ()</td></tr>
-<tr class="memdesc:abd0aabd0ca4e5fe17d1cdedea71f3623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the names of the available plugins. <br/></td></tr>
+<tr class="memitem:abd0aabd0ca4e5fe17d1cdedea71f3623"><td class="memItemLeft" align="right" valign="top">static QStringList&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#abd0aabd0ca4e5fe17d1cdedea71f3623">names</a> ()</td></tr>
+<tr class="memdesc:abd0aabd0ca4e5fe17d1cdedea71f3623"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the names of the available plugins.  <a href="#abd0aabd0ca4e5fe17d1cdedea71f3623"></a><br/></td></tr>
 <tr class="separator:abd0aabd0ca4e5fe17d1cdedea71f3623"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca877e206e538e8a069a1d0e122286b3"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aca877e206e538e8a069a1d0e122286b3"></a>
-static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#aca877e206e538e8a069a1d0e122286b3">parameters</a> (const QString &amp;name)</td></tr>
-<tr class="memdesc:aca877e206e538e8a069a1d0e122286b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parameters for a plugin. <br/></td></tr>
+<tr class="memitem:aca877e206e538e8a069a1d0e122286b3"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#aca877e206e538e8a069a1d0e122286b3">parameters</a> (const QString &amp;name)</td></tr>
+<tr class="memdesc:aca877e206e538e8a069a1d0e122286b3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the parameters for a plugin.  <a href="#aca877e206e538e8a069a1d0e122286b3"></a><br/></td></tr>
 <tr class="separator:aca877e206e538e8a069a1d0e122286b3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
-<tr class="memitem:a07e310026953da9095e472b5494b8e0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a07e310026953da9095e472b5494b8e0d"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#a07e310026953da9095e472b5494b8e0d">Factory</a> (QString name)</td></tr>
-<tr class="memdesc:a07e310026953da9095e472b5494b8e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">For internal use. Nifty trick to register objects using a constructor. <br/></td></tr>
+<tr class="memitem:a07e310026953da9095e472b5494b8e0d"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Factory.html#a07e310026953da9095e472b5494b8e0d">Factory</a> (QString name)</td></tr>
+<tr class="memdesc:a07e310026953da9095e472b5494b8e0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">For internal use. Nifty trick to register objects using a constructor.  <a href="#a07e310026953da9095e472b5494b8e0d"></a><br/></td></tr>
 <tr class="separator:a07e310026953da9095e472b5494b8e0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
@@ -133,10 +134,163 @@ struct br::Factory&lt; T &gt;</h3>
 <p>For run time construction of objects from strings. </p>
 <p>All plugins must derive from <a class="el" href="classbr_1_1Object.html" title="The base class of all plugins and objects requiring introspection.">br::Object</a>. The factory is a templated struct to allow for different types of plugins.</p>
 <p>Uses the Industrial Strength Pluggable <a class="el" href="structbr_1_1Factory.html" title="For run time construction of objects from strings.">Factory</a> model described <a href="http://adtmag.com/articles/2000/09/25/industrial-strength-pluggable-factories.aspx">here</a>. </p>
-</div></div><!-- contents -->
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a class="anchor" id="a46897d623329bc053554b177cb28d43c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual ~<a class="el" href="structbr_1_1Factory.html">Factory</a> </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a07e310026953da9095e472b5494b8e0d"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbr_1_1Factory.html">Factory</a> </td>
+          <td>(</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>For internal use. Nifty trick to register objects using a constructor. </p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a29d279804426b29027d33974fe3b2c85"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static T* make </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structbr_1_1File.html">File</a> &amp;&#160;</td>
+          <td class="paramname"><em>file</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs a plugin from a file. </p>
+
+</div>
+</div>
+<a class="anchor" id="a8d78577048a12f5cbf5d4e8299e33831"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QList&lt; QSharedPointer&lt;T&gt; &gt; makeAll </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Constructs all the available plugins. </p>
+
+</div>
+</div>
+<a class="anchor" id="abd0aabd0ca4e5fe17d1cdedea71f3623"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QStringList names </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the names of the available plugins. </p>
+
+</div>
+</div>
+<a class="anchor" id="aca877e206e538e8a069a1d0e122286b3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static QString parameters </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>name</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns the parameters for a plugin. </p>
+
+</div>
+</div>
+</div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sun Dec 23 2012 21:32:49 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed Dec 26 2012 14:38:16 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

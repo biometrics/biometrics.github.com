@@ -7,5 +7,6 @@ var searchData=
   ['appendroi',['appendROI',['../structbr_1_1File.html#ad38a8f688a70b4ec66855966d00b721c',1,'br::File']]],
   ['appendrois',['appendROIs',['../structbr_1_1File.html#abf9f7cb754bb9dd0ac21c4124657c8c6',1,'br::File']]],
   ['argument',['argument',['../classbr_1_1Object.html#a0f8215c6f392882dbfd83d0269e5149a',1,'br::Object']]],
-  ['arguments',['arguments',['../classbr_1_1Object.html#a3aecaf7fde11a268a31861a05b918291',1,'br::Object']]]
+  ['arguments',['arguments',['../classbr_1_1Object.html#a3aecaf7fde11a268a31861a05b918291',1,'br::Object']]],
+  ['asefeyes',['ASEFEyes',['../classASEFEyes.html#a80486cba9b39d8a3c465f407dd1c9a00',1,'ASEFEyes']]]
 ];

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['examples',['Examples',['../examples.html',1,'']]]
+  ['evaluate_20face_20recognition',['Evaluate Face Recognition',['../group__cli.html',1,'']]]
 ];
