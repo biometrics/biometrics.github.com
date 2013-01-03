@@ -7,7 +7,10 @@
     <meta name="description" content="OpenBiometrics.org">
     <meta name="author" content="OpenBiometrics.org">
 
-    <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap.min.css">
+    <!--[if lt IE 7]><link rel="stylesheet" href="http://blueimp.github.com/cdn/css/bootstrap-ie6.min.css"><![endif]-->
+    <link rel="stylesheet" href="css/bootstrap-image-gallery.min.css">
+    <link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
     <link href="css/bootstrap-responsive.min.css" rel="stylesheet" type="text/css">
     <link href="css/font-awesome.css" rel="stylesheet" type="text/css">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
@@ -78,12 +81,12 @@
     </div>
     <div class="span7 txt-middle">
 <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
-                <a rel="gallery" href="img/MEDS/MEDS_ROC.svg"><img width="128" height="128" src="img/MEDS/MEDS_ROC.svg" title="ROC"></a>
-                <a rel="gallery" href="img/MEDS/MEDS_SD.svg"><img width="128" height="128" src="img/MEDS/MEDS_SD.svg" title="Score Distribution"></a>
-                <a rel="gallery" href="img/MEDS/MEDS_DET.svg"><img width="128" height="128" src="img/MEDS/MEDS_DET.svg" title="DET"></a><br>
-                <a rel="gallery" href="img/MEDS/MEDS_BC.svg"><img width="128" height="128" src="img/MEDS/MEDS_BC.svg" title="FAR@FRR"></a>
-                <a rel="gallery" href="img/MEDS/MEDS_CMC.svg"><img width="128" height="128" src="img/MEDS/MEDS_CMC.svg" title="CMC"></a>
-                <a rel="gallery" href="img/MEDS/MEDS_FRR.svg"><img width="128" height="128" src="img/MEDS/MEDS_CMC.svg" title="FRR"></a>
+                <a data-gallery="gallery" href="img/MEDS/MEDS_ROC.svg"><img width="128" height="128" src="img/MEDS/MEDS_ROC.svg" title="ROC"></a>
+                <a data-gallery="gallery" href="img/MEDS/MEDS_SD.svg"><img width="128" height="128" src="img/MEDS/MEDS_SD.svg" title="Score Distribution"></a>
+                <a data-gallery="gallery" href="img/MEDS/MEDS_DET.svg"><img width="128" height="128" src="img/MEDS/MEDS_DET.svg" title="DET"></a><br>
+                <a data-gallery="gallery" href="img/MEDS/MEDS_BC.svg"><img width="128" height="128" src="img/MEDS/MEDS_BC.svg" title="FAR@FRR"></a>
+                <a data-gallery="gallery" href="img/MEDS/MEDS_CMC.svg"><img width="128" height="128" src="img/MEDS/MEDS_CMC.svg" title="CMC"></a>
+                <a data-gallery="gallery" href="img/MEDS/MEDS_FRR.svg"><img width="128" height="128" src="img/MEDS/MEDS_CMC.svg" title="FRR"></a>
       </div><!-- gallery-->
     </div><!-- span7-->
     <div class="span3">
@@ -119,8 +122,8 @@
 <div class="container">
 <div class="row">
 <div class="span8 offset2 txt-middle">
-<h2><p class="lead"><img src="img/glyphicons_043_group.png" alt=""> OpenBR -- Open Source Biometric Recognition</p></h2>
-Open Algorithms and Reproducible Evaluations
+<p class="lead"><img src="img/glyphicons_043_group.png" alt=""> OpenBR -- Open Source Biometric Recognition</p>
+<p>Open Algorithms and Reproducible Evaluations</p>
 </div>
 </div>
 </div>
@@ -179,12 +182,10 @@ Open Algorithms and Reproducible Evaluations
   </div>
 </div>
 
-<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-<script type="text/javascript" >window.jQuery || document.write('<script src="js/jquery-1.8.2.min.js"><\/script>')</script>
-<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-latest.js"></script>
+<script src="js/bootstrap.min.js"></script>
 <script src="http://blueimp.github.com/JavaScript-Load-Image/load-image.min.js"></script>
-<script src="http://blueimp.github.com/Bootstrap-Image-Gallery/js/bootstrap-image-gallery.min.js"></script>
-<link rel="stylesheet" href="http://blueimp.github.com/Bootstrap-Image-Gallery/css/bootstrap-image-gallery.min.css">
+<script src="js/bootstrap-image-gallery.min.js"></script>
 
 </body>
 </html>
