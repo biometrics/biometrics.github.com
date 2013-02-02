@@ -85,9 +85,9 @@
 <div class="container-fluid">
   <div class="row-fluid">
     <div class="span2">
-<br>
-<p>Supporting the <a href="doxygen/html/group__cpp__plugin__sdk.html#cpp_compare_faces">development</a> and <a href="doxygen/html/group__c__sdk.html#c_evaluate_face_recognition">evaluation</a> of biometric algorithms in an accessible, reproducible, and transparent manner.</p>
-  </div>
+      <p class="lead">Open Source Biometric Recognition</p>
+      <p>Supporting the development of open algorithms and reproducible evaluations.</p>
+    </div>
     <div class="span8 txt-middle">
       <div id="gallery" data-toggle="modal-gallery" data-target="#modal-gallery">
         <a data-gallery="gallery" href="img/MEDS/MEDS_ROC.svg"><img width="192" height="192" src="img/MEDS/MEDS_ROC.svg" title="ROC"></a>
@@ -97,8 +97,8 @@
       </div><!-- gallery-->
     </div><!-- span8-->
     <div class="span2">
-      <h2 class="sub">Download</h2>
-      <p class="lead">0.1.0 - 1/27/13</p>
+      <p class="lead">Download</p>
+      <p>0.1.0 - 1/27/13</p>
       <ul class="nav nav-pills">
         <li><a href="https://docs.google.com/uc?export=download&confirm=no_antivirus&id=0B4Ix6CYxZNO0Ty1rVFNwMXB2MHc">
             <img src="img/glyphicons_364_cloud_download.png" width="32" height="32" alt=""> .tar.gz</a></li>
@@ -119,28 +119,35 @@
 </div><!-- container-fluid-->
 
 <div id="landing">
-<div class="container">
-<div class="row">
-<div class="span8 offset2 txt-middle">
-<p class="lead"><img src="img/glyphicons_043_group.png" alt=""> OpenBR -- Open Source Biometric Recognition</p>
-<p>Open Algorithms and Reproducible Evaluations</p>
-</div>
-</div>
-</div>
-</div>
-<!-- landing-->
+  <div class="container">
+    <p class="lead">Get Started...</p>
+    <center>
+      <code class="lead">
+        $ br -algorithm FaceRecognition -compare me.jpg you.jpg
+        // <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_compare_faces">C++ Equivalent</a>
+      </code>
+    </center>
+  </div> <!--container-->
+</div> <!--landing-->
 
 <div id="content" class="txt-middle">
   <div class="container">
     <div class="row">
       <div class="span4">
-        <h2 class="sub">MITRE</h2>
-        <p>OpenBR is a collaborative research project of The <a href="http://www.mitre.org">MITRE</a> Corporation. The MITRE Corporation is a not-for-profit organization chartered to work in the public interest. As a national resource, we apply our expertise in systems engineering, information technology, operational concepts, and enterprise modernization to address our sponsors' critical needs.</p>
+        <h2 class="sub">About</h2>
+        <p>OpenBR is a collaborative research project started by The <a href="http://www.mitre.org">MITRE</a> Corporation.</p>
+        <ul class="nav nav-pills">
+          <li><a href="https://groups.google.com/forum/?fromgroups#!forum/openbr-dev" target="_blank"><img src="https://mail.google.com/mail/u/0/images/2/mail_icon_32.png" width="32" height="32" alt=""/> openbr-dev </a></li>
+          <li><a href="http://webchat.freenode.net" target="_blank"><img src="http://webchat.freenode.net/static/test/images/favicon.png" width="32" height="32" alt=""/> #openbr </a></li>
+          <li><a href="http://stackoverflow.com/questions/tagged/openbr" target="_blank"><img src="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png" width="32" height="32" alt=""/> openbr </a></li>
+          <li><a href="http://my.cdash.org/index.php?project=OpenBR" target="_blank"><img src="http://my.cdash.org/images/cdash.gif" width="32" height="32" alt=""/> CDash</a></li>
+        </ul>
       </div><!-- span4 -->
       <div class="span4">
         <h2 class="sub">Development</h2>
-<p>Supporting the <a href="doxygen/html/group__cpp__plugin__sdk.html#cpp_compare_faces">development</a> and <a href="doxygen/html/group__c__sdk.html#c_evaluate_face_recognition">evaluation</a> of biometric algorithms in an accessible, reproducible, and transparent manner.  OpenBR is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a> and follows the <a href="http://semver.org">Semantic Versioning</a> convention for publishing releases.  The project uses the <a href="http://www.cmake.org">CMake</a> build system and depends on <a href="http://qt-project.org">Qt 4.8</a> and <a href="http://opencv.org">OpenCV 2.4.3</a>.</p>
-      </div><!-- span4 -->
+        <p>OpenBR is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a> and follows the <a href="http://semver.org">Semantic Versioning</a> convention for publishing releases.
+           The project uses the <a href="http://www.cmake.org">CMake</a> build system and depends on <a href="http://qt-project.org">Qt 4.8</a> and <a href="http://opencv.org">OpenCV 2.4.3</a>.</p>
+        <script type="text/javascript" src="http://www.ohloh.net/p/623103/widgets/project_partner_badge.js"></script>      </div><!-- span4 -->
       <div class="span4">
         <h2 class="sub">Developers</h2>
         <ul class="nav nav-pills">
@@ -154,33 +161,11 @@
   </div><!--container -->
 </div><!--content -->
 
-<div id="footer">
-  <div class="container">
-    <div class="row">
-      <div class="span8">
-<h2>Get started...</h2>
-<pre class="prettyprint linenums">
-$ br -algorithm FaceRecognition -compare me.jpg you.jpg // <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_compare_faces">C++ Equivalent</a>
-</pre>
-        <ul class="nav nav-pills">
-          <li><a href="https://groups.google.com/forum/?fromgroups#!forum/openbr-dev" target="_blank"><img src="https://mail.google.com/mail/u/0/images/2/mail_icon_32.png" width="32" height="32" alt=""/> openbr-dev </a></li>
-          <li><a href="http://webchat.freenode.net" target="_blank"><img src="http://webchat.freenode.net/static/test/images/favicon.png" width="32" height="32" alt=""/> #openbr </a></li>
-          <li><a href="http://stackoverflow.com/questions/tagged/openbr" target="_blank"><img src="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png" width="32" height="32" alt=""/> openbr </a></li>
-          <li><a href="http://my.cdash.org/index.php?project=OpenBR" target="_blank"><img src="http://my.cdash.org/images/cdash.gif" width="32" height="32" alt=""/> CDash</a></li>
-        </ul>
-      </div> <!--span6 -->
-      <div class="span4 pull-right">
-        <script type="text/javascript" src="http://www.ohloh.net/p/623103/widgets/project_basic_stats.js"></script>
-      </div> <!--span4 -->
-    </div> <!--row -->
-  </div> <!-- container -->
-</div> <!--footer -->
-
 <div id="copywrite">
   <div class="container">
     <div class="row">
       <div class="span12">
-        <p>&copy; 2012 OpenBR<span id="totop" class="pull-right">Back to Top <i class="icon-arrow-up"></i></span></p>
+        <p>&copy; 2013 OpenBR<span id="totop" class="pull-right">Back to Top <i class="icon-arrow-up"></i></span></p>
       </div>
     </div>
   </div>
