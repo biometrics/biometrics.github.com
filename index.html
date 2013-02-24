@@ -48,9 +48,9 @@
   <div class="navbar-inner">
     <div class="container">
       <a class="btn btn-primary btn-dropnav" data-toggle="collapse" data-target=".nav-collapse">
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
+        <span class="icon-bar"> </span>
+        <span class="icon-bar"> </span>
+        <span class="icon-bar"> </span>
       </a>
       <a class="brand" href="#"><img src="favicon.ico" width="32" height="32" alt=""> OpenBR</a>
       <div class="nav-collapse collapse">
@@ -72,19 +72,17 @@
       <p class="lead">Open Source Biometric Recognition</p>
       <p>Supporting the development of open algorithms and reproducible evaluations.</p>
     </div>
-    <div class="span8">
-      <center>
-        <a href="img/MEDS/MEDS_ROC.svg"><img width="24%" src="img/MEDS/MEDS_ROC.svg" title="ROC"></a>
-        <a href="img/MEDS/MEDS_SD.svg"><img width="24%" src="img/MEDS/MEDS_SD.svg" title="Score Distribution"></a>
-        <a href="img/MEDS/MEDS_BC.svg"><img width="24%" src="img/MEDS/MEDS_BC.svg" title="FAR@FRR"></a>
-        <a href="img/MEDS/MEDS_CMC.svg"><img width="24%" src="img/MEDS/MEDS_CMC.svg" title="CMC"></a>
-      </center>
+    <div class="span8 pagination-centered">
+      <a href="img/MEDS/MEDS_ROC.svg"><img width="24%" src="img/MEDS/MEDS_ROC.svg" title="ROC"></a>
+      <a href="img/MEDS/MEDS_SD.svg"><img width="24%" src="img/MEDS/MEDS_SD.svg" title="Score Distribution"></a>
+      <a href="img/MEDS/MEDS_BC.svg"><img width="24%" src="img/MEDS/MEDS_BC.svg" title="FAR@FRR"></a>
+      <a href="img/MEDS/MEDS_CMC.svg"><img width="24%" src="img/MEDS/MEDS_CMC.svg" title="CMC"></a>
     </div><!-- span8-->
     <div class="span2 well well-small">
-      <center>
-      <span class="lead">Download</span>
-      <p><em>0.2.0 - 2/23/13</em></p>
-      </center>
+      <div class="pagination-centered">
+        <span class="lead">Download</span>
+        <p><em>0.2.0 - 2/23/13</em></p>
+      </div>
       <ul class="nav nav-pills nav-stacked">
         <li><a href="https://github.com/biometrics/openbr/archive/v0.2.tar.gz">
             <img src="img/glyphicons_364_cloud_download.png" width="32" height="32" alt=""> .tar.gz</a></li>
@@ -99,15 +97,13 @@
 <div id="landing">
   <div class="container">
     <h2>Get Started ...</h2>
-    <center>
-      <pre class="lead">$ br -algorithm FaceRecognition -compare me.jpg you.jpg // <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_compare_faces">C++ Equivalent</a> </pre>
-    </center>
-      <ul class="pager">
-        <li><a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_face_recognition">Face Recognition</a></li>
-        <li><a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_age_estimation">Age Estimation</a></li>
-        <li><a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_gender_estimation">Gender Estimation</a></li>
-        <li><a href="doxygen/latest/group__c__sdk.html#c_face_recognition_evaluation">Face Recognition Evaluation</a></li>
-      </ul>
+    <pre class="lead pagination-centered">$ br -algorithm FaceRecognition -compare me.jpg you.jpg // <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_compare_faces">C++ Equivalent</a> </pre>
+    <ul class="pager">
+      <li><a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_face_recognition">Face Recognition</a></li>
+      <li><a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_age_estimation">Age Estimation</a></li>
+      <li><a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_gender_estimation">Gender Estimation</a></li>
+      <li><a href="doxygen/latest/group__c__sdk.html#c_face_recognition_evaluation">Face Recognition Evaluation</a></li>
+    </ul>
   </div> <!--container-->
 </div> <!--landing-->
 
@@ -142,21 +138,21 @@
       <h2>Developers</h2>
       <p>Join us on <a href="https://github.com/biometrics/openbr">GitHub</a>!</p>
       <div class="row-fluid">
-        <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=watch&amp;count=true" frameborder="0" width="110" height="32"></iframe>
-        <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=fork&amp;count=true" frameborder="0" width="95" height="32"></iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=watch&amp;count=true" frameborder="0" width="110" height="32">Watch</iframe>
+        <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=fork&amp;count=true" frameborder="0" width="95" height="32">Fork</iframe>
       </div><!-- row-fluid-->
       <div class="row-fluid">
         <div class="span6">
           <ul class="nav nav-pills">
-            <li><a href="https://github.com/jklontz"><img src="http://www.gravatar.com/avatar/9763cb6c835edacbf5eb6311e7c84ed0" width="32" height="32">&nbsp;Josh Klontz</a></li>
-            <li><a href="https://github.com/mmtaborsky"><img src="http://www.gravatar.com/avatar/991dcdf93f3dd9018ab2e0580ca37739" width="32" height="32">&nbsp;M. Taborsky</a></li>
-            <li><a href="https://github.com/caotto"><img src="http://www.gravatar.com/avatar/7ef4a611883118daccd79c3289e8549d" width="32" height="32">&nbsp;Charles Otto</a></li>
+            <li><a href="https://github.com/jklontz"><img src="http://www.gravatar.com/avatar/9763cb6c835edacbf5eb6311e7c84ed0" width="32" height="32">&nbsp; Josh Klontz</a></li>
+            <li><a href="https://github.com/mmtaborsky"><img src="http://www.gravatar.com/avatar/991dcdf93f3dd9018ab2e0580ca37739" width="32" height="32">&nbsp; M. Taborsky</a></li>
+            <li><a href="https://github.com/caotto"><img src="http://www.gravatar.com/avatar/7ef4a611883118daccd79c3289e8549d" width="32" height="32">&nbsp; Charles Otto</a></li>
           </ul>
         </div><!--span6 -->
         <div class="span6">
           <ul class="nav nav-pills">
-            <li><a href="https://github.com/bklare"><img src="http://www.gravatar.com/avatar/1cd1f1a4750f47f1197ec10c602cda26" width="32" height="32">&nbsp;Brendan Klare</a></li>
-            <li><a href="https://github.com/sklum"><img src="http://www.gravatar.com/avatar/1b741e48cb0a15f5016cf84584681af3.png" width="32" height="32">&nbsp;Scott Klum</a></li>
+            <li><a href="https://github.com/bklare"><img src="http://www.gravatar.com/avatar/1cd1f1a4750f47f1197ec10c602cda26" width="32" height="32">&nbsp; Brendan Klare</a></li>
+            <li><a href="https://github.com/sklum"><img src="http://www.gravatar.com/avatar/1b741e48cb0a15f5016cf84584681af3.png" width="32" height="32">&nbsp; Scott Klum</a></li>
           </ul>
         </div><!--span6 -->
       </div><!--row-fluid -->
