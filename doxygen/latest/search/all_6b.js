@@ -4,7 +4,7 @@ var searchData=
   ['kde',['KDE',['../structbr_1_1KDE.html',1,'br']]],
   ['kde',['KDE',['../structbr_1_1KDE.html#a2190ee313f48db0914e4f0052b7f76a4',1,'br::KDE::KDE()'],['../structbr_1_1KDE.html#a6b3bca877a2fd3072a5f596c22524145',1,'br::KDE::KDE(const QList&lt; float &gt; &amp;scores)']]],
   ['keep',['keep',['../classbr_1_1PCATransform.html#a86d46135a94ec4d3237674d3ed542ce4',1,'br::PCATransform::keep()'],['../classbr_1_1DFFSTransform.html#a86d46135a94ec4d3237674d3ed542ce4',1,'br::DFFSTransform::keep()']]],
-  ['kernel',['Kernel',['../classbr_1_1SVMTransform.html#a8d71fe894b897c26adb0313a574b9839',1,'br::SVMTransform::Kernel()'],['../classbr_1_1SVMTransform.html#a464e47c5ec682151411ffcaecfa9e544',1,'br::SVMTransform::kernel()'],['../classbr_1_1UnaryTransform.html#aa5b9a1a53337ff506f50b67c0ec5967b',1,'br::UnaryTransform::kernel()']]],
+  ['kernel',['Kernel',['../classbr_1_1SVMTransform.html#a8d71fe894b897c26adb0313a574b9839',1,'br::SVMTransform::Kernel()'],['../classbr_1_1SVMTransform.html#a464e47c5ec682151411ffcaecfa9e544',1,'br::SVMTransform::kernel()']]],
   ['keypointdescriptortransform',['KeyPointDescriptorTransform',['../classbr_1_1KeyPointDescriptorTransform.html',1,'br']]],
   ['keypointdetectortransform',['KeyPointDetectorTransform',['../classbr_1_1KeyPointDetectorTransform.html',1,'br']]],
   ['keypointmatchertransform',['KeyPointMatcherTransform',['../classbr_1_1KeyPointMatcherTransform.html',1,'br']]],

@@ -1,5 +1,6 @@
 var searchData=
 [
+  ['namedlandmarks',['namedLandmarks',['../structbr_1_1File.html#a1f12357a2118cd5a636472728ca3b50b',1,'br::File']]],
   ['names',['names',['../structbr_1_1FileList.html#ae7c5e2c8b65666c19dc04a3d749b32f6',1,'br::FileList::names()'],['../structbr_1_1Factory.html#abd0aabd0ca4e5fe17d1cdedea71f3623',1,'br::Factory::names()']]],
   ['nt4context',['NT4Context',['../structNT4Context.html#a9de64c12849ae18b3825e71b09d9076c',1,'NT4Context']]],
   ['nt4detectface',['NT4DetectFace',['../classNT4DetectFace.html#a4edc0de60290cb06f129377527140d28',1,'NT4DetectFace']]],

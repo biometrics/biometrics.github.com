@@ -1,7 +1,9 @@
 var searchData=
 [
   ['l1',['L1',['../classbr_1_1DistDistance.html#abf74dfd688b4203cefa6d49f8d14403eae5bc7ee7d6dda5340a28f91834f10543',1,'br::DistDistance::L1()'],['../classbr_1_1NormalizeTransform.html#ad4bb8dabdbf8ad75e34220cc666b59caae5bc7ee7d6dda5340a28f91834f10543',1,'br::NormalizeTransform::L1()']]],
+  ['l1distance',['L1Distance',['../classbr_1_1L1Distance.html',1,'br']]],
   ['l2',['L2',['../classbr_1_1DistDistance.html#abf74dfd688b4203cefa6d49f8d14403ea0adffb24dae0c41be5b803f4d444f066',1,'br::DistDistance::L2()'],['../classbr_1_1NormalizeTransform.html#ad4bb8dabdbf8ad75e34220cc666b59caa0adffb24dae0c41be5b803f4d444f066',1,'br::NormalizeTransform::L2()']]],
+  ['l2distance',['L2Distance',['../classbr_1_1L2Distance.html',1,'br']]],
   ['lab',['Lab',['../classbr_1_1CvtTransform.html#af31477bc48f67856bedb0fa8e5b5281da233eb279317a0892413c9d2876831e79',1,'br::CvtTransform']]],
   ['label',['label',['../structbr_1_1File.html#ad84c420c75d5fdc334dad8dab9bdfd3a',1,'br::File']]],
   ['labelcounts',['labelCounts',['../structbr_1_1TemplateList.html#a3db39318d6993be8ac0260c301892d9c',1,'br::TemplateList']]],
@@ -16,13 +18,12 @@ var searchData=
   ['length',['length',['../classbr_1_1ToBinaryVectorTransform.html#a9f59b34b1f25fe00023291b678246bcc',1,'br::ToBinaryVectorTransform']]],
   ['limitsizetransform',['LimitSizeTransform',['../classbr_1_1LimitSizeTransform.html',1,'br']]],
   ['linear',['Linear',['../classbr_1_1SVMTransform.html#a8d71fe894b897c26adb0313a574b9839a1a1f3bc55fefa098d9034cc46e2e7a2b',1,'br::SVMTransform']]],
-  ['llvminitializer',['LLVMInitializer',['../classLLVMInitializer.html',1,'']]],
-  ['load',['load',['../classbr_1_1Object.html#ab81073dc54a704f0249b7798c497adb7',1,'br::Object::load()'],['../classbr_1_1KMeansTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::KMeansTransform::load()'],['../classbr_1_1DFFSTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::DFFSTransform::load()'],['../classbr_1_1LDATransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::LDATransform::load()'],['../classbr_1_1IUMTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::IUMTransform::load()'],['../classbr_1_1MPDistance.html#ab81073dc54a704f0249b7798c497adb7',1,'br::MPDistance::load()'],['../classbr_1_1RndTransformTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::RndTransformTransform::load()'],['../classbr_1_1RndSubspaceTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::RndSubspaceTransform::load()']]],
-  ['loadstoretransform',['LoadStoreTransform',['../classbr_1_1LoadStoreTransform.html#a04b06276eddc4e15b37e703bbfefbd60',1,'br::LoadStoreTransform']]],
+  ['load',['load',['../classbr_1_1Object.html#ab81073dc54a704f0249b7798c497adb7',1,'br::Object::load()'],['../classbr_1_1KMeansTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::KMeansTransform::load()'],['../classbr_1_1DFFSTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::DFFSTransform::load()'],['../classbr_1_1LDATransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::LDATransform::load()'],['../classbr_1_1ImpostorUniquenessMeasureTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::ImpostorUniquenessMeasureTransform::load()'],['../classbr_1_1MatchProbabilityDistance.html#ab81073dc54a704f0249b7798c497adb7',1,'br::MatchProbabilityDistance::load()'],['../classbr_1_1RndTransformTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::RndTransformTransform::load()'],['../classbr_1_1RndSubspaceTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::RndSubspaceTransform::load()'],['../classbr_1_1CrossValidateTransform.html#ab81073dc54a704f0249b7798c497adb7',1,'br::CrossValidateTransform::load()']]],
   ['loadstoretransform',['LoadStoreTransform',['../classbr_1_1LoadStoreTransform.html',1,'br']]],
+  ['loadstoretransform',['LoadStoreTransform',['../classbr_1_1LoadStoreTransform.html#a04b06276eddc4e15b37e703bbfefbd60',1,'br::LoadStoreTransform']]],
   ['localkeys',['localKeys',['../structbr_1_1File.html#a9164b8d5a7fa317e1ac81558b178b81a',1,'br::File']]],
   ['localmetadata',['localMetadata',['../structbr_1_1File.html#ab14bbc3b5a047ca2a7fec6b9107bfdf3',1,'br::File']]],
-  ['log',['log',['../classbr_1_1Context.html#addf8fdd09cb9dd696ea7b9cfd63c7a7e',1,'br::Context::log()'],['../classbr_1_1MPDistance.html#ae81d3246bfc238875eaecb9aff755a2e',1,'br::MPDistance::log()']]],
+  ['log',['log',['../classbr_1_1Context.html#addf8fdd09cb9dd696ea7b9cfd63c7a7e',1,'br::Context']]],
   ['lut',['lut',['../classbr_1_1GammaTransform.html#acc430205532f2d2ef257535ca110ad7d',1,'br::GammaTransform::lut()'],['../classbr_1_1LBPTransform.html#a04e5f93ff69f450d80e6b25ec422b241',1,'br::LBPTransform::lut()']]],
   ['luv',['Luv',['../classbr_1_1CvtTransform.html#af31477bc48f67856bedb0fa8e5b5281daace5187b039ea34bb1d4f789f3ee69dc',1,'br::CvtTransform']]]
 ];

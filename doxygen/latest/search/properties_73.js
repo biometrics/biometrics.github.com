@@ -12,5 +12,5 @@ var searchData=
   ['sigmas',['sigmas',['../classbr_1_1GaborJetTransform.html#a9668d2a664f0b81c1c1259306332d078',1,'br::GaborJetTransform']]],
   ['size',['size',['../classbr_1_1KeyPointDescriptorTransform.html#a439227feff9d7f55384e8780cfc2eb82',1,'br::KeyPointDescriptorTransform::size()'],['../classbr_1_1SIFTDescriptorTransform.html#a439227feff9d7f55384e8780cfc2eb82',1,'br::SIFTDescriptorTransform::size()']]],
   ['starttime',['startTime',['../classbr_1_1Context.html#a87afb3b7480fc65f1671171d978bc29f',1,'br::Context']]],
-  ['stddev',['stddev',['../classbr_1_1IUMTransform.html#a6ed2ab2d0246c66167c4d33f468ca608',1,'br::IUMTransform']]]
+  ['stddev',['stddev',['../classbr_1_1ImpostorUniquenessMeasureTransform.html#a6ed2ab2d0246c66167c4d33f468ca608',1,'br::ImpostorUniquenessMeasureTransform']]]
 ];

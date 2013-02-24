@@ -5,7 +5,6 @@ var searchData=
   ['about',['about',['../classbr_1_1Context.html#a463894e38855330be8e8eacc13b2b55c',1,'br::Context']]],
   ['absdifftransform',['AbsDiffTransform',['../classbr_1_1AbsDiffTransform.html',1,'br']]],
   ['acquirestep',['acquireStep',['../namespacebr.html#a78979df1c664312aefd7fc8182605718',1,'br']]],
-  ['addtransform',['addTransform',['../classaddTransform.html',1,'']]],
   ['affinetransform',['AffineTransform',['../classbr_1_1AffineTransform.html',1,'br']]],
   ['algorithm',['Algorithm',['../classbr_1_1CryptographicHashTransform.html#a5e41188f16a381c8915a17a22228e691',1,'br::CryptographicHashTransform::Algorithm()'],['../classbr_1_1Context.html#aff4db78b998f0ea2c2ec732d4ac6d204',1,'br::Context::algorithm()'],['../classbr_1_1CryptographicHashTransform.html#acc4ba09a6333be056db50ed15007518c',1,'br::CryptographicHashTransform::algorithm()']]],
   ['algorithmsinitializer',['AlgorithmsInitializer',['../classbr_1_1AlgorithmsInitializer.html',1,'br']]],
@@ -21,7 +20,10 @@ var searchData=
   ['appendrois',['appendROIs',['../structbr_1_1File.html#abf9f7cb754bb9dd0ac21c4124657c8c6',1,'br::File']]],
   ['argument',['argument',['../classbr_1_1Object.html#a0f8215c6f392882dbfd83d0269e5149a',1,'br::Object']]],
   ['arguments',['arguments',['../classbr_1_1Object.html#a3aecaf7fde11a268a31861a05b918291',1,'br::Object']]],
-  ['asefeyestransform',['ASEFEyesTransform',['../classbr_1_1ASEFEyesTransform.html',1,'br']]],
   ['asefeyestransform',['ASEFEyesTransform',['../classbr_1_1ASEFEyesTransform.html#a2573fbb5eceb37f65483222e5519b277',1,'br::ASEFEyesTransform']]],
-  ['axis',['Axis',['../classbr_1_1FlipTransform.html#ae3996976d8ffb3e58d88f58227473f8e',1,'br::FlipTransform::Axis()'],['../classbr_1_1FlipTransform.html#a7aa405af4ce808b4f3839b252d26c9e8',1,'br::FlipTransform::axis()']]]
+  ['asefeyestransform',['ASEFEyesTransform',['../classbr_1_1ASEFEyesTransform.html',1,'br']]],
+  ['aspectratio',['aspectRatio',['../classbr_1_1RectFromLandmarksTransform.html#a09c1e9032a77407b39a3bd33ee5c4721',1,'br::RectFromLandmarksTransform']]],
+  ['avigallery',['aviGallery',['../classbr_1_1aviGallery.html',1,'br']]],
+  ['axis',['axis',['../classbr_1_1FlipTransform.html#a7aa405af4ce808b4f3839b252d26c9e8',1,'br::FlipTransform::axis()'],['../classbr_1_1FlipTransform.html#ae3996976d8ffb3e58d88f58227473f8e',1,'br::FlipTransform::Axis()']]],
+  ['age_20estimation',['Age Estimation',['../group__cli.html',1,'']]]
 ];

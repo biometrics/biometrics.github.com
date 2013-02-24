@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['evaluate_20face_20recognition',['Evaluate Face Recognition',['../group__cli.html',1,'']]],
   ['edittransform',['EditTransform',['../classbr_1_1EditTransform.html',1,'br']]],
   ['emptygallery',['EmptyGallery',['../classbr_1_1EmptyGallery.html',1,'br']]],
   ['emptyoutput',['EmptyOutput',['../classbr_1_1EmptyOutput.html',1,'br']]],

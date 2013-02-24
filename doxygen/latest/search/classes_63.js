@@ -12,6 +12,8 @@ var searchData=
   ['context',['Context',['../classbr_1_1Context.html',1,'br']]],
   ['contrasteqtransform',['ContrastEqTransform',['../classbr_1_1ContrastEqTransform.html',1,'br']]],
   ['cropblacktransform',['CropBlackTransform',['../classbr_1_1CropBlackTransform.html',1,'br']]],
+  ['crossvalidatedistance',['CrossValidateDistance',['../classbr_1_1CrossValidateDistance.html',1,'br']]],
+  ['crossvalidatetransform',['CrossValidateTransform',['../classbr_1_1CrossValidateTransform.html',1,'br']]],
   ['cryptographichashtransform',['CryptographicHashTransform',['../classbr_1_1CryptographicHashTransform.html',1,'br']]],
   ['csdntransform',['CSDNTransform',['../classbr_1_1CSDNTransform.html',1,'br']]],
   ['csvformat',['csvFormat',['../classbr_1_1csvFormat.html',1,'br']]],

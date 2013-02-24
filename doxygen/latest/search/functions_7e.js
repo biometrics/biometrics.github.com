@@ -10,5 +10,6 @@ var searchData=
   ['_7einitializer',['~Initializer',['../classbr_1_1Initializer.html#a8cc5df50dacfd64fa5d286318dda8050',1,'br::Initializer']]],
   ['_7ent4context',['~NT4Context',['../structNT4Context.html#a849b3c690669d20d7be16cc35f7ece2a',1,'NT4Context']]],
   ['_7eoutput',['~Output',['../classbr_1_1Output.html#a8c3620b32551505c8ee5ff51b59e57aa',1,'br::Output']]],
-  ['_7etransform',['~Transform',['../classbr_1_1Transform.html#a027aef4eddeb6f9ec0f16cde4496d822',1,'br::Transform']]]
+  ['_7etransform',['~Transform',['../classbr_1_1Transform.html#a027aef4eddeb6f9ec0f16cde4496d822',1,'br::Transform']]],
+  ['_7exmlgallery',['~xmlGallery',['../classbr_1_1xmlGallery.html#ab628e072fa7d72520f1fc5ac7438093b',1,'br::xmlGallery']]]
 ];

@@ -1,8 +1,10 @@
 var searchData=
 [
   ['dbgallery',['dbGallery',['../classbr_1_1dbGallery.html',1,'br']]],
+  ['defaultdistance',['DefaultDistance',['../classbr_1_1DefaultDistance.html',1,'br']]],
   ['defaultformat',['DefaultFormat',['../classbr_1_1DefaultFormat.html',1,'br']]],
   ['defaultgallery',['DefaultGallery',['../classbr_1_1DefaultGallery.html',1,'br']]],
+  ['defaultoutput',['DefaultOutput',['../classbr_1_1DefaultOutput.html',1,'br']]],
   ['dffstransform',['DFFSTransform',['../classbr_1_1DFFSTransform.html',1,'br']]],
   ['discardtransform',['DiscardTransform',['../classbr_1_1DiscardTransform.html',1,'br']]],
   ['distance',['Distance',['../classbr_1_1Distance.html',1,'br']]],
