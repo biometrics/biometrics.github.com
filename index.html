@@ -98,31 +98,31 @@
       <li class="active"><a href="#face_recognition" data-toggle="tab">Face Recognition</a></li>
       <li><a href="#age_estimation" data-toggle="tab">Age Estimation</a></li>
       <li><a href="#gender_estimation" data-toggle="tab">Gender Estimation</a></li>
+      <li><a href="#face_recognition_evaluation" data-toggle="tab">Face Recognition Evaluation</a></li>
     </ul>
     <div class="tab-content">
       <div class="tab-pane active" id="face_recognition">
-        <pre class="lead pagination-centered">$ br -algorithm FaceRecognition -compare me.jpg you.jpg // <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_face_recognition">C++ Equivalent</a> </pre>
+        <pre class="lead pagination-centered">$ br -algorithm <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_face_recognition">FaceRecognition</a> -compare me.jpg you.jpg</pre>
       </div>
       <div class="tab-pane" id="age_estimation">
-        <pre class="lead pagination-centered">$ br -algorithm AgeEstimation -enroll me.jpg you.jpg metadata.csv // <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_age_estimation">C++ Equivalent</a> </pre>
+        <pre class="lead pagination-centered">$ br -algorithm <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_age_estimation">AgeEstimation</a> -enroll me.jpg you.jpg metadata.csv</pre>
       </div>
       <div class="tab-pane" id="gender_estimation">
-        <pre class="lead pagination-centered">$ br -algorithm GenderEstimation -enroll me.jpg you.jpg metadata.csv // <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_gender_estimation">C++ Equivalent</a> </pre>
+        <pre class="lead pagination-centered">$ br -algorithm <a href="doxygen/latest/group__cpp__plugin__sdk.html#cpp_gender_estimation">GenderEstimation</a> -enroll me.jpg you.jpg metadata.csv</pre>
       </div>
-    </div>
-  </div>
-</div>
-
-<div class="container txt-middle">
-  <div class="row-fluid">
-    <div class="span12 well">
-      <ul class="thumbnails">
-        <li class="span3"> <a href="img/MEDS/MEDS_ROC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_ROC.svg" title="ROC"> </a> </li>
-        <li class="span3"> <a href="img/MEDS/MEDS_SD.svg" class="thumbnail"> <img src="img/MEDS/MEDS_SD.svg" title="ROC"> </a> </li>
-        <li class="span3"> <a href="img/MEDS/MEDS_BC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_BC.svg" title="ROC"> </a> </li>
-        <li class="span3"> <a href="img/MEDS/MEDS_CMC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_CMC.svg" title="ROC"> </a> </li>
-      </ul>
-      <p>Accuracy on NIST <a href="http://www.nist.gov/itl/iad/ig/sd32.cfm">MEDS</a> Database, <a href="doxygen/latest/group__c__sdk.html#c_face_recognition_evaluation">reproduce</a> the results.</p>
+      <div class="tab-pane txt-middle" id="face_recognition_evaluation">
+        <div class="row-fluid">
+          <div class="span12 well">
+            <ul class="thumbnails">
+              <li class="span3"> <a href="img/MEDS/MEDS_ROC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_ROC.svg" title="ROC"> </a> </li>
+              <li class="span3"> <a href="img/MEDS/MEDS_SD.svg" class="thumbnail"> <img src="img/MEDS/MEDS_SD.svg" title="ROC"> </a> </li>
+              <li class="span3"> <a href="img/MEDS/MEDS_BC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_BC.svg" title="ROC"> </a> </li>
+              <li class="span3"> <a href="img/MEDS/MEDS_CMC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_CMC.svg" title="ROC"> </a> </li>
+            </ul>
+            <p>Accuracy on NIST <a href="http://www.nist.gov/itl/iad/ig/sd32.cfm">MEDS</a> Database, <a href="doxygen/latest/group__c__sdk.html#c_face_recognition_evaluation">reproduce</a> the results.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
