@@ -61,7 +61,6 @@
           <li><a href="https://github.com/biometrics/openbr/wiki">Wiki</a></li>
           <li><a href="slides.pdf">Slides</a></li>
           <li><a href="http://openbiometrics.org/likely">Likely</a></li>
-          <li><a href="http://openbiometrics.org/lenna">Lenna</a></li>
         </ul>
       </div>
     </div>
@@ -75,31 +74,7 @@
       <p class="lead">Open Source Biometric Recognition</p>
       <p>Supporting the development of open algorithms and reproducible evaluations.</p>
     </div>
-    <div class="span8 pagination-centered">
-      <ul class="thumbnails">
-        <li class="span3">
-          <a href="img/MEDS/MEDS_ROC.svg" class="thumbnail">
-            <img src="img/MEDS/MEDS_ROC.svg" title="ROC">
-          </a>
-        </li>
-        <li class="span3">
-          <a href="img/MEDS/MEDS_SD.svg" class="thumbnail">
-            <img src="img/MEDS/MEDS_SD.svg" title="ROC">
-          </a>
-        </li>
-        <li class="span3">
-          <a href="img/MEDS/MEDS_BC.svg" class="thumbnail">
-            <img src="img/MEDS/MEDS_BC.svg" title="ROC">
-          </a>
-        </li>
-        <li class="span3">
-          <a href="img/MEDS/MEDS_CMC.svg" class="thumbnail">
-            <img src="img/MEDS/MEDS_CMC.svg" title="ROC">
-          </a>
-        </li>
-        <caption>Accuracy on NIST <a href="http://www.nist.gov/itl/iad/ig/sd32.cfm">MEDS</a> Database, <a href="doxygen/latest/group__c__sdk.html#c_face_recognition_evaluation">reproduce</a> the results.</caption>
-      </ul>
-    </div><!-- span8-->
+    <div class="span8 pagination-centered"> <img src="diagram.png"> </div>
     <div class="span2 well well-small">
       <div class="pagination-centered">
         <span class="lead">Download</span>
@@ -117,7 +92,7 @@
 </div><!-- container-fluid-->
 
 <div class="container">
-  <h2>Get Started ...</h2>
+  <h2>Get Started</h2>
   <div class="tabbable">
     <ul class="nav nav-tabs">
       <li class="active"><a href="#face_recognition" data-toggle="tab">Face Recognition</a></li>
@@ -138,55 +113,66 @@
   </div>
 </div>
 
-<div id="content" class="container txt-middle">
+<div class="container txt-middle">
+  <div class="row-fluid">
+    <div class="span12 well">
+      <ul class="thumbnails">
+        <li class="span3"> <a href="img/MEDS/MEDS_ROC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_ROC.svg" title="ROC"> </a> </li>
+        <li class="span3"> <a href="img/MEDS/MEDS_SD.svg" class="thumbnail"> <img src="img/MEDS/MEDS_SD.svg" title="ROC"> </a> </li>
+        <li class="span3"> <a href="img/MEDS/MEDS_BC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_BC.svg" title="ROC"> </a> </li>
+        <li class="span3"> <a href="img/MEDS/MEDS_CMC.svg" class="thumbnail"> <img src="img/MEDS/MEDS_CMC.svg" title="ROC"> </a> </li>
+      </ul>
+      <p>Accuracy on NIST <a href="http://www.nist.gov/itl/iad/ig/sd32.cfm">MEDS</a> Database, <a href="doxygen/latest/group__c__sdk.html#c_face_recognition_evaluation">reproduce</a> the results.</p>
+    </div>
+  </div>
+</div>
+
+<div class="container">
   <div class="row">
     <div class="span4">
       <h2>About</h2>
-      <p>OpenBR is a collaborative research project started by The <a href="http://www.mitre.org">MITRE</a> Corporation. The MITRE Corporation is a not-for-profit organization chartered to work in the public interest.</p>
+      <p align="justify">OpenBR is a collaborative research project started by The <a href="http://www.mitre.org">MITRE</a> Corporation. The MITRE Corporation is a not-for-profit organization chartered to work in the public interest.</p>
       <div class="row-fluid">
         <div class="span6">
-          <ul class="nav nav-pills">
+          <ul class="nav">
             <li><a href="https://groups.google.com/forum/?fromgroups#!forum/openbr-dev" target="_blank"><img src="https://mail.google.com/mail/u/0/images/2/mail_icon_32.png" width="32" height="32" alt=""/> openbr-dev </a></li>
-            <li><a href="http://stackoverflow.com/questions/tagged/openbr" target="_blank"><img src="http://cdn.sstatic.net/stackoverflow/img/apple-touch-icon.png" width="32" height="32" alt=""/> openbr </a></li>
           </ul>
         </div>
         <div class="span6">
-          <ul class="nav nav-pills">
+          <ul class="nav">
             <li><a href="http://webchat.freenode.net" target="_blank"><img src="http://webchat.freenode.net/static/test/images/favicon.png" width="32" height="32" alt=""/> #openbr </a></li>
-            <li><a href="http://my.cdash.org/index.php?project=OpenBR" target="_blank"><img src="http://my.cdash.org/images/cdash.gif" width="32" height="32" alt=""/> CDash</a></li>
           </ul>
         </div>
       </div>
     </div><!-- span4 -->
     <div class="span4">
       <h2>Development</h2>
-      <p>OpenBR is supported on Windows, Mac OS X, and Debian Linux.
+      <p align="justify">OpenBR is supported on Windows, Mac OS X, and Debian Linux.
          The project is licensed under <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2.0</a> and releases follow the <a href="http://semver.org">Semantic Versioning</a> convention.
-         Internally the code base uses the <a href="http://www.cmake.org">CMake</a> build system and requires <a href="http://qt-project.org">Qt 5.0</a> and <a href="http://opencv.org">OpenCV 2.4.3</a>.</p>
-      <script type="text/javascript" src="http://www.ohloh.net/p/623103/widgets/project_partner_badge.js"></script>
+         Internally the code base uses the <a href="http://www.cmake.org">CMake</a> build system and requires <a href="http://qt-project.org">Qt</a> and <a href="http://opencv.org">OpenCV</a>.</p>
+         <div class="row-fluid">
+           <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=watch&amp;count=true" frameborder="0" width="110" height="32">Watch</iframe>
+           <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=fork&amp;count=true" frameborder="0" width="95" height="32">Fork</iframe>
+         </div><!-- row-fluid-->
     </div><!-- span4 -->
     <div class="span4">
       <h2>Developers</h2>
-      <p>Join us on <a href="https://github.com/biometrics/openbr">GitHub</a> and <a href="https://github.com/biometrics/openbr/wiki#volunteers-needed">volunteer</a>!</p>
-      <div class="row-fluid">
-        <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=watch&amp;count=true" frameborder="0" width="110" height="32">Watch</iframe>
-        <iframe src="http://ghbtns.com/github-btn.html?user=biometrics&amp;repo=openbr&amp;type=fork&amp;count=true" frameborder="0" width="95" height="32">Fork</iframe>
-      </div><!-- row-fluid-->
+      <p align="justify">Join us on <a href="https://github.com/biometrics/openbr">GitHub</a> and <a href="https://github.com/biometrics/openbr/wiki#volunteers-needed">volunteer</a>!</p>
       <div class="row-fluid">
         <div class="span6">
-          <ul class="nav nav-pills">
+          <ul class="nav">
             <li><a href="https://github.com/jklontz"><img src="http://www.gravatar.com/avatar/9763cb6c835edacbf5eb6311e7c84ed0" width="32" height="32">&nbsp; Josh Klontz</a></li>
             <li><a href="https://github.com/mmtaborsky"><img src="http://www.gravatar.com/avatar/991dcdf93f3dd9018ab2e0580ca37739" width="32" height="32">&nbsp; M. Taborsky</a></li>
             <li><a href="https://github.com/caotto"><img src="http://www.gravatar.com/avatar/7ef4a611883118daccd79c3289e8549d" width="32" height="32">&nbsp; Charles Otto</a></li>
           </ul>
-        </div><!--span6 -->
+        </div>
         <div class="span6">
-          <ul class="nav nav-pills">
+          <ul class="nav">
             <li><a href="https://github.com/bklare"><img src="http://www.gravatar.com/avatar/1cd1f1a4750f47f1197ec10c602cda26" width="32" height="32">&nbsp; Brendan Klare</a></li>
             <li><a href="https://github.com/sklum"><img src="http://www.gravatar.com/avatar/1b741e48cb0a15f5016cf84584681af3.png" width="32" height="32">&nbsp; Scott Klum</a></li>
           </ul>
-        </div><!--span6 -->
-      </div><!--row-fluid -->
+        </div>
+      </div><!--row -->
     </div><!--span4 -->
   </div><!--row -->
 </div><!--content -->
