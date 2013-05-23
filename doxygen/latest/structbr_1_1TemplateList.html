@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -117,6 +117,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memdesc:a6acba07924a29547c1b0fc3de4380192"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the template list from another template list.  <a href="#a6acba07924a29547c1b0fc3de4380192"></a><br/></td></tr>
 <tr class="separator:a6acba07924a29547c1b0fc3de4380192"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af75992237d12115cde12b14fb8e192d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#af75992237d12115cde12b14fb8e192d4">TemplateList</a> (const QList&lt; <a class="el" href="structbr_1_1File.html">File</a> &gt; &amp;<a class="el" href="structbr_1_1TemplateList.html#ac7c82a7ae57998d67759ecacb5ced346">files</a>)</td></tr>
+<tr class="memdesc:af75992237d12115cde12b14fb8e192d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the template list from a file list.  <a href="#af75992237d12115cde12b14fb8e192d4"></a><br/></td></tr>
 <tr class="separator:af75992237d12115cde12b14fb8e192d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad278de6e30c1ac035af0a1bf30a8eef1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ad278de6e30c1ac035af0a1bf30a8eef1"><td class="memTemplItemLeft" align="right" valign="top">T&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#ad278de6e30c1ac035af0a1bf30a8eef1">bytes</a> () const </td></tr>
@@ -125,9 +126,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a79e9c28453b8c88d5c07945bcaab86cf"><td class="memItemLeft" align="right" valign="top">QList&lt; cv::Mat &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#a79e9c28453b8c88d5c07945bcaab86cf">data</a> (int index=0) const </td></tr>
 <tr class="memdesc:a79e9c28453b8c88d5c07945bcaab86cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a list of matrices with one matrix from each template at the specified <em>index</em>.  <a href="#a79e9c28453b8c88d5c07945bcaab86cf"></a><br/></td></tr>
 <tr class="separator:a79e9c28453b8c88d5c07945bcaab86cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a763417dc3f02db8e317e6549d87df96c"><td class="memItemLeft" align="right" valign="top">QList&lt; <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#a763417dc3f02db8e317e6549d87df96c">partition</a> (const QList&lt; int &gt; &amp;partitionSizes) const </td></tr>
+<tr class="memdesc:a763417dc3f02db8e317e6549d87df96c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a <a class="el" href="structbr_1_1TemplateList.html" title="A list of templates.">br::TemplateList</a> containing templates with one matrix at the specified index <em>index</em>.  <a href="#a763417dc3f02db8e317e6549d87df96c"></a><br/></td></tr>
+<tr class="separator:a763417dc3f02db8e317e6549d87df96c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7c82a7ae57998d67759ecacb5ced346"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbr_1_1FileList.html">FileList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#ac7c82a7ae57998d67759ecacb5ced346">files</a> () const </td></tr>
 <tr class="memdesc:ac7c82a7ae57998d67759ecacb5ced346"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">br::Template::file</a> for each template in the list.  <a href="#ac7c82a7ae57998d67759ecacb5ced346"></a><br/></td></tr>
 <tr class="separator:ac7c82a7ae57998d67759ecacb5ced346"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0d993acefd86cd32c6b4bd9b54de4409"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbr_1_1FileList.html">FileList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#a0d993acefd86cd32c6b4bd9b54de4409">operator()</a> () const </td></tr>
+<tr class="memdesc:a0d993acefd86cd32c6b4bd9b54de4409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">br::Template::file</a> for each template in the list.  <a href="#a0d993acefd86cd32c6b4bd9b54de4409"></a><br/></td></tr>
+<tr class="separator:a0d993acefd86cd32c6b4bd9b54de4409"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2c0831686d3453e33405ee353e9f3a20"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:a2c0831686d3453e33405ee353e9f3a20"><td class="memTemplItemLeft" align="right" valign="top">QList&lt; T &gt;&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#a2c0831686d3453e33405ee353e9f3a20">labels</a> () const </td></tr>
 <tr class="memdesc:a2c0831686d3453e33405ee353e9f3a20"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns br::Template::label() for each template in the list.  <a href="#a2c0831686d3453e33405ee353e9f3a20"></a><br/></td></tr>
@@ -135,12 +142,15 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a3db39318d6993be8ac0260c301892d9c"><td class="memItemLeft" align="right" valign="top">QMap&lt; int, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#a3db39318d6993be8ac0260c301892d9c">labelCounts</a> (bool excludeFailures=false) const </td></tr>
 <tr class="memdesc:a3db39318d6993be8ac0260c301892d9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the number of occurences for each label in the list.  <a href="#a3db39318d6993be8ac0260c301892d9c"></a><br/></td></tr>
 <tr class="separator:a3db39318d6993be8ac0260c301892d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7018d2c6a8fa0c632a7dfdff3623f0c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbr_1_1TemplateList.html">TemplateList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#a7018d2c6a8fa0c632a7dfdff3623f0c3">reduced</a> () const </td></tr>
+<tr class="memdesc:a7018d2c6a8fa0c632a7dfdff3623f0c3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Merge all the templates together.  <a href="#a7018d2c6a8fa0c632a7dfdff3623f0c3"></a><br/></td></tr>
+<tr class="separator:a7018d2c6a8fa0c632a7dfdff3623f0c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
-<tr class="memitem:a9d8f14cf149ca248905e7cfc01a55ee4"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#a9d8f14cf149ca248905e7cfc01a55ee4">fromInput</a> (const <a class="el" href="structbr_1_1File.html">File</a> &amp;input)</td></tr>
-<tr class="memdesc:a9d8f14cf149ca248905e7cfc01a55ee4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a template list from a br::Input.  <a href="#a9d8f14cf149ca248905e7cfc01a55ee4"></a><br/></td></tr>
-<tr class="separator:a9d8f14cf149ca248905e7cfc01a55ee4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adec9e4549c7293ee7232877ef62a9e9c"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#adec9e4549c7293ee7232877ef62a9e9c">fromGallery</a> (const <a class="el" href="structbr_1_1File.html">File</a> &amp;gallery)</td></tr>
+<tr class="memdesc:adec9e4549c7293ee7232877ef62a9e9c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a template list from a <a class="el" href="classbr_1_1Gallery.html" title="Plugin base class for storing a list of enrolled templates.">br::Gallery</a>.  <a href="#adec9e4549c7293ee7232877ef62a9e9c"></a><br/></td></tr>
+<tr class="separator:adec9e4549c7293ee7232877ef62a9e9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae53f32b27cd0eed9dcd2a889ff9410b1"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1TemplateList.html#ae53f32b27cd0eed9dcd2a889ff9410b1">relabel</a> (const <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;tl)</td></tr>
 <tr class="memdesc:ae53f32b27cd0eed9dcd2a889ff9410b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Ensure labels are in the range [0,numClasses-1].  <a href="#ae53f32b27cd0eed9dcd2a889ff9410b1"></a><br/></td></tr>
 <tr class="separator:ae53f32b27cd0eed9dcd2a889ff9410b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -229,6 +239,8 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Initialize the template list from a file list. </p>
+
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
@@ -308,7 +320,7 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a9d8f14cf149ca248905e7cfc01a55ee4"></a>
+<a class="anchor" id="adec9e4549c7293ee7232877ef62a9e9c"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -316,10 +328,10 @@ Public Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> fromInput </td>
+          <td class="memname"><a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> fromGallery </td>
           <td>(</td>
           <td class="paramtype">const <a class="el" href="structbr_1_1File.html">File</a> &amp;&#160;</td>
-          <td class="paramname"><em>input</em></td><td>)</td>
+          <td class="paramname"><em>gallery</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -330,7 +342,7 @@ Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Create a template list from a br::Input. </p>
+<p>Create a template list from a <a class="el" href="classbr_1_1Gallery.html" title="Plugin base class for storing a list of enrolled templates.">br::Gallery</a>. </p>
 
 </div>
 </div>
@@ -382,6 +394,82 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Returns br::Template::label() for each template in the list. </p>
+
+</div>
+</div>
+<a class="anchor" id="a0d993acefd86cd32c6b4bd9b54de4409"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbr_1_1FileList.html">FileList</a> operator() </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">br::Template::file</a> for each template in the list. </p>
+
+</div>
+</div>
+<a class="anchor" id="a763417dc3f02db8e317e6549d87df96c"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QList&lt;<a class="el" href="structbr_1_1TemplateList.html">TemplateList</a>&gt; partition </td>
+          <td>(</td>
+          <td class="paramtype">const QList&lt; int &gt; &amp;&#160;</td>
+          <td class="paramname"><em>partitionSizes</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Returns a <a class="el" href="structbr_1_1TemplateList.html" title="A list of templates.">br::TemplateList</a> containing templates with one matrix at the specified index <em>index</em>. </p>
+
+</div>
+</div>
+<a class="anchor" id="a7018d2c6a8fa0c632a7dfdff3623f0c3"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> reduced </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Merge all the templates together. </p>
 
 </div>
 </div>
@@ -443,7 +531,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:58 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

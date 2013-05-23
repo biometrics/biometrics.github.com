@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -82,22 +82,29 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="contents">
 <div class="textblock"><h1><a class="anchor" id="overview"></a>
 Overview</h1>
-<p>OpenBR <a class="el" href="citelist.html#CITEREF_openbr">[3]</a> is a toolkit for biometric recognition and evaluation. Supported use cases include training new recognition algorithms, interfacing with commercial systems, and measuring algorithm performance. Free algorithms are also available for specific modalities including <a class="el" href="group__cpp__plugin__sdk.html#cpp_face_recognition">Face Recognition</a>, <a class="el" href="group__cpp__plugin__sdk.html#cpp_age_estimation">Age Estimation</a>, and <a class="el" href="group__cpp__plugin__sdk.html#cpp_gender_estimation">Gender Estimation</a>.</p>
-<p>There are three modules users may interact with:</p>
-<ul>
-<li><a class="el" href="group__cli.html">Command Line Interface</a> - Command line application for running algorithms and evaluating results. </li>
-<li><a class="el" href="group__c__sdk.html">C SDK</a> - High-level API for running algorithms and evaluating results with wrappers available for other programming languages. </li>
-<li><a class="el" href="group__cpp__plugin__sdk.html">C++ Plugin SDK</a> - Plugin API for developing new algorithms. </li>
-</ul>
-<h1><a class="anchor" id="get_started"></a>
+<p>OpenBR <a class="el" href="citelist.html#CITEREF_openbr">[3]</a> is a framework for investigating new modalities, improving existing algorithms, interfacing with commercial systems, measuring recognition performance, and deploying automated biometric systems. The project is designed to facilitate rapid algorithm prototyping, and features a mature core framework, flexible plugin system, and support for open and closed source development. Off-the-shelf algorithms are also available for specific modalities including <a class="el" href="group__cpp__plugin__sdk.html#cpp_face_recognition">Face Recognition</a>, <a class="el" href="group__cpp__plugin__sdk.html#cpp_age_estimation">Age Estimation</a>, and <a class="el" href="group__cpp__plugin__sdk.html#cpp_gender_estimation">Gender Estimation</a>.</p>
+<p>OpenBR originated within The MITRE Corporation from a need to streamline the process of prototyping new algorithms. The project was later published as open source software under the <a href="http://www.apache.org/licenses/LICENSE-2.0.html">Apache 2</a> license and is <em>free for academic and commercial use</em>.</p>
+<div class="image">
+<img src="abstraction.svg" alt="abstraction.svg"/>
+<div class="caption">
+The two principal software artifacts are the shared library 'openbr' and command line application 'br'.</div></div>
+ <h1><a class="anchor" id="get_started"></a>
 Get Started</h1>
 <ul>
-<li><a class="el" href="installation.html">Installation</a> - A hacker's guide to building, editing, and running the project.  </li>
+<li><a class="el" href="installation.html">Installation</a> - A hacker's guide to building, editing, and running OpenBR. </li>
+<li><a class="el" href="qmake_integration.html">QMake Integration</a> - Add OpenBR to your Qt <code>.pro</code> project. </li>
+</ul>
+<h1><a class="anchor" id="learn_more"></a>
+Learn More</h1>
+<ul>
+<li><a class="el" href="group__cli.html">Command Line Interface</a> - Command line wrapper of the <a class="el" href="group__c__sdk.html">C SDK</a>. </li>
+<li><a class="el" href="group__c__sdk.html">C SDK</a> - High-level API for running algorithms and evaluating results. </li>
+<li><a class="el" href="group__cpp__plugin__sdk.html">C++ Plugin SDK</a> - Plugin API for extending OpenBR functionality.  </li>
 </ul>
 </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:27:19 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:26 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

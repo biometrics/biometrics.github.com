@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -102,19 +102,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Object.html#a3aecaf7fde11a268a31861a05b918291">arguments</a>() const </td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a4281fda687c24e4a179d6c63afd19807">blocks</a>(int size) const </td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a56ecb1817e9e8affe8b3fcf723e3d772">blockSize</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a6f2fb1f4a147c7cbd35498d38fb80f61">BR_PROPERTY</a>(int, parallelism, std::max(1, QThread::idealThreadCount())) Q_PROPERTY(int blockSize READ get_blockSize WRITE set_blockSize RESET reset_blockSize) BR_PROPERTY(int</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a8979476f5cfb17faabafcbb2a150cb58">BR_PROPERTY</a>(int, parallelism, std::max(1, QThread::idealThreadCount()+1)) Q_PROPERTY(bool useGui READ get_useGui WRITE set_useGui RESET reset_useGui) Q_PROPERTY(int blockSize READ get_blockSize WRITE set_blockSize RESET reset_blockSize) BR_PROPERTY(int</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a67eda90ab7e7f50e5fe0f26a2bd1d42b">buffer</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a336f9049280b8e52261b30d22b959569">checkSDKPath</a>(const QString &amp;sdkPath)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a54f92b9088c9fdcfa5bf92e296fa0a0d">classes</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a0bd16cac28150db7832655181e29d4de">contains</a>(const QString &amp;name)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a851e55a577f897a925b8dc2ef00176dc">crossValidate</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a>() const </td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Object.html#a5eea5bedc36e0a29487dac7dd5725035">file</a></td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a8cab91979b514c2b5f14bbc97406a942">filters</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c">finalize</a>()</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Object.html#a9339772ec5ac9fa929938109207f2863">init</a>()</td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0">initialize</a>(int argc, char *argv[], const QString &amp;sdkPath=&quot;&quot;)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a4bdee3dde84111fc0d50010b997d99a0">initializeQt</a>(QString sdkPath)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a0bd16cac28150db7832655181e29d4de">contains</a>(const QString &amp;name)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a851e55a577f897a925b8dc2ef00176dc">crossValidate</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a>() const </td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbr_1_1Object.html#a5eea5bedc36e0a29487dac7dd5725035">file</a></td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a8cab91979b514c2b5f14bbc97406a942">filters</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c">finalize</a>()</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Object.html#a9339772ec5ac9fa929938109207f2863">init</a>()</td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#af586a1c38207795bd6c93e4062f54d1f">initialize</a>(int &amp;argc, char *argv[], QString sdkPath=&quot;&quot;, bool use_gui=true)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Object.html#ab81073dc54a704f0249b7798c497adb7">load</a>(QDataStream &amp;stream)</td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#addf8fdd09cb9dd696ea7b9cfd63c7a7e">log</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a21754503344b4682b1fb69c67b0d87fa">noDuplicates</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
@@ -127,16 +125,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
   <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#aa8f8824eb3754a9e19615383c5687db2">scratchPath</a>()</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a0f7ce2f183777c3e41d7b308296309a0">sdkPath</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#aea674ef5bdad55ae10f93cdda01d5fdc">setProperty</a>(const QString &amp;key, const QString &amp;value)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#afae8ee03f6b3c7d843ba854046a640fd">sizeof</a>(void *)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a87afb3b7480fc65f1671171d978bc29f">startTime</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Object.html#ad527eff32ed09b664f44f0c9008696df">store</a>(QDataStream &amp;stream) const </td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Object.html#a632d0797541485e960eb513860e18a17">br::Object::setProperty</a>(const QString &amp;name, QVariant value)</td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#afae8ee03f6b3c7d843ba854046a640fd">sizeof</a>(void *)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a87afb3b7480fc65f1671171d978bc29f">startTime</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classbr_1_1Object.html#ad527eff32ed09b664f44f0c9008696df">store</a>(QDataStream &amp;stream) const </td><td class="entry"><a class="el" href="classbr_1_1Object.html">Object</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#abdd62e046c69bc25d551863e3bd1f3ea">subjects</a></td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a35a664a6c93f29c7a3ed0f1f74323c2e">timeRemaining</a>() const </td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a763e35897e56df19ce448ee950597aec">trackFutures</a>(QList&lt; QFuture&lt; void &gt; &gt; &amp;futures)</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classbr_1_1Context.html#a659651269f8ce5ee7d80cb2d0ce89dd1">version</a>()</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classbr_1_1Context.html#a659651269f8ce5ee7d80cb2d0ce89dd1">version</a>()</td><td class="entry"><a class="el" href="classbr_1_1Context.html">Context</a></td><td class="entry"><span class="mlabel">static</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:58 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -83,7 +83,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>High-level API for running algorithms and evaluating results with wrappers available for other programming languages.  
+<p>High-level API for running algorithms and evaluating results.  
 <a href="#details">More...</a></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
@@ -106,9 +106,9 @@ Functions</h2></td></tr>
 <tr class="memitem:ga77f48d88d540eec5bd414eb19affefef"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga77f48d88d540eec5bd414eb19affefef">br_confusion</a> (const char *file, float score, int *true_positives, int *false_positives, int *true_negatives, int *false_negatives)</td></tr>
 <tr class="memdesc:ga77f48d88d540eec5bd414eb19affefef"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes the confusion matrix for a dataset at a particular threshold.  <a href="#ga77f48d88d540eec5bd414eb19affefef"></a><br/></td></tr>
 <tr class="separator:ga77f48d88d540eec5bd414eb19affefef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga4da4d3589f6407749b5ad27cd071fcae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga4da4d3589f6407749b5ad27cd071fcae">br_convert</a> (const char *input, const char *output)</td></tr>
-<tr class="memdesc:ga4da4d3589f6407749b5ad27cd071fcae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="group__cpp__plugin__sdk.html#ga130883fd29724e6e407f58b2b3c0fa19" title="To convert between matrix/template formats.">br::Convert()</a>  <a href="#ga4da4d3589f6407749b5ad27cd071fcae"></a><br/></td></tr>
-<tr class="separator:ga4da4d3589f6407749b5ad27cd071fcae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga9a9b2a076eab000ba48dde545deb4133"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga9a9b2a076eab000ba48dde545deb4133">br_convert</a> (const char *file_type, const char *input_file, const char *output_file)</td></tr>
+<tr class="memdesc:ga9a9b2a076eab000ba48dde545deb4133"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="group__cpp__plugin__sdk.html#ga9de7ffca51c2a437a92c44ce5e272e67" title="Change file formats.">br::Convert()</a>  <a href="#ga9a9b2a076eab000ba48dde545deb4133"></a><br/></td></tr>
+<tr class="separator:ga9a9b2a076eab000ba48dde545deb4133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga603ae43b638d5baf3464a627af5538b1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga603ae43b638d5baf3464a627af5538b1">br_enroll</a> (const char *input, const char *gallery=&quot;&quot;)</td></tr>
 <tr class="memdesc:ga603ae43b638d5baf3464a627af5538b1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Constructs template(s) from an input.  <a href="#ga603ae43b638d5baf3464a627af5538b1"></a><br/></td></tr>
 <tr class="separator:ga603ae43b638d5baf3464a627af5538b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -133,12 +133,9 @@ Functions</h2></td></tr>
 <tr class="memitem:gaca82fd5fb7545b589606a3ae6932ecd7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#gaca82fd5fb7545b589606a3ae6932ecd7">br_fuse</a> (int num_input_simmats, const char *input_simmats[], const char *mask, const char *normalization, const char *fusion, const char *output_simmat)</td></tr>
 <tr class="memdesc:gaca82fd5fb7545b589606a3ae6932ecd7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform score level fusion on similarity matrices.  <a href="#gaca82fd5fb7545b589606a3ae6932ecd7"></a><br/></td></tr>
 <tr class="separator:gaca82fd5fb7545b589606a3ae6932ecd7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6bc5e90cc82b84589b5c04f0ab0a960b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga6bc5e90cc82b84589b5c04f0ab0a960b">br_initialize</a> (int argc, char *argv[], const char *sdk_path=&quot;&quot;)</td></tr>
-<tr class="memdesc:ga6bc5e90cc82b84589b5c04f0ab0a960b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">br::Context::initialize()</a>  <a href="#ga6bc5e90cc82b84589b5c04f0ab0a960b"></a><br/></td></tr>
-<tr class="separator:ga6bc5e90cc82b84589b5c04f0ab0a960b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga3a36177a022dd7c0ee528cedaa18e216"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga3a36177a022dd7c0ee528cedaa18e216">br_initialize_qt</a> (const char *sdk_path=&quot;&quot;)</td></tr>
-<tr class="memdesc:ga3a36177a022dd7c0ee528cedaa18e216"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="classbr_1_1Context.html#a4bdee3dde84111fc0d50010b997d99a0" title="Alternative to initialize() for Qt users.">br::Context::initializeQt()</a>  <a href="#ga3a36177a022dd7c0ee528cedaa18e216"></a><br/></td></tr>
-<tr class="separator:ga3a36177a022dd7c0ee528cedaa18e216"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga70da72ce3702736c21a63fffc0b37ade"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga70da72ce3702736c21a63fffc0b37ade">br_initialize</a> (int &amp;argc, char *argv[], const char *sdk_path=&quot;&quot;)</td></tr>
+<tr class="memdesc:ga70da72ce3702736c21a63fffc0b37ade"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="classbr_1_1Context.html#af586a1c38207795bd6c93e4062f54d1f" title="Call once at the start of the application to allocate global variables.">br::Context::initialize()</a>  <a href="#ga70da72ce3702736c21a63fffc0b37ade"></a><br/></td></tr>
+<tr class="separator:ga70da72ce3702736c21a63fffc0b37ade"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga550c8966ffc782ef7b8c2d4cfb3340b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga550c8966ffc782ef7b8c2d4cfb3340b9">br_is_classifier</a> (const char *algorithm)</td></tr>
 <tr class="memdesc:ga550c8966ffc782ef7b8c2d4cfb3340b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="group__cpp__plugin__sdk.html#ga3925ef2ecf2a607c344ae0f2e5a8a253" title="Returns true if the algorithm is a classifier, false otherwise.">br::IsClassifier()</a>  <a href="#ga550c8966ffc782ef7b8c2d4cfb3340b9"></a><br/></td></tr>
 <tr class="separator:ga550c8966ffc782ef7b8c2d4cfb3340b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -160,18 +157,21 @@ Functions</h2></td></tr>
 <tr class="memitem:gafd82100bde972ac73e63ae417b4f1b3b"><td class="memItemLeft" align="right" valign="top">float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#gafd82100bde972ac73e63ae417b4f1b3b">br_progress</a> ()</td></tr>
 <tr class="memdesc:gafd82100bde972ac73e63ae417b4f1b3b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="classbr_1_1Context.html#a9ee37f47cac12dd2308c2c0f3cef8b9e" title="Returns the completion percentage of a call to br::Train(), br::Enroll() or br::Compare().">br::Context::progress()</a>  <a href="#gafd82100bde972ac73e63ae417b4f1b3b"></a><br/></td></tr>
 <tr class="separator:gafd82100bde972ac73e63ae417b4f1b3b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac057be5d550310c0ee3820880dd6f354"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#gac057be5d550310c0ee3820880dd6f354">br_read_line</a> (int *argc, const char ***argv)</td></tr>
-<tr class="memdesc:gac057be5d550310c0ee3820880dd6f354"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and parse a line from the terminal.  <a href="#gac057be5d550310c0ee3820880dd6f354"></a><br/></td></tr>
-<tr class="separator:gac057be5d550310c0ee3820880dd6f354"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa99f19949b538513932e783f9511808c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#gaa99f19949b538513932e783f9511808c">br_reformat</a> (const char *target_input, const char *query_input, const char *simmat, const char *output)</td></tr>
-<tr class="memdesc:gaa99f19949b538513932e783f9511808c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Converts a simmat to a new output format.  <a href="#gaa99f19949b538513932e783f9511808c"></a><br/></td></tr>
-<tr class="separator:gaa99f19949b538513932e783f9511808c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga0a57c07a61e5d7c34e175ed6fa18b53f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga0a57c07a61e5d7c34e175ed6fa18b53f">br_read_pipe</a> (const char *pipe, int *argc, char ***argv)</td></tr>
+<tr class="memdesc:ga0a57c07a61e5d7c34e175ed6fa18b53f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Read and parse arguments from a named pipe.  <a href="#ga0a57c07a61e5d7c34e175ed6fa18b53f"></a><br/></td></tr>
+<tr class="separator:ga0a57c07a61e5d7c34e175ed6fa18b53f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6168decd06136a6cca544f5a14ba1fea"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga6168decd06136a6cca544f5a14ba1fea">br_scratch_path</a> ()</td></tr>
 <tr class="memdesc:ga6168decd06136a6cca544f5a14ba1fea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="classbr_1_1Context.html#aa8f8824eb3754a9e19615383c5687db2" title="Returns the scratch directory.">br::Context::scratchPath()</a>  <a href="#ga6168decd06136a6cca544f5a14ba1fea"></a><br/></td></tr>
 <tr class="separator:ga6168decd06136a6cca544f5a14ba1fea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf4af75dea263bcb020b609e386c899ec"><td class="memItemLeft" align="right" valign="top">const char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#gaf4af75dea263bcb020b609e386c899ec">br_sdk_path</a> ()</td></tr>
 <tr class="memdesc:gaf4af75dea263bcb020b609e386c899ec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the full path to the root of the SDK.  <a href="#gaf4af75dea263bcb020b609e386c899ec"></a><br/></td></tr>
 <tr class="separator:gaf4af75dea263bcb020b609e386c899ec"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga60307dc86f44d3de95d9b009e151d54e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga60307dc86f44d3de95d9b009e151d54e">br_get_header</a> (const char *matrix, const char **target_gallery, const char **query_gallery)</td></tr>
+<tr class="memdesc:ga60307dc86f44d3de95d9b009e151d54e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Retrieve the target and query inputs in the <a class="el" href="namespaceBEE.html">BEE</a> matrix header.  <a href="#ga60307dc86f44d3de95d9b009e151d54e"></a><br/></td></tr>
+<tr class="separator:ga60307dc86f44d3de95d9b009e151d54e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga3bf852670f05e7e1be70c5641c7c5f2f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga3bf852670f05e7e1be70c5641c7c5f2f">br_set_header</a> (const char *matrix, const char *target_gallery, const char *query_gallery)</td></tr>
+<tr class="memdesc:ga3bf852670f05e7e1be70c5641c7c5f2f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the target and query inputs in the <a class="el" href="namespaceBEE.html">BEE</a> matrix header.  <a href="#ga3bf852670f05e7e1be70c5641c7c5f2f"></a><br/></td></tr>
+<tr class="separator:ga3bf852670f05e7e1be70c5641c7c5f2f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga903c2c07dd86e6c02023d3789a969744"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group__c__sdk.html#ga903c2c07dd86e6c02023d3789a969744">br_set_property</a> (const char *key, const char *value)</td></tr>
 <tr class="memdesc:ga903c2c07dd86e6c02023d3789a969744"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wraps <a class="el" href="classbr_1_1Context.html#aea674ef5bdad55ae10f93cdda01d5fdc" title="Set a global property.">br::Context::setProperty()</a>  <a href="#ga903c2c07dd86e6c02023d3789a969744"></a><br/></td></tr>
 <tr class="separator:ga903c2c07dd86e6c02023d3789a969744"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -189,9 +189,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga80e30689b43b6ae4d10a6036c12161f7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<p>High-level API for running algorithms and evaluating results with wrappers available for other programming languages. </p>
+<p>High-level API for running algorithms and evaluating results. </p>
 <p>In order to provide a high-level interface that is usable from the command line and callable from other programming languages, the API is designed to operate at the "file system" level. In other words, arguments to many functions are file paths that specify either a source of input or a desired output. File extensions are relied upon to determine <em>how</em> files should be interpreted in the context of the function being called. The <a class="el" href="group__cpp__plugin__sdk.html">C++ Plugin SDK</a> should be used if more fine-grained control is required.</p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;openbr.h&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;openbr/openbr.h&gt;</span></div>
 </div><!-- fragment --><p> <a href="http://www.cmake.org/">CMake</a> developers may wish to use <code>share/openbr/cmake/OpenBRConfig.cmake</code>.</p>
 <h1><a class="anchor" id="managed_return_value"></a>
 Managed Return Value</h1>
@@ -212,11 +212,11 @@ Examples</h1>
 <h2><a class="anchor" id="c_face_recognition_evaluation"></a>
 Face Recognition Evaluation</h2>
 <p><a class="el" href="group__cli.html">Command Line Interface Equivalent</a> </p>
-<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;openbr.h&gt;</span></div>
+<div class="fragment"><div class="line"><span class="preprocessor">#include &lt;openbr/openbr.h&gt;</span></div>
 <div class="line"></div>
 <div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="group__c__sdk.html#ga6bc5e90cc82b84589b5c04f0ab0a960b" title="Wraps br::Context::initialize()">br_initialize</a>(argc, argv);</div>
+<div class="line">    <a class="code" href="group__c__sdk.html#ga70da72ce3702736c21a63fffc0b37ade" title="Wraps br::Context::initialize()">br_initialize</a>(argc, argv);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Equivalent to &#39;Globals-&gt;algorithm = &quot;FaceRecognion&quot;;&#39; in C++ API</span></div>
 <div class="line">    <a class="code" href="group__c__sdk.html#ga903c2c07dd86e6c02023d3789a969744" title="Wraps br::Context::setProperty()">br_set_property</a>(<span class="stringliteral">&quot;algorithm&quot;</span>, <span class="stringliteral">&quot;FaceRecognition&quot;</span>);</div>
@@ -224,9 +224,9 @@ Face Recognition Evaluation</h2>
 <div class="line">    <span class="comment">// Equivalent to &#39;Globals-&gt;path = &quot;../data/MEDS/img/&quot;;&#39; in C++ API</span></div>
 <div class="line">    <a class="code" href="group__c__sdk.html#ga903c2c07dd86e6c02023d3789a969744" title="Wraps br::Context::setProperty()">br_set_property</a>(<span class="stringliteral">&quot;path&quot;</span>, <span class="stringliteral">&quot;../data/MEDS/img/&quot;</span>);</div>
 <div class="line"></div>
-<div class="line">    <span class="comment">// Enroll galleries</span></div>
-<div class="line">    <a class="code" href="group__c__sdk.html#ga603ae43b638d5baf3464a627af5538b1" title="Constructs template(s) from an input.">br_enroll</a>(<span class="stringliteral">&quot;../data/MEDS/sigset/MEDS_frontal_target.xml&quot;</span>, <span class="stringliteral">&quot;target.gal&quot;</span>);</div>
-<div class="line">    <a class="code" href="group__c__sdk.html#ga603ae43b638d5baf3464a627af5538b1" title="Constructs template(s) from an input.">br_enroll</a>(<span class="stringliteral">&quot;../data/MEDS/sigset/MEDS_frontal_query.xml&quot;</span>, <span class="stringliteral">&quot;query.gal&quot;</span>);</div>
+<div class="line">    <span class="comment">// Enroll galleries, don&#39;t re-enroll if they already exist (cache)</span></div>
+<div class="line">    <a class="code" href="group__c__sdk.html#ga603ae43b638d5baf3464a627af5538b1" title="Constructs template(s) from an input.">br_enroll</a>(<span class="stringliteral">&quot;../data/MEDS/sigset/MEDS_frontal_target.xml&quot;</span>, <span class="stringliteral">&quot;target.gal[cache]&quot;</span>);</div>
+<div class="line">    <a class="code" href="group__c__sdk.html#ga603ae43b638d5baf3464a627af5538b1" title="Constructs template(s) from an input.">br_enroll</a>(<span class="stringliteral">&quot;../data/MEDS/sigset/MEDS_frontal_query.xml&quot;</span>, <span class="stringliteral">&quot;query.gal[cache]&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Compare galleries and store result in a binary similarity matrix</span></div>
 <div class="line">    <a class="code" href="group__c__sdk.html#gac605cceb73047126451519eaf9903dd2" title="Compares each template in the query gallery to each template in the target gallery.">br_compare</a>(<span class="stringliteral">&quot;target.gal&quot;</span>, <span class="stringliteral">&quot;query.gal&quot;</span>, <span class="stringliteral">&quot;FaceRecognition_MEDS.mtx&quot;</span>);</div>
@@ -236,14 +236,12 @@ Face Recognition Evaluation</h2>
 <div class="line"></div>
 <div class="line">    <span class="comment">// Evaluate the performance of OpenBR&#39;s FaceRecognition and a COTS face recognition system.</span></div>
 <div class="line">    <a class="code" href="group__c__sdk.html#gac151d540944d092da1dc4ed1b0fddfe6" title="Creates a .csv file containing performance metrics from evaluating the similarity matrix using the ma...">br_eval</a>(<span class="stringliteral">&quot;FaceRecognition_MEDS.mtx&quot;</span>, <span class="stringliteral">&quot;MEDS.mask&quot;</span>, <span class="stringliteral">&quot;Algorithm_Dataset/FaceRecognition_MEDS.csv&quot;</span>);</div>
-<div class="line">    <a class="code" href="group__c__sdk.html#gac151d540944d092da1dc4ed1b0fddfe6" title="Creates a .csv file containing performance metrics from evaluating the similarity matrix using the ma...">br_eval</a>(<span class="stringliteral">&quot;../data/MEDS/simmat/COTS_MEDS.mtx&quot;</span>, <span class="stringliteral">&quot;MEDS.mask&quot;</span>, <span class="stringliteral">&quot;Algorithm_Dataset/COTS_MEDS.csv&quot;</span>);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// The &#39;_&#39; character has special significance and is used to populate plot legends.</span></div>
 <div class="line">    <span class="comment">// Requires R installation, see documentation of br_plot for details.</span></div>
-<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *files[2];</div>
+<div class="line">    <span class="keyword">const</span> <span class="keywordtype">char</span> *files[1];</div>
 <div class="line">    files[0] = <span class="stringliteral">&quot;Algorithm_Dataset/FaceRecognition_MEDS.csv&quot;</span>;</div>
-<div class="line">    files[1] = <span class="stringliteral">&quot;Algorithm_Dataset/COTS_MEDS.csv&quot;</span>;</div>
-<div class="line">    <a class="code" href="group__c__sdk.html#gabec0aefff3b26efeb677b958bc4f554c" title="Renders performance figures for a set of .csv files.">br_plot</a>(2, files, <span class="stringliteral">&quot;MEDS&quot;</span>, <span class="keyword">true</span>);</div>
+<div class="line">    <a class="code" href="group__c__sdk.html#gabec0aefff3b26efeb677b958bc4f554c" title="Renders performance figures for a set of .csv files.">br_plot</a>(1, files, <span class="stringliteral">&quot;MEDS&quot;</span>, <span class="keyword">true</span>);</div>
 <div class="line"></div>
 <div class="line">    <a class="code" href="group__c__sdk.html#ga0d099d899bd38a325d08e132fefad439" title="Wraps br::Context::finalize()">br_finalize</a>();</div>
 <div class="line">    <span class="keywordflow">return</span> 0;</div>
@@ -339,7 +337,7 @@ Face Recognition Evaluation</h2>
 </div><div class="memdoc">
 
 <p>Clusters one or more similarity matrices into a list of subjects. </p>
-<p>A similarity matrix is a type of <a class="el" href="classbr_1_1Output.html" title="Plugin base class for storing template comparison results.">br::Output</a>. The current clustering algorithm is a simplified implementation of <a class="el" href="citelist.html#CITEREF_zhu11">[9]</a>. </p>
+<p>A similarity matrix is a type of <a class="el" href="classbr_1_1Output.html" title="Plugin base class for storing template comparison results.">br::Output</a>. The current clustering algorithm is a simplified implementation of <a class="el" href="citelist.html#CITEREF_zhu11">zhu11</a>. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">num_simmats</td><td>Size of <code>simmats</code>. </td></tr>
@@ -514,7 +512,7 @@ Face Recognition Evaluation</h2>
 
 </div>
 </div>
-<a class="anchor" id="ga4da4d3589f6407749b5ad27cd071fcae"></a>
+<a class="anchor" id="ga9a9b2a076eab000ba48dde545deb4133"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -522,13 +520,19 @@ Face Recognition Evaluation</h2>
           <td class="memname">void br_convert </td>
           <td>(</td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>input</em>, </td>
+          <td class="paramname"><em>file_type</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>output</em>&#160;</td>
+          <td class="paramname"><em>input_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>output_file</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -538,7 +542,7 @@ Face Recognition Evaluation</h2>
       </table>
 </div><div class="memdoc">
 
-<p>Wraps <a class="el" href="group__cpp__plugin__sdk.html#ga130883fd29724e6e407f58b2b3c0fa19" title="To convert between matrix/template formats.">br::Convert()</a> </p>
+<p>Wraps <a class="el" href="group__cpp__plugin__sdk.html#ga9de7ffca51c2a437a92c44ce5e272e67" title="Change file formats.">br::Convert()</a> </p>
 
 </div>
 </div>
@@ -652,7 +656,7 @@ Face Recognition Evaluation</h2>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>True accept rate at a false accept rate of one in one hundred. </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>True accept rate at a false accept rate of one in one thousand. </dd></dl>
 <dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#gabec0aefff3b26efeb677b958bc4f554c" title="Renders performance figures for a set of .csv files.">br_plot</a> </dd></dl>
 
 </div>
@@ -779,7 +783,7 @@ Face Recognition Evaluation</h2>
 </div><div class="memdoc">
 
 <p>Wraps <a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c" title="Call once at the end of the application to deallocate global variables.">br::Context::finalize()</a> </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga6bc5e90cc82b84589b5c04f0ab0a960b" title="Wraps br::Context::initialize()">br_initialize</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga70da72ce3702736c21a63fffc0b37ade" title="Wraps br::Context::initialize()">br_initialize</a> </dd></dl>
 
 </div>
 </div>
@@ -857,14 +861,58 @@ Face Recognition Evaluation</h2>
 
 </div>
 </div>
-<a class="anchor" id="ga6bc5e90cc82b84589b5c04f0ab0a960b"></a>
+<a class="anchor" id="ga60307dc86f44d3de95d9b009e151d54e"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void br_get_header </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>target_gallery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char **&#160;</td>
+          <td class="paramname"><em>query_gallery</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Retrieve the target and query inputs in the <a class="el" href="namespaceBEE.html">BEE</a> matrix header. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">matrix</td><td>The <a class="el" href="namespaceBEE.html">BEE</a> matrix file to modify </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">target_gallery</td><td>The matrix target </td></tr>
+    <tr><td class="paramdir">[out]</td><td class="paramname">query_gallery</td><td>The matrix query </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Note</dt><dd><a class="el" href="group__c__sdk.html#managed_return_value">Managed Return Value</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga3bf852670f05e7e1be70c5641c7c5f2f" title="Update the target and query inputs in the BEE matrix header.">br_set_header</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga70da72ce3702736c21a63fffc0b37ade"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
           <td class="memname">void br_initialize </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
         </tr>
         <tr>
@@ -887,27 +935,8 @@ Face Recognition Evaluation</h2>
       </table>
 </div><div class="memdoc">
 
-<p>Wraps <a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">br::Context::initialize()</a> </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga3a36177a022dd7c0ee528cedaa18e216" title="Wraps br::Context::initializeQt()">br_initialize_qt</a> <a class="el" href="group__c__sdk.html#ga0d099d899bd38a325d08e132fefad439" title="Wraps br::Context::finalize()">br_finalize</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="ga3a36177a022dd7c0ee528cedaa18e216"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void br_initialize_qt </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>sdk_path</em> = <code>&quot;&quot;</code></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Wraps <a class="el" href="classbr_1_1Context.html#a4bdee3dde84111fc0d50010b997d99a0" title="Alternative to initialize() for Qt users.">br::Context::initializeQt()</a> </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga6bc5e90cc82b84589b5c04f0ab0a960b" title="Wraps br::Context::initialize()">br_initialize</a> <a class="el" href="group__c__sdk.html#ga0d099d899bd38a325d08e132fefad439" title="Wraps br::Context::finalize()">br_finalize</a> </dd></dl>
+<p>Wraps <a class="el" href="classbr_1_1Context.html#af586a1c38207795bd6c93e4062f54d1f" title="Call once at the start of the application to allocate global variables.">br::Context::initialize()</a> </p>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga0d099d899bd38a325d08e132fefad439" title="Wraps br::Context::finalize()">br_finalize</a> </dd></dl>
 
 </div>
 </div>
@@ -1084,11 +1113,10 @@ This function uses Qt's <a href="http://doc.qt.digia.com/stable/qregexp.html">QR
 <li>Cumulative Match Characteristic (CMC)</li>
 <li>Error Rate (ERR) curve</li>
 </ol>
-<p>Several files will be created:</p>
+<p>Two files will be created:</p>
 <ul>
 <li><em>destination</em><code>.R</code> which is the auto-generated R script used to render the figures.</li>
-<li><em>destination</em><code>.pdf</code> which has all of the figures in one file (convenient for attaching in an email).</li>
-<li><em>destination</em><code>_ROC.pdf</code>, ..., <em>destination</em><code>_ERR.pdf</code> which has each figure in a separate file (convenient for including in a presentation).</li>
+<li><em>destination</em><code>.pdf</code> which has all of the figures in one file multi-page file.</li>
 </ul>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
@@ -1180,20 +1208,26 @@ This function uses Qt's <a href="http://doc.qt.digia.com/stable/qregexp.html">QR
 
 </div>
 </div>
-<a class="anchor" id="gac057be5d550310c0ee3820880dd6f354"></a>
+<a class="anchor" id="ga0a57c07a61e5d7c34e175ed6fa18b53f"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void br_read_line </td>
+          <td class="memname">void br_read_pipe </td>
           <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>pipe</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">int *&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const char ***&#160;</td>
+          <td class="paramtype">char ***&#160;</td>
           <td class="paramname"><em>argv</em>&#160;</td>
         </tr>
         <tr>
@@ -1204,65 +1238,17 @@ This function uses Qt's <a href="http://doc.qt.digia.com/stable/qregexp.html">QR
       </table>
 </div><div class="memdoc">
 
-<p>Read and parse a line from the terminal. </p>
-<p>Used by the <a class="el" href="group__cli.html">Command Line Interface</a> to implement <code>-shell</code>. Generally not useful otherwise. </p>
+<p>Read and parse arguments from a named pipe. </p>
+<p>Used by the <a class="el" href="group__cli.html">Command Line Interface</a> to implement <code>-daemon</code>, generally not useful otherwise. Guaranteed to return at least one argument. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
+    <tr><td class="paramdir"></td><td class="paramname">pipe</td><td>Pipe name </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">argc</td><td>argument count </td></tr>
     <tr><td class="paramdir">[out]</td><td class="paramname">argv</td><td>argument list </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="group__c__sdk.html#managed_return_value">Managed Return Value</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="gaa99f19949b538513932e783f9511808c"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void br_reformat </td>
-          <td>(</td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>target_input</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>query_input</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>simmat</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const char *&#160;</td>
-          <td class="paramname"><em>output</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Converts a simmat to a new output format. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">target_input</td><td>The target br::Input used to make <em>simmat</em>. </td></tr>
-    <tr><td class="paramname">query_input</td><td>The query br::Input used to make <em>simmat</em>. </td></tr>
-    <tr><td class="paramname">simmat</td><td>The <a class="el" href="bee.html#simmat">Similarity Matrix</a> to reformat. </td></tr>
-    <tr><td class="paramname">output</td><td>The <a class="el" href="classbr_1_1Output.html" title="Plugin base class for storing template comparison results.">br::Output</a> to create. </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>
@@ -1300,7 +1286,50 @@ This function uses Qt's <a href="http://doc.qt.digia.com/stable/qregexp.html">QR
 
 <p>Returns the full path to the root of the SDK. </p>
 <dl class="section note"><dt>Note</dt><dd><a class="el" href="group__c__sdk.html#managed_return_value">Managed Return Value</a> </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga6bc5e90cc82b84589b5c04f0ab0a960b" title="Wraps br::Context::initialize()">br_initialize</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga70da72ce3702736c21a63fffc0b37ade" title="Wraps br::Context::initialize()">br_initialize</a> </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ga3bf852670f05e7e1be70c5641c7c5f2f"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void br_set_header </td>
+          <td>(</td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>matrix</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>target_gallery</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const char *&#160;</td>
+          <td class="paramname"><em>query_gallery</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Update the target and query inputs in the <a class="el" href="namespaceBEE.html">BEE</a> matrix header. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">matrix</td><td>The <a class="el" href="namespaceBEE.html">BEE</a> matrix file to modify </td></tr>
+    <tr><td class="paramname">target_gallery</td><td>The matrix target </td></tr>
+    <tr><td class="paramname">query_gallery</td><td>The matrix query </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="group__c__sdk.html#ga60307dc86f44d3de95d9b009e151d54e" title="Retrieve the target and query inputs in the BEE matrix header.">br_get_header</a> </dd></dl>
 
 </div>
 </div>
@@ -1443,7 +1472,7 @@ This function uses Qt's <a href="http://doc.qt.digia.com/stable/qregexp.html">QR
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:55 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -118,6 +118,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aa2f3fb8acb9114ac2befd0a4090dab36"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Template.html#aa2f3fb8acb9114ac2befd0a4090dab36">Template</a> (const <a class="el" href="structbr_1_1File.html">File</a> &amp;_file, const cv::Mat &amp;mat)</td></tr>
 <tr class="memdesc:aa2f3fb8acb9114ac2befd0a4090dab36"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a> and append a matrix.  <a href="#aa2f3fb8acb9114ac2befd0a4090dab36"></a><br/></td></tr>
 <tr class="separator:aa2f3fb8acb9114ac2befd0a4090dab36"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf86f6de18d8432921c55d6e350ff0fa"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Template.html#abf86f6de18d8432921c55d6e350ff0fa">Template</a> (const <a class="el" href="structbr_1_1File.html">File</a> &amp;_file, const QList&lt; cv::Mat &gt; &amp;mats)</td></tr>
+<tr class="memdesc:abf86f6de18d8432921c55d6e350ff0fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a> and append matricies.  <a href="#abf86f6de18d8432921c55d6e350ff0fa"></a><br/></td></tr>
+<tr class="separator:abf86f6de18d8432921c55d6e350ff0fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a93aa98e420339d9c974abc8432ff5e59"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structbr_1_1Template.html#a93aa98e420339d9c974abc8432ff5e59">Template</a> (const cv::Mat &amp;mat)</td></tr>
 <tr class="memdesc:a93aa98e420339d9c974abc8432ff5e59"><td class="mdescLeft">&#160;</td><td class="mdescRight">Append a matrix.  <a href="#a93aa98e420339d9c974abc8432ff5e59"></a><br/></td></tr>
 <tr class="separator:a93aa98e420339d9c974abc8432ff5e59"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -163,7 +166,7 @@ Public Attributes</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>A list of matrices associated with a file. </p>
-<p>The <a class="el" href="structbr_1_1Template.html" title="A list of matrices associated with a file.">br::Template</a> is one of the workhorse classes in OpenBR. A template represents a biometric at various stages of enrollment and can be modified <a class="el" href="classbr_1_1Transform.html" title="Plugin base class for processing a template.">br::Transform</a> and compared to other templates with <a class="el" href="classbr_1_1Distance.html" title="Plugin base class for comparing templates.">br::Distance</a>.</p>
+<p>The <a class="el" href="structbr_1_1Template.html" title="A list of matrices associated with a file.">Template</a> is one of two important data structures in OpenBR (the <a class="el" href="structbr_1_1File.html" title="A file path with associated metadata.">File</a> is the other). A template represents a biometric at various stages of enrollment and can be modified by <a class="el" href="classbr_1_1Transform.html" title="Plugin base class for processing a template.">br::Transform</a> and compared to other templates with <a class="el" href="classbr_1_1Distance.html" title="Plugin base class for comparing templates.">br::Distance</a>.</p>
 <p>While there exist many cases (ex. video enrollment, multiple face detects, per-patch subspace learning, ...) where the template will contain more than one matrix, in most cases templates have exactly one matrix in their list representing a single image at various stages of enrollment. In the cases where exactly one image is expected, the template provides the function <a class="el" href="structbr_1_1Template.html#a18930f3adceb73442dcbc26e40fbfa98" title="Idiom to treat the template as a matrix.">m()</a> as an idiom for treating it as a single matrix. Casting operators are also provided to pass the template into image processing functions expecting matrices.</p>
 <p>Metadata related to the template that is computed during enrollment (ex. bounding boxes, eye locations, quality metrics, ...) should be assigned to the template's <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a> member. </p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -249,6 +252,42 @@ Public Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Initialize <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a> and append a matrix. </p>
+
+</div>
+</div>
+<a class="anchor" id="abf86f6de18d8432921c55d6e350ff0fa"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbr_1_1Template.html">Template</a> </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="structbr_1_1File.html">File</a> &amp;&#160;</td>
+          <td class="paramname"><em>_file</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QList&lt; cv::Mat &gt; &amp;&#160;</td>
+          <td class="paramname"><em>mats</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Initialize <a class="el" href="structbr_1_1Template.html#a5eea5bedc36e0a29487dac7dd5725035" title="The file from which the template is constructed.">file</a> and append matricies. </p>
 
 </div>
 </div>
@@ -574,7 +613,7 @@ Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:57 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

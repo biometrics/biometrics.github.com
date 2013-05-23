@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -112,9 +112,9 @@ Inheritance diagram for Context:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a6f2fb1f4a147c7cbd35498d38fb80f61"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a6f2fb1f4a147c7cbd35498d38fb80f61">BR_PROPERTY</a> (int, <a class="el" href="classbr_1_1Context.html#abc7ac6ca01978dacc4363abc9de7ca11">parallelism</a>, std::max(1, QThread::idealThreadCount())) Q_PROPERTY(int <a class="el" href="classbr_1_1Context.html#a56ecb1817e9e8affe8b3fcf723e3d772">blockSize</a> READ get_blockSize WRITE set_blockSize RESET reset_blockSize) BR_PROPERTY(int</td></tr>
-<tr class="memdesc:a6f2fb1f4a147c7cbd35498d38fb80f61"><td class="mdescLeft">&#160;</td><td class="mdescRight">The maximum number of templates to process in parallel.  <a href="#a6f2fb1f4a147c7cbd35498d38fb80f61"></a><br/></td></tr>
-<tr class="separator:a6f2fb1f4a147c7cbd35498d38fb80f61"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8979476f5cfb17faabafcbb2a150cb58"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a8979476f5cfb17faabafcbb2a150cb58">BR_PROPERTY</a> (int, <a class="el" href="classbr_1_1Context.html#abc7ac6ca01978dacc4363abc9de7ca11">parallelism</a>, std::max(1, QThread::idealThreadCount()+1)) Q_PROPERTY(bool useGui READ get_useGui WRITE set_useGui RESET reset_useGui) Q_PROPERTY(int <a class="el" href="classbr_1_1Context.html#a56ecb1817e9e8affe8b3fcf723e3d772">blockSize</a> READ get_blockSize WRITE set_blockSize RESET reset_blockSize) BR_PROPERTY(int</td></tr>
+<tr class="memdesc:a8979476f5cfb17faabafcbb2a150cb58"><td class="mdescLeft">&#160;</td><td class="mdescRight">Whether or not to use GUI functions.  <a href="#a8979476f5cfb17faabafcbb2a150cb58"></a><br/></td></tr>
+<tr class="separator:a8979476f5cfb17faabafcbb2a150cb58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afae8ee03f6b3c7d843ba854046a640fd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbr_1_1Context.html#abc7ac6ca01978dacc4363abc9de7ca11">parallelism</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#afae8ee03f6b3c7d843ba854046a640fd">sizeof</a> (void *)</td></tr>
 <tr class="separator:afae8ee03f6b3c7d843ba854046a640fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4281fda687c24e4a179d6c63afd19807"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a4281fda687c24e4a179d6c63afd19807">blocks</a> (int size) const </td></tr>
@@ -135,9 +135,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a35a664a6c93f29c7a3ed0f1f74323c2e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a35a664a6c93f29c7a3ed0f1f74323c2e">timeRemaining</a> () const </td></tr>
 <tr class="memdesc:a35a664a6c93f29c7a3ed0f1f74323c2e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns the time remaining in seconds of a call to <a class="el" href="group__c__sdk.html#ga98d4618a89e995c916c5c07f6aab55bb">br_train</a>, <a class="el" href="group__c__sdk.html#ga603ae43b638d5baf3464a627af5538b1">br_enroll</a> or <a class="el" href="group__c__sdk.html#gac605cceb73047126451519eaf9903dd2">br_compare</a>.  <a href="#a35a664a6c93f29c7a3ed0f1f74323c2e"></a><br/></td></tr>
 <tr class="separator:a35a664a6c93f29c7a3ed0f1f74323c2e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a763e35897e56df19ce448ee950597aec"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a763e35897e56df19ce448ee950597aec">trackFutures</a> (QList&lt; QFuture&lt; void &gt; &gt; &amp;futures)</td></tr>
-<tr class="memdesc:a763e35897e56df19ce448ee950597aec"><td class="mdescLeft">&#160;</td><td class="mdescRight">Continues to print the progress of the futures until they are completed.  <a href="#a763e35897e56df19ce448ee950597aec"></a><br/></td></tr>
-<tr class="separator:a763e35897e56df19ce448ee950597aec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classbr_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbr_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classbr_1_1Object.html">Object</a></td></tr>
 <tr class="memitem:a9339772ec5ac9fa929938109207f2863 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a9339772ec5ac9fa929938109207f2863">init</a> ()</td></tr>
 <tr class="memdesc:a9339772ec5ac9fa929938109207f2863 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload this function instead of the default constructor to initialize the derived class. It should be safe to call this function multiple times.  <a href="#a9339772ec5ac9fa929938109207f2863"></a><br/></td></tr>
@@ -160,21 +157,18 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a> () const </td></tr>
 <tr class="memdesc:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string description of the object.  <a href="#aeaebc63d2181b1a4506603f4e03f1275"></a><br/></td></tr>
 <tr class="separator:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a5cc515ec37e24dc1eee67aba09a61f8c">setProperty</a> (const QString &amp;name, const QString &amp;value)</td></tr>
-<tr class="memdesc:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a5cc515ec37e24dc1eee67aba09a61f8c"></a><br/></td></tr>
-<tr class="separator:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a632d0797541485e960eb513860e18a17">setProperty</a> (const QString &amp;name, QVariant value)</td></tr>
+<tr class="memdesc:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a632d0797541485e960eb513860e18a17"></a><br/></td></tr>
+<tr class="separator:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a336f9049280b8e52261b30d22b959569"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a336f9049280b8e52261b30d22b959569">checkSDKPath</a> (const QString &amp;<a class="el" href="classbr_1_1Context.html#a0f7ce2f183777c3e41d7b308296309a0">sdkPath</a>)</td></tr>
 <tr class="memdesc:a336f9049280b8e52261b30d22b959569"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns <code>true</code> if <em>sdkPath</em> is valid, <code>false</code> otherwise.  <a href="#a336f9049280b8e52261b30d22b959569"></a><br/></td></tr>
 <tr class="separator:a336f9049280b8e52261b30d22b959569"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ace3daabef9be1c9d97e6402d959d11e0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0">initialize</a> (int argc, char *argv[], const QString &amp;<a class="el" href="classbr_1_1Context.html#a0f7ce2f183777c3e41d7b308296309a0">sdkPath</a>=&quot;&quot;)</td></tr>
-<tr class="memdesc:ace3daabef9be1c9d97e6402d959d11e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call <em>once</em> at the start of the application to allocate global variables.  <a href="#ace3daabef9be1c9d97e6402d959d11e0"></a><br/></td></tr>
-<tr class="separator:ace3daabef9be1c9d97e6402d959d11e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4bdee3dde84111fc0d50010b997d99a0"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a4bdee3dde84111fc0d50010b997d99a0">initializeQt</a> (QString <a class="el" href="classbr_1_1Context.html#a0f7ce2f183777c3e41d7b308296309a0">sdkPath</a>)</td></tr>
-<tr class="memdesc:a4bdee3dde84111fc0d50010b997d99a0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Alternative to <a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">initialize()</a> for <a href="http://qt-project.org/">Qt</a> users.  <a href="#a4bdee3dde84111fc0d50010b997d99a0"></a><br/></td></tr>
-<tr class="separator:a4bdee3dde84111fc0d50010b997d99a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af586a1c38207795bd6c93e4062f54d1f"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#af586a1c38207795bd6c93e4062f54d1f">initialize</a> (int &amp;argc, char *argv[], QString <a class="el" href="classbr_1_1Context.html#a0f7ce2f183777c3e41d7b308296309a0">sdkPath</a>=&quot;&quot;, bool use_gui=true)</td></tr>
+<tr class="memdesc:af586a1c38207795bd6c93e4062f54d1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call <em>once</em> at the start of the application to allocate global variables.  <a href="#af586a1c38207795bd6c93e4062f54d1f"></a><br/></td></tr>
+<tr class="separator:af586a1c38207795bd6c93e4062f54d1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a32d626626eee0bc4ade146973f6abb1c"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c">finalize</a> ()</td></tr>
 <tr class="memdesc:a32d626626eee0bc4ade146973f6abb1c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Call <em>once</em> at the end of the application to deallocate global variables.  <a href="#a32d626626eee0bc4ade146973f6abb1c"></a><br/></td></tr>
 <tr class="separator:a32d626626eee0bc4ade146973f6abb1c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,7 +198,7 @@ Properties</h2></td></tr>
 <tr class="memdesc:addf8fdd09cb9dd696ea7b9cfd63c7a7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Optional log file to copy <code>stderr</code> to.  <a href="#addf8fdd09cb9dd696ea7b9cfd63c7a7e"></a><br/></td></tr>
 <tr class="separator:addf8fdd09cb9dd696ea7b9cfd63c7a7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a34b772573db9a14b1acb61b24709ae73"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a34b772573db9a14b1acb61b24709ae73">path</a></td></tr>
-<tr class="memdesc:a34b772573db9a14b1acb61b24709ae73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to use when resolving images specified with relative paths.  <a href="#a34b772573db9a14b1acb61b24709ae73"></a><br/></td></tr>
+<tr class="memdesc:a34b772573db9a14b1acb61b24709ae73"><td class="mdescLeft">&#160;</td><td class="mdescRight">Path to use when resolving images specified with relative paths. Multiple paths can be specified using a semicolon separator.  <a href="#a34b772573db9a14b1acb61b24709ae73"></a><br/></td></tr>
 <tr class="separator:a34b772573db9a14b1acb61b24709ae73"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc7ac6ca01978dacc4363abc9de7ca11"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#abc7ac6ca01978dacc4363abc9de7ca11">parallelism</a></td></tr>
 <tr class="memdesc:abc7ac6ca01978dacc4363abc9de7ca11"><td class="mdescLeft">&#160;</td><td class="mdescRight">The number of threads to use.  <a href="#abc7ac6ca01978dacc4363abc9de7ca11"></a><br/></td></tr>
@@ -226,9 +220,9 @@ Properties</h2></td></tr>
 <tr class="memitem:af0925d7572149d0b54076442217d199b"><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, QString &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#af0925d7572149d0b54076442217d199b">abbreviations</a></td></tr>
 <tr class="memdesc:af0925d7572149d0b54076442217d199b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by <a class="el" href="classbr_1_1Transform.html#a9ed36eda8404dd2e04d3213ec14d5385" title="Make a transform from a string.">br::Transform::make()</a> to expand abbreviated algorithms into their complete definitions.  <a href="#af0925d7572149d0b54076442217d199b"></a><br/></td></tr>
 <tr class="separator:af0925d7572149d0b54076442217d199b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54f92b9088c9fdcfa5bf92e296fa0a0d"><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a54f92b9088c9fdcfa5bf92e296fa0a0d">classes</a></td></tr>
-<tr class="memdesc:a54f92b9088c9fdcfa5bf92e296fa0a0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by classifiers to associate text class labels with unique integers IDs.  <a href="#a54f92b9088c9fdcfa5bf92e296fa0a0d"></a><br/></td></tr>
-<tr class="separator:a54f92b9088c9fdcfa5bf92e296fa0a0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abdd62e046c69bc25d551863e3bd1f3ea"><td class="memItemLeft" align="right" valign="top">QHash&lt; QString, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#abdd62e046c69bc25d551863e3bd1f3ea">subjects</a></td></tr>
+<tr class="memdesc:abdd62e046c69bc25d551863e3bd1f3ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used by classifiers to associate text class labels with unique integers IDs.  <a href="#abdd62e046c69bc25d551863e3bd1f3ea"></a><br/></td></tr>
+<tr class="separator:abdd62e046c69bc25d551863e3bd1f3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a87afb3b7480fc65f1671171d978bc29f"><td class="memItemLeft" align="right" valign="top">QTime&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Context.html#a87afb3b7480fc65f1671171d978bc29f">startTime</a></td></tr>
 <tr class="memdesc:a87afb3b7480fc65f1671171d978bc29f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Used to estimate <a class="el" href="classbr_1_1Context.html#a35a664a6c93f29c7a3ed0f1f74323c2e" title="Returns the time remaining in seconds of a call to br_train, br_enroll or br_compare.">timeRemaining()</a>.  <a href="#a87afb3b7480fc65f1671171d978bc29f"></a><br/></td></tr>
 <tr class="separator:a87afb3b7480fc65f1671171d978bc29f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -242,7 +236,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>The singleton class of global settings. </p>
-<p>Allocated by <a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">br::Context::initialize()</a>, and deallocated by <a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c" title="Call once at the end of the application to deallocate global variables.">br::Context::finalize()</a>.</p>
+<p>Allocated by <a class="el" href="classbr_1_1Context.html#af586a1c38207795bd6c93e4062f54d1f" title="Call once at the start of the application to allocate global variables.">br::Context::initialize()</a>, and deallocated by <a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c" title="Call once at the end of the application to deallocate global variables.">br::Context::finalize()</a>.</p>
 <div class="fragment"><div class="line"><span class="comment">// Access the global context using the br::Globals pointer:</span></div>
 <div class="line">QString theSDKPath = <a class="code" href="group__cpp__plugin__sdk.html#ga0e46b0bb9b4c85632aa6fd3504dd3528" title="The globally available settings.">br::Globals</a>-&gt;<a class="code" href="classbr_1_1Context.html#a0f7ce2f183777c3e41d7b308296309a0" title="Path to share/openbr/openbr.bib">sdkPath</a>;</div>
 </div><!-- fragment --> </div><h2 class="groupheader">Member Function Documentation</h2>
@@ -297,7 +291,7 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a6f2fb1f4a147c7cbd35498d38fb80f61"></a>
+<a class="anchor" id="a8979476f5cfb17faabafcbb2a150cb58"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -317,7 +311,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::&#160;</td>
-          <td class="paramname"><em>max</em>1, QThread::idealThreadCount()&#160;</td>
+          <td class="paramname"><em>max</em>1, QThread::idealThreadCount()+1&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -327,6 +321,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
+<p>Whether or not to use GUI functions. </p>
 <p>The maximum number of templates to process in parallel. </p>
 
 </div>
@@ -411,11 +406,11 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Call <em>once</em> at the end of the application to deallocate global variables. </p>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">initialize</a> </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classbr_1_1Context.html#af586a1c38207795bd6c93e4062f54d1f" title="Call once at the start of the application to allocate global variables.">initialize</a> </dd></dl>
 
 </div>
 </div>
-<a class="anchor" id="ace3daabef9be1c9d97e6402d959d11e0"></a>
+<a class="anchor" id="af586a1c38207795bd6c93e4062f54d1f"></a>
 <div class="memitem">
 <div class="memproto">
 <table class="mlabels">
@@ -425,7 +420,7 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">void initialize </td>
           <td>(</td>
-          <td class="paramtype">int&#160;</td>
+          <td class="paramtype">int &amp;&#160;</td>
           <td class="paramname"><em>argc</em>, </td>
         </tr>
         <tr>
@@ -437,8 +432,14 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const QString &amp;&#160;</td>
-          <td class="paramname"><em>sdkPath</em> = <code>&quot;&quot;</code>&#160;</td>
+          <td class="paramtype">QString&#160;</td>
+          <td class="paramname"><em>sdkPath</em> = <code>&quot;&quot;</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>use_gui</em> = <code>true</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -456,7 +457,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Call <em>once</em> at the start of the application to allocate global variables. </p>
 <div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
 <div class="line">{</div>
-<div class="line">    <a class="code" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">br::Context::initialize</a>(argc, argv);</div>
+<div class="line">    <a class="code" href="classbr_1_1Context.html#af586a1c38207795bd6c93e4062f54d1f" title="Call once at the start of the application to allocate global variables.">br::Context::initialize</a>(argc, argv);</div>
 <div class="line"></div>
 <div class="line">    <span class="comment">// ...</span></div>
 <div class="line"></div>
@@ -472,52 +473,14 @@ Additional Inherited Members</h2></td></tr>
 <li>The executable's location </li>
 </ol>
 </td></tr>
+    <tr><td class="paramname">use_gui</td><td>Create a QApplication instead of a QCoreApplication. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section note"><dt>Note</dt><dd>Tiggers <em>abort()</em> on failure to locate <code>share/openbr/openbr.bib</code>. </dd>
 <dd>
-<a href="http://qt-project.org/">Qt</a> users should instead call <a class="el" href="classbr_1_1Context.html#a4bdee3dde84111fc0d50010b997d99a0" title="Alternative to initialize() for Qt users.">initializeQt()</a>. </dd></dl>
-<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classbr_1_1Context.html#a4bdee3dde84111fc0d50010b997d99a0" title="Alternative to initialize() for Qt users.">initializeQt</a> <a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c" title="Call once at the end of the application to deallocate global variables.">finalize</a> </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a4bdee3dde84111fc0d50010b997d99a0"></a>
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void initializeQt </td>
-          <td>(</td>
-          <td class="paramtype">QString&#160;</td>
-          <td class="paramname"><em>sdkPath</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>Alternative to <a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">initialize()</a> for <a href="http://qt-project.org/">Qt</a> users. </p>
-<p>This alternative to <a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">initialize()</a> should be used when a <a href="http://doc.qt.digia.com/stable/qcoreapplication.html">QCoreApplication</a> has already been defined. </p>
-<div class="fragment"><div class="line"><span class="keywordtype">int</span> main(<span class="keywordtype">int</span> argc, <span class="keywordtype">char</span> *argv[])</div>
-<div class="line">{</div>
-<div class="line">    QApplication a(argc, argv);</div>
-<div class="line">    <a class="code" href="classbr_1_1Context.html#a4bdee3dde84111fc0d50010b997d99a0" title="Alternative to initialize() for Qt users.">br::Context::initializeQt</a>();</div>
-<div class="line"></div>
-<div class="line">    <span class="comment">// ...</span></div>
-<div class="line"></div>
-<div class="line">    <span class="keywordtype">int</span> result = a.exec();</div>
-<div class="line">    <a class="code" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c" title="Call once at the end of the application to deallocate global variables.">br::Context::finalize</a>();</div>
-<div class="line">    <span class="keywordflow">return</span> result;</div>
-<div class="line">}</div>
-</div><!-- fragment --> <dl class="section see"><dt>See Also</dt><dd><a class="el" href="classbr_1_1Context.html#ace3daabef9be1c9d97e6402d959d11e0" title="Call once at the start of the application to allocate global variables.">initialize</a> </dd></dl>
+<a href="http://qt-project.org/">Qt</a> users should instead call this <em>after</em> initializing QApplication. </dd></dl>
+<dl class="section see"><dt>See Also</dt><dd><a class="el" href="classbr_1_1Context.html#a32d626626eee0bc4ade146973f6abb1c" title="Call once at the end of the application to deallocate global variables.">finalize</a> </dd></dl>
 
 </div>
 </div>
@@ -663,30 +626,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a class="anchor" id="a763e35897e56df19ce448ee950597aec"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void trackFutures </td>
-          <td>(</td>
-          <td class="paramtype">QList&lt; QFuture&lt; void &gt; &gt; &amp;&#160;</td>
-          <td class="paramname"><em>futures</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Continues to print the progress of the futures until they are completed. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">futures</td><td>The list of futures to track. </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
 <a class="anchor" id="a659651269f8ce5ee7d80cb2d0ce89dd1"></a>
 <div class="memitem">
 <div class="memproto">
@@ -782,20 +721,6 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p><a class="el" href="structbr_1_1File.html" title="A file path with associated metadata.">File</a> output is redirected here if the file's basename is 'buffer', clearing previous contents. </p>
-
-</div>
-</div>
-<a class="anchor" id="a54f92b9088c9fdcfa5bf92e296fa0a0d"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">QHash&lt;QString,int&gt; classes</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Used by classifiers to associate text class labels with unique integers IDs. </p>
 
 </div>
 </div>
@@ -928,7 +853,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Path to use when resolving images specified with relative paths. </p>
+<p>Path to use when resolving images specified with relative paths. Multiple paths can be specified using a semicolon separator. </p>
 
 </div>
 </div>
@@ -968,10 +893,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="abdd62e046c69bc25d551863e3bd1f3ea"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">QHash&lt;QString,int&gt; subjects</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Used by classifiers to associate text class labels with unique integers IDs. </p>
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:58 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

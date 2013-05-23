@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -90,6 +90,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="header">
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#properties">Properties</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="classbr_1_1PCATransform-members.html">List of all members</a>  </div>
@@ -106,8 +107,9 @@ Inheritance diagram for PCATransform:</div>
  <div class="center">
   <img src="classbr_1_1PCATransform.png" usemap="#PCATransform_map" alt=""/>
   <map id="PCATransform_map" name="PCATransform_map">
-<area href="classbr_1_1Transform.html" title="Plugin base class for processing a template." alt="Transform" shape="rect" coords="0,112,95,136"/>
-<area href="classbr_1_1Object.html" title="The base class of all plugins and objects requiring introspection." alt="Object" shape="rect" coords="0,56,95,80"/>
+<area href="classbr_1_1Transform.html" title="Plugin base class for processing a template." alt="Transform" shape="rect" coords="0,112,146,136"/>
+<area href="classbr_1_1Object.html" title="The base class of all plugins and objects requiring introspection." alt="Object" shape="rect" coords="0,56,146,80"/>
+<area href="classbr_1_1RowWisePCATransform.html" title="PCA on each row." alt="RowWisePCATransform" shape="rect" coords="0,224,146,248"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -124,18 +126,37 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a80877731704c53a42a9ba3da38140389 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a80877731704c53a42a9ba3da38140389">project</a> (const <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;src, <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;dst) const </td></tr>
 <tr class="memdesc:a80877731704c53a42a9ba3da38140389 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the transform.  <a href="#a80877731704c53a42a9ba3da38140389"></a><br/></td></tr>
 <tr class="separator:a80877731704c53a42a9ba3da38140389 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac6fbe6f47937c35bde2a8407f841afd8 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#ac6fbe6f47937c35bde2a8407f841afd8">backProject</a> (const <a class="el" href="structbr_1_1Template.html">Template</a> &amp;dst, <a class="el" href="structbr_1_1Template.html">Template</a> &amp;src) const </td></tr>
-<tr class="memdesc:ac6fbe6f47937c35bde2a8407f841afd8 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert the transform.  <a href="#ac6fbe6f47937c35bde2a8407f841afd8"></a><br/></td></tr>
-<tr class="separator:ac6fbe6f47937c35bde2a8407f841afd8 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a54508d28cf143fa9c3d53a2ac87a7494 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a54508d28cf143fa9c3d53a2ac87a7494">backProject</a> (const <a class="el" href="structbr_1_1Template.html">Template</a> &amp;dst, <a class="el" href="structbr_1_1Template.html">Template</a> &amp;src) const </td></tr>
+<tr class="memdesc:a54508d28cf143fa9c3d53a2ac87a7494 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert the transform.  <a href="#a54508d28cf143fa9c3d53a2ac87a7494"></a><br/></td></tr>
+<tr class="separator:a54508d28cf143fa9c3d53a2ac87a7494 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a648948a05562d2f0aeca8163a6c0f393 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a648948a05562d2f0aeca8163a6c0f393">backProject</a> (const <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;dst, <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;src) const </td></tr>
 <tr class="memdesc:a648948a05562d2f0aeca8163a6c0f393 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Invert the transform.  <a href="#a648948a05562d2f0aeca8163a6c0f393"></a><br/></td></tr>
 <tr class="separator:a648948a05562d2f0aeca8163a6c0f393 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6a12f8935f6895e304ed268c3f126311 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a6a12f8935f6895e304ed268c3f126311">projectUpdate</a> (const <a class="el" href="structbr_1_1Template.html">Template</a> &amp;src, <a class="el" href="structbr_1_1Template.html">Template</a> &amp;dst)</td></tr>
+<tr class="memdesc:a6a12f8935f6895e304ed268c3f126311 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Apply the transform, may update the transform's internal state.  <a href="#a6a12f8935f6895e304ed268c3f126311"></a><br/></td></tr>
+<tr class="separator:a6a12f8935f6895e304ed268c3f126311 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd37a39559512bf0902520a3c800560b inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#afd37a39559512bf0902520a3c800560b">projectUpdate</a> (const <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;src, <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;dst)</td></tr>
+<tr class="memdesc:afd37a39559512bf0902520a3c800560b inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">inplace projectUpdate.  <a href="#afd37a39559512bf0902520a3c800560b"></a><br/></td></tr>
+<tr class="separator:afd37a39559512bf0902520a3c800560b inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a39d2298413b244fa137be59ddda051ed inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a39d2298413b244fa137be59ddda051ed">projectUpdate</a> (<a class="el" href="structbr_1_1Template.html">Template</a> &amp;srcdst)</td></tr>
+<tr class="memdesc:a39d2298413b244fa137be59ddda051ed inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">inplace projectUpdate.  <a href="#a39d2298413b244fa137be59ddda051ed"></a><br/></td></tr>
+<tr class="separator:a39d2298413b244fa137be59ddda051ed inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a34466623cc1cf801aaecc1e5478c8fc6 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a34466623cc1cf801aaecc1e5478c8fc6">projectUpdate</a> (<a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;srcdst)</td></tr>
+<tr class="separator:a34466623cc1cf801aaecc1e5478c8fc6 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a004aea5a59e945553ff4c5fd717801f7 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a004aea5a59e945553ff4c5fd717801f7">finalize</a> (<a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;output)</td></tr>
+<tr class="separator:a004aea5a59e945553ff4c5fd717801f7 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0477414018d249c37e49b19385682d87 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a0477414018d249c37e49b19385682d87">timeVarying</a> () const </td></tr>
+<tr class="memdesc:a0477414018d249c37e49b19385682d87 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Does the transform require the non-const version of project? Can vary for aggregation type transforms (if their children are time varying, they are also time varying, otherwise probably not)  <a href="#a0477414018d249c37e49b19385682d87"></a><br/></td></tr>
+<tr class="separator:a0477414018d249c37e49b19385682d87 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e46918cb860b0e1c9cc08c999ee0539 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbr_1_1Template.html">Template</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a2e46918cb860b0e1c9cc08c999ee0539">operator()</a> (const <a class="el" href="structbr_1_1Template.html">Template</a> &amp;src) const </td></tr>
 <tr class="memdesc:a2e46918cb860b0e1c9cc08c999ee0539 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function equivalent to <a class="el" href="classbr_1_1Transform.html#aa00ddf40a08b7e1f392d3e324bb69c4e" title="Apply the transform.">project()</a>.  <a href="#a2e46918cb860b0e1c9cc08c999ee0539"></a><br/></td></tr>
 <tr class="separator:a2e46918cb860b0e1c9cc08c999ee0539 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca380022d5a52bbf981bb9ec184b889a inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbr_1_1TemplateList.html">TemplateList</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#aca380022d5a52bbf981bb9ec184b889a">operator()</a> (const <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;src) const </td></tr>
 <tr class="memdesc:aca380022d5a52bbf981bb9ec184b889a inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Convenience function equivalent to <a class="el" href="classbr_1_1Transform.html#aa00ddf40a08b7e1f392d3e324bb69c4e" title="Apply the transform.">project()</a>.  <a href="#aca380022d5a52bbf981bb9ec184b889a"></a><br/></td></tr>
 <tr class="separator:aca380022d5a52bbf981bb9ec184b889a inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87e7f86a9b33e19494b76ee1d0897c77 inherit pub_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="classbr_1_1Transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a87e7f86a9b33e19494b76ee1d0897c77">smartCopy</a> ()</td></tr>
+<tr class="memdesc:a87e7f86a9b33e19494b76ee1d0897c77 inherit pub_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Perform the minimum amount of work necessary to make a transform that can be used safely from a different thread than this transform. For transforms that aren't time-varying, nothing needs to be done, returning this is sufficient.  <a href="#a87e7f86a9b33e19494b76ee1d0897c77"></a><br/></td></tr>
+<tr class="separator:a87e7f86a9b33e19494b76ee1d0897c77 inherit pub_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classbr_1_1Object"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classbr_1_1Object')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classbr_1_1Object.html">Object</a></td></tr>
 <tr class="memitem:a9339772ec5ac9fa929938109207f2863 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a9339772ec5ac9fa929938109207f2863">init</a> ()</td></tr>
 <tr class="memdesc:a9339772ec5ac9fa929938109207f2863 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload this function instead of the default constructor to initialize the derived class. It should be safe to call this function multiple times.  <a href="#a9339772ec5ac9fa929938109207f2863"></a><br/></td></tr>
@@ -152,9 +173,23 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a> () const </td></tr>
 <tr class="memdesc:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string description of the object.  <a href="#aeaebc63d2181b1a4506603f4e03f1275"></a><br/></td></tr>
 <tr class="separator:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a5cc515ec37e24dc1eee67aba09a61f8c">setProperty</a> (const QString &amp;name, const QString &amp;value)</td></tr>
-<tr class="memdesc:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a5cc515ec37e24dc1eee67aba09a61f8c"></a><br/></td></tr>
-<tr class="separator:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a632d0797541485e960eb513860e18a17">setProperty</a> (const QString &amp;name, QVariant value)</td></tr>
+<tr class="memdesc:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a632d0797541485e960eb513860e18a17"></a><br/></td></tr>
+<tr class="separator:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a78adb7bb31b801f705ce62003eb24d46"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#a78adb7bb31b801f705ce62003eb24d46">train</a> (Eigen::MatrixXd data)</td></tr>
+<tr class="separator:a78adb7bb31b801f705ce62003eb24d46"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67ccfbb8500c61fe1f28c8d02a968a29"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#a67ccfbb8500c61fe1f28c8d02a968a29">writeEigenVectors</a> (const Eigen::MatrixXd &amp;allEVals, const Eigen::MatrixXd &amp;allEVecs) const </td></tr>
+<tr class="separator:a67ccfbb8500c61fe1f28c8d02a968a29"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pro_methods_classbr_1_1Transform"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbr_1_1Transform')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classbr_1_1Transform.html">Transform</a></td></tr>
+<tr class="memitem:a5355105a19ea9113df6d3be7f7091cdc inherit pro_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a5355105a19ea9113df6d3be7f7091cdc">Transform</a> (bool <a class="el" href="classbr_1_1Transform.html#a4c383b0a5c05cac9c9717756be824a96">independent</a>=true, bool <a class="el" href="classbr_1_1Transform.html#a9b6d6c2809da02303a67964ce7480c31">trainable</a>=true)</td></tr>
+<tr class="memdesc:a5355105a19ea9113df6d3be7f7091cdc inherit pro_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a transform.  <a href="#a5355105a19ea9113df6d3be7f7091cdc"></a><br/></td></tr>
+<tr class="separator:a5355105a19ea9113df6d3be7f7091cdc inherit pro_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3953187c5f5eeca2861354ff5e7a2875 inherit pro_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbr_1_1Transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a3953187c5f5eeca2861354ff5e7a2875">make</a> (const QString &amp;<a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a>)</td></tr>
+<tr class="memdesc:a3953187c5f5eeca2861354ff5e7a2875 inherit pro_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a subtransform.  <a href="#a3953187c5f5eeca2861354ff5e7a2875"></a><br/></td></tr>
+<tr class="separator:a3953187c5f5eeca2861354ff5e7a2875 inherit pro_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -164,14 +199,14 @@ Properties</h2></td></tr>
 <tr class="separator:a56da9169fe581b834e971dee4997ecfd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac72b734d166fbcab9a388b163ff0ffce"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#ac72b734d166fbcab9a388b163ff0ffce">whiten</a></td></tr>
 <tr class="separator:ac72b734d166fbcab9a388b163ff0ffce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aea76aaf1efd1f82535ea726e08831976"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#aea76aaf1efd1f82535ea726e08831976">originalRows</a></td></tr>
-<tr class="separator:aea76aaf1efd1f82535ea726e08831976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6e065392c5efdd904787edd9db188bf3"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#a6e065392c5efdd904787edd9db188bf3">mean</a></td></tr>
 <tr class="separator:a6e065392c5efdd904787edd9db188bf3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1696678fbae09390f7050e1451849405"><td class="memItemLeft" align="right" valign="top">Eigen::VectorXf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#a1696678fbae09390f7050e1451849405">eVals</a></td></tr>
 <tr class="separator:a1696678fbae09390f7050e1451849405"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9322801e83ffe54dc18c5806680d4daf"><td class="memItemLeft" align="right" valign="top">Eigen::MatrixXf&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#a9322801e83ffe54dc18c5806680d4daf">eVecs</a></td></tr>
 <tr class="separator:a9322801e83ffe54dc18c5806680d4daf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aea76aaf1efd1f82535ea726e08831976"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1PCATransform.html#aea76aaf1efd1f82535ea726e08831976">originalRows</a></td></tr>
+<tr class="separator:aea76aaf1efd1f82535ea726e08831976"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header properties_classbr_1_1Transform"><td colspan="2" onclick="javascript:toggleInherit('properties_classbr_1_1Transform')"><img src="closed.png" alt="-"/>&#160;Properties inherited from <a class="el" href="classbr_1_1Transform.html">Transform</a></td></tr>
 <tr class="memitem:a32f475bef844e1b54aeea4d3d6769390 inherit properties_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a32f475bef844e1b54aeea4d3d6769390">classes</a></td></tr>
 <tr class="separator:a32f475bef844e1b54aeea4d3d6769390 inherit properties_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -204,13 +239,6 @@ Additional Inherited Members</h2></td></tr>
 <tr class="memitem:a5eea5bedc36e0a29487dac7dd5725035 inherit pub_attribs_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbr_1_1File.html">File</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a5eea5bedc36e0a29487dac7dd5725035">file</a></td></tr>
 <tr class="memdesc:a5eea5bedc36e0a29487dac7dd5725035 inherit pub_attribs_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">The file used to construct the plugin.  <a href="#a5eea5bedc36e0a29487dac7dd5725035"></a><br/></td></tr>
 <tr class="separator:a5eea5bedc36e0a29487dac7dd5725035 inherit pub_attribs_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pro_methods_classbr_1_1Transform"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classbr_1_1Transform')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classbr_1_1Transform.html">Transform</a></td></tr>
-<tr class="memitem:a5355105a19ea9113df6d3be7f7091cdc inherit pro_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a5355105a19ea9113df6d3be7f7091cdc">Transform</a> (bool <a class="el" href="classbr_1_1Transform.html#a4c383b0a5c05cac9c9717756be824a96">independent</a>=true, bool <a class="el" href="classbr_1_1Transform.html#a9b6d6c2809da02303a67964ce7480c31">trainable</a>=true)</td></tr>
-<tr class="memdesc:a5355105a19ea9113df6d3be7f7091cdc inherit pro_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a transform.  <a href="#a5355105a19ea9113df6d3be7f7091cdc"></a><br/></td></tr>
-<tr class="separator:a5355105a19ea9113df6d3be7f7091cdc inherit pro_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3953187c5f5eeca2861354ff5e7a2875 inherit pro_methods_classbr_1_1Transform"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classbr_1_1Transform.html">Transform</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Transform.html#a3953187c5f5eeca2861354ff5e7a2875">make</a> (const QString &amp;<a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a>)</td></tr>
-<tr class="memdesc:a3953187c5f5eeca2861354ff5e7a2875 inherit pro_methods_classbr_1_1Transform"><td class="mdescLeft">&#160;</td><td class="mdescRight">Make a subtransform.  <a href="#a3953187c5f5eeca2861354ff5e7a2875"></a><br/></td></tr>
-<tr class="separator:a3953187c5f5eeca2861354ff5e7a2875 inherit pro_methods_classbr_1_1Transform"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Projects input into learned Principal Component Analysis subspace. </p>
@@ -235,6 +263,65 @@ Josh Klontz <a class="el" href="citelist.html#CITEREF_jklontz">[4]</a> </dd></dl
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a78adb7bb31b801f705ce62003eb24d46"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void train </td>
+          <td>(</td>
+          <td class="paramtype">Eigen::MatrixXd&#160;</td>
+          <td class="paramname"><em>data</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a class="anchor" id="a67ccfbb8500c61fe1f28c8d02a968a29"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void writeEigenVectors </td>
+          <td>(</td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>allEVals</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const Eigen::MatrixXd &amp;&#160;</td>
+          <td class="paramname"><em>allEVecs</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -356,6 +443,9 @@ Josh Klontz <a class="el" href="citelist.html#CITEREF_jklontz">[4]</a> </dd></dl
         </tr>
       </table>
 </div><div class="memdoc">
+<pre class="fragment">keep &lt;  0: All eigenvalues are retained.
+keep =  0: No PCA performed, eigenvectors form an identity matrix.
+</pre><p> 0 &lt; keep &lt; 1: Fraction of the variance to retain. keep &gt;= 1: Number of leading eigenvectors to retain. </p>
 
 </div>
 </div>
@@ -394,7 +484,7 @@ Josh Klontz <a class="el" href="citelist.html#CITEREF_jklontz">[4]</a> </dd></dl
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:27:02 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

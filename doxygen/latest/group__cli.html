@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -81,20 +81,25 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Command line application for running algorithms and evaluating results.  
+<p>Command line wrapper of the <a class="el" href="group__c__sdk.html">C SDK</a>.  
 <a href="#details">More...</a></p>
-<p>Command line application for running algorithms and evaluating results. </p>
-<p>The easiest and fastest way to leverage the project, we use it all the time! Commands are designed to mirror the <a class="el" href="group__c__sdk.html">C SDK</a> and are evaluated in the order they are entered. To get started, try running: </p>
+<p>Command line wrapper of the <a class="el" href="group__c__sdk.html">C SDK</a>. </p>
+<p>The easiest and fastest way to run algorithms and evaluating results, we use it all the time! Commands are designed to mirror the <a class="el" href="group__c__sdk.html">C SDK</a> and are evaluated in the order they are entered. To get started, try running: </p>
 <div class="fragment"><div class="line">$ br -help</div>
 </div><!-- fragment --><h1><a class="anchor" id="cli_examples"></a>
 Examples</h1>
 <ul>
+<li><a class="el" href="group__cli.html">Show Face Detection</a></li>
 <li><a class="el" href="group__cli.html">Age Estimation</a></li>
 <li><a class="el" href="group__cli.html">Face Recognition</a></li>
 <li><a class="el" href="group__cli.html">Face Recognition Evaluation</a></li>
-<li><a class="el" href="group__cli.html">Gender Estimation</a> </li>
+<li><a class="el" href="group__cli.html">Gender Estimation</a></li>
+<li><a class="el" href="group__cli.html">Show Face Detection</a> </li>
 </ul>
 
+
+<h3><a class="anchor" id="cli_show_face_detection"></a>Show Face Detection</h3><div class="textblock"><div class="fragment"><div class="line">$ br -algorithm ShowFaceDetection -enrollAll -enroll ../data/family.jpg # Press <span class="stringliteral">&#39;Enter&#39;</span> to cycle through the results</div>
+</div><!-- fragment --> </div>
 
 <h3><a class="anchor" id="cli_age_estimation"></a>Age Estimation</h3><div class="textblock"><a class="el" href="group__cpp__plugin__sdk.html#cpp_age_estimation">C++ Equivalent</a> </p>
 <div class="fragment"><div class="line">$ br -algorithm AgeEstimation \</div>
@@ -112,10 +117,15 @@ Examples</h1>
 <div class="line">     -enroll ../data/MEDS/sigset/MEDS_frontal_target.xml target.gal \</div>
 <div class="line">     -enroll ../data/MEDS/sigset/MEDS_frontal_query.xml query.gal \</div>
 <div class="line">     -compare target.gal query.gal scores.mtx \</div>
-<div class="line">     -makeMask ../data/MEDS/sigset/MEDS_frontal_target.xml ../data/MEDS/sigset/MEDS_frontal_query.xml MEDS.mask \</div>
+<div class="line">     -<a class="code" href="namespaceBEE.html#a55bd5946193bcb97cce384667bc2fa27">makeMask</a> ../data/MEDS/sigset/MEDS_frontal_target.xml ../data/MEDS/sigset/MEDS_frontal_query.xml MEDS.mask \</div>
 <div class="line">     -eval scores.mtx MEDS.mask Algorithm_Dataset/FaceRecognition_MEDS.csv \</div>
 <div class="line">     -eval ../data/MEDS/simmat/COTS_MEDS.mtx MEDS.mask Algorithm_Dataset/COTS_MEDS.csv \</div>
 <div class="line">     -plot Algorithm_Dataset/FaceRecognition_MEDS.csv Algorithm_Dataset/COTS_MEDS.csv MEDS</div>
+</div><!-- fragment --> </div>
+
+<h3><a class="anchor" id="cli_face_recognition_search"></a>Face Recognition Search</h3><div class="textblock"><a class="el" href="group__cpp__plugin__sdk.html#cpp_face_recognition_search">C++ Equivalent</a> </p>
+<div class="fragment"><div class="line">$ br -algorithm FaceRecognition -enrollAll -enroll ../data/MEDS/img <span class="stringliteral">&#39;meds.gal;meds.csv[separator=;]&#39;</span></div>
+<div class="line">$ br -algorithm FaceRecognition -compare meds.gal ../data/MEDS/img/S001-01-t10_01.jpg match_scores.csv</div>
 </div><!-- fragment --> </div>
 
 <h3><a class="anchor" id="cli_gender_estimation"></a>Gender Estimation</h3><div class="textblock"><a class="el" href="group__cpp__plugin__sdk.html#cpp_gender_estimation">C++ Equivalent</a> </p>
@@ -124,7 +134,7 @@ Examples</h1>
 </div><!-- fragment --> </div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:55 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

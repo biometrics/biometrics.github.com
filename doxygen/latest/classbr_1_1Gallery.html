@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -105,17 +105,22 @@ Inheritance diagram for Gallery:</div>
  <div class="center">
   <img src="classbr_1_1Gallery.png" usemap="#Gallery_map" alt=""/>
   <map id="Gallery_map" name="Gallery_map">
-<area href="classbr_1_1Object.html" title="The base class of all plugins and objects requiring introspection." alt="Object" shape="rect" coords="0,56,93,80"/>
-<area href="classbr_1_1aviGallery.html" title="Treat a video as a gallery, making a single template from each frame." alt="aviGallery" shape="rect" coords="103,168,196,192"/>
-<area href="classbr_1_1csvGallery.html" title="Treats each line as a file." alt="csvGallery" shape="rect" coords="103,224,196,248"/>
-<area href="classbr_1_1dbGallery.html" title="Database input." alt="dbGallery" shape="rect" coords="103,280,196,304"/>
-<area href="classbr_1_1DefaultGallery.html" title="Treats the gallery as a single image." alt="DefaultGallery" shape="rect" coords="103,336,196,360"/>
-<area href="classbr_1_1EmptyGallery.html" title="Reads and writes templates to folders of images." alt="EmptyGallery" shape="rect" coords="103,392,196,416"/>
-<area href="classbr_1_1galGallery.html" title="A binary gallery." alt="galGallery" shape="rect" coords="103,448,196,472"/>
-<area href="classbr_1_1googleGallery.html" title="Input from a google image search." alt="googleGallery" shape="rect" coords="103,504,196,528"/>
-<area href="classbr_1_1memGallery.html" title="A gallery held in memory." alt="memGallery" shape="rect" coords="103,560,196,584"/>
-<area href="classbr_1_1txtGallery.html" title="Treats each line as a file." alt="txtGallery" shape="rect" coords="103,616,196,640"/>
-<area href="classbr_1_1xmlGallery.html" title="A Signature Set input." alt="xmlGallery" shape="rect" coords="103,672,196,696"/>
+<area href="classbr_1_1Object.html" title="The base class of all plugins and objects requiring introspection." alt="Object" shape="rect" coords="0,56,99,80"/>
+<area href="classbr_1_1arffGallery.html" title="Weka ARFF file format." alt="arffGallery" shape="rect" coords="109,168,208,192"/>
+<area href="classbr_1_1aviGallery.html" title="Treat a video as a gallery, making a single template from each frame." alt="aviGallery" shape="rect" coords="109,224,208,248"/>
+<area href="classbr_1_1csvGallery.html" title="Treats each line as a file." alt="csvGallery" shape="rect" coords="109,280,208,304"/>
+<area href="classbr_1_1dbGallery.html" title="Database input." alt="dbGallery" shape="rect" coords="109,336,208,360"/>
+<area href="classbr_1_1DefaultGallery.html" title="Treats the gallery as a br::Format." alt="DefaultGallery" shape="rect" coords="109,392,208,416"/>
+<area href="classbr_1_1EmptyGallery.html" title="Reads/writes templates to/from folders." alt="EmptyGallery" shape="rect" coords="109,448,208,472"/>
+<area href="classbr_1_1galGallery.html" title="A binary gallery." alt="galGallery" shape="rect" coords="109,504,208,528"/>
+<area href="classbr_1_1googleGallery.html" title="Input from a google image search." alt="googleGallery" shape="rect" coords="109,560,208,584"/>
+<area href="classbr_1_1matrixGallery.html" title="Combine all templates into one large matrix and process it as a br::Format." alt="matrixGallery" shape="rect" coords="109,616,208,640"/>
+<area href="classbr_1_1memGallery.html" title="A gallery held in memory." alt="memGallery" shape="rect" coords="109,672,208,696"/>
+<area href="classbr_1_1postGallery.html" title="Handle POST requests." alt="postGallery" shape="rect" coords="109,728,208,752"/>
+<area href="classbr_1_1statGallery.html" title="Print template statistics." alt="statGallery" shape="rect" coords="109,784,208,808"/>
+<area href="classbr_1_1templateGallery.html" title="Treat the file as a single binary template." alt="templateGallery" shape="rect" coords="109,840,208,864"/>
+<area href="classbr_1_1txtGallery.html" title="Treats each line as a file." alt="txtGallery" shape="rect" coords="109,896,208,920"/>
+<area href="classbr_1_1xmlGallery.html" title="A Signature Set input." alt="xmlGallery" shape="rect" coords="109,952,208,976"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -160,9 +165,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a> () const </td></tr>
 <tr class="memdesc:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string description of the object.  <a href="#aeaebc63d2181b1a4506603f4e03f1275"></a><br/></td></tr>
 <tr class="separator:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a5cc515ec37e24dc1eee67aba09a61f8c">setProperty</a> (const QString &amp;name, const QString &amp;value)</td></tr>
-<tr class="memdesc:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a5cc515ec37e24dc1eee67aba09a61f8c"></a><br/></td></tr>
-<tr class="separator:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a632d0797541485e960eb513860e18a17">setProperty</a> (const QString &amp;name, QVariant value)</td></tr>
+<tr class="memdesc:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a632d0797541485e960eb513860e18a17"></a><br/></td></tr>
+<tr class="separator:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -294,7 +299,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Retrieve a portion of the stored templates. </p>
 
-<p>Implemented in <a class="el" href="classbr_1_1xmlGallery.html#a96625ad51ca825bf2e7f00e21b32e2d3">xmlGallery</a>, and <a class="el" href="classbr_1_1csvGallery.html#a96625ad51ca825bf2e7f00e21b32e2d3">csvGallery</a>.</p>
+<p>Implemented in <a class="el" href="classbr_1_1xmlGallery.html#a96625ad51ca825bf2e7f00e21b32e2d3">xmlGallery</a>, <a class="el" href="classbr_1_1txtGallery.html#a96625ad51ca825bf2e7f00e21b32e2d3">txtGallery</a>, <a class="el" href="classbr_1_1csvGallery.html#a96625ad51ca825bf2e7f00e21b32e2d3">csvGallery</a>, <a class="el" href="classbr_1_1matrixGallery.html#a96625ad51ca825bf2e7f00e21b32e2d3">matrixGallery</a>, and <a class="el" href="classbr_1_1EmptyGallery.html#a96625ad51ca825bf2e7f00e21b32e2d3">EmptyGallery</a>.</p>
 
 </div>
 </div>
@@ -322,7 +327,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Serialize a template. </p>
 
-<p>Implemented in <a class="el" href="classbr_1_1xmlGallery.html#a6b5c01c6a6693faf7ed10b568374d5ed">xmlGallery</a>, and <a class="el" href="classbr_1_1csvGallery.html#a6b5c01c6a6693faf7ed10b568374d5ed">csvGallery</a>.</p>
+<p>Implemented in <a class="el" href="classbr_1_1xmlGallery.html#a6b5c01c6a6693faf7ed10b568374d5ed">xmlGallery</a>, <a class="el" href="classbr_1_1txtGallery.html#a6b5c01c6a6693faf7ed10b568374d5ed">txtGallery</a>, <a class="el" href="classbr_1_1csvGallery.html#a6b5c01c6a6693faf7ed10b568374d5ed">csvGallery</a>, <a class="el" href="classbr_1_1matrixGallery.html#a6b5c01c6a6693faf7ed10b568374d5ed">matrixGallery</a>, and <a class="el" href="classbr_1_1EmptyGallery.html#a6b5c01c6a6693faf7ed10b568374d5ed">EmptyGallery</a>.</p>
 
 </div>
 </div>
@@ -347,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:58 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

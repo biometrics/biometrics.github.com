@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -112,8 +112,6 @@ Inheritance diagram for MatchProbabilityDistance:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a59874e2a8536351f255616dc84fdfcff"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1MatchProbabilityDistance.html#a59874e2a8536351f255616dc84fdfcff">BR_PROPERTY</a> (<a class="el" href="classbr_1_1Distance.html">br::Distance</a> *, <a class="el" href="classbr_1_1MatchProbabilityDistance.html#a21a440a190f83d2df8ae57b3c3d4cf22">distance</a>, <a class="el" href="classbr_1_1Distance.html#aff9d0ab3773d1a544c00b3bea6a5e36d">make</a>(&quot;Dist(L2)&quot;)) MP mp</td></tr>
-<tr class="separator:a59874e2a8536351f255616dc84fdfcff"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a7d3825832a0c9a1e5fc6f42104445c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1MatchProbabilityDistance.html#a2a7d3825832a0c9a1e5fc6f42104445c">train</a> (const <a class="el" href="structbr_1_1TemplateList.html">TemplateList</a> &amp;src)</td></tr>
 <tr class="memdesc:a2a7d3825832a0c9a1e5fc6f42104445c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Train the distance.  <a href="#a2a7d3825832a0c9a1e5fc6f42104445c"></a><br/></td></tr>
 <tr class="separator:a2a7d3825832a0c9a1e5fc6f42104445c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -151,9 +149,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a> () const </td></tr>
 <tr class="memdesc:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string description of the object.  <a href="#aeaebc63d2181b1a4506603f4e03f1275"></a><br/></td></tr>
 <tr class="separator:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a5cc515ec37e24dc1eee67aba09a61f8c">setProperty</a> (const QString &amp;name, const QString &amp;value)</td></tr>
-<tr class="memdesc:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a5cc515ec37e24dc1eee67aba09a61f8c"></a><br/></td></tr>
-<tr class="separator:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a632d0797541485e960eb513860e18a17">setProperty</a> (const QString &amp;name, QVariant value)</td></tr>
+<tr class="memdesc:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a632d0797541485e960eb513860e18a17"></a><br/></td></tr>
+<tr class="separator:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="properties"></a>
 Properties</h2></td></tr>
@@ -161,6 +159,10 @@ Properties</h2></td></tr>
 <tr class="separator:a21a440a190f83d2df8ae57b3c3d4cf22"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0725e24ba3c93b46e081b9a1ed5add72"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1MatchProbabilityDistance.html#a0725e24ba3c93b46e081b9a1ed5add72">gaussian</a></td></tr>
 <tr class="separator:a0725e24ba3c93b46e081b9a1ed5add72"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ac622aa6d1f8a10e126beba89ff1e41"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1MatchProbabilityDistance.html#a2ac622aa6d1f8a10e126beba89ff1e41">crossModality</a></td></tr>
+<tr class="separator:a2ac622aa6d1f8a10e126beba89ff1e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a786317a70117969ae86af3bfbd8c9bd9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="structbr_1_1MP.html">MP</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1MatchProbabilityDistance.html#a786317a70117969ae86af3bfbd8c9bd9">mp</a></td></tr>
+<tr class="separator:a786317a70117969ae86af3bfbd8c9bd9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
@@ -182,41 +184,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Match Probability. </p>
-<p><a class="el" href="citelist.html#CITEREF_klare12">[1]</a> </p>
+<p><a class="el" href="citelist.html#CITEREF_klare12">klare12</a> </p>
 <dl class="section author"><dt>Author</dt><dd>Josh Klontz <a class="el" href="citelist.html#CITEREF_jklontz">[4]</a> </dd></dl>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a59874e2a8536351f255616dc84fdfcff"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">BR_PROPERTY </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classbr_1_1Distance.html">br::Distance</a> *&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classbr_1_1MatchProbabilityDistance.html#a21a440a190f83d2df8ae57b3c3d4cf22">distance</a>&#160;</td>
-          <td class="paramname">, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="classbr_1_1Distance.html#aff9d0ab3773d1a544c00b3bea6a5e36d">make</a>(&quot;Dist(L2)&quot;)&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a class="anchor" id="ab7ca5f1744cf7291b07e864fbfcdb57a"></a>
 <div class="memitem">
 <div class="memproto">
@@ -340,6 +310,26 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Property Documentation</h2>
+<a class="anchor" id="a2ac622aa6d1f8a10e126beba89ff1e41"></a>
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool crossModality</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">read</span><span class="mlabel">write</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a class="anchor" id="a21a440a190f83d2df8ae57b3c3d4cf22"></a>
 <div class="memitem">
 <div class="memproto">
@@ -380,10 +370,22 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a class="anchor" id="a786317a70117969ae86af3bfbd8c9bd9"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="structbr_1_1MP.html">MP</a> mp</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:27:15 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:25 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>

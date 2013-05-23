@@ -20,10 +20,10 @@
 <table cellspacing="0" cellpadding="0">
  <tbody>
  <tr style="height: 56px;">
-  <td id="projectlogo"><img alt="Logo" src="openbr-small.png"/></td>
+  <td id="projectlogo"><img alt="Logo" src="openbr_small.png"/></td>
   <td style="padding-left: 0.5em;">
    <div id="projectname">OpenBR
-   &#160;<span id="projectnumber">0.2.0</span>
+   &#160;<span id="projectnumber">0.3.0</span>
    </div>
    <div id="projectbrief">Open Source Biometric Recognition</div>
   </td>
@@ -106,22 +106,32 @@ Inheritance diagram for Distance:</div>
  <div class="center">
   <img src="classbr_1_1Distance.png" usemap="#Distance_map" alt=""/>
   <map id="Distance_map" name="Distance_map">
-<area href="classbr_1_1Object.html" title="The base class of all plugins and objects requiring introspection." alt="Object" shape="rect" coords="0,56,179,80"/>
-<area href="classbr_1_1ByteL1Distance.html" title="Fast 8-bit L1 distance." alt="ByteL1Distance" shape="rect" coords="189,168,368,192"/>
-<area href="classbr_1_1CrossValidateDistance.html" title="Cross validate a distance metric." alt="CrossValidateDistance" shape="rect" coords="189,224,368,248"/>
-<area href="classbr_1_1DefaultDistance.html" title="DistDistance wrapper." alt="DefaultDistance" shape="rect" coords="189,280,368,304"/>
-<area href="classbr_1_1DistDistance.html" title="Standard distance metrics." alt="DistDistance" shape="rect" coords="189,336,368,360"/>
-<area href="classbr_1_1FilterDistance.html" title="Checks target metadata against filters." alt="FilterDistance" shape="rect" coords="189,392,368,416"/>
-<area href="classbr_1_1HalfByteL1Distance.html" title="Fast 4-bit L1 distance." alt="HalfByteL1Distance" shape="rect" coords="189,448,368,472"/>
-<area href="classbr_1_1IdenticalDistance.html" title="Returns true if the templates are identical, false otherwise." alt="IdenticalDistance" shape="rect" coords="189,504,368,528"/>
-<area href="classbr_1_1KeyPointMatcherTransform.html" title="Wraps OpenCV Key Point Matcher." alt="KeyPointMatcherTransform" shape="rect" coords="189,560,368,584"/>
-<area href="classbr_1_1L1Distance.html" title="L1 distance computed using eigen." alt="L1Distance" shape="rect" coords="189,616,368,640"/>
-<area href="classbr_1_1L2Distance.html" title="L2 distance computed using eigen." alt="L2Distance" shape="rect" coords="189,672,368,696"/>
-<area href="classbr_1_1MatchProbabilityDistance.html" title="Match Probability." alt="MatchProbabilityDistance" shape="rect" coords="189,728,368,752"/>
-<area href="classbr_1_1NECLatent1CompareDistance.html" title="Compare two NEC latent fingerprints." alt="NECLatent1CompareDistance" shape="rect" coords="189,784,368,808"/>
-<area href="classbr_1_1PipeDistance.html" title="Distances in series." alt="PipeDistance" shape="rect" coords="189,840,368,864"/>
-<area href="classbr_1_1UnitDistance.html" title="Linear normalizes of a distance so the mean impostor score is 0 and the mean genuine score is 1..." alt="UnitDistance" shape="rect" coords="189,896,368,920"/>
-<area href="classNT4Compare.html" title="Compare templates with Neurotech SDK 4." alt="NT4Compare" shape="rect" coords="189,952,368,976"/>
+<area href="classbr_1_1Object.html" title="The base class of all plugins and objects requiring introspection." alt="Object" shape="rect" coords="0,56,232,80"/>
+<area href="classbr_1_1AverageDistance.html" title="Average distance of multiple matrices." alt="AverageDistance" shape="rect" coords="242,168,474,192"/>
+<area href="classbr_1_1BayesianQuantizationDistance.html" title="Bayesian quantization distance." alt="BayesianQuantizationDistance" shape="rect" coords="242,224,474,248"/>
+<area href="classbr_1_1ByteL1Distance.html" title="Fast 8-bit L1 distance." alt="ByteL1Distance" shape="rect" coords="242,280,474,304"/>
+<area href="classbr_1_1CrossValidateDistance.html" title="Cross validate a distance metric." alt="CrossValidateDistance" shape="rect" coords="242,336,474,360"/>
+<area href="classbr_1_1DefaultDistance.html" title="DistDistance wrapper." alt="DefaultDistance" shape="rect" coords="242,392,474,416"/>
+<area href="classbr_1_1DistDistance.html" title="Standard distance metrics." alt="DistDistance" shape="rect" coords="242,448,474,472"/>
+<area href="classbr_1_1FilterDistance.html" title="Checks target metadata against filters." alt="FilterDistance" shape="rect" coords="242,504,474,528"/>
+<area href="classbr_1_1HalfByteL1Distance.html" title="Fast 4-bit L1 distance." alt="HalfByteL1Distance" shape="rect" coords="242,560,474,584"/>
+<area href="classbr_1_1HeatMapDistance.html" title="Match Probability modification for heat maps." alt="HeatMapDistance" shape="rect" coords="242,616,474,640"/>
+<area href="classbr_1_1IdenticalDistance.html" title="Returns true if the templates are identical, false otherwise." alt="IdenticalDistance" shape="rect" coords="242,672,474,696"/>
+<area href="classbr_1_1KeyPointMatcherDistance.html" title="Wraps OpenCV Key Point Matcher." alt="KeyPointMatcherDistance" shape="rect" coords="242,728,474,752"/>
+<area href="classbr_1_1L1Distance.html" title="L1 distance computed using eigen." alt="L1Distance" shape="rect" coords="242,784,474,808"/>
+<area href="classbr_1_1L2Distance.html" title="L2 distance computed using eigen." alt="L2Distance" shape="rect" coords="242,840,474,864"/>
+<area href="classbr_1_1MatchProbabilityDistance.html" title="Match Probability." alt="MatchProbabilityDistance" shape="rect" coords="242,896,474,920"/>
+<area href="classbr_1_1MetadataDistance.html" title="Checks target metadata against query metadata." alt="MetadataDistance" shape="rect" coords="242,952,474,976"/>
+<area href="classbr_1_1NECLatent1CompareDistance.html" title="Compare two NEC latent fingerprints." alt="NECLatent1CompareDistance" shape="rect" coords="242,1008,474,1032"/>
+<area href="classbr_1_1NegativeLogPlusOneDistance.html" title="Returns -log(distance(a,b)+1)" alt="NegativeLogPlusOneDistance" shape="rect" coords="242,1064,474,1088"/>
+<area href="classbr_1_1PipeDistance.html" title="Distances in series." alt="PipeDistance" shape="rect" coords="242,1120,474,1144"/>
+<area href="classbr_1_1ProductQuantizationDistance.html" title="Distance in a product quantized space." alt="ProductQuantizationDistance" shape="rect" coords="242,1176,474,1200"/>
+<area href="classbr_1_1RecursiveProductQuantizationDistance.html" title="Recurively computed distance in a product quantized space." alt="RecursiveProductQuantizationDistance" shape="rect" coords="242,1232,474,1256"/>
+<area href="classbr_1_1SentenceSimilarityDistance.html" title="Distance between sentences." alt="SentenceSimilarityDistance" shape="rect" coords="242,1288,474,1312"/>
+<area href="classbr_1_1SVMDistance.html" title="SVM Regression on template absolute differences." alt="SVMDistance" shape="rect" coords="242,1344,474,1368"/>
+<area href="classbr_1_1UnitDistance.html" title="Linear normalizes of a distance so the mean impostor score is 0 and the mean genuine score is 1..." alt="UnitDistance" shape="rect" coords="242,1400,474,1424"/>
+<area href="classNEC3Compare.html" title="Compare faces with NEC NeoFace 3 SDK." alt="NEC3Compare" shape="rect" coords="242,1456,474,1480"/>
+<area href="classNT4Compare.html" title="Compare templates with Neurotech SDK 4." alt="NT4Compare" shape="rect" coords="242,1512,474,1536"/>
 </map>
  </div></div>
 <table class="memberdecls">
@@ -163,9 +173,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#aeaebc63d2181b1a4506603f4e03f1275">description</a> () const </td></tr>
 <tr class="memdesc:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns a string description of the object.  <a href="#aeaebc63d2181b1a4506603f4e03f1275"></a><br/></td></tr>
 <tr class="separator:aeaebc63d2181b1a4506603f4e03f1275 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a5cc515ec37e24dc1eee67aba09a61f8c">setProperty</a> (const QString &amp;name, const QString &amp;value)</td></tr>
-<tr class="memdesc:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a5cc515ec37e24dc1eee67aba09a61f8c"></a><br/></td></tr>
-<tr class="separator:a5cc515ec37e24dc1eee67aba09a61f8c inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classbr_1_1Object.html#a632d0797541485e960eb513860e18a17">setProperty</a> (const QString &amp;name, QVariant value)</td></tr>
+<tr class="memdesc:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="mdescLeft">&#160;</td><td class="mdescRight">Overload of QObject::setProperty to handle OpenBR data types.  <a href="#a632d0797541485e960eb513860e18a17"></a><br/></td></tr>
+<tr class="separator:a632d0797541485e960eb513860e18a17 inherit pub_methods_classbr_1_1Object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
@@ -260,6 +270,8 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Compare two template lists. </p>
 
+<p>Reimplemented in <a class="el" href="classbr_1_1HeatMapDistance.html#ae7df8e40dbb8cc8f4fd74283a6d5fe5d">HeatMapDistance</a>.</p>
+
 </div>
 </div>
 <a class="anchor" id="a9e5442818916005fd2caf7edae01cecf"></a>
@@ -324,7 +336,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Compute the distance between two templates. </p>
 
-<p>Implemented in <a class="el" href="classbr_1_1UnitDistance.html#ab7ca5f1744cf7291b07e864fbfcdb57a">UnitDistance</a>, <a class="el" href="classbr_1_1MatchProbabilityDistance.html#ab7ca5f1744cf7291b07e864fbfcdb57a">MatchProbabilityDistance</a>, <a class="el" href="classbr_1_1PipeDistance.html#aaedfcabe5da09b062666b662c0da3597">PipeDistance</a>, and <a class="el" href="classbr_1_1KeyPointMatcherTransform.html#aaedfcabe5da09b062666b662c0da3597">KeyPointMatcherTransform</a>.</p>
+<p>Implemented in <a class="el" href="classbr_1_1UnitDistance.html#ab7ca5f1744cf7291b07e864fbfcdb57a">UnitDistance</a>, <a class="el" href="classbr_1_1RecursiveProductQuantizationDistance.html#aaedfcabe5da09b062666b662c0da3597">RecursiveProductQuantizationDistance</a>, <a class="el" href="classbr_1_1HeatMapDistance.html#ab7ca5f1744cf7291b07e864fbfcdb57a">HeatMapDistance</a>, <a class="el" href="classbr_1_1NegativeLogPlusOneDistance.html#aaedfcabe5da09b062666b662c0da3597">NegativeLogPlusOneDistance</a>, <a class="el" href="classbr_1_1ProductQuantizationDistance.html#aaedfcabe5da09b062666b662c0da3597">ProductQuantizationDistance</a>, <a class="el" href="classbr_1_1AverageDistance.html#aaedfcabe5da09b062666b662c0da3597">AverageDistance</a>, <a class="el" href="classbr_1_1MatchProbabilityDistance.html#ab7ca5f1744cf7291b07e864fbfcdb57a">MatchProbabilityDistance</a>, <a class="el" href="classbr_1_1PipeDistance.html#aaedfcabe5da09b062666b662c0da3597">PipeDistance</a>, <a class="el" href="classbr_1_1MetadataDistance.html#aaedfcabe5da09b062666b662c0da3597">MetadataDistance</a>, and <a class="el" href="classbr_1_1KeyPointMatcherDistance.html#aaedfcabe5da09b062666b662c0da3597">KeyPointMatcherDistance</a>.</p>
 
 </div>
 </div>
@@ -440,14 +452,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Train the distance. </p>
 
-<p>Reimplemented in <a class="el" href="classbr_1_1MatchProbabilityDistance.html#a2a7d3825832a0c9a1e5fc6f42104445c">MatchProbabilityDistance</a>, and <a class="el" href="classbr_1_1PipeDistance.html#adb473cc0016f8d29c33c88b9db622df2">PipeDistance</a>.</p>
+<p>Reimplemented in <a class="el" href="classbr_1_1NegativeLogPlusOneDistance.html#a2a7d3825832a0c9a1e5fc6f42104445c">NegativeLogPlusOneDistance</a>, <a class="el" href="classbr_1_1HeatMapDistance.html#a2a7d3825832a0c9a1e5fc6f42104445c">HeatMapDistance</a>, <a class="el" href="classbr_1_1PipeDistance.html#adb473cc0016f8d29c33c88b9db622df2">PipeDistance</a>, and <a class="el" href="classbr_1_1MatchProbabilityDistance.html#a2a7d3825832a0c9a1e5fc6f42104445c">MatchProbabilityDistance</a>.</p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Sat Feb 23 2013 21:26:59 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Wed May 22 2013 22:15:24 for OpenBR by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.2
 </small></address>
