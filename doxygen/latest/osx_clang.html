@@ -106,7 +106,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line">$ cd ../..</div>
 <div class="line">$ rm -rf opencv-2.4.5*</div>
 </div><!-- fragment --></li>
-<li><a href="http://download.qt-project.org/official_releases/qt/5.0/5.0.2/qt-mac-opensource-5.0.2-clang-offline.dmg">Download and install Qt 5.0.2</a></li>
+<li><a href="http://download.qt-project.org/official_releases/qt/5.1/5.1.0/qt-mac-opensource-5.1.0-clang-offline.dmg">Download and install Qt 5.1.0</a></li>
 <li>Create a <a href="github.com">GitHub</a> account, follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>. <div class="fragment"><div class="line">$ git clone https:<span class="comment">//github.com/biometrics/openbr.git</span></div>
 <div class="line">$ cd openbr</div>
 <div class="line">$ git submodule init</div>
@@ -114,12 +114,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!-- fragment --></li>
 <li>Build OpenBR! <div class="fragment"><div class="line">$ mkdir build # from the OpenBR root directory</div>
 <div class="line">$ cd build</div>
-<div class="line">$ cmake -DCMAKE_PREFIX_PATH=~/Qt5.0.2/5.0.2/clang_64 -DCMAKE_BUILD_TYPE=Release ..</div>
+<div class="line">$ cmake -DCMAKE_PREFIX_PATH=~/Qt5.1.0/5.1.0/clang_64 -DCMAKE_BUILD_TYPE=Release ..</div>
 <div class="line">$ make -j4</div>
 <div class="line">$ sudo make install</div>
 </div><!-- fragment --></li>
 <li>Hack OpenBR!<ol type="a">
-<li>Open Qt Creator IDE <div class="fragment"><div class="line">$ open ~/Qt5.0.2/Qt\ Creator.app</div>
+<li>Open Qt Creator IDE <div class="fragment"><div class="line">$ open ~/Qt5.1.0/Qt\ Creator.app</div>
 </div><!-- fragment --></li>
 <li>From the Qt Creator "File" menu select "Open File or Project...".</li>
 <li>Select "openbr/CMakeLists.txt" then "Open".</li>
