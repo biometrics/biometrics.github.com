@@ -2,9 +2,10 @@ var searchData=
 [
   ['_5finputarray',['_InputArray',['../structbr_1_1Template.html#ad0087a7ede9a22076c436acfb13959ed',1,'br::Template']]],
   ['_5foutputarray',['_OutputArray',['../structbr_1_1Template.html#aa1b69712f58f028e05ba9adc706767dd',1,'br::Template']]],
-  ['mat_20_26',['Mat &amp;',['../structbr_1_1Template.html#a10151cd9bed8eebb845b4dedd01dfa0c',1,'br::Template']]],
   ['mat_20_26',['Mat &amp;',['../structbr_1_1Template.html#ad72a913d4b53af5a54d0d664e57234ab',1,'br::Template']]],
-  ['open',['open',['../classbr_1_1DataSource.html#a2cfee24c81fd289c11a26e4ee54fbe24',1,'br::DataSource::open()'],['../classbr_1_1VideoDataSource.html#ae65f82bf83ac48cb8740c34a0eec0bb1',1,'br::VideoDataSource::open()'],['../classbr_1_1TemplateDataSource.html#ae65f82bf83ac48cb8740c34a0eec0bb1',1,'br::TemplateDataSource::open()'],['../classbr_1_1DataSourceManager.html#ae65f82bf83ac48cb8740c34a0eec0bb1',1,'br::DataSourceManager::open()']]],
+  ['mat_20_26',['Mat &amp;',['../structbr_1_1Template.html#a10151cd9bed8eebb845b4dedd01dfa0c',1,'br::Template']]],
+  ['open',['open',['../classbr_1_1DataSource.html#aea9db272617e684c2e5f4449001934ef',1,'br::DataSource::open()'],['../classbr_1_1DataSourceManager.html#a8d7c1fa8017439ba87ed96170bbb999d',1,'br::DataSourceManager::open()']]],
+  ['operator_20const_20file_20_26',['operator const File &amp;',['../structbr_1_1Template.html#af54f099332000b8a170fc9200cb63208',1,'br::Template']]],
   ['operator_20qstring',['operator QString',['../structbr_1_1File.html#ab73a351240de6739ff051d7ea2b519a9',1,'br::File']]],
   ['operator_21_3d',['operator!=',['../structbr_1_1File.html#afef48a5388c2be4fd07baa39824da0b6',1,'br::File']]],
   ['operator_28_29',['operator()',['../structbr_1_1TemplateList.html#a0d993acefd86cd32c6b4bd9b54de4409',1,'br::TemplateList::operator()()'],['../classbr_1_1Transform.html#a2e46918cb860b0e1c9cc08c999ee0539',1,'br::Transform::operator()(const Template &amp;src) const '],['../classbr_1_1Transform.html#aca380022d5a52bbf981bb9ec184b889a',1,'br::Transform::operator()(const TemplateList &amp;src) const '],['../structbr_1_1KDE.html#a8e20a3e26368547d1cfc613603f8dbad',1,'br::KDE::operator()()'],['../structbr_1_1MP.html#a8e20a3e26368547d1cfc613603f8dbad',1,'br::MP::operator()()']]],

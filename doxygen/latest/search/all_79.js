@@ -5,6 +5,5 @@ var searchData=
   ['y2',['y2',['../classbr_1_1AffineTransform.html#a07bcd014e69eddcf4243b2a961014eaf',1,'br::AffineTransform']]],
   ['y3',['y3',['../classbr_1_1AffineTransform.html#abab69543d238318a5cbd85abb37f60e2',1,'br::AffineTransform']]],
   ['ycrcb',['YCrCb',['../classbr_1_1CvtTransform.html#a20f8d042a293f7b8c87f2992d183ceb9a456ad54e53355b159727b13810705331',1,'br::CvtTransform']]],
-  ['youtubefacesdbtransform',['YouTubeFacesDBTransform',['../classbr_1_1YouTubeFacesDBTransform.html',1,'br']]],
-  ['yubikey',['YubiKey',['../classYubiKey.html',1,'']]]
+  ['youtubefacesdbtransform',['YouTubeFacesDBTransform',['../classbr_1_1YouTubeFacesDBTransform.html',1,'br']]]
 ];

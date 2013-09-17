@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['streamtransform',['StreamTransform',['../classbr_1_1ProcessingStage.html#a69a8ad8dc1449279ff4ed0de5abfcd6d',1,'br::ProcessingStage']]]
+  ['streamtransfrom',['StreamTransfrom',['../classbr_1_1DirectStreamTransform.html#a39fe6ec154993b6bfe294131c851a32d',1,'br::DirectStreamTransform']]]
 ];

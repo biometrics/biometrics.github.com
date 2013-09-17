@@ -1,16 +1,9 @@
 var searchData=
 [
   ['nametransform',['NameTransform',['../classbr_1_1NameTransform.html',1,'br']]],
-  ['nec3compare',['NEC3Compare',['../classNEC3Compare.html',1,'']]],
-  ['nec3context',['NEC3Context',['../structNEC3Context.html',1,'']]],
-  ['nec3enroll',['NEC3Enroll',['../classNEC3Enroll.html',1,'']]],
-  ['nec3initializer',['NEC3Initializer',['../classNEC3Initializer.html',1,'']]],
-  ['neclatent1comparedistance',['NECLatent1CompareDistance',['../classbr_1_1NECLatent1CompareDistance.html',1,'br']]],
-  ['neclatent1enrolltransform',['NECLatent1EnrollTransform',['../classbr_1_1NECLatent1EnrollTransform.html',1,'br']]],
-  ['neclatent1initialier',['NECLatent1Initialier',['../classbr_1_1NECLatent1Initialier.html',1,'br']]],
   ['negativelogplusonedistance',['NegativeLogPlusOneDistance',['../classbr_1_1NegativeLogPlusOneDistance.html',1,'br']]],
-  ['neighborstransform',['NeighborsTransform',['../classbr_1_1NeighborsTransform.html',1,'br']]],
   ['nlmeansdenoisingtransform',['NLMeansDenoisingTransform',['../classbr_1_1NLMeansDenoisingTransform.html',1,'br']]],
+  ['nominalcreation',['NominalCreation',['../classbr_1_1NominalCreation.html',1,'br']]],
   ['normalizetransform',['NormalizeTransform',['../classbr_1_1NormalizeTransform.html',1,'br']]],
   ['nt4compare',['NT4Compare',['../classNT4Compare.html',1,'']]],
   ['nt4context',['NT4Context',['../structNT4Context.html',1,'']]],

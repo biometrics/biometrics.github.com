@@ -1,8 +1,10 @@
 var searchData=
 [
   ['s',['s',['../classbr_1_1CSDNTransform.html#a874f74a4dc1c9a0cd9c6e0d79c298f55',1,'br::CSDNTransform']]],
-  ['scalefactor',['scaleFactor',['../classbr_1_1IntegralSamplerTransform.html#a8030f24154c0e29bcbdf9a153804f214',1,'br::IntegralSamplerTransform::scaleFactor()'],['../classbr_1_1RecursiveIntegralSamplerTransform.html#a8030f24154c0e29bcbdf9a153804f214',1,'br::RecursiveIntegralSamplerTransform::scaleFactor()']]],
+  ['scalefactor',['scaleFactor',['../classbr_1_1IntegralSamplerTransform.html#a8030f24154c0e29bcbdf9a153804f214',1,'br::IntegralSamplerTransform::scaleFactor()'],['../classbr_1_1RecursiveIntegralSamplerTransform.html#a8030f24154c0e29bcbdf9a153804f214',1,'br::RecursiveIntegralSamplerTransform::scaleFactor()'],['../classbr_1_1DelaunayTransform.html#a8030f24154c0e29bcbdf9a153804f214',1,'br::DelaunayTransform::scaleFactor()'],['../classbr_1_1SlidingWindowTransform.html#a7abda017cb76ae387450f3791f534046',1,'br::SlidingWindowTransform::scaleFactor()']]],
   ['scales',['scales',['../classbr_1_1IntegralSamplerTransform.html#a706cc7c7163878b35e58171cc5aa8a3c',1,'br::IntegralSamplerTransform::scales()'],['../classbr_1_1RecursiveIntegralSamplerTransform.html#a706cc7c7163878b35e58171cc5aa8a3c',1,'br::RecursiveIntegralSamplerTransform::scales()']]],
+  ['scorehash',['scoreHash',['../classbr_1_1OnlineDistance.html#a1d1d2832d74015b0a5247842755d6cb3',1,'br::OnlineDistance']]],
+  ['scorenormalization',['scoreNormalization',['../classbr_1_1Context.html#a8d0020d1ea736877f98568442445b433',1,'br::Context']]],
   ['sdkpath',['sdkPath',['../classbr_1_1Context.html#a0f7ce2f183777c3e41d7b308296309a0',1,'br::Context']]],
   ['searchwindowsize',['searchWindowSize',['../classbr_1_1NLMeansDenoisingTransform.html#a13b52100f183301998ea1e2ade15afa0',1,'br::NLMeansDenoisingTransform']]],
   ['secondorder',['secondOrder',['../classbr_1_1IntegralSamplerTransform.html#aac8af93301fdc8968773ee7936495ea2',1,'br::IntegralSamplerTransform']]],
@@ -14,10 +16,12 @@ var searchData=
   ['size',['size',['../classbr_1_1KeyPointDescriptorTransform.html#a439227feff9d7f55384e8780cfc2eb82',1,'br::KeyPointDescriptorTransform::size()'],['../classbr_1_1SIFTDescriptorTransform.html#a439227feff9d7f55384e8780cfc2eb82',1,'br::SIFTDescriptorTransform::size()']]],
   ['split',['split',['../classbr_1_1BinTransform.html#a6c60dc17b672ec14207e7588641907c6',1,'br::BinTransform']]],
   ['starttime',['startTime',['../classbr_1_1Context.html#a87afb3b7480fc65f1671171d978bc29f',1,'br::Context']]],
+  ['stasm3format',['stasm3Format',['../classbr_1_1StasmTransform.html#af69786ecea6d6071eb51090854e15f46',1,'br::StasmTransform']]],
+  ['stasmcascaderesource',['stasmCascadeResource',['../classbr_1_1StasmTransform.html#a11764ef0263982cbef095e282422a2ef',1,'br::StasmTransform']]],
   ['statistic',['statistic',['../classbr_1_1StatTransform.html#a5eaad98e359249466008ac4979eeb4c6',1,'br::StatTransform']]],
   ['stddev',['stddev',['../classbr_1_1ImpostorUniquenessMeasureTransform.html#a6ed2ab2d0246c66167c4d33f468ca608',1,'br::ImpostorUniquenessMeasureTransform']]],
   ['step',['step',['../classbr_1_1HeatMapDistance.html#abc16e65f240ed0c8f3e876e8732c0a33',1,'br::HeatMapDistance']]],
   ['stepfactor',['stepFactor',['../classbr_1_1IntegralSamplerTransform.html#afe913ca4e3a3ba8b995617d738f2a866',1,'br::IntegralSamplerTransform']]],
-  ['subjects',['subjects',['../classbr_1_1Context.html#abdd62e046c69bc25d551863e3bd1f3ea',1,'br::Context']]],
+  ['stepsize',['stepSize',['../classbr_1_1SlidingWindowTransform.html#a76b84e13aaf5a8bd0f919403d57307c0',1,'br::SlidingWindowTransform']]],
   ['subtransform',['subTransform',['../classbr_1_1RecursiveIntegralSamplerTransform.html#a93b266ed025f33ff41b99418dd404bc3',1,'br::RecursiveIntegralSamplerTransform']]]
 ];

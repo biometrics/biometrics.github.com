@@ -1,8 +1,10 @@
 var searchData=
 [
+  ['tail',['Tail',['../classbr_1_1Tail.html',1,'br']]],
   ['tailoutput',['tailOutput',['../classbr_1_1tailOutput.html',1,'br']]],
   ['template',['Template',['../structbr_1_1Template.html',1,'br']]],
   ['templatedatasource',['TemplateDataSource',['../classbr_1_1TemplateDataSource.html',1,'br']]],
+  ['templateevent',['TemplateEvent',['../classbr_1_1TemplateEvent.html',1,'br']]],
   ['templategallery',['templateGallery',['../classbr_1_1templateGallery.html',1,'br']]],
   ['templatelist',['TemplateList',['../structbr_1_1TemplateList.html',1,'br']]],
   ['templatemetadata',['TemplateMetadata',['../classbr_1_1TemplateMetadata.html',1,'br']]],
@@ -10,8 +12,6 @@ var searchData=
   ['templateviewergrid',['TemplateViewerGrid',['../classbr_1_1TemplateViewerGrid.html',1,'br']]],
   ['timeinvariantwrappertransform',['TimeInvariantWrapperTransform',['../classbr_1_1TimeInvariantWrapperTransform.html',1,'br']]],
   ['timevaryingtransform',['TimeVaryingTransform',['../classbr_1_1TimeVaryingTransform.html',1,'br']]],
-  ['tobinaryvectortransform',['ToBinaryVectorTransform',['../classbr_1_1ToBinaryVectorTransform.html',1,'br']]],
-  ['tometadatatransform',['ToMetadataTransform',['../classbr_1_1ToMetadataTransform.html',1,'br']]],
   ['transform',['Transform',['../classbr_1_1Transform.html',1,'br']]],
   ['transformcopier',['TransformCopier',['../classbr_1_1TransformCopier.html',1,'br']]],
   ['transformeditor',['TransformEditor',['../classbr_1_1TransformEditor.html',1,'br']]],

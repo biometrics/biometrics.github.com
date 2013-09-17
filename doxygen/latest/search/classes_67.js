@@ -10,6 +10,5 @@ var searchData=
   ['googlegallery',['googleGallery',['../classbr_1_1googleGallery.html',1,'br']]],
   ['gradientmasktransform',['GradientMaskTransform',['../classbr_1_1GradientMaskTransform.html',1,'br']]],
   ['gradienttransform',['GradientTransform',['../classbr_1_1GradientTransform.html',1,'br']]],
-  ['gridtransform',['GridTransform',['../classbr_1_1GridTransform.html',1,'br']]],
-  ['guiproxy',['GUIProxy',['../classbr_1_1GUIProxy.html',1,'br']]]
+  ['gridtransform',['GridTransform',['../classbr_1_1GridTransform.html',1,'br']]]
 ];

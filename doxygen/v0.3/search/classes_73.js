@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['score',['Score',['../classbr_1_1Score.html',1,'br']]],
+  ['sdkestimator',['SdkEstimator',['../structSdkEstimator.html',1,'']]],
+  ['sentencesimilaritydistance',['SentenceSimilarityDistance',['../classbr_1_1SentenceSimilarityDistance.html',1,'br']]],
+  ['sentencetransform',['SentenceTransform',['../classbr_1_1SentenceTransform.html',1,'br']]],
+  ['sequencingbuffer',['SequencingBuffer',['../classbr_1_1SequencingBuffer.html',1,'br']]],
+  ['sface',['sface',['../structsface.html',1,'']]],
+  ['sharedbuffer',['SharedBuffer',['../classbr_1_1SharedBuffer.html',1,'br']]],
+  ['showtransform',['ShowTransform',['../classbr_1_1ShowTransform.html',1,'br']]],
+  ['siftdescriptortransform',['SIFTDescriptorTransform',['../classbr_1_1SIFTDescriptorTransform.html',1,'br']]],
+  ['singlethreadstage',['SingleThreadStage',['../classbr_1_1SingleThreadStage.html',1,'br']]],
+  ['singletontransform',['SingletonTransform',['../classbr_1_1SingletonTransform.html',1,'br']]],
+  ['skinmasktransform',['SkinMaskTransform',['../classbr_1_1SkinMaskTransform.html',1,'br']]],
+  ['splashscreen',['SplashScreen',['../classbr_1_1SplashScreen.html',1,'br']]],
+  ['splitchannelstransform',['SplitChannelsTransform',['../classbr_1_1SplitChannelsTransform.html',1,'br']]],
+  ['stasminitializer',['StasmInitializer',['../classbr_1_1StasmInitializer.html',1,'br']]],
+  ['stasmtransform',['StasmTransform',['../classbr_1_1StasmTransform.html',1,'br']]],
+  ['statgallery',['statGallery',['../classbr_1_1statGallery.html',1,'br']]],
+  ['stattransform',['StatTransform',['../classbr_1_1StatTransform.html',1,'br']]],
+  ['streamtransform',['StreamTransform',['../classbr_1_1StreamTransform.html',1,'br']]],
+  ['subdividetransform',['SubdivideTransform',['../classbr_1_1SubdivideTransform.html',1,'br']]],
+  ['subjecttransform',['SubjectTransform',['../classbr_1_1SubjectTransform.html',1,'br']]],
+  ['subtracttransform',['SubtractTransform',['../classbr_1_1SubtractTransform.html',1,'br']]],
+  ['svmdistance',['SVMDistance',['../classbr_1_1SVMDistance.html',1,'br']]],
+  ['svmtransform',['SVMTransform',['../classbr_1_1SVMTransform.html',1,'br']]]
+];
