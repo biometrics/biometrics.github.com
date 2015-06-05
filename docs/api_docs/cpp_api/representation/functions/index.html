@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Functions - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/highlight.css">
+
+  <script src="../../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../../js/highlight.pack.js"></script>
+  <script src="../../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../../../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../../c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="../../">C++ Plugin API</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../apifunctions/">API Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../file/file/">File</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filelist/filelist/">FileList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../template/template/">Template</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../templatelist/templatelist/">TemplateList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../factory/factory/">Factory</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../object/object/">Object</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../context/context/">Context</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../initializer/initializer/">Initializer</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../transform/transform/">Transform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabletransform/untrainabletransform/">UntrainableTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metatransform/metatransform/">MetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metadatatransform/metadatatransform/">MetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../compositetransform/compositetransform/">CompositeTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../wrappertransform/wrappertransform/">WrapperTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../distance/distance/">Distance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabledistance/untrainabledistance/">UntrainableDistance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../output/output/">Output</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../matrixoutput/matrixoutput/">MatrixOutput</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../format/format/">Format</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../gallery/gallery/">Gallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filegallery/filegallery/">FileGallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="../representation/">Representation</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../constructors/">Constructors</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../statics/">Static Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Functions</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#preprocess">Mat preprocess(const Mat image)</a></li>
+                
+                    <li><a href="#train">void train(const QListMat images, const QListfloat labels)</a></li>
+                
+                    <li><a href="#evaluate">Mat evaluate(const Mat image, const QListint indices = QListint())</a></li>
+                
+                    <li><a href="#numfeatures">int numFeatures()</a></li>
+                
+            </ul>
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../classifier/classifier/">Classifier</a>
+            </li>
+            
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../../../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Representation &raquo;</li>
+        
+      
+    
+    <li>Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#preprocess"><span>Mat preprocess(const Mat image)</span></a></li>
+                                            
+                                                <li><a href="#train"><span>void train(const QListMat images, const QListfloat labels)</span></a></li>
+                                            
+                                                <li><a href="#evaluate"><span>Mat evaluate(const Mat image, const QListint indices = QListint())</span></a></li>
+                                            
+                                                <li><a href="#numfeatures"><span>int numFeatures()</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <h2 id="preprocess"><a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> preprocess(const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;image)</h2>
+<p>This is a virtual function. Preprocess an image into the desired format for the representation. Default implementation returns the image unmodified.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual Mat preprocess(const Mat &amp;image) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;</td>
+<td>Image to be preprocessed</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (<a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a>) Returns the preprocessed image</p>
+</li>
+<li><strong>example:</strong><pre><code>Template in("picture.jpg");
+
+Representation *rep = Representation::make("RepresentationThatRequiresGrayscale");
+rep-&gt;preprocess(in); // returns the original image converted to grayscale
+</code></pre>
+</li>
+</ul>
+<h2 id="train">void train(const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;<a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a>&gt; &amp;images, const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;float&gt; &amp;labels)</h2>
+<p>This is a virtual function. Train the representation using the provided images and associated labels. Default implementation does no training.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual void train(const QList&lt;Mat&gt; &amp;images, const QList&lt;float&gt; &amp;labels)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>images</td>
+<td>const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;<a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a>&gt; &amp;</td>
+<td>Training images</td>
+</tr>
+<tr>
+<td>labels</td>
+<td>const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;float&gt; &amp;</td>
+<td>Training labels</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+<li><strong>example:</strong><pre><code>// Create data for a 2-class classification problem
+QList&lt;Mat&gt; images = QList&lt;Mat&gt;() &lt;&lt; Template("training_pic1.jpg").m()
+                                 &lt;&lt; Template("training_pic2.jpg").m()
+                                 &lt;&lt; Template("training_pic3.jpg").m()
+                                 &lt;&lt; Template("training_pic4.jpg").m();
+
+QList&lt;float&gt; labels = QList&lt;float&gt;() &lt;&lt; 0 &lt;&lt; 0 &lt;&lt; 1 &lt;&lt; 1;
+
+Representation *rep = Representation::make("Representation");
+rep-&gt;train(images, labels);
+</code></pre>
+</li>
+</ul>
+<h2 id="evaluate"><a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> evaluate(const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;image, const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;int&gt; &amp;indices = <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;int&gt;())</h2>
+<p>This is a pure virtual function. For a provided input image calculate only the feature responses associated with the provided indices. The indices are expected relative to the entire feature space. If the indices list is empty the response of the entire feature space is calculated.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual cv::Mat evaluate(const Mat &amp;image, const QList&lt;int&gt; &amp;indices = QList&lt;int&gt;()) const = 0
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>image</td>
+<td>const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;</td>
+<td>The image to be converted</td>
+</tr>
+<tr>
+<td>indices</td>
+<td>const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;int&gt; &amp;</td>
+<td>(Optional) A list of indices corresponding to the desired features to calculate. If the list is empty all features are calculated.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (<a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a>) Returns a 1xN feature vector where N is the number of indices provided. If no indices are provided N equals the size of the feature space.</p>
+</li>
+<li><strong>example:</strong><pre><code>Template image("picture.jpg");
+
+Representation *rep = Representation::make("Representation");
+rep-&gt;evaluate(image, QList&lt;int&gt;() &lt;&lt; 7 &lt;&lt; 10 &lt;&lt; 72 ); // returns a 1x3 Mat feature vector
+</code></pre>
+</li>
+</ul>
+<h2 id="numfeatures">int numFeatures()</h2>
+<p>This is a pure virtual function. Get the size of the feature space.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual int numFeatures() const = 0
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong> NONE</p>
+</li>
+<li><strong>output:</strong> (int) Returns the size of the feature space</li>
+<li><strong>example:</strong><pre><code>Representation *rep1 = Representation::make("RepresentationWith1000features");
+Representation *rep2 = Representation::make("RepresentationWith25643features");
+
+rep1-&gt;numFeatures(); // returns 1000
+rep2-&gt;numFeatures(); // returns 25643
+</code></pre>
+</li>
+</ul>
+<!-- Links -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

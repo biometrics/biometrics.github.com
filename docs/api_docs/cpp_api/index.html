@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="./">C++ Plugin API</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="apifunctions/">API Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="file/file/">File</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="filelist/filelist/">FileList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="template/template/">Template</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="templatelist/templatelist/">TemplateList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="factory/factory/">Factory</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="object/object/">Object</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="context/context/">Context</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="initializer/initializer/">Initializer</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="transform/transform/">Transform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="untrainabletransform/untrainabletransform/">UntrainableTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="metatransform/metatransform/">MetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="metadatatransform/metadatatransform/">MetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="compositetransform/compositetransform/">CompositeTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="wrappertransform/wrappertransform/">WrapperTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="distance/distance/">Distance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="untrainabledistance/untrainabledistance/">UntrainableDistance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="output/output/">Output</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="matrixoutput/matrixoutput/">MatrixOutput</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="format/format/">Format</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="gallery/gallery/">Gallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="filegallery/filegallery/">FileGallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="representation/representation/">Representation</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="classifier/classifier/">Classifier</a>
+            </li>
+            
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>C++ Plugin API &raquo;</li>
+        
+      
+    
+    <li>Overview</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#c-plugin-api"><span>C++ Plugin API</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <h1 id="c-plugin-api">C++ Plugin API</h1>
+<p>The C++ Plugin API is a pluggable API designed to allow the succinct expression of biometrics algorithms as a series of independent plugins. The API exposes a number of data structures and plugin abstractions to use as simple building blocks for complex algorithms.</p>
+<h2 id="data-structures">Data Structures</h2>
+<p>The API defines two data structures:</p>
+<ul>
+<li><a href="file/file/">File</a>s are typically used to store the path to a file on disk with associated metadata (in the form of key-value pairs). In the example above, we store the rectangles detected by <a href="../../plugin_docs/metadata/#cascadetransform">Cascade</a> as metadata which are then used by <a href="../../plugin_docs/gui/#drawtransform">Draw</a> for visualization.</li>
+<li><a href="template/template/">Template</a>s are containers for images and <a href="file/file/">File</a>s. Images in OpenBR are OpenCV Mats and are member variables of Templates. Templates can contain one or more images.</li>
+</ul>
+<h2 id="plugin-abstractions">Plugin Abstractions</h2>
+<p>A plugin in OpenBR is defined as <em>classes which modify, interpret, or assist with the modification of OpenBR compatible images and/or metadata</em>. All OpenBR plugins have a common ancestor, <a href="object/object/">Object</a>, and they all are constructed from string descriptions given by <a href="file/file/">Files</a>. There are eight base abstractions that derive from <a href="object/object/">Object</a>, one of which should be the parent for all production plugins. They are:</p>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="initializer/initializer/">Initializer</a></td>
+<td>Initializes shared contexts and variables at the launch of OpenBR. Typically used with third-party plugins.</td>
+</tr>
+<tr>
+<td><a href="transform/transform/">Transform</a></td>
+<td>The most common plugin type in OpenBR. Provides the basis for algorithms by transforming images or metadata.</td>
+</tr>
+<tr>
+<td><a href="distance/distance/">Distance</a></td>
+<td>Used to compute a distance metric between <a href="template/template/">Template</a>s.</td>
+</tr>
+<tr>
+<td><a href="format/format/">Format</a></td>
+<td>Used for I/O. Formats handle file types that correspond to single objects (e.g. .jpg, .png, etc.).</td>
+</tr>
+<tr>
+<td><a href="gallery/gallery/">Gallery</a></td>
+<td>Used for I/O. Galleries handle file types that correspond to many objects (e.g. .csv., .xml, etc.).</td>
+</tr>
+<tr>
+<td><a href="output/output/">Output</a></td>
+<td>Used for I/O. Outputs handle the results of <a href="distance/distance/">Distance</a> comparisons.</td>
+</tr>
+<tr>
+<td><a href="representation/representation/">Representation</a></td>
+<td>Converts images into feature vectors. Slightly different then <a href="transform/transform/">Transform</a>s in implementation and available API calls.</td>
+</tr>
+<tr>
+<td><a href="classifier/classifier/">Classifier</a></td>
+<td>Classifies feature vectors as members of specific classes or performs regression on them.</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, there are several child-abstractions for specific use cases. A few examples are:</p>
+<table>
+<thead>
+<tr>
+<th>Plugin</th>
+<th>Parent</th>
+<th>Function</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="untrainabletransform/untrainabletransform/">UntrainableTransform</a></td>
+<td><a href="transform/transform/">Transform</a></td>
+<td>A <a href="transform/transform/">Transform</a> that cannot be trained.</td>
+</tr>
+<tr>
+<td><a href="metatransform/metatransform/">MetaTransform</a></td>
+<td><a href="transform/transform/">Transform</a></td>
+<td>A <a href="transform/transform/">Transform</a> that is <em>not</em> <a href="transform/members/#independent">independent</a>.</td>
+</tr>
+<tr>
+<td><a href="untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></td>
+<td><a href="untrainabletransform/untrainabletransform/">UntrainableTransform</a></td>
+<td>A <a href="transform/transform/">Transform</a> that is <em>not</em> <a href="transform/members/#independent">independent</a> and cannot be trained.</td>
+</tr>
+<tr>
+<td><a href="metadatatransform/metadatatransform/">MetadataTransform</a></td>
+<td><a href="transform/transform/">Transform</a></td>
+<td>A <a href="transform/transform/">Transform</a> that operates only on <a href="template/template/">Template</a> <a href="template/members/#file">metadata</a>.</td>
+</tr>
+<tr>
+<td><a href="timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a></td>
+<td><a href="transform/transform/">Transform</a></td>
+<td>A <a href="transform/transform/">Transform</a> that changes at runtime as a result of the input.</td>
+</tr>
+<tr>
+<td><a href="untrainabledistance/untrainabledistance/">UntrainableDistance</a></td>
+<td><a href="distance/distance/">Distance</a></td>
+<td>A <a href="distance/distance/">Distance</a> that cannot be trained.</td>
+</tr>
+<tr>
+<td><a href="matrixoutput/matrixoutput/">MatrixOutput</a></td>
+<td><a href="output/output/">Output</a></td>
+<td>A <a href="output/output/">Output</a> that outputs data as a matrix.</td>
+</tr>
+</tbody>
+</table>
+<p>As previously mentioned, all plugins in OpenBR are constructed using strings stored as <a href="file/file/">Files</a>. The construction is done at runtime by a <a href="factory/factory/">Factory</a> class<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup>. The <a href="factory/factory/">Factory</a> expects strings of the form <code>PluginName(property1=value1,property2=value2...propertyN=valueN)</code> (value lists are also permitted). It looks up the <code>PluginName</code> in a static registry and builds the plugin if found. The registry is populated using a special macro <a href="factory/macros/#br_register">BR_REGISTER</a>; each plugin needs to register itself and its base abstraction in the factory to enable construction. The purpose of this is to allow algorithms to be described completely by strings. For more information on algorithms in OpenBR please see the <a href="../../tutorials/#algorithms-in-openbr">tutorial</a></p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><a href="https://adtmag.com/articles/2000/09/25/industrial-strength-pluggable-factories.aspx">Industrial Strength Pluggable Factories</a>&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

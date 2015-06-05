@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Core - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../api_docs/c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../api_docs/cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../api_docs/python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../api_docs/cpp_api/">C++ Plugin API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Core</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#cachetransform">CacheTransform</a></li>
+                
+                    <li><a href="#collectoutputtransform">CollectOutputTransform</a></li>
+                
+                    <li><a href="#contracttransform">ContractTransform</a></li>
+                
+                    <li><a href="#crossvalidatetransform">CrossValidateTransform</a></li>
+                
+                    <li><a href="#directstreamtransform">DirectStreamTransform</a></li>
+                
+                    <li><a href="#discardtemplatestransform">DiscardTemplatesTransform</a></li>
+                
+                    <li><a href="#discardtransform">DiscardTransform</a></li>
+                
+                    <li><a href="#distributetemplatetransform">DistributeTemplateTransform</a></li>
+                
+                    <li><a href="#downsampletrainingtransform">DownsampleTrainingTransform</a></li>
+                
+                    <li><a href="#eventtransform">EventTransform</a></li>
+                
+                    <li><a href="#expandtransform">ExpandTransform</a></li>
+                
+                    <li><a href="#ftetransform">FTETransform</a></li>
+                
+                    <li><a href="#firsttransform">FirstTransform</a></li>
+                
+                    <li><a href="#forktransform">ForkTransform</a></li>
+                
+                    <li><a href="#gallerycomparetransform">GalleryCompareTransform</a></li>
+                
+                    <li><a href="#identitytransform">IdentityTransform</a></li>
+                
+                    <li><a href="#independenttransform">IndependentTransform</a></li>
+                
+                    <li><a href="#jnitransform">JNITransform</a></li>
+                
+                    <li><a href="#likelytransform">LikelyTransform</a></li>
+                
+                    <li><a href="#loadstoretransform">LoadStoreTransform</a></li>
+                
+                    <li><a href="#pipetransform">PipeTransform</a></li>
+                
+                    <li><a href="#processwrappertransform">ProcessWrapperTransform</a></li>
+                
+                    <li><a href="#progresscountertransform">ProgressCounterTransform</a></li>
+                
+                    <li><a href="#propagatetransform">PropagateTransform</a></li>
+                
+                    <li><a href="#removetransform">RemoveTransform</a></li>
+                
+                    <li><a href="#resttransform">RestTransform</a></li>
+                
+                    <li><a href="#schrodingertransform">SchrodingerTransform</a></li>
+                
+                    <li><a href="#singletontransform">SingletonTransform</a></li>
+                
+                    <li><a href="#streamtransform">StreamTransform</a></li>
+                
+            </ul>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plugin Documentation &raquo;</li>
+        
+      
+    
+    <li>Core</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#cachetransform"><span>CacheTransform</span></a></li>
+                                            
+                                                <li><a href="#collectoutputtransform"><span>CollectOutputTransform</span></a></li>
+                                            
+                                                <li><a href="#contracttransform"><span>ContractTransform</span></a></li>
+                                            
+                                                <li><a href="#crossvalidatetransform"><span>CrossValidateTransform</span></a></li>
+                                            
+                                                <li><a href="#directstreamtransform"><span>DirectStreamTransform</span></a></li>
+                                            
+                                                <li><a href="#discardtemplatestransform"><span>DiscardTemplatesTransform</span></a></li>
+                                            
+                                                <li><a href="#discardtransform"><span>DiscardTransform</span></a></li>
+                                            
+                                                <li><a href="#distributetemplatetransform"><span>DistributeTemplateTransform</span></a></li>
+                                            
+                                                <li><a href="#downsampletrainingtransform"><span>DownsampleTrainingTransform</span></a></li>
+                                            
+                                                <li><a href="#eventtransform"><span>EventTransform</span></a></li>
+                                            
+                                                <li><a href="#expandtransform"><span>ExpandTransform</span></a></li>
+                                            
+                                                <li><a href="#ftetransform"><span>FTETransform</span></a></li>
+                                            
+                                                <li><a href="#firsttransform"><span>FirstTransform</span></a></li>
+                                            
+                                                <li><a href="#forktransform"><span>ForkTransform</span></a></li>
+                                            
+                                                <li><a href="#gallerycomparetransform"><span>GalleryCompareTransform</span></a></li>
+                                            
+                                                <li><a href="#identitytransform"><span>IdentityTransform</span></a></li>
+                                            
+                                                <li><a href="#independenttransform"><span>IndependentTransform</span></a></li>
+                                            
+                                                <li><a href="#jnitransform"><span>JNITransform</span></a></li>
+                                            
+                                                <li><a href="#likelytransform"><span>LikelyTransform</span></a></li>
+                                            
+                                                <li><a href="#loadstoretransform"><span>LoadStoreTransform</span></a></li>
+                                            
+                                                <li><a href="#pipetransform"><span>PipeTransform</span></a></li>
+                                            
+                                                <li><a href="#processwrappertransform"><span>ProcessWrapperTransform</span></a></li>
+                                            
+                                                <li><a href="#progresscountertransform"><span>ProgressCounterTransform</span></a></li>
+                                            
+                                                <li><a href="#propagatetransform"><span>PropagateTransform</span></a></li>
+                                            
+                                                <li><a href="#removetransform"><span>RemoveTransform</span></a></li>
+                                            
+                                                <li><a href="#resttransform"><span>RestTransform</span></a></li>
+                                            
+                                                <li><a href="#schrodingertransform"><span>SchrodingerTransform</span></a></li>
+                                            
+                                                <li><a href="#singletontransform"><span>SingletonTransform</span></a></li>
+                                            
+                                                <li><a href="#streamtransform"><span>StreamTransform</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <h1 id="cachetransform">CacheTransform</h1>
+<p>Caches <a href="../../api_docs/cpp_api/transform/transform/">Transform</a>::project() results.</p>
+<ul>
+<li><strong>file:</strong> core/cache.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="collectoutputtransform">CollectOutputTransform</h1>
+<p>DOCUMENT ME CHARLES</p>
+<ul>
+<li><strong>file:</strong> core/stream.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="contracttransform">ContractTransform</h1>
+<p>It's like the opposite of ExpandTransform, but not really</p>
+<p>Given a <a href="../../api_docs/cpp_api/templatelist/templatelist/">TemplateList</a> as input, concatenate them into a single <a href="../../api_docs/cpp_api/template/template/">Template</a></p>
+<ul>
+<li><strong>file:</strong> core/contract.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="crossvalidatetransform">CrossValidateTransform</h1>
+<p>Cross validate a trainable <a href="../../api_docs/cpp_api/transform/transform/">Transform</a>.</p>
+<p>Two flags can be put in <a href="../../api_docs/cpp_api/file/file/">File</a> metadata that are related to cross-validation and are used to
+extend a testing gallery:</p>
+<table>
+<thead>
+<tr>
+<th>flag</th>
+<th>description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>allPartitions</td>
+<td>This flag is intended to be used when comparing the performance of an untrainable algorithm (e.g. a COTS algorithm) against a trainable algorithm that was trained using cross-validation. All templates with the allPartitions flag will be compared against for every partition. As untrainable algorithms will have no use for the CrossValidateTransform, this flag is only meaningful at comparison time (but care has been taken so that one can train and enroll without issue if these <a href="../../api_docs/cpp_api/file/file/">File</a>s are present in the used <a href="../../api_docs/cpp_api/gallery/gallery/">Gallery</a>).</td>
+</tr>
+<tr>
+<td>duplicatePartitions</td>
+<td>This flag is similar to allPartitions in that it causes the same template to be used during comparison for every partition. The difference is that duplicatePartitions will duplicate each marked template and project it into the model space constituded by the child transforms of CrossValidateTransform. Again, care has been take such that one can train with these templates in the used <a href="../../api_docs/cpp_api/gallery/gallery/">Gallery</a> successfully (they will simply be omitted).</td>
+</tr>
+</tbody>
+</table>
+<p>To use an extended <a href="../../api_docs/cpp_api/gallery/gallery/">Gallery</a>, add an allPartitions="true" flag to the gallery sigset for those images that should be compared
+against for all testing partitions.</p>
+<ul>
+<li><strong>file:</strong> core/crossvalidate.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a>, <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="directstreamtransform">DirectStreamTransform</h1>
+<p>DOCUMENT ME CHARLES</p>
+<ul>
+<li><strong>file:</strong> core/stream.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/compositetransform/compositetransform/">CompositeTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="discardtemplatestransform">DiscardTemplatesTransform</h1>
+<p>DOCUMENT ME</p>
+<ul>
+<li><strong>file:</strong> core/discardtemplates.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://openbiometrics.com">Unknown</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="discardtransform">DiscardTransform</h1>
+<p>Removes all matrices from a <a href="../../api_docs/cpp_api/template/template/">Template</a>.</p>
+<ul>
+<li><strong>file:</strong> core/discard.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="distributetemplatetransform">DistributeTemplateTransform</h1>
+<p>DOCUMENT ME CHARLES</p>
+<ul>
+<li><strong>file:</strong> core/distributetemplate.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://openbiometrics.com">Unknown</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="downsampletrainingtransform">DownsampleTrainingTransform</h1>
+<p>DOCUMENT ME JOSH</p>
+<ul>
+<li><strong>file:</strong> core/downsampletraining.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="eventtransform">EventTransform</h1>
+<p>DOCUMENT ME</p>
+<ul>
+<li><strong>file:</strong> core/event.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://openbiometrics.com">Unknown</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="expandtransform">ExpandTransform</h1>
+<p>Performs an expansion step on an input <a href="../../api_docs/cpp_api/templatelist/templatelist/">TemplateList</a>. Each matrix in each input <a href="../../api_docs/cpp_api/template/template/">Template</a> is expanded into its own <a href="../../api_docs/cpp_api/template/template/">Template</a>.</p>
+<ul>
+<li><strong>file:</strong> core/expand.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="ftetransform">FTETransform</h1>
+<p>Flags images that failed to enroll based on the specified <a href="../../api_docs/cpp_api/transform/transform/">Transform</a>.</p>
+<ul>
+<li><strong>file:</strong> core/fte.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="firsttransform">FirstTransform</h1>
+<p>Removes all but the first matrix from the <a href="../../api_docs/cpp_api/template/template/">Template</a>.</p>
+<ul>
+<li><strong>file:</strong> core/first.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="forktransform">ForkTransform</h1>
+<p>Transforms in parallel.</p>
+<p>The source <a href="../../api_docs/cpp_api/template/template/">Template</a> is seperately given to each transform and the results are appended together.</p>
+<ul>
+<li><strong>file:</strong> core/fork.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/compositetransform/compositetransform/">CompositeTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="gallerycomparetransform">GalleryCompareTransform</h1>
+<p>Compare each <a href="../../api_docs/cpp_api/template/template/">Template</a> to a fixed <a href="../../api_docs/cpp_api/gallery/gallery/">Gallery</a> (with name = galleryName), using the specified distance.
+dst will contain a 1 by n vector of scores.</p>
+<ul>
+<li><strong>file:</strong> core/gallerycompare.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="identitytransform">IdentityTransform</h1>
+<p>A no-op <a href="../../api_docs/cpp_api/transform/transform/">Transform</a>.</p>
+<ul>
+<li><strong>file:</strong> core/identity.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="independenttransform">IndependentTransform</h1>
+<p>Clones the <a href="../../api_docs/cpp_api/transform/transform/">Transform</a> so that it can be applied independently.</p>
+<p>Independent <a href="../../api_docs/cpp_api/transform/transform/">Transform</a>s expect single-matrix <a href="../../api_docs/cpp_api/template/template/">Template</a>.</p>
+<ul>
+<li><strong>file:</strong> core/independent.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="jnitransform">JNITransform</h1>
+<p>Execute Java code from OpenBR using the JNI</p>
+<ul>
+<li><strong>file:</strong> core/jni.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="likelytransform">LikelyTransform</h1>
+<p>Generic interface to Likely JIT compiler</p>
+<ul>
+<li><strong>file:</strong> core/likely.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>see:</strong></p>
+<ul>
+<li><a href="http://liblikely.org">Homepage</a></li>
+<li><a href="https://s3.amazonaws.com/liblikely/doxygen/index.html">API Documentation</a></li>
+</ul>
+</li>
+<li>
+<p><strong>properties:</strong> None</p>
+</li>
+</ul>
+<hr />
+<h1 id="loadstoretransform">LoadStoreTransform</h1>
+<p>Caches <a href="../../api_docs/cpp_api/transform/transform/">Transform</a> training.</p>
+<ul>
+<li><strong>file:</strong> core/loadstore.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="pipetransform">PipeTransform</h1>
+<p>Transforms in series.</p>
+<p>The source <a href="../../api_docs/cpp_api/template/template/">Template</a> is given to the first transform and the resulting <a href="../../api_docs/cpp_api/template/template/">Template</a> is passed to the next transform, etc.</p>
+<ul>
+<li><strong>file:</strong> core/pipe.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/compositetransform/compositetransform/">CompositeTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="processwrappertransform">ProcessWrapperTransform</h1>
+<p>Interface to a separate process</p>
+<ul>
+<li><strong>file:</strong> core/processwrapper.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/wrappertransform/wrappertransform/">WrapperTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="progresscountertransform">ProgressCounterTransform</h1>
+<p>DOCUMENT ME CHARLES</p>
+<ul>
+<li><strong>file:</strong> core/progresscounter.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://openbiometrics.com">Unknown</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="propagatetransform">PropagateTransform</h1>
+<p>Ensures that a template will be propogated.</p>
+<ul>
+<li><strong>file:</strong> core/propagate.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="removetransform">RemoveTransform</h1>
+<p>Removes the matrix from the <a href="../../api_docs/cpp_api/template/template/">Template</a> at the specified index.</p>
+<ul>
+<li><strong>file:</strong> core/remove.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="resttransform">RestTransform</h1>
+<p>Removes the first matrix from the <a href="../../api_docs/cpp_api/template/template/">Template</a>.</p>
+<ul>
+<li><strong>file:</strong> core/rest.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="schrodingertransform">SchrodingerTransform</h1>
+<p>Generates two <a href="../../api_docs/cpp_api/template/template/">Template</a>, one of which is passed through a <a href="../../api_docs/cpp_api/transform/transform/">Transform</a> and the other
+is not. No cats were harmed in the making of this <a href="../../api_docs/cpp_api/transform/transform/">Transform</a>.</p>
+<ul>
+<li><strong>file:</strong> core/schrodinger.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="singletontransform">SingletonTransform</h1>
+<p>A globally shared <a href="../../api_docs/cpp_api/transform/transform/">Transform</a>.</p>
+<ul>
+<li><strong>file:</strong> core/singleton.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="streamtransform">StreamTransform</h1>
+<p>DOCUMENT ME CHARLES</p>
+<ul>
+<li><strong>file:</strong> core/stream.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/wrappertransform/wrappertransform/">WrapperTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<!-- Contributors -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

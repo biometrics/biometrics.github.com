@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Install - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href=".." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Install</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#linux">Linux</a></li>
+                
+                    <li><a href="#osx">OSX</a></li>
+                
+                    <li><a href="#windows">Windows</a></li>
+                
+                    <li><a href="#raspian">Raspian</a></li>
+                
+            </ul>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../api_docs/c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../api_docs/cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../api_docs/python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../api_docs/cpp_api/">C++ Plugin API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Install</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#linux"><span>Linux</span></a></li>
+                                            
+                                                <li><a href="#osx"><span>OSX</span></a></li>
+                                            
+                                                <li><a href="#windows"><span>Windows</span></a></li>
+                                            
+                                                <li><a href="#raspian"><span>Raspian</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <p>A hacker's guide to building, editing, and running OpenBR.</p>
+<hr />
+<h1 id="linux">Linux</h1>
+<ol>
+<li>
+<p>Install GCC 4.9.2</p>
+<pre><code>$ sudo apt-get update
+$ sudo apt-get install build-essential
+</code></pre>
+</li>
+<li>
+<p>Install CMake 3.0.2</p>
+<pre><code>$ sudo apt-get install cmake cmake-curses-gui
+</code></pre>
+</li>
+<li>
+<p><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.11/opencv-2.4.11.zip/download">Download OpenCV 2.4.11</a>, <strong>note</strong> <a href="https://github.com/biometrics/openbr/wiki/Build-OpenCV-with-Video-Support-on-Ubuntu">Build OpenCV with video support</a></p>
+<pre><code>$ cd ~/Downloads
+$ unzip opencv-2.4.11.zip
+$ cd opencv-2.4.11
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make -j4
+$ sudo make install
+$ cd ../..
+$ rm -rf opencv-2.4.11*
+</code></pre>
+</li>
+<li>
+<p>Install Qt 5.4.1</p>
+<pre><code>$ sudo apt-get install qt5-default libqt5svg5-dev qtcreator
+</code></pre>
+</li>
+<li>
+<p>Create a <a href="https://github.com/">GitHub</a> account, follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.</p>
+<pre><code>$ git clone https://github.com/biometrics/openbr.git
+$ cd openbr
+$ git checkout 0.5
+$ git submodule init
+$ git submodule update
+</code></pre>
+</li>
+<li>
+<p>Build OpenBR!</p>
+<pre><code>$ mkdir build # from the OpenBR root directory
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make -j4
+$ sudo make install
+</code></pre>
+</li>
+<li>
+<p>Hack OpenBR!</p>
+<ol>
+<li>
+<p>Open Qt Creator IDE</p>
+<p>$ qtcreator &amp;</p>
+</li>
+<li>
+<p>From the Qt Creator "File" menu select "Open File or Project...".</p>
+</li>
+<li>Select "openbr/CMakeLists.txt" then "Open".</li>
+<li>Browse to your pre-existing build directory "openbr/build" then select "Next".</li>
+<li>Select "Run CMake" then "Finish".</li>
+<li>You're all set! You can find more information on Qt Creator <a href="http://qt-project.org/doc/qtcreator">here</a> if you need it.</li>
+</ol>
+</li>
+<li>
+<p>(Optional) Test OpenBR!</p>
+<pre><code>$ cd openbr/scripts
+$ ./downloadDatasets.sh
+$ cd ../build
+$ make test
+</code></pre>
+</li>
+<li>
+<p>(Optional) Package OpenBR!</p>
+<pre><code>$ cd openbr/build
+$ sudo cpack -G TGZ
+</code></pre>
+</li>
+<li>
+<p>(Optional) Build OpenBR documentation!</p>
+</li>
+</ol>
+<p>Need to rewrite this step for the new docs!</p>
+<hr />
+<h1 id="osx">OSX</h1>
+<ol>
+<li>
+<p>Download and install the latest "XCode" and "Command Line Tools" from the <a href="https://developer.apple.com/downloads/index.action#">Apple Developer Downloads</a> page.</p>
+</li>
+<li>
+<p><a href="http://www.cmake.org/files/v3.0/cmake-3.0.2.tar.gz">Download CMake 3.0.2</a></p>
+<pre><code>    $ cd ~/Downloads
+    $ tar -xf cmake-2.8.11.2.tar.gz
+    $ cd cmake-2.8.11.2
+    $ ./configure
+    $ make -j4
+    $ sudo make install
+    $ cd ..
+    $ rm -rf cmake-2.8.11.2*
+</code></pre>
+</li>
+<li>
+<p><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.11/opencv-2.4.11.zip/download">Download OpenCV 2.4.11</a></p>
+<pre><code>$ cd ~/Downloads
+$ unzip opencv-2.4.11.zip
+$ cd opencv-2.4.11
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make -j4
+$ sudo make install
+$ cd ../..
+$ rm -rf opencv-2.4.11*
+</code></pre>
+</li>
+<li>
+<p><a href="http://download.qt.io/official_releases/qt/5.4/5.4.1/qt-opensource-mac-x64-clang-5.4.1.dmg">Download and install Qt 5.4.1</a></p>
+</li>
+<li>
+<p>Create a <a href="https://github.com/">GitHub</a> account, follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.</p>
+<pre><code>$ git clone https://github.com/biometrics/openbr.git
+$ cd openbr
+$ git checkout 0.5
+$ git submodule init
+$ git submodule update
+</code></pre>
+</li>
+<li>
+<p>Build OpenBR!</p>
+<pre><code>$ mkdir build # from the OpenBR root directory
+$ cd build
+$ cmake -DCMAKE_PREFIX_PATH=~/Qt/5.4.1/clang_64 -DCMAKE_BUILD_TYPE=Release ..
+$ make -j4
+$ sudo make install
+</code></pre>
+</li>
+<li>
+<p>Hack OpenBR!</p>
+<ol>
+<li>
+<p>Open Qt Creator IDE</p>
+<pre><code>$ open ~/Qt/Qt\ Creator.app
+</code></pre>
+</li>
+<li>
+<p>From the Qt Creator "File" menu select "Open File or Project...".</p>
+</li>
+<li>Select "openbr/CMakeLists.txt" then "Open".</li>
+<li>Browse to your pre-existing build directory "openbr/build" then select "Continue".</li>
+<li>Select "Run CMake" then "Done".</li>
+<li>You're all set! You can find more information on Qt Creator <a href="http://qt-project.org/doc/qtcreator">here</a> if you need it.</li>
+</ol>
+</li>
+<li>
+<p>(Optional) Test OpenBR!</p>
+<pre><code>$ cd openbr/scripts
+$ ./downloadDatasets.sh
+$ cd ../build
+$ make test
+</code></pre>
+</li>
+<li>
+<p>(Optional) Package OpenBR!</p>
+<pre><code>$ cd openbr/build
+$ sudo cpack -G TGZ
+</code></pre>
+</li>
+<li>
+<p>(Optional) Build OpenBR documentation!</p>
+</li>
+</ol>
+<p>Need to remake this step with the new docs!</p>
+<hr />
+<h1 id="windows">Windows</h1>
+<ol>
+<li>
+<p><a href="http://go.microsoft.com/?linkid=9832280&amp;clcid=0x409">Download Visual Studio Express 2013 for Windows Desktop</a> and install. You will have to register with Microsoft, but it's free.</p>
+</li>
+<li>
+<p><a href="http://www.cmake.org/files/v3.0/cmake-3.0.2-win32-x86.exe">Download and Install CMake 3.0.2</a></p>
+<ol>
+<li>During installation setup select "Add CMake to PATH".</li>
+</ol>
+</li>
+<li>
+<p><a href="http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.11/opencv-2.4.11.zip/download">Download OpenCV 2.4.11</a></p>
+<ol>
+<li>Consider the free open source program <a href="http://www.7-zip.org/">7-Zip</a> if you need a program to unarchive tarballs.</li>
+<li>Move the "opencv-2.4.11" folder to "C:\".</li>
+<li>Open "VS2013 x64 Cross Tools Command Prompt" (from the Start Menu, select "All Programs" -&gt; "Microsoft Visual Studio 2013" -&gt; "Visual Studio Tools" -&gt; "VS2013 x64 Cross Tools Command Prompt") and enter:<pre><code>$ cd C:\opencv-2.4.11
+$ mkdir build-msvc2013
+$ cd build-msvc2013
+$ cmake -G "NMake Makefiles" -DBUILD_PERF_TESTS=OFF -DBUILD_TESTS=OFF -DWITH_FFMPEG=OFF -DCMAKE_BUILD_TYPE=Debug ..
+$ nmake
+$ nmake install
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ nmake
+$ nmake install
+$ nmake clean
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p><a href="http://download.qt.io/official_releases/qt/5.4/5.4.1/qt-opensource-windows-x86-msvc2013_64-5.4.1.exe">Download and Install Qt 5.4.1</a></p>
+</li>
+<li>
+<p>Create a <a href="https://github.com/">GitHub</a> account and follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.</p>
+<ol>
+<li>Launch "Git Bash" from the Desktop and clone OpenBR:<pre><code>$ cd /c
+$ git clone https://github.com/biometrics/openbr.git
+$ cd openbr
+$ git checkout 0.5
+$ git submodule init
+$ git submodule update
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Build OpenBR!</p>
+<ol>
+<li>
+<p>From the VS2013 x64 Cross Tools Command Prompt:</p>
+<pre><code>$ cd C:\openbr
+$ mkdir build-msvc2013
+$ cd build-msvc2013
+$ cmake -G "CodeBlocks - NMake Makefiles" -DCMAKE_PREFIX_PATH="C:/opencv-2.4.11/build/install;C:/Qt/Qt5.4.1/5.4/msvc2013_64" -DCMAKE_INSTALL_PREFIX="./install" -DBR_INSTALL_DEPENDENCIES=ON -DCMAKE_BUILD_TYPE=Release ..
+$ nmake
+$ nmake install
+</code></pre>
+</li>
+<li>
+<p>Check out the "install" folder.</p>
+</li>
+</ol>
+</li>
+<li>
+<p>Hack OpenBR!</p>
+<ol>
+<li>From the VS2013 x64 Cross Tools Command Prompt:
+    $ C:\Qt\Qt5.4.1\Tools\QtCreator\bin\qtcreator.exe</li>
+<li>From the Qt Creator "Tools" menu select "Options..."</li>
+<li>Under "Kits" select "Desktop (default)"</li>
+<li>For "Compiler:" select "Microsoft Visual C++ Compiler 11.0 (x86_amd64)" and click "OK"</li>
+<li>From the Qt Creator "File" menu select "Open File or Project...".</li>
+<li>Select "C:\openbr\CMakeLists.txt" then "Open".</li>
+<li>If prompted for the location of CMake, enter "C:\Program Files (x86)\CMake 3.0.2\bin\cmake.exe".</li>
+<li>Browse to your pre-existing build directory "C:\openbr\build-msvc2013" then select "Next".</li>
+<li>Select "Run CMake" then "Finish".</li>
+<li>You're all set! You can find more information on Qt Creator <a href="http://qt-project.org/doc/qtcreator">here</a> if you need.</li>
+</ol>
+</li>
+<li>
+<p>(Optional) Package OpenBR!</p>
+<ol>
+<li>From the VS2013 x64 Cross Tools Command Prompt:
+    $ cd C:\openbr\build-msvc2013
+    $ cpack -G ZIP</li>
+</ol>
+</li>
+</ol>
+<hr />
+<h1 id="raspian">Raspian</h1>
+<ol>
+<li>
+<p>Install CMake 2.8.9</p>
+<pre><code>$ sudo apt-get install cmake
+</code></pre>
+</li>
+<li>
+<p>Download OpenCV 2.4.9</p>
+<pre><code>$ wget http://sourceforge.net/projects/opencvlibrary/files/opencv-unix/2.4.9/opencv-2.4.9.zip
+$ unzip opencv-2.4.9.zip
+$ cd opencv-2.4.9
+$ mkdir build
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+$ cd ../..
+$ rm -rf opencv-2.4.9*
+</code></pre>
+</li>
+<li>
+<p>Install Qt5</p>
+<ol>
+<li>
+<p>Modify source list</p>
+<pre><code>$ nano /etc/apt/sources.list
+</code></pre>
+<p>by changing:</p>
+<pre><code>$ deb http://mirrordirector.raspbian.org/raspbian/ wheezy main contrib non-free rpi
+</code></pre>
+<p>to:</p>
+<pre><code>$ deb http://mirrordirector.raspbian.org/raspbian/ jessie main contrib non-free rpi
+</code></pre>
+</li>
+</ol>
+</li>
+<li>
+<p>Update apt-get</p>
+<pre><code>$ sudo apt-get update
+</code></pre>
+</li>
+<li>
+<p>Install packages</p>
+<pre><code>$ sudo apt-get install qt5-default libqt5svg5-dev
+</code></pre>
+</li>
+<li>
+<p>Create a <a href="https://github.com/">GitHub</a> account, follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.</p>
+<pre><code>$ git clone https://github.com/biometrics/openbr.git
+$ cd openbr
+$ git checkout 0.5
+$ git submodule init
+$ git submodule update
+</code></pre>
+</li>
+<li>
+<p>Build OpenBR!</p>
+<pre><code>$ mkdir build # from the OpenBR root directory
+$ cd build
+$ cmake -DCMAKE_BUILD_TYPE=Release ..
+$ make
+$ sudo make install
+</code></pre>
+</li>
+<li>
+<p>(Optional) Test OpenBR!</p>
+<pre><code>$ cd openbr/scripts
+$ ./downloadDatasets.sh
+$ cd ../build
+$ make test
+</code></pre>
+</li>
+</ol>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

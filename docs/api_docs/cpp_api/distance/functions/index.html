@@ -1,0 +1,1013 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Functions - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/highlight.css">
+
+  <script src="../../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../../js/highlight.pack.js"></script>
+  <script src="../../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../../../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../../c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="../../">C++ Plugin API</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../apifunctions/">API Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../file/file/">File</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filelist/filelist/">FileList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../template/template/">Template</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../templatelist/templatelist/">TemplateList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../factory/factory/">Factory</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../object/object/">Object</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../context/context/">Context</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../initializer/initializer/">Initializer</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../transform/transform/">Transform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabletransform/untrainabletransform/">UntrainableTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metatransform/metatransform/">MetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metadatatransform/metadatatransform/">MetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../compositetransform/compositetransform/">CompositeTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../wrappertransform/wrappertransform/">WrapperTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="../distance/">Distance</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../constructors/">Constructors</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../statics/">Static Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Functions</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#trainable">bool trainable()</a></li>
+                
+                    <li><a href="#train">void train(const TemplateList src)</a></li>
+                
+                    <li><a href="#compare-1">void compare(const TemplateList target, const [TemplateList] query, Output)</a></li>
+                
+                    <li><a href="#compare-2">QListfloat compare(const TemplateList target, const Template query)</a></li>
+                
+                    <li><a href="#compare-3">float compare(const Template a, const Template b)</a></li>
+                
+                    <li><a href="#compare-4">float compare(const Mat a, const Mat b)</a></li>
+                
+                    <li><a href="#compare-5">float compare(const uchar *a, const uchar *b, size_t size)</a></li>
+                
+                    <li><a href="#make">Distance *make(const QString description)</a></li>
+                
+            </ul>
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabledistance/untrainabledistance/">UntrainableDistance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../output/output/">Output</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../matrixoutput/matrixoutput/">MatrixOutput</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../format/format/">Format</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../gallery/gallery/">Gallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filegallery/filegallery/">FileGallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../representation/representation/">Representation</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../classifier/classifier/">Classifier</a>
+            </li>
+            
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../../../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Distance &raquo;</li>
+        
+      
+    
+    <li>Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#trainable"><span>bool trainable()</span></a></li>
+                                            
+                                                <li><a href="#train"><span>void train(const TemplateList src)</span></a></li>
+                                            
+                                                <li><a href="#compare-1"><span>void compare(const TemplateList target, const [TemplateList] query, Output)</span></a></li>
+                                            
+                                                <li><a href="#compare-2"><span>QListfloat compare(const TemplateList target, const Template query)</span></a></li>
+                                            
+                                                <li><a href="#compare-3"><span>float compare(const Template a, const Template b)</span></a></li>
+                                            
+                                                <li><a href="#compare-4"><span>float compare(const Mat a, const Mat b)</span></a></li>
+                                            
+                                                <li><a href="#compare-5"><span>float compare(const uchar *a, const uchar *b, size_t size)</span></a></li>
+                                            
+                                                <li><a href="#make"><span>Distance *make(const QString description)</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <h2 id="trainable">bool trainable()</h2>
+<p>This is a virtual function. Check if the distance is trainable. The default version returns true. Distances that are not trainable should derive from <a href="../../untrainabledistance/untrainabledistance/">UntrainableDistance</a> instead.</p>
+<ul>
+<li>
+<p><strong>function defintion:</strong></p>
+<pre><code>virtual bool trainable()
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong> NONE</p>
+</li>
+<li><strong>output:</strong> (bool) Returns true if the distance is trainable, false otherwise.</li>
+</ul>
+<h2 id="train">void train(const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;src)</h2>
+<p>This is a pure virtual function. Train the distance on a provided <a href="../../templatelist/templatelist/">TemplateList</a> of data. The structure of the data is dependent on the distance to be trained. Distances that are not trainable should derive from <a href="../../untrainabledistance/untrainabledistance/">UntrainableDistance</a> so they do not have to overload this function.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual void train(const TemplateList &amp;src) = 0
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>Training data for the distance.</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+<li><strong>example:</strong><pre><code>// Create data for a 2-class classification problem
+Template t1("training_pic1.jpg");
+t1.file.set("Label", 0);
+Template t2("training_pic2.jpg");
+t2.file.set("Label", 0);
+Template t3("training_pic3.jpg");
+t3.file.set("Label", 1);
+Template t4("training_pic4.jpg");
+t4.file.set("Label", 1);
+
+TemplateList training_data(QList&lt;Template&gt;() &lt;&lt; t1 &lt;&lt; t2 &lt;&lt; t3 &lt;&lt; t4);
+
+Transform *distance = Distance::fromAlgorithm("Enrollment:Distance");
+distance-&gt;train(training_data); // Images are enrolled through Enrollment and the passed to Distance for training
+</code></pre>
+</li>
+</ul>
+<h2 id="compare-1">void compare(const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;target, const [TemplateList] &amp;query, <a href="../../output/output/">Output</a>)</h2>
+<p>This is a virtual function. Compare two <a href="../../templatelist/templatelist/">TemplateLists</a> and store the results in a provided output.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual void compare(const TemplateList &amp;target, const TemplateList &amp;query, Output *output) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>target</td>
+<td>const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>List of templates to compare the query against</td>
+</tr>
+<tr>
+<td>query</td>
+<td>const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>List of templates to compare against the target</td>
+</tr>
+<tr>
+<td>output</td>
+<td><a href="../../output/output/">Output</a> *</td>
+<td><a href="../../output/output/">Output</a> plugin to use to store the results of the comparisons</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+</ul>
+<h2 id="compare-2"><a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;float&gt; compare(const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;target, const <a href="../../template/template/">Template</a> &amp;query)</h2>
+<p>This is a virtual function. Compare a query against a list of targets. Each comparison results in a floating point response which is the distance between the query and a specific target.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual QList&lt;float&gt; compare(const TemplateList &amp;targets, const Template &amp;query) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>targets</td>
+<td>const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>List of templates to compare the query against</td>
+</tr>
+<tr>
+<td>query</td>
+<td>const <a href="../../template/template/">Template</a> &amp;</td>
+<td>Query template to be compared</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (<a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;float&gt;) Returns a list of the responses from each comparison between the query and a target.</p>
+</li>
+<li><strong>example:</strong><pre><code>Template t1("target_picture1.jpg");
+Template t2("target_picture2.jpg");
+Template t3("target_picture3.jpg");
+
+TemplateList targets = TemplateList() &lt;&lt; t1 &lt;&lt; t2 &lt;&lt; t3;
+
+Template query("query_picture.jpg");
+
+algorithm = "Enrollment:Distance";
+
+Transform *transform = Transform::fromAlgorithm(algorithm);
+Distance *distance = Distance::fromAlgorithm(algorithm);
+
+targets &gt;&gt; *transform;
+query   &gt;&gt; *transform;
+
+distance-&gt;compare(targets, query); // returns [0.37, -0.56, 4.35] *Note results are made up!
+</code></pre>
+</li>
+</ul>
+<h2 id="compare-3">float compare(const <a href="../../template/template/">Template</a> &amp;a, const <a href="../../template/template/">Template</a> &amp;b)</h2>
+<p>This is a virtual function. Compare two templates and get the difference between them.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual float compare(const Template &amp;a, const Template &amp;b) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>const <a href="../../template/template/">Template</a> &amp;</td>
+<td>First template to compare</td>
+</tr>
+<tr>
+<td>b</td>
+<td>const <a href="../../template/template/">Template</a> &amp;</td>
+<td>Second template to compare</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (float) Returns the calculated difference between the provided templates</p>
+</li>
+<li><strong>example:</strong></li>
+</ul>
+<p>Template a("picture_a.jpg");
+Template b("picture_b.jpg");</p>
+<p>algorithm = "Enrollment:Distance";</p>
+<p>Transform <em>transform = Transform::fromAlgorithm(algorithm);
+Distance </em>distance = Distance::fromAlgorithm(algorithm);</p>
+<p>a &gt;&gt; <em>transform;
+b &gt;&gt; </em>transform;</p>
+<p>distance-&gt;compare(a, b); // returns 16.43 *Note results are made up!</p>
+<h2 id="compare-4">float compare(const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;a, const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;b)</h2>
+<p>This is a virtual function. Compare two <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mats</a> and get the difference between them.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual float compare(const Mat &amp;a, const Mat &amp;b) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;</td>
+<td>First matrix to compare</td>
+</tr>
+<tr>
+<td>b</td>
+<td>const <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mat</a> &amp;</td>
+<td>Second matrix to compare</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (float) Returns the calculated difference between the provided <a href="http://docs.opencv.org/modules/core/doc/basic_structures.html#mat" title="Mat">Mats</a></p>
+</li>
+<li><strong>example:</strong><pre><code>Template a("picture_a.jpg");
+Template b("picture_b.jpg");
+
+algorithm = "Enrollment:Distance";
+
+Transform *transform = Transform::fromAlgorithm(algorithm);
+Distance *distance = Distance::fromAlgorithm(algorithm);
+
+a &gt;&gt; *transform;
+b &gt;&gt; *transform;
+
+distance-&gt;compare(a.m(), b.m()); // returns 16.43 *Note results are made up!
+</code></pre>
+</li>
+</ul>
+<h2 id="compare-5">float compare(const uchar *a, const uchar *b, size_t size)</h2>
+<p>This is a virtual function. Compare two buffers and get the difference between them</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual float compare(const uchar *a, const uchar *b, size_t size) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>a</td>
+<td>const uchar *</td>
+<td>First buffer to compare</td>
+</tr>
+<tr>
+<td>b</td>
+<td>const uchar *</td>
+<td>Second buffer to compare</td>
+</tr>
+<tr>
+<td>size</td>
+<td>size_t</td>
+<td>Size of buffers a and b (they must be the same size)</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (float) Returns the calculated difference between the provided buffers</p>
+</li>
+<li><strong>example:</strong><pre><code>Template a("picture_a.jpg");
+Template b("picture_b.jpg");
+
+algorithm = "Enrollment:Distance";
+
+Transform *transform = Transform::fromAlgorithm(algorithm);
+Distance *distance = Distance::fromAlgorithm(algorithm);
+
+a &gt;&gt; *transform;
+b &gt;&gt; *transform;
+
+distance-&gt;compare(a.m().ptr(), b.m().ptr()); // returns -4.32 *Note results are made up!
+</code></pre>
+</li>
+</ul>
+<h2 id="make"><a href="../distance/">Distance</a> *make(const <a href="http://doc.qt.io/qt-5/QString.html" title="QString">QString</a> &amp;description)</h2>
+<p>This is a protected function. Makes a child distance from a provided description by calling <a href="../statics/#make">make</a> with parent = <tt>this</tt>.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>inline Distance *make(const QString &amp;description)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>description</td>
+<td>const <a href="http://doc.qt.io/qt-5/QString.html" title="QString">QString</a> &amp;</td>
+<td>Description of the child distance</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (<a href="../distance/">Distance</a> *) Returns a pointer to the created child distance</p>
+</li>
+</ul>
+<!-- Links -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

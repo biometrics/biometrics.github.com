@@ -1,0 +1,803 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Overview - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/highlight.css">
+
+  <script src="../../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../../js/highlight.pack.js"></script>
+  <script src="../../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../../../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../../c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="../../">C++ Plugin API</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../apifunctions/">API Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="./">File</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../members/">Members</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../constructors/">Constructors</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../statics/">Static Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../functions/">Functions</a>
+        </li>
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filelist/filelist/">FileList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../template/template/">Template</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../templatelist/templatelist/">TemplateList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../factory/factory/">Factory</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../object/object/">Object</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../context/context/">Context</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../initializer/initializer/">Initializer</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../transform/transform/">Transform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabletransform/untrainabletransform/">UntrainableTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metatransform/metatransform/">MetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metadatatransform/metadatatransform/">MetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../compositetransform/compositetransform/">CompositeTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../wrappertransform/wrappertransform/">WrapperTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../distance/distance/">Distance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabledistance/untrainabledistance/">UntrainableDistance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../output/output/">Output</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../matrixoutput/matrixoutput/">MatrixOutput</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../format/format/">Format</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../gallery/gallery/">Gallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filegallery/filegallery/">FileGallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../representation/representation/">Representation</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../classifier/classifier/">Classifier</a>
+            </li>
+            
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../../../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>File &raquo;</li>
+        
+      
+    
+    <li>Overview</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <p>A file path with associated metadata.</p>
+<p>See:</p>
+<ul>
+<li><a href="../members/">Members</a></li>
+<li><a href="../constructors/">Constructors</a></li>
+<li><a href="../statics/">Static Functions</a></li>
+<li><a href="../functions/">Functions</a></li>
+</ul>
+<p>The File is one of two important data structures in OpenBR (the <a href="../../template/template/">Template</a> is the other).
+It is typically used to store the path to a file on disk with associated metadata.
+The ability to associate a key/value metadata table with the file helps keep the API simple while providing customizable behavior.</p>
+<p>When querying the value of a metadata key, the value will first try to be resolved against the file's private metadata table.
+If the key does not exist in its local table then it will be resolved against the properties in the global Context.
+By design file metadata may be set globally using Context::setProperty to operate on all files.</p>
+<p>Files have a simple grammar that allow them to be converted to and from strings.
+If a string ends with a <strong>]</strong> or <strong>)</strong> then the text within the final <strong>[]</strong> or <strong>()</strong> are parsed as comma separated metadata fields.
+By convention, fields within <strong>[]</strong> are expected to have the format <tt>[key1=value1, key2=value2, ..., keyN=valueN]</tt> where order is irrelevant.
+Fields within <strong>()</strong> are expected to have the format <tt>(value1, value2, ..., valueN)</tt> where order matters and the key context dependent.
+The left hand side of the string not parsed in a manner described above is assigned to <a href="../members/#name">name</a>.</p>
+<p>Values are not necessarily stored as strings in the metadata table.
+The system will attempt to infer and convert them to their "native" type.
+The conversion logic is as follows:</p>
+<ol>
+<li>If the value starts with <strong>[</strong> and ends with <strong>]</strong> then it is treated as a comma separated list and represented with <a href="http://doc.qt.io/qt-5/qvariant.html#QVariantList-typedef" title="QVariantList">QVariantList</a>. Each value in the list is parsed recursively.</li>
+<li>If the value starts with <strong>(</strong> and ends with <strong>)</strong> and contains four comma separated elements, each convertable to a floating point number, then it is represented with <a href="http://doc.qt.io/qt-5/qrectf.html" title="QRectF">QRectF</a>.</li>
+<li>If the value starts with <strong>(</strong> and ends with <strong>)</strong> and contains two comma separated elements, each convertable to a floating point number, then it is represented with <a href="http://doc.qt.io/qt-5/qpointf.html" title="QPointF">QPointF</a>.</li>
+<li>If the value is convertable to a floating point number then it is represented with <tt>float</tt>.</li>
+<li>Otherwise, it is represented with <a href="http://doc.qt.io/qt-5/QString.html" title="QString">QString</a>.</li>
+</ol>
+<p>Metadata keys fall into one of two categories:
+<em> camelCaseKeys are inputs that specify how to process the file.
+</em> Capitalized_Underscored_Keys are outputs computed from processing the file.</p>
+<p>Below are some of the most commonly occurring standardized keys:</p>
+<table>
+<thead>
+<tr>
+<th>Key</th>
+<th>Value</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>name</td>
+<td>QString</td>
+<td>Contents of <a href="../members/#name">name</a></td>
+</tr>
+<tr>
+<td>separator</td>
+<td>QString</td>
+<td>Separate <a href="../members/#name">name</a> into multiple files</td>
+</tr>
+<tr>
+<td>Index</td>
+<td>int</td>
+<td>Index of a template in a template list</td>
+</tr>
+<tr>
+<td>Confidence</td>
+<td>float</td>
+<td>Classification/Regression quality</td>
+</tr>
+<tr>
+<td>FTE</td>
+<td>bool</td>
+<td>Failure to enroll</td>
+</tr>
+<tr>
+<td>FTO</td>
+<td>bool</td>
+<td>Failure to open</td>
+</tr>
+<tr>
+<td>*_X</td>
+<td>float</td>
+<td>Position</td>
+</tr>
+<tr>
+<td>*_Y</td>
+<td>float</td>
+<td>Position</td>
+</tr>
+<tr>
+<td>*_Width</td>
+<td>float</td>
+<td>Size</td>
+</tr>
+<tr>
+<td>*_Height</td>
+<td>float</td>
+<td>Size</td>
+</tr>
+<tr>
+<td>*_Radius</td>
+<td>float</td>
+<td>Size</td>
+</tr>
+<tr>
+<td>Label</td>
+<td>QString</td>
+<td>Class label</td>
+</tr>
+<tr>
+<td>Theta</td>
+<td>float</td>
+<td>Pose</td>
+</tr>
+<tr>
+<td>Roll</td>
+<td>float</td>
+<td>Pose</td>
+</tr>
+<tr>
+<td>Pitch</td>
+<td>float</td>
+<td>Pose</td>
+</tr>
+<tr>
+<td>Yaw</td>
+<td>float</td>
+<td>Pose</td>
+</tr>
+<tr>
+<td>Points</td>
+<td>QList&lt;QPointF&gt;</td>
+<td>List of unnamed points</td>
+</tr>
+<tr>
+<td>Rects</td>
+<td>QList&lt;Rect&gt;</td>
+<td>List of unnamed rects</td>
+</tr>
+<tr>
+<td>Age</td>
+<td>float</td>
+<td>Age used for demographic filtering</td>
+</tr>
+<tr>
+<td>Gender</td>
+<td>QString</td>
+<td>Subject gender</td>
+</tr>
+<tr>
+<td>Train</td>
+<td>bool</td>
+<td>The data is for training, as opposed to enrollment</td>
+</tr>
+<tr>
+<td>_*</td>
+<td>*</td>
+<td>Reserved for internal use</td>
+</tr>
+</tbody>
+</table>
+<!-- Links -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
