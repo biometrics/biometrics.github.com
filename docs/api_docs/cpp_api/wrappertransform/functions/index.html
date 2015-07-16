@@ -1,0 +1,978 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Functions - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../../../css/highlight.css">
+
+  <script src="../../../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../../../js/highlight.pack.js"></script>
+  <script src="../../../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../../../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../../c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="../../">C++ Plugin API</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../apifunctions/">API Functions</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../file/file/">File</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filelist/filelist/">FileList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../template/template/">Template</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../templatelist/templatelist/">TemplateList</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../factory/factory/">Factory</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../object/object/">Object</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../context/context/">Context</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../initializer/initializer/">Initializer</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../transform/transform/">Transform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabletransform/untrainabletransform/">UntrainableTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metatransform/metatransform/">MetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../metadatatransform/metadatatransform/">MetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../compositetransform/compositetransform/">CompositeTransform</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 current">
+                <a href="../wrappertransform/">WrapperTransform</a>
+            </li>
+            
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../properties/">Properties</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../constructors/">Constructors</a>
+        </li>
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Functions</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#timevarying">bool timeVarying()</a></li>
+                
+                    <li><a href="#train">void train(const QList[TemplateList][../templatelist/templatelist.md) data)</a></li>
+                
+                    <li><a href="#project-1">void project(const Template src, Template dst)</a></li>
+                
+                    <li><a href="#project-2">void project(const TemplateList src, TemplateList dst)</a></li>
+                
+                    <li><a href="#projectupdate-1">void projectUpdate(const Template src, Template dst)</a></li>
+                
+                    <li><a href="#projectupdate-2">void projectUpdate(const TemplateList src, TemplateList dst)</a></li>
+                
+                    <li><a href="#init">void init()</a></li>
+                
+                    <li><a href="#finalize">void finalize(TemplateList output)</a></li>
+                
+                    <li><a href="#simplify">Transform *simplify(bool newTransform)</a></li>
+                
+                    <li><a href="#smartcopy">Transform *smartCopy(bool newTransform)</a></li>
+                
+            </ul>
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../distance/distance/">Distance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../untrainabledistance/untrainabledistance/">UntrainableDistance</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../output/output/">Output</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../matrixoutput/matrixoutput/">MatrixOutput</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../format/format/">Format</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../gallery/gallery/">Gallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../filegallery/filegallery/">FileGallery</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../representation/representation/">Representation</a>
+            </li>
+            
+        
+    
+</ul>
+                
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../classifier/classifier/">Classifier</a>
+            </li>
+            
+        
+    
+</ul>
+                
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../../../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../../../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>WrapperTransform &raquo;</li>
+        
+      
+    
+    <li>Functions</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#timevarying"><span>bool timeVarying()</span></a></li>
+                                            
+                                                <li><a href="#train"><span>void train(const QList[TemplateList][../templatelist/templatelist.md) data)</span></a></li>
+                                            
+                                                <li><a href="#project-1"><span>void project(const Template src, Template dst)</span></a></li>
+                                            
+                                                <li><a href="#project-2"><span>void project(const TemplateList src, TemplateList dst)</span></a></li>
+                                            
+                                                <li><a href="#projectupdate-1"><span>void projectUpdate(const Template src, Template dst)</span></a></li>
+                                            
+                                                <li><a href="#projectupdate-2"><span>void projectUpdate(const TemplateList src, TemplateList dst)</span></a></li>
+                                            
+                                                <li><a href="#init"><span>void init()</span></a></li>
+                                            
+                                                <li><a href="#finalize"><span>void finalize(TemplateList output)</span></a></li>
+                                            
+                                                <li><a href="#simplify"><span>Transform *simplify(bool newTransform)</span></a></li>
+                                            
+                                                <li><a href="#smartcopy"><span>Transform *smartCopy(bool newTransform)</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <h2 id="timevarying">bool timeVarying()</h2>
+<p>Check whether the transform is timeVarying.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>bool timeVarying() const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong> NONE</p>
+</li>
+<li><strong>output:</strong> (bool) Returns true if the <a href="../properties/">child transform</a> is time varying, false otherwise</li>
+</ul>
+<h2 id="train">void train(const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;[TemplateList][../templatelist/templatelist.md)&gt; &amp;data)</h2>
+<p>Call train on the child transform</p>
+<ul>
+<li>
+<p><strong>function defintion:</strong></p>
+<pre><code>void train(const QList&lt;TemplateList&gt; &amp;data)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>data</td>
+<td>const <a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;<a href="../../templatelist/templatelist/">TemplateList</a>&gt; &amp;</td>
+<td>The training data</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+</ul>
+<h2 id="project-1">void project(const <a href="../../template/template/">Template</a> &amp;src, <a href="../../template/template/">Template</a> &amp;dst)</h2>
+<p>Call project on the child transform</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>void project(const Template &amp;src, Template &amp;dst) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>const <a href="../../template/template/">Template</a> &amp;</td>
+<td>The input template</td>
+</tr>
+<tr>
+<td>dst</td>
+<td><a href="../../template/template/">Template</a> &amp;</td>
+<td>The output template</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+</ul>
+<h2 id="project-2">void project(const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;src, <a href="../../templatelist/templatelist/">TemplateList</a> &amp;dst)</h2>
+<p>Call project on the child transform</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>void project(const TemplateList &amp;src, TemplateList &amp;dst) const
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>The input template list</td>
+</tr>
+<tr>
+<td>dst</td>
+<td><a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>The output template list</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+</ul>
+<h2 id="projectupdate-1">void projectUpdate(const <a href="../../template/template/">Template</a> &amp;src, <a href="../../template/template/">Template</a> &amp;dst)</h2>
+<p>Call projectUpdate on the child transform</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>void projectUpdate(const Template &amp;src, Template &amp;dst)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>const <a href="../../template/template/">Template</a> &amp;</td>
+<td>The input template</td>
+</tr>
+<tr>
+<td>dst</td>
+<td><a href="../../template/template/">Template</a> &amp;</td>
+<td>The output template</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+</ul>
+<h2 id="projectupdate-2">void projectUpdate(const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;src, <a href="../../templatelist/templatelist/">TemplateList</a> &amp;dst)</h2>
+<p>Call projectUpdate on the child transform</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>void projectUpdate(const TemplateList &amp;src, TemplateList &amp;dst)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>src</td>
+<td>const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>The input template list</td>
+</tr>
+<tr>
+<td>dst</td>
+<td><a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>The output template list</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+</ul>
+<h2 id="init">void init()</h2>
+<p>Initialize the transform. Sets <a href="../../transform/members/#trainable">trainable</a> to match the child transform (if the child is trainable so is the wrapper)</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>void init()
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong> NONE</p>
+</li>
+<li><strong>output:</strong> (void)</li>
+</ul>
+<h2 id="finalize">void finalize(<a href="../../templatelist/templatelist/">TemplateList</a> &amp;output)</h2>
+<p>This is a virtual function. Call finalize on the child transform</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual void finalize(TemplateList &amp;output)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>output</td>
+<td>const <a href="../../templatelist/templatelist/">TemplateList</a> &amp;</td>
+<td>The output to finalize</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (void)</p>
+</li>
+</ul>
+<h2 id="simplify"><a href="../../transform/transform/">Transform</a> *simplify(bool &amp;newTransform)</h2>
+<p>This is a virtual function. Calls simplify on the child transform.</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>virtual Transform *simplify(bool &amp;newTransform)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newTransform</td>
+<td>bool &amp;</td>
+<td>True if a new, simplified, transform was allocated inside this call, false otherwise</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (<a href="../../transform/transform/">Transform</a> *) Returns itself if the child transform cannot be simplified. newTransform is set to false in this case. If the child can be simplified, a new WrapperTransform is allocated with the child transform set as the simplified version of the old child transform. newTransform is set to true in this case</p>
+</li>
+</ul>
+<h2 id="smartcopy"><a href="../../transform/transform/">Transform</a> *smartCopy(bool &amp;newTransform)</h2>
+<p>Get a smart copy, meaning a copy only if one is required, of this transform</p>
+<ul>
+<li>
+<p><strong>function definition:</strong></p>
+<pre><code>Transform *smartCopy(bool &amp;newTransform)
+</code></pre>
+</li>
+<li>
+<p><strong>parameters:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Parameter</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>newTransform</td>
+<td>bool &amp;</td>
+<td>True if a new, simplified, transform was allocated inside this call, false otherwise</td>
+</tr>
+</tbody>
+</table>
+</li>
+<li>
+<p><strong>output:</strong> (<a href="../../transform/transform/">Transform</a> *) Returns itself if the child transform is not time varying (no copy needed). newTransform is set to false in this case. If the child is time varying make a copy by calling <a href="../../timevaryingtransform/functions/#smartcopy">smartCopy</a> on the child. newTransform is set to true in this case.</p>
+</li>
+</ul>
+<!-- Links -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutorials - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href=".." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Tutorials</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#quick-start">Quick Start</a></li>
+                
+                    <li><a href="#algorithms-in-openbr">Algorithms in OpenBR</a></li>
+                
+                    <li><a href="#training-algorithms">Training Algorithms</a></li>
+                
+                    <li><a href="#face-recognition">Face Recognition</a></li>
+                
+                    <li><a href="#age-estimation">Age Estimation</a></li>
+                
+                    <li><a href="#gender-estimation">Gender Estimation</a></li>
+                
+                    <li><a href="#openbr-as-a-library">OpenBR as a Library</a></li>
+                
+                    <li><a href="#the-evaluation-harness">The Evaluation Harness</a></li>
+                
+            </ul>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../api_docs/c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../api_docs/cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../api_docs/python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../api_docs/cpp_api/">C++ Plugin API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Tutorials</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#quick-start"><span>Quick Start</span></a></li>
+                                            
+                                                <li><a href="#algorithms-in-openbr"><span>Algorithms in OpenBR</span></a></li>
+                                            
+                                                <li><a href="#training-algorithms"><span>Training Algorithms</span></a></li>
+                                            
+                                                <li><a href="#face-recognition"><span>Face Recognition</span></a></li>
+                                            
+                                                <li><a href="#age-estimation"><span>Age Estimation</span></a></li>
+                                            
+                                                <li><a href="#gender-estimation"><span>Gender Estimation</span></a></li>
+                                            
+                                                <li><a href="#openbr-as-a-library"><span>OpenBR as a Library</span></a></li>
+                                            
+                                                <li><a href="#the-evaluation-harness"><span>The Evaluation Harness</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <p>Welcome to OpenBR! Here we have a series of tutorials designed to get you up to speed on what OpenBR is, how it works, and its command line interface. These tutorials aren't meant to be completed in a specific order so feel free to hop around. If you need help, feel free to <a href="..#help">contact us</a>.</p>
+<hr />
+<h1 id="quick-start">Quick Start</h1>
+<p>This tutorial is meant to familiarize you with the ideas, objects and motivations behind OpenBR using some fun examples. <strong>Note that parts of this tutorial require a webcam.</strong></p>
+<p>OpenBR is a C++ library built on top of <a href="http://www.qt.io/">Qt</a>, <a href="http://opencv.org/">OpenCV</a>, and <a href="http://eigen.tuxfamily.org/index.php?title=Main_Page">Eigen</a>. It can either be used from the command line using the <code>br</code> application, or from interfacing with the <a href="../api_docs/cpp_api/">C++</a> or <a href="../api_docs/c_api/">C</a> APIs. Using the <code>br</code> application is the easiest and fastest way to get started and this tutorial will use it for all of the examples.</p>
+<p>First, make sure that OpenBR has been installed on your system using the steps described in the <a href="../install/">installation section</a>.</p>
+<p>Open up your terminal or command prompt and enter:</p>
+<pre><code>$ br -gui -algorithm "Show(false)" -enroll 0.webcam
+</code></pre>
+<p>If everything has gone according to plan, your webcam should be on and capturing video. Congratulations, you are using OpenBR!</p>
+<p>Let's talk about what's happening in the above command. <code>-gui</code>, <code>-algorithm</code>, and <code>-enroll</code> are examples of OpenBR's flags and are used to specify instructions to <code>br</code>. OpenBR expects flags to be prepended by a <code>-</code> and arguments that follow the flags to be separated by spaces. Flags normally require a specific number of arguments. All of the possible flags and their values are <a href="../api_docs/cl_api/">documented here</a>. Let's step through the individual arguments and values:</p>
+<ul>
+<li><code>-gui</code> is the flag that tells OpenBR to open up a GUI window. Note that when <code>-gui</code> is used, it must be the first flag passed to <code>br</code>.</li>
+<li><code>-algorithm</code> is one of the most important flags in OpenBR. It expects one argument, referred to as the <em>algorithm string</em>. This string determines the pipeline through which images and metadata propagate. It is composed of <a href="../api_docs/cpp_api/transform/transform/">Transforms</a>, which are described in detail later in this tutorial.</li>
+<li><code>-enroll</code> reads files from a <a href="../api_docs/cpp_api/gallery/gallery/">Gallery</a> or a <a href="../api_docs/cpp_api/format/format/">Format</a> and <em>enrolls</em> them through the algorithm pipeline and serializes them to another <a href="../api_docs/cpp_api/gallery/gallery/">Gallery</a> or <a href="../api_docs/cpp_api/format/format/">Format</a>. <code>-enroll</code> takes one input argument (<code>0.webcam</code> in this example) and an optional output argument. OpenBR supports multiple formats including <code>.jpg</code>, <code>.png</code>, <code>.csv</code>, and <code>.xml</code>. The <code>.webcam</code> <a href="../api_docs/cpp_api/format/format/">Format</a> tells OpenBR to enroll frames from the computer's webcam.</li>
+</ul>
+<p>Let's try a slightly more complicated example. After all, OpenBR can do way more then just open webcams! Fire up the terminal again and enter:</p>
+<pre><code>$ br -gui -algorithm "Cvt(Gray)+Show(false)" -enroll 0.webcam
+</code></pre>
+<p>Here, we took our normal BGR (OpenCV's alternative to RGB) image and converted it to a grayscale image simply by adding <code>Cvt(Gray)</code> to the algorithm string. <a href="../plugin_docs/imgproc/#cvttransform">Cvt</a>, short for convert, is an example of an OpenBR <em><a href="../api_docs/cpp_api/transform/transform/">Transform</a></em>. <a href="../plugin_docs/gui/#showtransform">Show</a> is a <a href="../api_docs/cpp_api/transform/transform/">Transform</a> as well. In fact, every algorithm string in OpenBR is just a series of <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s joined to form a pipeline; even the <code>+</code> symbol is shorthand for a <a href="../plugin_docs/core/#pipetransform">Pipe</a>, another kind of OpenBR <a href="../api_docs/cpp_api/transform/transform/">Transform</a>.</p>
+<p>Typically, <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s accept parameters.  We specify <code>Gray</code> to <a href="../plugin_docs/imgproc/#cvttransform">Cvt</a> as a runtime parameter to tell the <a href="../api_docs/cpp_api/transform/transform/">Transform</a> which color space to convert the image to. We also could have written <code>Cvt(HSV)</code> if we wanted to convert to the HSV color space or <code>Cvt(Luv)</code> if we wanted to convert to LUV. Parameters can be provided as key-value pairs or as keyless values (<code>Cvt(Gray)</code> is equivalent to <code>Cvt(colorSpace=Gray)</code>) . Note that if you are supplying values only, the parameters are expected to be supplied in the order they are defined. Try changing the algorithm string above to include <code>Show(true)</code> to see how modifying the parameters affects the output of the command (Hint: hit a key to cycle through the images).</p>
+<p>Let's make this example a little bit more exciting and relevant to OpenBR's biometric roots. Face detection is normally the first step in a <a href="#face-recognition">face recognition</a> algorithm. Let's perform face detection in OpenBR. Back in the terminal enter:</p>
+<pre><code>$ br -gui -algorithm "Cvt(Gray)+Cascade(FrontalFace)+Draw(lineThickness=3)+Show(false)" -enroll 0.webcam
+</code></pre>
+<p>You're webcam should be open again but this time a bounding-box should have appeared around your face! We added two new <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s to our string: <a href="../plugin_docs/metadata/#cascadetransform">Cascade</a> and <a href="../plugin_docs/gui/#drawtransform">Draw</a>. Let's walk through this <a href="../api_docs/cpp_api/transform/transform/">Transform</a> by <a href="../api_docs/cpp_api/transform/transform/">Transform</a> and see how it works:</p>
+<ol>
+<li><a href="../plugin_docs/imgproc/#cvttransform">Cvt(Gray)</a>: Convert the image from BGR to grayscale. Grayscale is required for <a href="../plugin_docs/metadata/#cascadetransform">Cascade</a> to work properly.</li>
+<li><a href="../plugin_docs/metadata/#cascadetransform">Cascade(FrontalFace)</a>: This is a wrapper on the OpenCV <a href="http://docs.opencv.org/modules/objdetect/doc/cascade_classification.html">Cascade Classification</a> framework. It detects frontal faces using the <code>FrontalFace</code> model.</li>
+<li><a href="../plugin_docs/gui/#drawtransform">Draw(lineThickness=3)</a>: Take the rectangles detected by <a href="../plugin_docs/metadata/#cascadetransform">Cascade</a> and draw them onto the frame from the webcam. <code>lineThickness</code> determines the thickness of the drawn rectangle.</li>
+<li><a href="../plugin_docs/gui/#showtransform">Show(false)</a>: Show the image in a GUI window. <code>false</code> indicates the images should be shown in succession without waiting for a key press.</li>
+</ol>
+<p>Each <a href="../api_docs/cpp_api/transform/transform/">Transform</a> completes one task and the passes the output on to the next <a href="../api_docs/cpp_api/transform/transform/">Transform</a>. You can pipe together as many <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s as you like, but note that certain <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s have specific expectations for their input.</p>
+<p>You may be wondering what objects are actually being propagated through the algorithm pipeline. There are two objects that handle data in OpenBR:</p>
+<ul>
+<li><a href="../api_docs/cpp_api/file/file/">File</a>s are typically used to store the path to a file on disk with associated metadata (in the form of key-value pairs). In the example above, we store the rectangles detected by <a href="../plugin_docs/metadata/#cascadetransform">Cascade</a> as metadata which are then used by <a href="../plugin_docs/gui/#drawtransform">Draw</a> for visualization.</li>
+<li><a href="../api_docs/cpp_api/template/template/">Template</a>s are containers for images and <a href="../api_docs/cpp_api/file/file/">File</a>s. Images in OpenBR are OpenCV Mats and are member variables of Templates. Templates can contain one or more images.</li>
+</ul>
+<p>If you want to learn more about the <a href="../api_docs/cl_api/">command line</a> or <a href="../api_docs/cpp_api/">all of the plugins and the key data structures</a>, please refer to the linked documentation.  The next few tutorials will explore algorithms and their use in more depth.</p>
+<hr />
+<h1 id="algorithms-in-openbr">Algorithms in OpenBR</h1>
+<p>One advantage of OpenBR is the ease with which one can express biometrics algorithms in a consistent and simple way. In OpenBR, an algorithm string defines a technique for enrolling images and (optionally) a method for comparing them.</p>
+<p>Instead of storing the entire raw image for comparison, it is common practice to store an optimized representation, or <em>template</em>, of the image for the task at hand. We note for the sake of clarity that while the OpenBR object <a href="../api_docs/cpp_api/template/template/">Template</a> gets it name from this concept, <em>template</em> is a more general biometrics concept. The process of generating this optimized representation is called <em>template enrollment</em> or <em>template generation</em>. Given two templates, <em>template comparison</em> computes the similarity between them, where the higher values indicate more probable matches. Operationally, one seeks to generate templates that are small, accurate, and fast to compare.</p>
+<p>As previously noted, an algorithm is defined in OpenBR through an algorithm string. There are several advantages in mandating that algorithms are defined from strings, the most important of which are the following:</p>
+<ol>
+<li>It ensures good software development practices by forcibly decoupling the development of each step in an algorithm, facilitating the modification of algorithms and the re-use of individual steps.</li>
+<li>It spares the creation and maintenance of a lot of very similar header files that would otherwise be needed for each step in an algorithm (observe the absence of headers in <code>openbr/plugins</code> files).</li>
+<li>It allows for algorithm parameter tuning without recompiling.</li>
+<li>It is completely unambiguous, both the OpenBR interpreter and anyone familiar with the project can understand exactly what your algorithm does just from this description.</li>
+</ol>
+<p>OpenBR provides a syntax for setting plugin property values and creating concise algorithm strings. The relevant symbols are:</p>
+<table>
+<thead>
+<tr>
+<th>Symbol</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>PluginName(property1=value1,...propertyN=valueN)</td>
+<td>A plugin is described by its name (without the abstraction) and a list of properties and values. Properties of a plugin that are not specified are set to their default values.</td>
+</tr>
+<tr>
+<td>:</td>
+<td>Seperates <em>template enrollment</em> from <em>template comparison</em>. Enrollment is on the left of the colon in the algorithm string, while comparison is on the right. Defining an algorithm with a template comparison step is optional.</td>
+</tr>
+<tr>
+<td>+</td>
+<td>Abbreviation for a <a href="../plugin_docs/core/#pipetransform">Pipe</a>. Joins <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s together and projects input through them in series. The output of a <a href="../api_docs/cpp_api/transform/transform/">Transform</a> to the left of + become the input of the Transform to the right.</td>
+</tr>
+<tr>
+<td>/</td>
+<td>Abbreviation for a <a href="../plugin_docs/core/#forktransform">Fork</a>. Joins <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s together and projects input through them in parallel. All <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s receive the same input, the output of which is concatenated together.</td>
+</tr>
+<tr>
+<td>{}</td>
+<td>Abbreviation for <a href="../plugin_docs/core/#cachetransform">Cache</a>. Cache the output of a plugin in memory for quick lookups later on.</td>
+</tr>
+<tr>
+<td>&lt;></td>
+<td>Abbreviation for <a href="../plugin_docs/core/#loadstoretransform">LoadStore</a>. Parameters for <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s inside the brackets are stored on disk after training and loaded from disk before projection.</td>
+</tr>
+<tr>
+<td>()</td>
+<td>Order of operations. Change the order of operations using parantheses.</td>
+</tr>
+</tbody>
+</table>
+<p>Let's look at some of the important parts of the codebase that make this possible:</p>
+<p>In <code>AlgorithmCore::init()</code> in <code>openbr/core/core.cpp</code> you can see the code for splitting the algorithm description at the colon.
+Shortly thereafter in this function we <code>make</code> the template generation and comparison objects.
+These <code>make</code> calls are defined in the public <a href="../api_docs/cpp_api/">C++ plugin API</a> and can also be called from end user code.</p>
+<p>Below we discuss some of the source code for <code>Transform::make</code> in <code>openbr/openbr_plugin.cpp</code>.
+Note, the <code>make</code> functions for other plugin types are similar in spirit and will not be covered.</p>
+<p>One of the first steps when converting the template generation description into <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s is to replace the operators, like '+', with their full form:</p>
+<pre><code>{ // Check for use of '+' as shorthand for Pipe(...)
+     QStringList words = parse(str, '+');
+     if (words.size() &gt; 1)
+         return make("Pipe([" + words.join(",") + "])", parent);
+}
+</code></pre>
+<p>After operator expansion, the template enrollment description forms a tree, and the <a href="../api_docs/cpp_api/transform/transform/">Transform</a> is constructed from this description recursively, starting at the root of the tree:</p>
+<pre><code>Transform *transform = Factory&lt;Transform&gt;::make("." + str);
+</code></pre>
+<p>Let's use the algorithm in <code>scripts/helloWorld.sh</code> as an example. The algorithm is:</p>
+<pre><code>Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.33,0.45)+CvtFloat+PCA(0.95):Dist(L2)
+</code></pre>
+<p>Let's expand this using our new knowledge of OpenBR's algorithm syntax. First, the algorithm will be split into enrollment and comparison portions at the <code>:</code>. So enrollment becomes:</p>
+<pre><code>Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.33,0.45)+CvtFloat+PCA(0.95)
+</code></pre>
+<p>and comparison is:</p>
+<pre><code>Dist(L2)
+</code></pre>
+<p>On the enrollment side, <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s joined by the <code>+</code> operators are converted into children of a <a href="../plugin_docs/core/#pipetransform">Pipe</a>. Thus, the enrollment algorithm is constructed as:</p>
+<pre><code>Pipe(transforms=[Open,Cvt(Gray),Cascade(FrontalFace),ASEFEyes,Affine(128,128,0.33,0.45,CvtFloat,PCA(0.95)])
+</code></pre>
+<p>Low-level detail of the operations involved in this algorithm can be found in the <a href="../api_docs/cpp_api/transform/functions/#project-1">project</a> function implemented by each of these <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s.
+To briefly summarize:</p>
+<pre><code>1. Reads the image from disk
+2. Converts the image to grayscale
+3. Detects faces
+4. Detects eyes in detected faces
+5. Normalize the face with respect to rotation and scale using the eye locations
+6. Converts the image to floating point format
+7. Embeds the image in a PCA subspace trained on face images
+</code></pre>
+<p>If you are familiar with face recognition, you will likely recognize this as the Eigenfaces<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> algorithm.</p>
+<p>As a final note, the Eigenfaces algorithms uses the Euclidean distance (or L2-norm) to compare templates.
+Since OpenBR expects similarity values when comparing templates and not dissimilarity values, the <a href="../plugin_docs/distance/#distdistance">DistDistance</a> will return <em>-log(distance+1)</em> by default so that smaller distances (in the Euclidean sense) indicate higher similarity.
+Note that <a href="../plugin_docs/distance/#negativelogplusonedistance">NegativeLogPlusOne</a> distance also exists such that you can convert the output of any distance using the above function.</p>
+<hr />
+<h1 id="training-algorithms">Training Algorithms</h1>
+<p>OpenBR makes it easy to create and train your own algorithms on custom datasets. Let's start with the algorithm string for the Eigenfaces<sup id="fnref:1"><a class="footnote-ref" href="#fn:1" rel="footnote">1</a></sup> algorithm described in the <a href="#algorithms-in-openbr">Algorithms</a> tutorial. Recall that the algorithm is:</p>
+<pre><code>$ Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.33,0.45)+CvtFloat+PCA(0.95)
+</code></pre>
+<p>Suppose we want to train this algorithm on some data we gathered. First, let's examine some of the underlying principles of training in OpenBR. Recall that every algorithm is composed of <a href="../api_docs/cpp_api/transform/transform/">Transforms</a> but not all <a href="../api_docs/cpp_api/transform/transform/">Transforms</a> need to be trained. In our example, <code>Cvt(Gray)</code>, which converts the image to grayscale, does not need to be trained at all, and neither does <code>Open</code>, <code>ASEFEyes</code>, <code>Affine(128,128,0.33,0.45)</code> or <code>CvtFloat</code>. These are <a href="../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransforms</a> (a subclass of <a href="../api_docs/cpp_api/transform/transform/">Transform</a>). <code>Cascade(FrontalFace)</code> is a special case; it is a <a href="../api_docs/cpp_api/transform/transform/">Transform</a> and therefore can be trained. However, we have passed it an argument indicating it should use pre-trained model (<code>FrontalFace</code>). Thus, <code>PCA(0.95)</code> is the only trainable <a href="../api_docs/cpp_api/transform/transform/">Transform</a> in our algorithm string.  For the sake of completeness, we note that this transform is performing principal component analysis and retaining dimensions that account for 95% of the variance.</p>
+<p>Of course, we need to supply data to train our algorithm. Let's step back and consider the full training command. An example of this might be:</p>
+<pre><code>$ br -algorithm "Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.33,0.45)+CvtFloat+PCA(0.95)" -train training_data.csv EigenFaces
+</code></pre>
+<p>Notice the <code>-train</code> flag used in the algorithm. <a href="../api_docs/cl_api/#train">-train</a> requires at least one argument, a training <a href="../api_docs/cpp_api/gallery/gallery/">Gallery</a>. Note that certain <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s expect <em>labelled</em> training data. While <a href="../api_docs/cl_api/#train">-train</a> needs only a single gallery <a href="../api_docs/cpp_api/gallery/gallery/">Gallery</a>, more than one can be provided:</p>
+<pre><code>$ br -algorithm "Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.33,0.45)+CvtFloat+PCA(0.95)" -train training_data1.csv training_data2.csv EigenFaces
+</code></pre>
+<p><a href="../api_docs/cl_api/#train">-train</a> has an optional second argument: the name for a trained model (<code>EigenFaces</code> in the example above). The optional model file is a serialized and compressed binary file that stores the parameters learned during algorithm training.  The model file should only be considered optional when your algorithm string uses a <a href="../plugin_docs/core/#loadstoretransform">LoadStoreTransform</a> (discussed in depth later in this tutorial).  Otherwise, none of the parameters learned during algorithm training will be stored!</p>
+<p>As was briefly discussed above, each <a href="../api_docs/cpp_api/transform/transform/">Transform</a> in is either <a href="../api_docs/cpp_api/transform/members/#trainable">trainable</a> or not (in our case only <code>PCA(0.95)</code> is trainable). At train time, the training data is projected through each <a href="../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a> in sequence, just as it would be at test time. When the data reaches a trainable transform, the <a href="../api_docs/cpp_api/transform/functions/#train-1">train</a> method is called with the data projected through the preceding <a href="../api_docs/cpp_api/transform/transform/">Transforms</a> as its input. After training, the project method is called on the newly trained transform and the data continues to propagate through the algorithm.</p>
+<p>After training is complete the algorithm is serialized to a model file (if you have specified one). The algorithm string is serialized first such that the algorithm can be recreated, followed by the parameters for each transform using the <a href="../api_docs/cpp_api/object/functions/#store">store</a> method. Note that only trainable <a href="../api_docs/cpp_api/transform/transform/">Transforms</a> need to implement <a href="../api_docs/cpp_api/object/functions/#store">store</a> because <a href="../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransforms</a> can be recreated solely from their algorithm string descriptions.</p>
+<p>We can then <a href="../api_docs/cl_api/#enroll">-enroll</a> images using the trained algorithm by replacing the algorithm string with the model file:</p>
+<pre><code>$ br -algorithm EigenFaces -enroll enroll_data.csv enroll_data.gal
+</code></pre>
+<p>In the case that we want our training and testing algorithms to be different, we can use <a href="../plugin_docs/core/#loadstoretransform">LoadStoreTransform</a> to serialize specific parts of the algorithm string. Reusing our EigenFaces example, we could specify that only <code>CvtFloat</code> and <code>PCA(0.95)</code> should be serialized to the model, allowing the other algorithmic steps to be specified at test time. The command to accomplish this is:</p>
+<pre><code>$ br -algorithm "Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.33,0.45)+&lt;CvtFloat+PCA(0.95),EigenFaces&gt;" -train training_data.csv
+</code></pre>
+<p>Recall from the <a href="#algorithms-in-openbr">Algorithms</a> tutorial that <code>&lt;&gt;</code> is shorthand for a <a href="../plugin_docs/core/#loadstoretransform">LoadStoreTransform</a>. Also note that the <a href="../plugin_docs/core/#loadstoretransform">LoadStoreTransform</a> takes two arguments: the algorithm string and an optional model name. If a name is not provided, a random name is created. Using this model would like this:</p>
+<pre><code>$ br -algorithm "Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.2,0.55)+&lt;EigenFaces&gt;"
+</code></pre>
+<p>Since we haven't serialized that portion of the algorithm, the parameters of <code>Affine</code>, for example, can now be changed at test time! Note that, in this contrived example, changing the <code>Affine</code> parameters will severely degrade performance. As a final note, when a <a href="../plugin_docs/core/#loadstoretransform">LoadStoreTransform</a> is present in the algorithm string used for training, OpenBR will not overwrite the specified model file if it already exists. Instead, it will load the old model file and treat the associated <a href="../api_docs/cpp_api/transform/transform/">Transforms</a> as untrainable (as they have already been trained!). This can helpful when you want to isolate a particular algorithmic step (e.g. to explore parameters) but don't want to retrain every part of the algorithm during each iteration.</p>
+<p>Now that we've covered training a generic algorithm, the next tutorials will cover popular use cases supported by OpenBR including <a href="#face-recognition">FaceRecognition</a>, <a href="#age-estimation">Age Estimation</a>, and <a href="#gender-estimation">Gender Estimation</a>.</p>
+<hr />
+<h1 id="face-recognition">Face Recognition</h1>
+<p>This tutorial gives an example on how to perform face recognition in OpenBR. OpenBR implements the 4SF<sup id="fnref:2"><a class="footnote-ref" href="#fn:2" rel="footnote">2</a></sup> algorithm to perform face recognition. Please read the paper for more specific algorithm details.</p>
+<p>To start, lets run face recognition from the command line. Open the terminal and enter</p>
+<pre><code>$ br -algorithm FaceRecognition \
+    -compare ../data/MEDS/img/S354-01-t10_01.jpg ../data/MEDS/img/S354-02-t10_01.jpg \
+     -compare ../data/MEDS/img/S354-01-t10_01.jpg ../data/MEDS/img/S386-04-t10_01.jpg
+</code></pre>
+<p>Easy enough? You should see results printed to terminal that look like</p>
+<pre><code>$ Set algorithm to FaceRecognition
+$ Loading /usr/local/share/openbr/models/algorithms/FaceRecognition
+$ Loading /usr/local/share/openbr/models/transforms//FaceRecognitionExtraction
+$ Loading /usr/local/share/openbr/models/transforms//FaceRecognitionEmbedding
+$ Loading /usr/local/share/openbr/models/transforms//FaceRecognitionQuantization
+$ Comparing ../data/MEDS/img/S354-01-t10_01.jpg and ../data/MEDS/img/S354-02-t10_01.jpg
+$ Enrolling ../data/MEDS/img/S354-01-t10_01.jpg to S354-01-t10_01r7Rv4W.mem
+$ 100.00%  ELAPSED=00:00:00  REMAINING=00:00:00  COUNT=1
+$ 100.00%  ELAPSED=00:00:00  REMAINING=00:00:00  COUNT=1
+$ 1.8812
+$ Comparing ../data/MEDS/img/S354-01-t10_01.jpg and ../data/MEDS/img/S386-04-t10_01.jpg
+$ Enrolling ../data/MEDS/img/S354-01-t10_01.jpg to S354-01-t10_01r7Rv4W.mem
+$ 100.00%  ELAPSED=00:00:00  REMAINING=00:00:00  COUNT=1
+$ 100.00%  ELAPSED=00:00:00  REMAINING=00:00:00  COUNT=1
+$ 0.571219
+</code></pre>
+<p>So, what is <code>FaceRecognition</code>? It's an abbrieviation to simplify execution of the algorithm. All of the algorithm abbreviations are located in <code>openbr/plugins/core/algorithms.cpp</code>.</p>
+<p>It is also possible to:</p>
+<ul>
+<li>
+<p>Evaluate face recognition performance (Note that this requires <a href="http://www.r-project.org/">R</a> to be installed):</p>
+<pre><code>$ br -algorithm FaceRecognition -path ../data/MEDS/img/ \
+-enroll ../data/MEDS/sigset/MEDS_frontal_target.xml target.gal \
+-enroll ../data/MEDS/sigset/MEDS_frontal_query.xml query.gal \
+-compare target.gal query.gal scores.mtx \
+-makeMask ../data/MEDS/sigset/MEDS_frontal_target.xml ../data/MEDS/sigset/MEDS_frontal_query.xml MEDS.mask \
+-eval scores.mtx MEDS.mask Algorithm_Dataset/FaceRecognition_MEDS.csv \
+-plot Algorithm_Dataset/FaceRecognition_MEDS.csv MEDS
+</code></pre>
+</li>
+<li>
+<p>Perform a 1:N face recognition search:</p>
+<pre><code>$ br -algorithm FaceRecognition -enrollAll -enroll ../data/MEDS/img 'meds.gal'
+$ br -algorithm FaceRecognition -compare meds.gal ../data/MEDS/img/S001-01-t10_01.jpg match_scores.csv
+</code></pre>
+</li>
+<li>
+<p>Train a new face recognition algorithm (on a different dataset):</p>
+<pre><code>$ br -algorithm 'Open+Cvt(Gray)+Cascade(FrontalFace)+ASEFEyes+Affine(128,128,0.33,0.45)+(Grid(10,10)+SIFTDescriptor(12)+ByRow)/(Blur(1.1)+Gamma(0.2)+DoG(1,2)+ContrastEq(0.1,10)+LBP(1,2)+RectRegions(8,8,6,6)+Hist(59))+PCA(0.95)+Normalize(L2)+Dup(12)+RndSubspace(0.05,1)+LDA(0.98)+Cat+PCA(0.95)+Normalize(L1)+Quantize:NegativeLogPlusOne(ByteL1)' -train ../data/ATT/img FaceRecognitionATT
+</code></pre>
+</li>
+</ul>
+<p>The entire command line API is documented <a href="../api_docs/cl_api/">here</a>.</p>
+<hr />
+<h1 id="age-estimation">Age Estimation</h1>
+<p>Age estimation is very similar in spirit to <a href="#face-recognition">Face Recognition</a> and will be covered in far less detail.</p>
+<p>To perform age estimation from the command line you can run:</p>
+<pre><code>$ br -algorithm AgeEstimation \
+    -enroll ../data/MEDS/img/S354-01-t10_01.jpg ../data/MEDS/img/S001-01-t10_01.jpg metadata.csv
+</code></pre>
+<p>The results will be stored in metadata.csv under the key 'Age'. Remember from the <a href="#face-recognition">Face Recognition</a> tutorial that <code>AgeEstimation</code> is just an abbreviation for the full algorithm description.</p>
+<p>The source code to run age estimation as an application is in <code>app/examples/age_estimation.cpp</code></p>
+<hr />
+<h1 id="gender-estimation">Gender Estimation</h1>
+<p>As with age estimation, gender estimation is very similar in spirit to <a href="#face-recognition">Face Recognition</a> and will be covered in far less detail.</p>
+<p>To perform gender estimation from the command line you can run:</p>
+<pre><code>$ br -algorithm GenderEstimation \
+    -enroll ../data/MEDS/img/S354-01-t10_01.jpg ../data/MEDS/img/S001-01-t10_01.jpg metadata.csv
+</code></pre>
+<p>The results will be stored in metadata.csv under the key 'Gender'. Remember from the <a href="#face-recognition">Face Recognition</a> tutorial that <code>GenderEstimation</code> is just an abbreviation for the full algorithm description.</p>
+<p>The source code to run gender estimation as an application is in <code>app/examples/gender_estimation.cpp</code></p>
+<hr />
+<h1 id="openbr-as-a-library">OpenBR as a Library</h1>
+<p>OpenBR exposes a <a href="../api_docs/cpp_api/">C++ API</a> that can be embedded into your own applications. Let's step through the example code at <code>app/example/face_recognition.cpp</code> and learn about using OpenBR as a library.</p>
+<p>Our main function starts with:</p>
+<pre><code>br::Context::initialize(argc, argv)
+</code></pre>
+<p>This is the first step in any OpenBR-based application, it initializes the global context.</p>
+<pre><code>QSharedPointer&lt;br::Transform&gt; transform = br::Transform::fromAlgorithm("FaceRecognition");
+QSharedPointer&lt;br::Distance&gt; distance = br::Distance::fromAlgorithm("FaceRecognition");
+</code></pre>
+<p>Here, we split our algorithm into <em>enrollment</em> (<a href="../api_docs/cpp_api/transform/transform/">Transform</a>::<a href="../api_docs/cpp_api/transform/statics/#fromalgorithm">fromAlgorithm</a>) and <em>comparison</em> (<a href="../api_docs/cpp_api/distance/distance/">Distance</a>::<a href="../api_docs/cpp_api/distance/statics/#fromalgorithm">fromAlgorithm</a>)</p>
+<pre><code>br::Template queryA("../data/MEDS/img/S354-01-t10_01.jpg");
+br::Template queryB("../data/MEDS/img/S382-08-t10_01.jpg");
+br::Template target("../data/MEDS/img/S354-02-t10_01.jpg");
+</code></pre>
+<p>These lines create our <a href="../api_docs/cpp_api/template/template/">Template</a>s for enrollment. At this point, the Templates simply store the file path to the specified image on disk. In this example, <code>queryA</code> depicts the same person as <code>target</code> (often referred to as a <em>genuine match</em>) and <code>queryB</code> depicts a different person from <code>target</code> (often referred to as an <em>impostor match</em>).</p>
+<pre><code>queryA &gt;&gt; *transform;
+queryB &gt;&gt; *transform;
+target &gt;&gt; *transform;
+</code></pre>
+<p><code>&gt;&gt;</code> is a convienience operator for enrolling <a href="../api_docs/cpp_api/template/template/">Template</a>s in <a href="../api_docs/cpp_api/transform/transform/">Transform</a>s. Thus, at this stage, our <a href="../api_docs/cpp_api/template/template/">Template</a>s now store the images enrolled via the <code>FaceRecognition</code> algorithm.</p>
+<pre><code>float comparisonA = distance-&gt;compare(target, queryA);
+float comparisonB = distance-&gt;compare(target, queryB);
+</code></pre>
+<p>We then compare our query <a href="../api_docs/cpp_api/template/template/">Template</a>s against the target <a href="../api_docs/cpp_api/template/template/">Template</a>. The result is a floating point value indicating similarity.</p>
+<pre><code>printf("Genuine match score: %.3f\n", comparisonA);
+printf("Impostor match score: %.3f\n", comparisonB);
+</code></pre>
+<p>After printing the results, you can see that <code>comparisonA</code> (between <code>queryA</code> and <code>target</code>) has a higher similarity score then <code>comparisonB</code>, which is exactly what we expect!</p>
+<pre><code>br::Context::finalize();
+</code></pre>
+<p>The last line in any OpenBR application has to be call to <code>finalize</code>. This functions performs the clean up of OpenBR.</p>
+<p>That's it! You can now embed face recognition into all of your applications.</p>
+<hr />
+<h1 id="the-evaluation-harness">The Evaluation Harness</h1>
+<p>OpenBR implements a complete, <a href="http://www.nist.gov/index.html">NIST</a> compliant, evaluation harness for evaluating face recognition, face detection, and facial landmarking. The goal is to provide a consistent environment for the repeatable evaluation of algorithms to the academic and open source communities. To accompish this OpenBR defines the following portions of the biometrics evaluation environment (BEE) standard-</p>
+<ul>
+<li>
+<p>Signature set - A signature set (or <em>sigset</em>) is an XML file-list specified on page 9 of the <a href="../misc/MBGC_file_overview.pdf">MBGC File Overview</a> and is implemented in <a href="../plugin_docs/gallery/#xmlgallery">xmlGallery</a>. Sigsets are identified with an <code>.xml</code> extension.</p>
+</li>
+<li>
+<p>Similarity matrix - A similarity matrix (or <em>simmat</em>) is a binary score matrix specified on page 12 of the <a href="../misc/MBGC_file_overview.pdf">MBGC File Overview</a> and is implemented in <a href="../plugin_docs/output/#mtxoutput">mtxOutput</a>. Simmats are identified with a <code>.mtx</code> extension. See <a href="../api_docs/c_api/functions/#br_eval">br_eval</a> for more information.</p>
+</li>
+<li>
+<p>Mask matrix - A mask matrix (or <em>mask</em>) is a binary matrix specified on page 14 of the <a href="../misc/MBGC_file_overview.pdf">MBGC File Overview</a> identifying the genuine and impostor matches within a corresponding <em>simmat</em>. Masks are identified with a <code>.mask</code> extension. See <a href="../api_docs/c_api/functions/#br_make_mask">br_make_mask</a> and <a href="../api_docs/c_api/functions/#br_combine_masks">br_combine_masks</a> for more information.</p>
+</li>
+</ul>
+<p>The evaluation harness is also accessible from the command line. See <a href="../api_docs/cl_api/#eval">-eval</a>, <a href="../api_docs/cl_api/#evaldetection">-evalDetection</a>, <a href="../api_docs/cl_api/#evallandmarking">-evalLandmarking</a>, <a href="../api_docs/cl_api/#evalclassification">-evalClassification</a>, <a href="../api_docs/cl_api/#evalclustering">-evalClustering</a>, or <a href="../api_docs/cl_api/#evalregression">-evalRegression</a> for relevant information.</p>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p><em>Matthew Turk and Alex Pentland.</em>
+<strong>Eigenfaces for recognition.</strong>
+Journal of Cognitive Neuroscience, 71&#45;86, 1991 <!-- Don't know why I have to use the &#45; code instead of '-' -->&#160;<a class="footnote-backref" href="#fnref:1" rev="footnote" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:2">
+<p><em>B. Klare.</em>
+<strong>Spectrally sampled structural subspace features (4SF).</strong>
+In Michigan State University Technical Report, MSUCSE-11-16, 2011&#160;<a class="footnote-backref" href="#fnref:2" rev="footnote" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

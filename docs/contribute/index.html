@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contribute - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../css/highlight.css">
+
+  <script src="../js/jquery-2.1.1.min.js"></script>
+  <script src="../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../js/highlight.pack.js"></script>
+  <script src="../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href=".." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Contribute</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#contributing-a-plugin">Contributing a Plugin</a></li>
+                
+                    <li><a href="#contributing-to-the-api">Contributing to the API</a></li>
+                
+                    <li><a href="#style-guide">Style Guide</a></li>
+                
+            </ul>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../api_docs/c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../api_docs/cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../api_docs/python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../api_docs/cpp_api/">C++ Plugin API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../plugin_docs/video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="..">Docs</a> &raquo;</li>
+    
+      
+    
+    <li>Contribute</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#contributing-a-plugin"><span>Contributing a Plugin</span></a></li>
+                                            
+                                                <li><a href="#contributing-to-the-api"><span>Contributing to the API</span></a></li>
+                                            
+                                                <li><a href="#style-guide"><span>Style Guide</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <p>Contributing to OpenBR should be straightforward and enjoyable. This guide elucidates some guidelines such that your contribution fits nicely into our framework.</p>
+<h2 id="contributing-a-plugin">Contributing a Plugin</h2>
+<p>You should consider contributing a plugin (or plugins!) if you have an algorithm that you would like to express via OpenBR's algorithm grammar or you have an extension to an existing algorithm. Below are the steps for creating and contributing a plugin:</p>
+<ol>
+<li>Check out the <a href="../api_docs/cpp_api/">C++ Plugin API</a> and decide which abstraction best suits the needs of your contribution.</li>
+<li>Select a module in the <code>openbr/plugins/</code> directory that describes your plugin, then create a new source (<code>.cpp</code>) file in that directory. Your file should have the same name as your plugin.</li>
+<li>Implement your plugin! Make sure to adhere to the <a href="#style-guide">Style Guide</a> to keep the code consistent within OpenBR. This increases overall readability and makes it easier for newcomers to learn!</li>
+</ol>
+<h3 id="common-mistakes">Common Mistakes</h3>
+<p>Some common mistakes that will stop your plugin from working:</p>
+<ul>
+<li><code>#include</code> the  <code>&lt;openbr/plugins/openbr_internal.h&gt;</code> header.</li>
+<li>The entire plugin should be inside <code>namespace br</code>.</li>
+<li>Make sure your plugin declares <code>Q_OBJECT</code> right after it's definition.</li>
+<li>Remember to call <a href="../api_docs/cpp_api/factory/macros/#br_register">BR_REGISTER</a> at the end of your plugin.</li>
+<li>Remeber to add <code>#include "module/filename.moc"</code> at the very bottom of your file.</li>
+</ul>
+<p>When in doubt, check out existing <a href="../api_docs/cpp_api/transform/transform/">Transforms</a>. <a href="../plugin_docs/imgproc/#maddtransform">MAddTransform</a> is a simple and clear example of how a <a href="../api_docs/cpp_api/transform/transform/">Transform</a> should look.</p>
+<h3 id="documenting">Documenting</h3>
+<p>Documenting your plugin is very important. OpenBR supports custom, doxygen-style, in-code comments to make documentation simple, clear, and easy. Comments should be written as:</p>
+<pre><code>    /*!
+     * ...
+     */
+</code></pre>
+<p>Comments are organized using tags, which are of the form <code>\tag</code>. There are a few <em>required</em> tags that all OpenBR transforms must have:</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\ingroup</td>
+<td>The abstraction to which your plugin belongs</td>
+</tr>
+<tr>
+<td>\brief</td>
+<td>A description of your plugin</td>
+</tr>
+<tr>
+<td>\author</td>
+<td>Your name</td>
+</tr>
+<tr>
+<td>\cite</td>
+<td>The citation link for the author. There must be citation tag for every author who appears. If you haven't already please add your information to <tt>openbr/docs/docs/contributors.md</tt></td>
+</tr>
+<tr>
+<td>\br_property</td>
+<td>Describes a <tt>BR_PROPERTY</tt> of your plugin. This should take the format <code>\br_property type name description</code>. In certain cases, for enumerations for example, it is beneficial to add a bulleted list to the description. This is done using a comma seperated <strong>[]</strong> list. <code>[item1,item2,item3]</code> will appear like <ul><li>item1</li><li>item2</li><li>item3</li></ul> Each property of the plugin must have a corresponding \br_property tag.</td>
+</tr>
+</tbody>
+</table>
+<p>At a minimum, a comment should look like this:</p>
+<pre><code>    /*!
+     * \ingroup abstraction group
+     * \brief A description of the plugin
+     * \author Your Name \cite Your Citation
+     * \br_property percentage float The percentage of something
+     * \br_property enum choice A choice with possible values: [choice1, choice2, choice3]
+     */
+</code></pre>
+<p>There are also a few <em>optional</em> tags to provide more information:</p>
+<table>
+<thead>
+<tr>
+<th>Tag</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>\br_link</td>
+<td>A link to a webpage. It can take an optional preceding argument of a title for the link.</td>
+</tr>
+<tr>
+<td>\br_paper</td>
+<td>An academic paper your plugin needs to cite. This is a multi-line tag- The first line should contain the paper authors, the second line should contain the paper title, and the third should contain other information about the paper (for example conference and year). See below for an example.</td>
+</tr>
+<tr>
+<td>\br_related_plugin</td>
+<td>Link to a related plugin within OpenBR. The full name of the plugin should be provided. Multiple plugins can be given and they should be seperated by a space.</td>
+</tr>
+<tr>
+<td>\br_format</td>
+<td>A specifically formatted section that should be rendered as is. Everything following this tag (up to the next tag) is wrapped in an html <code> block and is displayed exactly as it appears.</td>
+</tr>
+</tbody>
+</table>
+<p>Optional tags could look like this</p>
+<pre><code>    /*!
+     * \br_link http://www.openbiometrics.org
+     * \br_link OpenBR http://www.openbiometrics.org
+     * \br_paper Author1, Author2, Author3
+     *           Paper Title
+     *           Conference. Year
+     * \br_related_plugin ExampleTransform ExampleDistance ExampleGallery
+     * \br_format
+     * I will          show        up exactly
+     * like
+     * this
+     */
+</code></pre>
+<p>Tables are also supported within any of the tags defined above. Tables are created using the standard markdown syntax. For example, to add a table to a \brief use code like the following-</p>
+<pre><code>    /*!
+     * \brief A short brief describing the plugin.
+     *
+     *     Table Header | Table Header
+     *     --- | ---
+     *     table content | table content
+     *     table content | table content
+     */
+</code></pre>
+<p>Finally, OpenBR supports automatic linking for abstractions found in comments. For example, Transform will automatically become <a href="../api_docs/cpp_api/transform/transform/">Transform</a>.</p>
+<hr />
+<h2 id="contributing-to-the-api">Contributing to the API</h2>
+<p>You should contribute to the API if you want to add a new abstraction or extend an existing abstraction with new functionality. Please note, this occurs <em>very</em> rarely. Our goal is to leave the core API as stable and consistent as possible and change only the surrounding plugins. If you believe your idea offers exciting new functionality or greatly increases efficiency please <a href="https://github.com/biometrics/openbr/issues">open an issue</a> so that it can be discussed as a community.</p>
+<hr />
+<h2 id="style-guide">Style Guide</h2>
+<p>The most important rule is that <strong>new code should be consistent with the existing code around it</strong>. The rules below illustrate the preferred style when cleaning up existing inconsistently-styled code.</p>
+<p>These rules are a work in progress and are subject to additions. Changes to the style can be made with a pull request implementing the change across the entire repository.</p>
+<h3 id="structs-classes">Structs &amp; Classes</h3>
+<pre><code>struct FooBar
+{
+
+};
+</code></pre>
+<h3 id="functions">Functions</h3>
+<pre><code>int *fooBar(const int &amp;x, int *y, int z)
+{
+    *y = x + z;
+    return y;
+}
+</code></pre>
+<h3 id="variables">Variables</h3>
+<pre><code>int x = 2;
+int *y = &amp;x;
+int &amp;z = x;
+</code></pre>
+<h3 id="loops-and-conditionals">Loops and Conditionals</h3>
+<h4 id="single-statement">Single-statement</h4>
+<pre><code>for (int i=start; i&lt;end; i++)
+    foo();
+</code></pre>
+<h4 id="multiple-statement">Multiple-statement</h4>
+<pre><code>for (int i=start; i&lt;end; i++) {
+    foo();
+    bar();
+}
+</code></pre>
+<h3 id="const">Const</h3>
+<p>Use <code>const</code> whenever possible.</p>
+<h3 id="static">Static</h3>
+<p>Use <code>static</code> function declarations whenever possible but <code>static</code> variables sparingly.</p>
+<h3 id="unused-variables">Unused variables</h3>
+<pre><code>int foo(int used, int)
+{
+    // Unused variables are nameless in the function definition
+    return used;
+}
+</code></pre>
+<h3 id="indentation">Indentation</h3>
+<p>4 spaces, no tabs.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

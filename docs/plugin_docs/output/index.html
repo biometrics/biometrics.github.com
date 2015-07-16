@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Output - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../api_docs/c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../api_docs/cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../api_docs/python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../api_docs/cpp_api/">C++ Plugin API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../imgproc/">Image Processing</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Output</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#defaultoutput">DefaultOutput</a></li>
+                
+                    <li><a href="#emptyoutput">EmptyOutput</a></li>
+                
+                    <li><a href="#bestoutput">bestOutput</a></li>
+                
+                    <li><a href="#csvoutput">csvOutput</a></li>
+                
+                    <li><a href="#evaloutput">evalOutput</a></li>
+                
+                    <li><a href="#heatoutput">heatOutput</a></li>
+                
+                    <li><a href="#histoutput">histOutput</a></li>
+                
+                    <li><a href="#meltoutput">meltOutput</a></li>
+                
+                    <li><a href="#mtxoutput">mtxOutput</a></li>
+                
+                    <li><a href="#nulloutput">nullOutput</a></li>
+                
+                    <li><a href="#rankoutput">rankOutput</a></li>
+                
+                    <li><a href="#rroutput">rrOutput</a></li>
+                
+                    <li><a href="#tailoutput">tailOutput</a></li>
+                
+                    <li><a href="#txtoutput">txtOutput</a></li>
+                
+            </ul>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plugin Documentation &raquo;</li>
+        
+      
+    
+    <li>Output</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#defaultoutput"><span>DefaultOutput</span></a></li>
+                                            
+                                                <li><a href="#emptyoutput"><span>EmptyOutput</span></a></li>
+                                            
+                                                <li><a href="#bestoutput"><span>bestOutput</span></a></li>
+                                            
+                                                <li><a href="#csvoutput"><span>csvOutput</span></a></li>
+                                            
+                                                <li><a href="#evaloutput"><span>evalOutput</span></a></li>
+                                            
+                                                <li><a href="#heatoutput"><span>heatOutput</span></a></li>
+                                            
+                                                <li><a href="#histoutput"><span>histOutput</span></a></li>
+                                            
+                                                <li><a href="#meltoutput"><span>meltOutput</span></a></li>
+                                            
+                                                <li><a href="#mtxoutput"><span>mtxOutput</span></a></li>
+                                            
+                                                <li><a href="#nulloutput"><span>nullOutput</span></a></li>
+                                            
+                                                <li><a href="#rankoutput"><span>rankOutput</span></a></li>
+                                            
+                                                <li><a href="#rroutput"><span>rrOutput</span></a></li>
+                                            
+                                                <li><a href="#tailoutput"><span>tailOutput</span></a></li>
+                                            
+                                                <li><a href="#txtoutput"><span>txtOutput</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <h1 id="defaultoutput">DefaultOutput</h1>
+<p>Adaptor class -- write a matrix output using <a href="../../api_docs/cpp_api/format/format/">Format</a> classes.</p>
+<ul>
+<li><strong>file:</strong> output/default.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="emptyoutput">EmptyOutput</h1>
+<p>Output to the terminal.</p>
+<ul>
+<li><strong>file:</strong> output/empty.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="bestoutput">bestOutput</h1>
+<p>The highest scoring matches.</p>
+<ul>
+<li><strong>file:</strong> output/best.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/output/output/">Output</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="csvoutput">csvOutput</h1>
+<p>Comma separated values output.</p>
+<ul>
+<li><strong>file:</strong> output/csv.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="evaloutput">evalOutput</h1>
+<p>Evaluate the output matrix.</p>
+<ul>
+<li><strong>file:</strong> output/eval.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="heatoutput">heatOutput</h1>
+<p>Matrix-like output for heat maps.</p>
+<ul>
+<li><strong>file:</strong> output/heat.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="histoutput">histOutput</h1>
+<p>Score histogram.</p>
+<ul>
+<li><strong>file:</strong> output/hist.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/output/output/">Output</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="meltoutput">meltOutput</h1>
+<p>One score per row.</p>
+<ul>
+<li><strong>file:</strong> output/melt.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="mtxoutput">mtxOutput</h1>
+<p>simmat output.</p>
+<ul>
+<li><strong>file:</strong> output/mtx.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/output/output/">Output</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="nulloutput">nullOutput</h1>
+<p>Discards the scores.</p>
+<ul>
+<li><strong>file:</strong> output/null.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/output/output/">Output</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rankoutput">rankOutput</h1>
+<p>Outputs highest ranked matches with scores.</p>
+<ul>
+<li><strong>file:</strong> output/rank.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rroutput">rrOutput</h1>
+<p>Rank retrieval output.</p>
+<ul>
+<li><strong>file:</strong> output/rr.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a>, <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="tailoutput">tailOutput</h1>
+<p>The highest scoring matches.</p>
+<ul>
+<li><strong>file:</strong> output/tail.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/output/output/">Output</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="txtoutput">txtOutput</h1>
+<p>Text file output.</p>
+<ul>
+<li><strong>file:</strong> output/txt.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/matrixoutput/matrixoutput/">MatrixOutput</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<!-- Contributors -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>

@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Image Processing - OpenBR</title>
+  
+
+  <link rel="shortcut icon" href="../../docs/img/openbr.ico">
+  
+
+  
+  <link href='https://fonts.googleapis.com/css?family=Lato:400,700|Roboto+Slab:400,700|Inconsolata:400,700' rel='stylesheet' type='text/css'>
+
+  <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
+  <link rel="stylesheet" href="../../css/highlight.css">
+
+  <script src="../../js/jquery-2.1.1.min.js"></script>
+  <script src="../../js/modernizr-2.8.3.min.js"></script>
+  <script type="text/javascript" src="../../js/highlight.pack.js"></script>
+  <script src="../../js/theme.js"></script> 
+
+  
+</head>
+
+<body class="wy-body-for-nav" role="document">
+    <div class="wy-grid-for-nav">
+        
+        <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+            <div class="wy-side-nav-search">
+                <a href="../.." class="icon icon-home"> OpenBR</a>
+                <div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+  </form>
+</div>
+            </div>
+
+            <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+                <ul class="current">
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../..">Home</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../install/">Install</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../tutorials/">Tutorials</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../contribute/">Contribute</a>
+        </li>
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>API Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../api_docs/c_api/">C API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../api_docs/cl_api/">Command Line API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../../api_docs/python_api/">Python Wrapper API</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../api_docs/cpp_api/">C++ Plugin API</a>
+            </li>
+            
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                        <li><ul class="subnav">
+    
+        
+            <li><span>Plugin Documentation</span></li>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../classification/">Classification</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../cluster/">Cluster</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../core/">Core</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../distance/">Distance</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../format/">Format</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../gallery/">Gallery</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../gui/">GUI</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 current">
+            <a class="current" href="./">Image Processing</a>
+        </li>
+        
+            <ul class="subnav">
+                
+                    <li><a href="#absdifftransform">AbsDiffTransform</a></li>
+                
+                    <li><a href="#abstransform">AbsTransform</a></li>
+                
+                    <li><a href="#adaptivethresholdtransform">AdaptiveThresholdTransform</a></li>
+                
+                    <li><a href="#affinetransform">AffineTransform</a></li>
+                
+                    <li><a href="#andtransform">AndTransform</a></li>
+                
+                    <li><a href="#applymasktransform">ApplyMaskTransform</a></li>
+                
+                    <li><a href="#bayesianquantizationtransform">BayesianQuantizationTransform</a></li>
+                
+                    <li><a href="#binarizetransform">BinarizeTransform</a></li>
+                
+                    <li><a href="#blendtransform">BlendTransform</a></li>
+                
+                    <li><a href="#blurtransform">BlurTransform</a></li>
+                
+                    <li><a href="#buildscalestransform">BuildScalesTransform</a></li>
+                
+                    <li><a href="#byrowtransform">ByRowTransform</a></li>
+                
+                    <li><a href="#cannytransform">CannyTransform</a></li>
+                
+                    <li><a href="#catcolstransform">CatColsTransform</a></li>
+                
+                    <li><a href="#catrowstransform">CatRowsTransform</a></li>
+                
+                    <li><a href="#cattransform">CatTransform</a></li>
+                
+                    <li><a href="#centertransform">CenterTransform</a></li>
+                
+                    <li><a href="#contrasteqtransform">ContrastEqTransform</a></li>
+                
+                    <li><a href="#convexhulltransform">ConvexHullTransform</a></li>
+                
+                    <li><a href="#cropblacktransform">CropBlackTransform</a></li>
+                
+                    <li><a href="#cropfrommasktransform">CropFromMaskTransform</a></li>
+                
+                    <li><a href="#cropsquaretransform">CropSquareTransform</a></li>
+                
+                    <li><a href="#croptransform">CropTransform</a></li>
+                
+                    <li><a href="#cryptographichashtransform">CryptographicHashTransform</a></li>
+                
+                    <li><a href="#customsifttransform">CustomSIFTTransform</a></li>
+                
+                    <li><a href="#cvtfloattransform">CvtFloatTransform</a></li>
+                
+                    <li><a href="#cvttransform">CvtTransform</a></li>
+                
+                    <li><a href="#cvtuchartransform">CvtUCharTransform</a></li>
+                
+                    <li><a href="#discardalphatransform">DiscardAlphaTransform</a></li>
+                
+                    <li><a href="#divtransform">DivTransform</a></li>
+                
+                    <li><a href="#dogtransform">DoGTransform</a></li>
+                
+                    <li><a href="#downsampletransform">DownsampleTransform</a></li>
+                
+                    <li><a href="#duptransform">DupTransform</a></li>
+                
+                    <li><a href="#ensurechannelstransform">EnsureChannelsTransform</a></li>
+                
+                    <li><a href="#equalizehisttransform">EqualizeHistTransform</a></li>
+                
+                    <li><a href="#fillcontourstransform">FillContoursTransform</a></li>
+                
+                    <li><a href="#fliptransform">FlipTransform</a></li>
+                
+                    <li><a href="#floodtransform">FloodTransform</a></li>
+                
+                    <li><a href="#gaborjettransform">GaborJetTransform</a></li>
+                
+                    <li><a href="#gabortransform">GaborTransform</a></li>
+                
+                    <li><a href="#gammatransform">GammaTransform</a></li>
+                
+                    <li><a href="#gradientmasktransform">GradientMaskTransform</a></li>
+                
+                    <li><a href="#gradienttransform">GradientTransform</a></li>
+                
+                    <li><a href="#grouptransform">GroupTransform</a></li>
+                
+                    <li><a href="#heatmaptransform">HeatmapTransform</a></li>
+                
+                    <li><a href="#histbintransform">HistBinTransform</a></li>
+                
+                    <li><a href="#histeqquantizationtransform">HistEqQuantizationTransform</a></li>
+                
+                    <li><a href="#histtransform">HistTransform</a></li>
+                
+                    <li><a href="#hogdescriptortransform">HoGDescriptorTransform</a></li>
+                
+                    <li><a href="#humomentstransform">HuMomentsTransform</a></li>
+                
+                    <li><a href="#inpainttransform">InpaintTransform</a></li>
+                
+                    <li><a href="#integralhisttransform">IntegralHistTransform</a></li>
+                
+                    <li><a href="#integralsamplertransform">IntegralSamplerTransform</a></li>
+                
+                    <li><a href="#integraltransform">IntegralTransform</a></li>
+                
+                    <li><a href="#kernelhashtransform">KernelHashTransform</a></li>
+                
+                    <li><a href="#keypointdescriptortransform">KeyPointDescriptorTransform</a></li>
+                
+                    <li><a href="#lbptransform">LBPTransform</a></li>
+                
+                    <li><a href="#ltptransform">LTPTransform</a></li>
+                
+                    <li><a href="#largestconvexareatransform">LargestConvexAreaTransform</a></li>
+                
+                    <li><a href="#limitsizetransform">LimitSizeTransform</a></li>
+                
+                    <li><a href="#maddtransform">MAddTransform</a></li>
+                
+                    <li><a href="#masktransform">MaskTransform</a></li>
+                
+                    <li><a href="#matstatstransform">MatStatsTransform</a></li>
+                
+                    <li><a href="#meanfilltransform">MeanFillTransform</a></li>
+                
+                    <li><a href="#meantransform">MeanTransform</a></li>
+                
+                    <li><a href="#mergetransform">MergeTransform</a></li>
+                
+                    <li><a href="#morphtransform">MorphTransform</a></li>
+                
+                    <li><a href="#nlmeansdenoisingtransform">NLMeansDenoisingTransform</a></li>
+                
+                    <li><a href="#normalizetransform">NormalizeTransform</a></li>
+                
+                    <li><a href="#origlinearregressiontransform">OrigLinearRegressionTransform</a></li>
+                
+                    <li><a href="#packtransform">PackTransform</a></li>
+                
+                    <li><a href="#powtransform">PowTransform</a></li>
+                
+                    <li><a href="#productquantizationdistance">ProductQuantizationDistance</a></li>
+                
+                    <li><a href="#productquantizationtransform">ProductQuantizationTransform</a></li>
+                
+                    <li><a href="#quantizetransform">QuantizeTransform</a></li>
+                
+                    <li><a href="#rgtransform">RGTransform</a></li>
+                
+                    <li><a href="#roifromptstransform">ROIFromPtsTransform</a></li>
+                
+                    <li><a href="#roitransform">ROITransform</a></li>
+                
+                    <li><a href="#ranktransform">RankTransform</a></li>
+                
+                    <li><a href="#rectregionstransform">RectRegionsTransform</a></li>
+                
+                    <li><a href="#recursiveintegralsamplertransform">RecursiveIntegralSamplerTransform</a></li>
+                
+                    <li><a href="#redlinearregressiontransform">RedLinearRegressionTransform</a></li>
+                
+                    <li><a href="#reshapetransform">ReshapeTransform</a></li>
+                
+                    <li><a href="#resizefiltertransform">ResizeFilterTransform</a></li>
+                
+                    <li><a href="#resizetransform">ResizeTransform</a></li>
+                
+                    <li><a href="#revertaffinetransform">RevertAffineTransform</a></li>
+                
+                    <li><a href="#rndpointtransform">RndPointTransform</a></li>
+                
+                    <li><a href="#rndregiontransform">RndRegionTransform</a></li>
+                
+                    <li><a href="#rndrotatetransform">RndRotateTransform</a></li>
+                
+                    <li><a href="#rndsubspacetransform">RndSubspaceTransform</a></li>
+                
+                    <li><a href="#rootnormtransform">RootNormTransform</a></li>
+                
+                    <li><a href="#rowwisemeancentertransform">RowWiseMeanCenterTransform</a></li>
+                
+                    <li><a href="#siftdescriptortransform">SIFTDescriptorTransform</a></li>
+                
+                    <li><a href="#samplefrommasktransform">SampleFromMaskTransform</a></li>
+                
+                    <li><a href="#scaletransform">ScaleTransform</a></li>
+                
+                    <li><a href="#skinmasktransform">SkinMaskTransform</a></li>
+                
+                    <li><a href="#sobeltransform">SobelTransform</a></li>
+                
+                    <li><a href="#splitchannelstransform">SplitChannelsTransform</a></li>
+                
+                    <li><a href="#subdividetransform">SubdivideTransform</a></li>
+                
+                    <li><a href="#subtracttransform">SubtractTransform</a></li>
+                
+                    <li><a href="#synthesizepointstransform">SynthesizePointsTransform</a></li>
+                
+                    <li><a href="#thresholdtransform">ThresholdTransform</a></li>
+                
+                    <li><a href="#transposetransform">TransposeTransform</a></li>
+                
+                    <li><a href="#trimtransform">TrimTransform</a></li>
+                
+                    <li><a href="#watershedsegmentationtransform">WatershedSegmentationTransform</a></li>
+                
+            </ul>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../io/">I/O</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../metadata/">Metadata</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../output/">Output</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../representation/">Representation</a>
+        </li>
+        
+    
+</ul>
+            
+                <ul class="subnav">
+    
+        <li class="l1 ">
+            <a class="" href="../video/">Video</a>
+        </li>
+        
+    
+</ul>
+            
+        
+    
+</ul><li>
+                    
+                </ul>
+            </div>
+            &nbsp;
+        </nav>
+
+        <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+            
+            <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+                <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+                <a href="../..">OpenBR</a>
+            </nav>
+
+            
+            <div class="wy-nav-content">
+                <div class="rst-content">
+                    <div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../..">Docs</a> &raquo;</li>
+    
+      
+        
+          <li>Plugin Documentation &raquo;</li>
+        
+      
+    
+    <li>Image Processing</li>
+    <li class="wy-breadcrumbs-aside">
+      
+        
+          <a href="https://github.com/biometrics/openbr" class="icon icon-github"> Edit on GitHub</a>
+        
+      
+    </li>
+  </ul>
+  <hr/>
+</div>
+
+                    <div role="main">
+                        <div class="section">
+                            
+                                <!--<div class="toc" data-spy="affix" role="navigation" aria-label="main navigation">
+                                    <ul class="current">
+                                        <span>Table of Contents</span>
+                                        <ul>
+                                            
+                                                <li><a href="#absdifftransform"><span>AbsDiffTransform</span></a></li>
+                                            
+                                                <li><a href="#abstransform"><span>AbsTransform</span></a></li>
+                                            
+                                                <li><a href="#adaptivethresholdtransform"><span>AdaptiveThresholdTransform</span></a></li>
+                                            
+                                                <li><a href="#affinetransform"><span>AffineTransform</span></a></li>
+                                            
+                                                <li><a href="#andtransform"><span>AndTransform</span></a></li>
+                                            
+                                                <li><a href="#applymasktransform"><span>ApplyMaskTransform</span></a></li>
+                                            
+                                                <li><a href="#bayesianquantizationtransform"><span>BayesianQuantizationTransform</span></a></li>
+                                            
+                                                <li><a href="#binarizetransform"><span>BinarizeTransform</span></a></li>
+                                            
+                                                <li><a href="#blendtransform"><span>BlendTransform</span></a></li>
+                                            
+                                                <li><a href="#blurtransform"><span>BlurTransform</span></a></li>
+                                            
+                                                <li><a href="#buildscalestransform"><span>BuildScalesTransform</span></a></li>
+                                            
+                                                <li><a href="#byrowtransform"><span>ByRowTransform</span></a></li>
+                                            
+                                                <li><a href="#cannytransform"><span>CannyTransform</span></a></li>
+                                            
+                                                <li><a href="#catcolstransform"><span>CatColsTransform</span></a></li>
+                                            
+                                                <li><a href="#catrowstransform"><span>CatRowsTransform</span></a></li>
+                                            
+                                                <li><a href="#cattransform"><span>CatTransform</span></a></li>
+                                            
+                                                <li><a href="#centertransform"><span>CenterTransform</span></a></li>
+                                            
+                                                <li><a href="#contrasteqtransform"><span>ContrastEqTransform</span></a></li>
+                                            
+                                                <li><a href="#convexhulltransform"><span>ConvexHullTransform</span></a></li>
+                                            
+                                                <li><a href="#cropblacktransform"><span>CropBlackTransform</span></a></li>
+                                            
+                                                <li><a href="#cropfrommasktransform"><span>CropFromMaskTransform</span></a></li>
+                                            
+                                                <li><a href="#cropsquaretransform"><span>CropSquareTransform</span></a></li>
+                                            
+                                                <li><a href="#croptransform"><span>CropTransform</span></a></li>
+                                            
+                                                <li><a href="#cryptographichashtransform"><span>CryptographicHashTransform</span></a></li>
+                                            
+                                                <li><a href="#customsifttransform"><span>CustomSIFTTransform</span></a></li>
+                                            
+                                                <li><a href="#cvtfloattransform"><span>CvtFloatTransform</span></a></li>
+                                            
+                                                <li><a href="#cvttransform"><span>CvtTransform</span></a></li>
+                                            
+                                                <li><a href="#cvtuchartransform"><span>CvtUCharTransform</span></a></li>
+                                            
+                                                <li><a href="#discardalphatransform"><span>DiscardAlphaTransform</span></a></li>
+                                            
+                                                <li><a href="#divtransform"><span>DivTransform</span></a></li>
+                                            
+                                                <li><a href="#dogtransform"><span>DoGTransform</span></a></li>
+                                            
+                                                <li><a href="#downsampletransform"><span>DownsampleTransform</span></a></li>
+                                            
+                                                <li><a href="#duptransform"><span>DupTransform</span></a></li>
+                                            
+                                                <li><a href="#ensurechannelstransform"><span>EnsureChannelsTransform</span></a></li>
+                                            
+                                                <li><a href="#equalizehisttransform"><span>EqualizeHistTransform</span></a></li>
+                                            
+                                                <li><a href="#fillcontourstransform"><span>FillContoursTransform</span></a></li>
+                                            
+                                                <li><a href="#fliptransform"><span>FlipTransform</span></a></li>
+                                            
+                                                <li><a href="#floodtransform"><span>FloodTransform</span></a></li>
+                                            
+                                                <li><a href="#gaborjettransform"><span>GaborJetTransform</span></a></li>
+                                            
+                                                <li><a href="#gabortransform"><span>GaborTransform</span></a></li>
+                                            
+                                                <li><a href="#gammatransform"><span>GammaTransform</span></a></li>
+                                            
+                                                <li><a href="#gradientmasktransform"><span>GradientMaskTransform</span></a></li>
+                                            
+                                                <li><a href="#gradienttransform"><span>GradientTransform</span></a></li>
+                                            
+                                                <li><a href="#grouptransform"><span>GroupTransform</span></a></li>
+                                            
+                                                <li><a href="#heatmaptransform"><span>HeatmapTransform</span></a></li>
+                                            
+                                                <li><a href="#histbintransform"><span>HistBinTransform</span></a></li>
+                                            
+                                                <li><a href="#histeqquantizationtransform"><span>HistEqQuantizationTransform</span></a></li>
+                                            
+                                                <li><a href="#histtransform"><span>HistTransform</span></a></li>
+                                            
+                                                <li><a href="#hogdescriptortransform"><span>HoGDescriptorTransform</span></a></li>
+                                            
+                                                <li><a href="#humomentstransform"><span>HuMomentsTransform</span></a></li>
+                                            
+                                                <li><a href="#inpainttransform"><span>InpaintTransform</span></a></li>
+                                            
+                                                <li><a href="#integralhisttransform"><span>IntegralHistTransform</span></a></li>
+                                            
+                                                <li><a href="#integralsamplertransform"><span>IntegralSamplerTransform</span></a></li>
+                                            
+                                                <li><a href="#integraltransform"><span>IntegralTransform</span></a></li>
+                                            
+                                                <li><a href="#kernelhashtransform"><span>KernelHashTransform</span></a></li>
+                                            
+                                                <li><a href="#keypointdescriptortransform"><span>KeyPointDescriptorTransform</span></a></li>
+                                            
+                                                <li><a href="#lbptransform"><span>LBPTransform</span></a></li>
+                                            
+                                                <li><a href="#ltptransform"><span>LTPTransform</span></a></li>
+                                            
+                                                <li><a href="#largestconvexareatransform"><span>LargestConvexAreaTransform</span></a></li>
+                                            
+                                                <li><a href="#limitsizetransform"><span>LimitSizeTransform</span></a></li>
+                                            
+                                                <li><a href="#maddtransform"><span>MAddTransform</span></a></li>
+                                            
+                                                <li><a href="#masktransform"><span>MaskTransform</span></a></li>
+                                            
+                                                <li><a href="#matstatstransform"><span>MatStatsTransform</span></a></li>
+                                            
+                                                <li><a href="#meanfilltransform"><span>MeanFillTransform</span></a></li>
+                                            
+                                                <li><a href="#meantransform"><span>MeanTransform</span></a></li>
+                                            
+                                                <li><a href="#mergetransform"><span>MergeTransform</span></a></li>
+                                            
+                                                <li><a href="#morphtransform"><span>MorphTransform</span></a></li>
+                                            
+                                                <li><a href="#nlmeansdenoisingtransform"><span>NLMeansDenoisingTransform</span></a></li>
+                                            
+                                                <li><a href="#normalizetransform"><span>NormalizeTransform</span></a></li>
+                                            
+                                                <li><a href="#origlinearregressiontransform"><span>OrigLinearRegressionTransform</span></a></li>
+                                            
+                                                <li><a href="#packtransform"><span>PackTransform</span></a></li>
+                                            
+                                                <li><a href="#powtransform"><span>PowTransform</span></a></li>
+                                            
+                                                <li><a href="#productquantizationdistance"><span>ProductQuantizationDistance</span></a></li>
+                                            
+                                                <li><a href="#productquantizationtransform"><span>ProductQuantizationTransform</span></a></li>
+                                            
+                                                <li><a href="#quantizetransform"><span>QuantizeTransform</span></a></li>
+                                            
+                                                <li><a href="#rgtransform"><span>RGTransform</span></a></li>
+                                            
+                                                <li><a href="#roifromptstransform"><span>ROIFromPtsTransform</span></a></li>
+                                            
+                                                <li><a href="#roitransform"><span>ROITransform</span></a></li>
+                                            
+                                                <li><a href="#ranktransform"><span>RankTransform</span></a></li>
+                                            
+                                                <li><a href="#rectregionstransform"><span>RectRegionsTransform</span></a></li>
+                                            
+                                                <li><a href="#recursiveintegralsamplertransform"><span>RecursiveIntegralSamplerTransform</span></a></li>
+                                            
+                                                <li><a href="#redlinearregressiontransform"><span>RedLinearRegressionTransform</span></a></li>
+                                            
+                                                <li><a href="#reshapetransform"><span>ReshapeTransform</span></a></li>
+                                            
+                                                <li><a href="#resizefiltertransform"><span>ResizeFilterTransform</span></a></li>
+                                            
+                                                <li><a href="#resizetransform"><span>ResizeTransform</span></a></li>
+                                            
+                                                <li><a href="#revertaffinetransform"><span>RevertAffineTransform</span></a></li>
+                                            
+                                                <li><a href="#rndpointtransform"><span>RndPointTransform</span></a></li>
+                                            
+                                                <li><a href="#rndregiontransform"><span>RndRegionTransform</span></a></li>
+                                            
+                                                <li><a href="#rndrotatetransform"><span>RndRotateTransform</span></a></li>
+                                            
+                                                <li><a href="#rndsubspacetransform"><span>RndSubspaceTransform</span></a></li>
+                                            
+                                                <li><a href="#rootnormtransform"><span>RootNormTransform</span></a></li>
+                                            
+                                                <li><a href="#rowwisemeancentertransform"><span>RowWiseMeanCenterTransform</span></a></li>
+                                            
+                                                <li><a href="#siftdescriptortransform"><span>SIFTDescriptorTransform</span></a></li>
+                                            
+                                                <li><a href="#samplefrommasktransform"><span>SampleFromMaskTransform</span></a></li>
+                                            
+                                                <li><a href="#scaletransform"><span>ScaleTransform</span></a></li>
+                                            
+                                                <li><a href="#skinmasktransform"><span>SkinMaskTransform</span></a></li>
+                                            
+                                                <li><a href="#sobeltransform"><span>SobelTransform</span></a></li>
+                                            
+                                                <li><a href="#splitchannelstransform"><span>SplitChannelsTransform</span></a></li>
+                                            
+                                                <li><a href="#subdividetransform"><span>SubdivideTransform</span></a></li>
+                                            
+                                                <li><a href="#subtracttransform"><span>SubtractTransform</span></a></li>
+                                            
+                                                <li><a href="#synthesizepointstransform"><span>SynthesizePointsTransform</span></a></li>
+                                            
+                                                <li><a href="#thresholdtransform"><span>ThresholdTransform</span></a></li>
+                                            
+                                                <li><a href="#transposetransform"><span>TransposeTransform</span></a></li>
+                                            
+                                                <li><a href="#trimtransform"><span>TrimTransform</span></a></li>
+                                            
+                                                <li><a href="#watershedsegmentationtransform"><span>WatershedSegmentationTransform</span></a></li>
+                                            
+                                        </ul>
+                                    </ul>
+                                </div>-->
+                                <h1 id="absdifftransform">AbsDiffTransform</h1>
+<p>Take the absolute difference of two matrices.</p>
+<ul>
+<li><strong>file:</strong> imgproc/absdiff.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="abstransform">AbsTransform</h1>
+<p>Computes the absolute value of each element.</p>
+<ul>
+<li><strong>file:</strong> imgproc/abs.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="adaptivethresholdtransform">AdaptiveThresholdTransform</h1>
+<p>Wraps OpenCV's adaptive thresholding.</p>
+<ul>
+<li><strong>file:</strong> imgproc/adaptivethreshold.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="affinetransform">AffineTransform</h1>
+<p>Performs a two or three point registration.</p>
+<ul>
+<li><strong>file:</strong> imgproc/affine.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="andtransform">AndTransform</h1>
+<p>Logical AND of two matrices.</p>
+<ul>
+<li><strong>file:</strong> imgproc/and.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="applymasktransform">ApplyMaskTransform</h1>
+<p>Applies a mask from the metadata.</p>
+<ul>
+<li><strong>file:</strong> imgproc/applymask.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="bayesianquantizationtransform">BayesianQuantizationTransform</h1>
+<p>Quantize into a space where L1 distance approximates log-likelihood.</p>
+<ul>
+<li><strong>file:</strong> imgproc/bayesianquantization.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="binarizetransform">BinarizeTransform</h1>
+<p>Approximate floats as signed bit.</p>
+<ul>
+<li><strong>file:</strong> imgproc/binarize.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="blendtransform">BlendTransform</h1>
+<p>Alpha-blend matrices</p>
+<ul>
+<li><strong>file:</strong> imgproc/blend.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="blurtransform">BlurTransform</h1>
+<p>Gaussian blur</p>
+<ul>
+<li><strong>file:</strong> imgproc/blur.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="buildscalestransform">BuildScalesTransform</h1>
+<p>DOCUMENT ME</p>
+<ul>
+<li><strong>file:</strong> imgproc/multiscale.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="byrowtransform">ByRowTransform</h1>
+<p>Turns each row into its own matrix.</p>
+<ul>
+<li><strong>file:</strong> imgproc/byrow.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cannytransform">CannyTransform</h1>
+<p>Wrapper to OpenCV Canny edge detector</p>
+<ul>
+<li><strong>file:</strong> imgproc/canny.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/doc/tutorials/imgproc/imgtrans/canny_detector/canny_detector.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="catcolstransform">CatColsTransform</h1>
+<p>Concatenates all input matrices by column into a single matrix.
+Use after a fork to concatenate two feature matrices by column.</p>
+<ul>
+<li><strong>file:</strong> imgproc/catcols.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="catrowstransform">CatRowsTransform</h1>
+<p>Concatenates all input matrices by row into a single matrix.
+All matricies must have the same column counts.</p>
+<ul>
+<li><strong>file:</strong> imgproc/catrows.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cattransform">CatTransform</h1>
+<p>Concatenates all input matrices into a single matrix.</p>
+<ul>
+<li><strong>file:</strong> imgproc/cat.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="centertransform">CenterTransform</h1>
+<p>Normalize each dimension based on training data.</p>
+<ul>
+<li><strong>file:</strong> imgproc/center.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="contrasteqtransform">ContrastEqTransform</h1>
+<p>Perform contrast equalization</p>
+<ul>
+<li><strong>file:</strong> imgproc/contrasteq.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Xiaoyang Tan; Triggs, B.;</em><br>
+ <strong>"Enhanced Local Texture Feature Sets for Face Recognition Under Difficult Lighting Conditions,"</strong>
+ Image Processing, IEEE Transactions on , vol.19, no.6, pp.1635-1650, June 2010</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong> None</p>
+</li>
+</ul>
+<hr />
+<h1 id="convexhulltransform">ConvexHullTransform</h1>
+<p>Set the template's label to the area of the largest convex hull.</p>
+<ul>
+<li><strong>file:</strong> imgproc/convexhull.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cropblacktransform">CropBlackTransform</h1>
+<p>Crop out black borders</p>
+<ul>
+<li><strong>file:</strong> imgproc/cropblack.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cropfrommasktransform">CropFromMaskTransform</h1>
+<p>Crops image based on mask metadata</p>
+<ul>
+<li><strong>file:</strong> imgproc/cropfrommask.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cropsquaretransform">CropSquareTransform</h1>
+<p>Trim the image so the width and the height are the same size.</p>
+<ul>
+<li><strong>file:</strong> imgproc/cropsquare.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="croptransform">CropTransform</h1>
+<p>Crops about the specified region of interest.</p>
+<ul>
+<li><strong>file:</strong> imgproc/crop.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cryptographichashtransform">CryptographicHashTransform</h1>
+<p>Wraps QCryptographicHash</p>
+<ul>
+<li><strong>file:</strong> imgproc/cryptographichash.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://doc.qt.io/qt-5/qcryptographichash.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="customsifttransform">CustomSIFTTransform</h1>
+<p>Specialize wrapper OpenCV SIFT wrapper</p>
+<ul>
+<li><strong>file:</strong> imgproc/custom_sift.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cvtfloattransform">CvtFloatTransform</h1>
+<p>Convert to floating point format.</p>
+<ul>
+<li><strong>file:</strong> imgproc/cvtfloat.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cvttransform">CvtTransform</h1>
+<p>Colorspace conversion.</p>
+<ul>
+<li><strong>file:</strong> imgproc/cvt.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cvtuchartransform">CvtUCharTransform</h1>
+<p>Convert to uchar format</p>
+<ul>
+<li><strong>file:</strong> imgproc/cvtuchar.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="discardalphatransform">DiscardAlphaTransform</h1>
+<p>Drop the alpha channel (if exists).</p>
+<ul>
+<li><strong>file:</strong> imgproc/discardalpha.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="divtransform">DivTransform</h1>
+<p>Enforce a multiple of n columns.</p>
+<ul>
+<li><strong>file:</strong> imgproc/div.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="dogtransform">DoGTransform</h1>
+<p>Difference of gaussians</p>
+<ul>
+<li><strong>file:</strong> imgproc/dog.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="downsampletransform">DownsampleTransform</h1>
+<p>Downsample the rows and columns of a matrix.</p>
+<ul>
+<li><strong>file:</strong> imgproc/downsample.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/lbestrowden" title="Lacey S. Best-Rowden bestrow1@msu.edu">Lacey Best-Rowden</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="duptransform">DupTransform</h1>
+<p>Duplicates the <a href="../../api_docs/cpp_api/template/template/">Template</a> data.</p>
+<ul>
+<li><strong>file:</strong> imgproc/dup.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="ensurechannelstransform">EnsureChannelsTransform</h1>
+<p>Enforce the matrix has a certain number of channels by adding or removing channels.</p>
+<ul>
+<li><strong>file:</strong> imgproc/ensurechannels.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="equalizehisttransform">EqualizeHistTransform</h1>
+<p>Histogram equalization</p>
+<ul>
+<li><strong>file:</strong> imgproc/equalizehist.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="fillcontourstransform">FillContoursTransform</h1>
+<p>Fills contours with white pixels.</p>
+<ul>
+<li><strong>file:</strong> imgproc/fillcontours.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="fliptransform">FlipTransform</h1>
+<p>Flips the image about an axis.</p>
+<ul>
+<li><strong>file:</strong> imgproc/flip.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="floodtransform">FloodTransform</h1>
+<p>Fill black pixels with the specified color.</p>
+<ul>
+<li><strong>file:</strong> imgproc/flood.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="gaborjettransform">GaborJetTransform</h1>
+<p>A vector of gabor wavelets applied at a point.</p>
+<ul>
+<li><strong>file:</strong> imgproc/gabor.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="gabortransform">GaborTransform</h1>
+<p>Implements a Gabor Filter</p>
+<ul>
+<li><strong>file:</strong> imgproc/gabor.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://en.wikipedia.org/wiki/Gabor_filter"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="gammatransform">GammaTransform</h1>
+<p>Gamma correction</p>
+<ul>
+<li><strong>file:</strong> imgproc/gamma.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="gradientmasktransform">GradientMaskTransform</h1>
+<p>Masks image according to pixel change.</p>
+<ul>
+<li><strong>file:</strong> imgproc/gradientmask.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="gradienttransform">GradientTransform</h1>
+<p>Computes magnitude and/or angle of image.</p>
+<ul>
+<li><strong>file:</strong> imgproc/gradient.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="grouptransform">GroupTransform</h1>
+<p>Group all input matrices into a single matrix.</p>
+<p>Similar to CatTransfrom but groups every <em>size</em> adjacent matricies.</p>
+<ul>
+<li><strong>file:</strong> imgproc/group.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="heatmaptransform">HeatmapTransform</h1>
+<p>Applies a colormap to src.</p>
+<ul>
+<li><strong>file:</strong> imgproc/heatmap.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="histbintransform">HistBinTransform</h1>
+<p>Quantizes the values into bins.</p>
+<ul>
+<li><strong>file:</strong> imgproc/histbin.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="histeqquantizationtransform">HistEqQuantizationTransform</h1>
+<p>Approximate floats as uchar with different scalings for each dimension.</p>
+<ul>
+<li><strong>file:</strong> imgproc/histeqquantization.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="histtransform">HistTransform</h1>
+<p>Histograms the matrix</p>
+<ul>
+<li><strong>file:</strong> imgproc/hist.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="hogdescriptortransform">HoGDescriptorTransform</h1>
+<p>OpenCV HOGDescriptor wrapper</p>
+<ul>
+<li><strong>file:</strong> imgproc/hog.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/gpu/doc/object_detection.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="humomentstransform">HuMomentsTransform</h1>
+<p>Computes the seven Hu moments of a shape.</p>
+<ul>
+<li><strong>file:</strong> imgproc/humoments.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="inpainttransform">InpaintTransform</h1>
+<p>Wraps OpenCV inpainting</p>
+<ul>
+<li><strong>file:</strong> imgproc/inpaint.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/photo/doc/inpainting.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="integralhisttransform">IntegralHistTransform</h1>
+<p>An integral histogram</p>
+<ul>
+<li><strong>file:</strong> imgproc/integralhist.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="integralsamplertransform">IntegralSamplerTransform</h1>
+<p>Sliding window feature extraction from a multi-channel integral image.</p>
+<ul>
+<li><strong>file:</strong> imgproc/integralsampler.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="integraltransform">IntegralTransform</h1>
+<p>Computes integral image.</p>
+<ul>
+<li><strong>file:</strong> imgproc/integral.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="kernelhashtransform">KernelHashTransform</h1>
+<p>Kernel hash</p>
+<ul>
+<li><strong>file:</strong> imgproc/kernelhash.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="keypointdescriptortransform">KeyPointDescriptorTransform</h1>
+<p>Wraps OpenCV Key Point Descriptor</p>
+<ul>
+<li><strong>file:</strong> imgproc/keypointdescriptor.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/features2d/doc/common_interfaces_of_feature_detectors.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="lbptransform">LBPTransform</h1>
+<p>Convert the image into a feature vector using Local Binary Patterns</p>
+<ul>
+<li><strong>file:</strong> imgproc/lbp.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Ahonen, T.; Hadid, A.; Pietikainen, M.;</em><br>
+ <strong>"Face Description with Local Binary Patterns: Application to Face Recognition"</strong>
+ Pattern Analysis and Machine Intelligence, IEEE Transactions, vol.28, no.12, pp.2037-2041, Dec. 2006</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong> None</p>
+</li>
+</ul>
+<hr />
+<h1 id="ltptransform">LTPTransform</h1>
+<p>DOCUMENT ME</p>
+<ul>
+<li><strong>file:</strong> imgproc/ltp.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a>, <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Tan, Xiaoyang, and Bill Triggs.</em><br>
+ <strong>"Enhanced local texture feature sets for face recognition under difficult lighting conditions."</strong>
+ Analysis and Modeling of Faces and Gestures. Springer Berlin Heidelberg, 2007. 168-182.</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong> None</p>
+</li>
+</ul>
+<hr />
+<h1 id="largestconvexareatransform">LargestConvexAreaTransform</h1>
+<p>Set the template's label to the area of the largest convex hull.</p>
+<ul>
+<li><strong>file:</strong> imgproc/largestconvexarea.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="limitsizetransform">LimitSizeTransform</h1>
+<p>Limit the size of the template</p>
+<ul>
+<li><strong>file:</strong> imgproc/limitsize.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="maddtransform">MAddTransform</h1>
+<p>dst = a*src+b</p>
+<ul>
+<li><strong>file:</strong> imgproc/madd.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="masktransform">MaskTransform</h1>
+<p>Applies an eliptical mask</p>
+<ul>
+<li><strong>file:</strong> imgproc/mask.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="matstatstransform">MatStatsTransform</h1>
+<p>Statistics</p>
+<ul>
+<li><strong>file:</strong> imgproc/matstats.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="meanfilltransform">MeanFillTransform</h1>
+<p>Fill 0 pixels with the mean of non-0 pixels.</p>
+<ul>
+<li><strong>file:</strong> imgproc/meanfill.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="meantransform">MeanTransform</h1>
+<p>Computes the mean of a set of templates.</p>
+<p>Suitable for visualization only as it sets every projected template to the mean template.</p>
+<ul>
+<li><strong>file:</strong> imgproc/mean.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="mergetransform">MergeTransform</h1>
+<p>Wraps OpenCV merge</p>
+<ul>
+<li><strong>file:</strong> imgproc/merge.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/core/doc/operations_on_arrays.html#merge"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="morphtransform">MorphTransform</h1>
+<p>Morphological operator</p>
+<ul>
+<li><strong>file:</strong> imgproc/morph.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="nlmeansdenoisingtransform">NLMeansDenoisingTransform</h1>
+<p>Wraps OpenCV Non-Local Means Denoising</p>
+<ul>
+<li><strong>file:</strong> imgproc/denoising.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/photo/doc/denoising.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="normalizetransform">NormalizeTransform</h1>
+<p>Normalize matrix to unit length</p>
+<ul>
+<li><strong>file:</strong> imgproc/normalize.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>NormType</td>
+<td>enum</td>
+<td>Values are:<ul><li>NORM_INF</li><li>NORM_L1</li><li>NORM_L2</li><li>NORM_MINMAX</li></ul></td>
+</tr>
+<tr>
+<td>ByRow</td>
+<td>bool</td>
+<td>If true normalize each row independently otherwise normalize the entire matrix.</td>
+</tr>
+<tr>
+<td>alpha</td>
+<td>int</td>
+<td>Lower bound if using NORM_MINMAX. Value to normalize to otherwise.</td>
+</tr>
+<tr>
+<td>beta</td>
+<td>int</td>
+<td>Upper bound if using NORM_MINMAX. Not used otherwise.</td>
+</tr>
+<tr>
+<td>squareRoot</td>
+<td>bool</td>
+<td>If true compute the signed square root of the output after normalization.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="origlinearregressiontransform">OrigLinearRegressionTransform</h1>
+<p>Prediction with magic numbers from jmp; must get input as blue;green;red</p>
+<ul>
+<li><strong>file:</strong> imgproc/origlinearregression.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/mmtaborsky" title="M. M. Taborsky mmtaborsky@gmail.com">E. Taborsky</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="packtransform">PackTransform</h1>
+<p>Compress two uchar into one uchar.</p>
+<ul>
+<li><strong>file:</strong> imgproc/pack.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="powtransform">PowTransform</h1>
+<p>Raise each element to the specified power.</p>
+<ul>
+<li><strong>file:</strong> imgproc/pow.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="productquantizationdistance">ProductQuantizationDistance</h1>
+<p>Distance in a product quantized space</p>
+<ul>
+<li><strong>file:</strong> imgproc/productquantization.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabledistance/untrainabledistance/">UntrainableDistance</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Jegou, Herve, Matthijs Douze, and Cordelia Schmid.</em><br>
+ <strong>"Product quantization for nearest neighbor search."</strong>
+ Pattern Analysis and Machine Intelligence, IEEE Transactions on 33.1 (2011): 117-128</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong> None</p>
+</li>
+</ul>
+<hr />
+<h1 id="productquantizationtransform">ProductQuantizationTransform</h1>
+<p>Product quantization</p>
+<ul>
+<li><strong>file:</strong> imgproc/productquantization.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Jegou, Herve, Matthijs Douze, and Cordelia Schmid.</em><br>
+ <strong>"Product quantization for nearest neighbor search."</strong>
+ Pattern Analysis and Machine Intelligence, IEEE Transactions on 33.1 (2011): 117-128</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong> None</p>
+</li>
+</ul>
+<hr />
+<h1 id="quantizetransform">QuantizeTransform</h1>
+<p>Approximate floats as uchar.</p>
+<ul>
+<li><strong>file:</strong> imgproc/quantize.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rgtransform">RGTransform</h1>
+<p>Normalized RG color space.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rg.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="roifromptstransform">ROIFromPtsTransform</h1>
+<p>Crops the rectangular regions of interest from given points and sizes.</p>
+<ul>
+<li><strong>file:</strong> imgproc/roifrompoints.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="roitransform">ROITransform</h1>
+<p>Crops the rectangular regions of interest.</p>
+<ul>
+<li><strong>file:</strong> imgproc/roi.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="ranktransform">RankTransform</h1>
+<p>Converts each element to its rank-ordered value.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rank.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rectregionstransform">RectRegionsTransform</h1>
+<p>Subdivide matrix into rectangular subregions.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rectregions.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="recursiveintegralsamplertransform">RecursiveIntegralSamplerTransform</h1>
+<p>Construct <a href="../../api_docs/cpp_api/template/template/">Template</a> in a recursive decent manner.</p>
+<ul>
+<li><strong>file:</strong> imgproc/recursiveintegralsampler.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="redlinearregressiontransform">RedLinearRegressionTransform</h1>
+<p>Prediction using only the red wavelength; magic numbers from jmp</p>
+<ul>
+<li><strong>file:</strong> imgproc/redlinearregression.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/mmtaborsky" title="M. M. Taborsky mmtaborsky@gmail.com">E. Taborsky</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="reshapetransform">ReshapeTransform</h1>
+<p>Reshape each matrix to the specified number of rows.</p>
+<ul>
+<li><strong>file:</strong> imgproc/reshape.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="resizefiltertransform">ResizeFilterTransform</h1>
+<p>Resize the template depending on its metadata</p>
+<ul>
+<li><strong>file:</strong> imgproc/resizefilter.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> [Jordan Cheney][JordanCheney]</li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="resizetransform">ResizeTransform</h1>
+<p>Resize the template</p>
+<ul>
+<li><strong>file:</strong> imgproc/resize.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>method</td>
+<td>enum</td>
+<td>Resize method. Good options are:<ul><li>Area should be used for shrinking an image</li><li>Cubic for slow but accurate enlargment</li><li>Bilin for fast enlargement</li></ul></td>
+</tr>
+<tr>
+<td>preserveAspect</td>
+<td>bool</td>
+<td>If true, the image will be sized per specification, but a border will be applied to preserve aspect ratio.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="revertaffinetransform">RevertAffineTransform</h1>
+<p>Designed for use after eye detection + Stasm, this will
+revert the detected landmarks to the original coordinate space
+before affine alignment to the stasm mean shape. The storeAffine
+parameter must be set to true when calling AffineTransform before this.</p>
+<ul>
+<li><strong>file:</strong> imgproc/revertaffine.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rndpointtransform">RndPointTransform</h1>
+<p>Generates a random landmark.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rndpoint.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rndregiontransform">RndRegionTransform</h1>
+<p>Selects a random region.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rndregion.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rndrotatetransform">RndRotateTransform</h1>
+<p>Randomly rotates an image in a specified range.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rndrotate.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rndsubspacetransform">RndSubspaceTransform</h1>
+<p>Generates a random subspace.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rndsubspace.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rootnormtransform">RootNormTransform</h1>
+<p>dst=sqrt(norm_L1(src)) proposed as RootSIFT (see paper)</p>
+<ul>
+<li><strong>file:</strong> imgproc/rootnorm.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Arandjelovic, Relja, and Andrew Zisserman.</em><br>
+ <strong>"Three things everyone should know to improve object retrieval."</strong>
+ Computer Vision and Pattern Recognition (CVPR), 2012 IEEE Conference on. IEEE, 2012.</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong> None</p>
+</li>
+</ul>
+<hr />
+<h1 id="rowwisemeancentertransform">RowWiseMeanCenterTransform</h1>
+<p>Remove the row-wise training set average.</p>
+<ul>
+<li><strong>file:</strong> imgproc/rowwisemeancenter.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="siftdescriptortransform">SIFTDescriptorTransform</h1>
+<p>Specialize wrapper OpenCV SIFT wrapper</p>
+<ul>
+<li><strong>file:</strong> imgproc/sift.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/nonfree/doc/feature_detection.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="samplefrommasktransform">SampleFromMaskTransform</h1>
+<p>Samples pixels from a mask.</p>
+<ul>
+<li><strong>file:</strong> imgproc/samplefrommask.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="scaletransform">ScaleTransform</h1>
+<p>Scales using the given factor</p>
+<ul>
+<li><strong>file:</strong> imgproc/scale.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="skinmasktransform">SkinMaskTransform</h1>
+<p>Make a mask over skin in an image</p>
+<ul>
+<li><strong>file:</strong> imgproc/skinmask.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>see:</strong> <a href="http://worldofcameras.wordpress.com/tag/skin-detection-opencv/"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="sobeltransform">SobelTransform</h1>
+<p>Approximates the gradient in an image using sobel operator.</p>
+<ul>
+<li><strong>file:</strong> imgproc/sobel.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="splitchannelstransform">SplitChannelsTransform</h1>
+<p>Split a multi-channel matrix into several single-channel matrices.</p>
+<ul>
+<li><strong>file:</strong> imgproc/splitchannels.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="subdividetransform">SubdivideTransform</h1>
+<p>Divide the matrix into 4 smaller matricies of equal size.</p>
+<ul>
+<li><strong>file:</strong> imgproc/subdivide.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="subtracttransform">SubtractTransform</h1>
+<p>Subtract two matrices.</p>
+<ul>
+<li><strong>file:</strong> imgproc/subtract.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="synthesizepointstransform">SynthesizePointsTransform</h1>
+<p>Synthesize additional points via triangulation.</p>
+<ul>
+<li><strong>file:</strong> imgproc/synthesizekeypoints.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metadatatransform/metadatatransform/">MetadataTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="thresholdtransform">ThresholdTransform</h1>
+<p>Wraps OpenCV's thresholding.</p>
+<ul>
+<li><strong>file:</strong> imgproc/threshold.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>see:</strong> <a href="http://docs.opencv.org/modules/imgproc/doc/miscellaneous_transformations.html"></a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="transposetransform">TransposeTransform</h1>
+<p>Get the transpose of the <a href="../../api_docs/cpp_api/template/template/">Template</a> matrix</p>
+<ul>
+<li><strong>file:</strong> imgproc/transpose.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://openbiometrics.com">Unknown</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="trimtransform">TrimTransform</h1>
+<p>Trims a percentage of width and height from the border of a matrix.</p>
+<ul>
+<li><strong>file:</strong> imgproc/trim.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="watershedsegmentationtransform">WatershedSegmentationTransform</h1>
+<p>Applies watershed segmentation.</p>
+<ul>
+<li><strong>file:</strong> imgproc/watershedsegmentation.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<!-- Contributors -->
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+    </div>
+</body>
+</html>
