@@ -217,6 +217,8 @@
                 
                     <li><a href="#lmgallery">lmGallery</a></li>
                 
+                    <li><a href="#matlabgallery">matlabGallery</a></li>
+                
                     <li><a href="#matrixgallery">matrixGallery</a></li>
                 
                     <li><a href="#memgallery">memGallery</a></li>
@@ -229,6 +231,8 @@
                 
                     <li><a href="#statgallery">statGallery</a></li>
                 
+                    <li><a href="#tgallery">tGallery</a></li>
+                
                     <li><a href="#templategallery">templateGallery</a></li>
                 
                     <li><a href="#turkgallery">turkGallery</a></li>
@@ -236,8 +240,6 @@
                     <li><a href="#txtgallery">txtGallery</a></li>
                 
                     <li><a href="#urlgallery">urlGallery</a></li>
-                
-                    <li><a href="#utgallery">utGallery</a></li>
                 
                     <li><a href="#vbbgallery">vbbGallery</a></li>
                 
@@ -398,6 +400,8 @@
                                             
                                                 <li><a href="#lmgallery"><span>lmGallery</span></a></li>
                                             
+                                                <li><a href="#matlabgallery"><span>matlabGallery</span></a></li>
+                                            
                                                 <li><a href="#matrixgallery"><span>matrixGallery</span></a></li>
                                             
                                                 <li><a href="#memgallery"><span>memGallery</span></a></li>
@@ -410,6 +414,8 @@
                                             
                                                 <li><a href="#statgallery"><span>statGallery</span></a></li>
                                             
+                                                <li><a href="#tgallery"><span>tGallery</span></a></li>
+                                            
                                                 <li><a href="#templategallery"><span>templateGallery</span></a></li>
                                             
                                                 <li><a href="#turkgallery"><span>turkGallery</span></a></li>
@@ -417,8 +423,6 @@
                                                 <li><a href="#txtgallery"><span>txtGallery</span></a></li>
                                             
                                                 <li><a href="#urlgallery"><span>urlGallery</span></a></li>
-                                            
-                                                <li><a href="#utgallery"><span>utGallery</span></a></li>
                                             
                                                 <li><a href="#vbbgallery"><span>vbbGallery</span></a></li>
                                             
@@ -606,6 +610,37 @@ file_name:x1,y1,x2,y2,...,xn,yn
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
+<h1 id="matlabgallery">matlabGallery</h1>
+<p>A simple matrix container format that is easily read into matlab.
+<a href="../../api_docs/cpp_api/template/template/">Template</a> are concatenated into column vectors, and output into a single matrix.
+Note that this is not intended to read in .matlab files, as this is simply
+a quick and dirty for analyzing data in a more interactive environment.
+Use the loadOpenBR.m script to ingest the resultant file into Matlab</p>
+<ul>
+<li><strong>file:</strong> gallery/matlab.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/filegallery/filegallery/">FileGallery</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>writeLabels</td>
+<td>bool</td>
+<td>Write the subject labels of the instances in the final row of the matrix.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="matrixgallery">matrixGallery</h1>
 <p>Combine all <a href="../../api_docs/cpp_api/template/template/">Template</a> into one large matrix and process it as a <a href="../../api_docs/cpp_api/format/format/">Format</a></p>
 <ul>
@@ -660,6 +695,15 @@ file_name:x1,y1,x2,y2,...,xn,yn
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
+<h1 id="tgallery">tGallery</h1>
+<p>A contiguous array of br_universal_template.</p>
+<ul>
+<li><strong>file:</strong> gallery/binary.cpp</li>
+<li><strong>inherits:</strong> <a href="#binarygallery">BinaryGallery</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
 <h1 id="templategallery">templateGallery</h1>
 <p>Treat the file as a single binary <a href="../../api_docs/cpp_api/template/template/">Template</a>.</p>
 <ul>
@@ -698,15 +742,6 @@ file_name:x1,y1,x2,y2,...,xn,yn
 <hr />
 <h1 id="urlgallery">urlGallery</h1>
 <p>Newline-separated URLs.</p>
-<ul>
-<li><strong>file:</strong> gallery/binary.cpp</li>
-<li><strong>inherits:</strong> <a href="#binarygallery">BinaryGallery</a></li>
-<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
-<li><strong>properties:</strong> None</li>
-</ul>
-<hr />
-<h1 id="utgallery">utGallery</h1>
-<p>A contiguous array of br_universal_template.</p>
 <ul>
 <li><strong>file:</strong> gallery/binary.cpp</li>
 <li><strong>inherits:</strong> <a href="#binarygallery">BinaryGallery</a></li>

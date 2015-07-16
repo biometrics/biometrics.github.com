@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Static Functions - OpenBR</title>
+  <title>Properties - OpenBR</title>
   
 
   <link rel="shortcut icon" href="../../../../docs/img/openbr.ico">
@@ -341,73 +341,35 @@
                     <ul class="subnav">
     
         
-            <li class="l1 ">
-                <a href="../../listdistance/listdistance/">ListDistance</a>
-            </li>
-            
-        
-    
-</ul>
-                
-                    <ul class="subnav">
-    
-        
             <li class="l1 current">
-                <a href="../output/">Output</a>
+                <a href="../listdistance/">ListDistance</a>
             </li>
             
-                
-                    <ul class="subnav">
-    
-        <li class="l1 ">
-            <a class="" href="../properties/">Properties</a>
-        </li>
-        
-    
-</ul>
-                
-                    <ul class="subnav">
-    
-        <li class="l1 ">
-            <a class="" href="../members/">Members</a>
-        </li>
-        
-    
-</ul>
-                
-                    <ul class="subnav">
-    
-        <li class="l1 ">
-            <a class="" href="../constructors/">Constructors</a>
-        </li>
-        
-    
-</ul>
                 
                     <ul class="subnav">
     
         <li class="l1 current">
-            <a class="current" href="./">Static Functions</a>
+            <a class="current" href="./">Properties</a>
         </li>
         
             <ul class="subnav">
-                
-                    <li><a href="#make">Output *make(const File &amp;file, const FileList &amp;targetFiles, const FileList &amp;queryFiles)</a></li>
                 
             </ul>
         
     
 </ul>
                 
-                    <ul class="subnav">
-    
-        <li class="l1 ">
-            <a class="" href="../functions/">Functions</a>
-        </li>
+            
         
     
 </ul>
                 
+                    <ul class="subnav">
+    
+        
+            <li class="l1 ">
+                <a href="../../output/output/">Output</a>
+            </li>
             
         
     
@@ -635,11 +597,11 @@
     
       
         
-          <li>Output &raquo;</li>
+          <li>ListDistance &raquo;</li>
         
       
     
-    <li>Static Functions</li>
+    <li>Properties</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -659,59 +621,26 @@
                                         <span>Table of Contents</span>
                                         <ul>
                                             
-                                                <li><a href="#make"><span>Output *make(const File &amp;file, const FileList &amp;targetFiles, const FileList &amp;queryFiles)</span></a></li>
-                                            
                                         </ul>
                                     </ul>
                                 </div>-->
-                                <h2 id="make">Output *make(const <a href="../../file/file/">File</a> &amp;file, const <a href="../../filelist/filelist/">FileList</a> &amp;targetFiles, const <a href="../../filelist/filelist/">FileList</a> &amp;queryFiles)</h2>
-<p>Make an <a href="../output/">Output</a> from a string and lists of target and query files. This function calls <a href="../functions/#initialize">initialize</a>, which should be overloaded by derived classes to handle initialization. The provided file is first split using <a href="../../file/file/">File</a>::<a href="../../file/functions/#split-1">split</a> and each resulting file is turned into an <a href="../output/">Output</a> that is stored in a linked-list.</p>
-<ul>
-<li>
-<p><strong>function definition:</strong></p>
-<pre><code>static Output *make(const File &amp;file, const FileList &amp;targetFiles, const FileList &amp;queryFiles)
-</code></pre>
-</li>
-<li>
-<p><strong>parameters:</strong></p>
-<table>
+                                <table>
 <thead>
 <tr>
-<th>Parameter</th>
+<th>Property</th>
 <th>Type</th>
 <th>Description</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>file</td>
-<td>const <a href="../../file/file/">File</a> &amp;</td>
-<td>File describing the output or outputs to construct</td>
-</tr>
-<tr>
-<td>targetFiles</td>
-<td>const <a href="../../filelist/filelist/">FileList</a> &amp;</td>
-<td>List of files representing the target templates</td>
-</tr>
-<tr>
-<td>queryFiles</td>
-<td>const <a href="../../filelist/filelist/">FileList</a> &amp;</td>
-<td>List of files representing the query templates</td>
+<td>distances</td>
+<td><a href="http://doc.qt.io/qt-5/QList.html" title="QList">QList</a>&lt;<a href="../../distance/distance/">Distance</a>*&gt;</td>
+<td>List of child distances</td>
 </tr>
 </tbody>
 </table>
-</li>
-<li>
-<p><strong>output:</strong> (<a href="../output/">Output</a> *) Returns a pointer to the first output in the linked list</p>
-</li>
-<li><strong>example:</strong><pre><code>TemplateList targets = TemplateList() &lt;&lt; Template("target1.jpg") &lt;&lt; Template("target2.jpg") &lt;&lt; Template("target3.jpg");
-TemplateList queries = TemplateList() &lt;&lt; Template("query1.jpg") &lt;&lt; Template("query2.jpg");
-
-Output *output1 = Output::make("output.mtx", targets, queries); // returns a pointer to an Output at "output.mtx"
-Output *output2 = Output::make("output1.mtx;output2.mtx", targets, queries); // returns a pointer to the output created with "output1.mtx" with a pointer to the output created with "output2.mtx"
-</code></pre>
-</li>
-</ul>
+<!-- Links -->
                             
                         </div>
                     </div>

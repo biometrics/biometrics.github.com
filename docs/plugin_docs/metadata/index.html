@@ -231,6 +231,8 @@
                 
                     <li><a href="#cascadetransform">CascadeTransform</a></li>
                 
+                    <li><a href="#checkpointstransform">CheckPointsTransform</a></li>
+                
                     <li><a href="#checktransform">CheckTransform</a></li>
                 
                     <li><a href="#clearpointstransform">ClearPointsTransform</a></li>
@@ -250,6 +252,8 @@
                     <li><a href="#fileexclusiontransform">FileExclusionTransform</a></li>
                 
                     <li><a href="#filterdupemetadatatransform">FilterDupeMetadataTransform</a></li>
+                
+                    <li><a href="#filtermetadatatransform">FilterMetadataTransform</a></li>
                 
                     <li><a href="#gridtransform">GridTransform</a></li>
                 
@@ -308,6 +312,8 @@
                     <li><a href="#stasmtransform">StasmTransform</a></li>
                 
                     <li><a href="#stopwatchtransform">StopWatchTransform</a></li>
+                
+                    <li><a href="#verifydetectiontransform">VerifyDetectionTransform</a></li>
                 
             </ul>
         
@@ -400,6 +406,8 @@
                                             
                                                 <li><a href="#cascadetransform"><span>CascadeTransform</span></a></li>
                                             
+                                                <li><a href="#checkpointstransform"><span>CheckPointsTransform</span></a></li>
+                                            
                                                 <li><a href="#checktransform"><span>CheckTransform</span></a></li>
                                             
                                                 <li><a href="#clearpointstransform"><span>ClearPointsTransform</span></a></li>
@@ -419,6 +427,8 @@
                                                 <li><a href="#fileexclusiontransform"><span>FileExclusionTransform</span></a></li>
                                             
                                                 <li><a href="#filterdupemetadatatransform"><span>FilterDupeMetadataTransform</span></a></li>
+                                            
+                                                <li><a href="#filtermetadatatransform"><span>FilterMetadataTransform</span></a></li>
                                             
                                                 <li><a href="#gridtransform"><span>GridTransform</span></a></li>
                                             
@@ -478,6 +488,8 @@
                                             
                                                 <li><a href="#stopwatchtransform"><span>StopWatchTransform</span></a></li>
                                             
+                                                <li><a href="#verifydetectiontransform"><span>VerifyDetectionTransform</span></a></li>
+                                            
                                         </ul>
                                     </ul>
                                 </div>-->
@@ -535,6 +547,33 @@
 <li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a>, <a href="https://github.com/dgcrouse" title="David G. Crouse dgcrouse@gmail.com">David Crouse</a></li>
 <li><strong>see:</strong> <a href="http://docs.opencv.org/modules/objdetect/doc/cascade_classification.html"></a></li>
 <li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="checkpointstransform">CheckPointsTransform</h1>
+<p>Checks the points in a template for missing (-1,-1) values</p>
+<ul>
+<li><strong>file:</strong> metadata/checkpoints.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>indices</td>
+<td>QList<int></td>
+<td>Indices of points to check.</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <h1 id="checktransform">CheckTransform</h1>
@@ -648,6 +687,49 @@
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
 <li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="filtermetadatatransform">FilterMetadataTransform</h1>
+<p>Filters templates such that the only remaining template wills have metadata values witihin the
+the specified ranges.</p>
+<ul>
+<li><strong>file:</strong> metadata/filtermetadata.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>key1,key2</td>
+<td>QString</td>
+<td>The meta-data key(s) to filter on</td>
+</tr>
+<tr>
+<td>value1,value2</td>
+<td>float</td>
+<td>The values to compare the values of key1 and key2 entires against</td>
+</tr>
+<tr>
+<td>compareType1</td>
+<td>QString</td>
+<td>The comparison operation to perform. "le" -&gt;  val(key1) &lt;= value1, "lt" -&gt; val(key1) &lt; value1,</td>
+</tr>
+<tr>
+<td>"ge" -&gt; val(key1) &gt;= value1, "gt" -&gt; val(key1) &gt; value1.</td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <h1 id="gridtransform">GridTransform</h1>
@@ -913,6 +995,36 @@ vice versa</p>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
 <li><strong>author(s):</strong> [Jordan Cheney][JordanCheney], <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
 <li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="verifydetectiontransform">VerifyDetectionTransform</h1>
+<p>Check if a the automated face detection contains the landmarks correpsonding
+to the tempate metadata. If not, drop the template. This is meant for use
+during training, where the landmarks will be ground truth'd. If one wants to
+using a ground truth bounding box instead, then convert the BB to a landmark.</p>
+<ul>
+<li><strong>file:</strong> metadata/verifydetection.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>int</td>
+<td>Index of the landmark to be used.</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <!-- Contributors -->

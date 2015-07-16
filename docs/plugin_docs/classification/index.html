@@ -142,7 +142,9 @@
                 
                     <li><a href="#adaboosttransform">AdaBoostTransform</a></li>
                 
-                    <li><a href="#bbldaalignmenttransform">BBLDAAlignmentTransform</a></li>
+                    <li><a href="#boostedforestclassifier">BoostedForestClassifier</a></li>
+                
+                    <li><a href="#cascadeclassifier">CascadeClassifier</a></li>
                 
                     <li><a href="#dffstransform">DFFSTransform</a></li>
                 
@@ -183,8 +185,6 @@
                     <li><a href="#pp5enrolltransform">PP5EnrollTransform</a></li>
                 
                     <li><a href="#pp5gallerytransform">PP5GalleryTransform</a></li>
-                
-                    <li><a href="#rowwisepcatransform">RowWisePCATransform</a></li>
                 
                     <li><a href="#svmtransform">SVMTransform</a></li>
                 
@@ -358,7 +358,9 @@
                                             
                                                 <li><a href="#adaboosttransform"><span>AdaBoostTransform</span></a></li>
                                             
-                                                <li><a href="#bbldaalignmenttransform"><span>BBLDAAlignmentTransform</span></a></li>
+                                                <li><a href="#boostedforestclassifier"><span>BoostedForestClassifier</span></a></li>
+                                            
+                                                <li><a href="#cascadeclassifier"><span>CascadeClassifier</span></a></li>
                                             
                                                 <li><a href="#dffstransform"><span>DFFSTransform</span></a></li>
                                             
@@ -399,8 +401,6 @@
                                                 <li><a href="#pp5enrolltransform"><span>PP5EnrollTransform</span></a></li>
                                             
                                                 <li><a href="#pp5gallerytransform"><span>PP5GalleryTransform</span></a></li>
-                                            
-                                                <li><a href="#rowwisepcatransform"><span>RowWisePCATransform</span></a></li>
                                             
                                                 <li><a href="#svmtransform"><span>SVMTransform</span></a></li>
                                             
@@ -486,13 +486,112 @@
 </li>
 </ul>
 <hr />
-<h1 id="bbldaalignmenttransform">BBLDAAlignmentTransform</h1>
-<p>Boosted Binary LDA classifier for local alignment.</p>
+<h1 id="boostedforestclassifier">BoostedForestClassifier</h1>
+<p>A classification wrapper on OpenCV's CvBoost class. It uses CvBoost for training a boosted forest and then performs classification using the trained nodes.</p>
 <ul>
-<li><strong>file:</strong> classification/lda.cpp</li>
-<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
-<li><strong>author(s):</strong> <a href="https://openbiometrics.com">Unknown</a></li>
-<li><strong>properties:</strong> None</li>
+<li><strong>file:</strong> classification/boostedforest.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/classifier/classifier/">Classifier</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a>, <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>representation</td>
+<td>Representation*</td>
+<td>The Representation describing the features used by the boosted forest</td>
+</tr>
+<tr>
+<td>minTAR</td>
+<td>float</td>
+<td>The minimum true accept rate during training</td>
+</tr>
+<tr>
+<td>maxFAR</td>
+<td>float</td>
+<td>The maximum false accept rate during training</td>
+</tr>
+<tr>
+<td>trimRate</td>
+<td>float</td>
+<td>The trim rate during training</td>
+</tr>
+<tr>
+<td>maxDepth</td>
+<td>int</td>
+<td>The maximum depth for each trained tree</td>
+</tr>
+<tr>
+<td>maxWeakCount</td>
+<td>int</td>
+<td>The maximum number of trees in the forest</td>
+</tr>
+<tr>
+<td>type.</td>
+<td>Type</td>
+<td>The type of boosting to perform. Options are<ul><li>Discrete</li><li>Real</li><li>Logit</li><li>Gentle</li></ul>. Gentle is the default.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="cascadeclassifier">CascadeClassifier</h1>
+<p>A meta <a href="../../api_docs/cpp_api/classifier/classifier/">Classifier</a> that creates a cascade of another <a href="../../api_docs/cpp_api/classifier/classifier/">Classifier</a>. The cascade is a series of stages, each with its own instance of a given classifier. A sample can only reach the next stage if it is classified as positive by the previous stage.</p>
+<ul>
+<li><strong>file:</strong> classification/cascade.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/classifier/classifier/">Classifier</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a>, <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>see:</strong> <a href="https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf">Rapid Object Detection using a Boosted Cascade of Simple Features</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Paul Viola, Michael Jones</em><br>
+ <strong>Rapid Object Detection using a Boosted Cascade of Simple Features</strong>
+ CVPR, 2001</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numStages</td>
+<td>int</td>
+<td>The number of stages in the cascade</td>
+</tr>
+<tr>
+<td>numPos</td>
+<td>int</td>
+<td>The number of positives to feed each stage during training</td>
+</tr>
+<tr>
+<td>numNegs</td>
+<td>int</td>
+<td>The number of negatives to feed each stage during training. A negative sample must have been classified by the previous stages in the cascade as positive to be fed to the next stage during training.</td>
+</tr>
+<tr>
+<td>maxFAR</td>
+<td>float</td>
+<td>A termination parameter. Calculated as (number of passed negatives) / (total number of checked negatives) for a given stage during training. If that number is below the given maxFAR cascade training is terminated early. This can help prevent overfitting.</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <h1 id="dffstransform">DFFSTransform</h1>
@@ -723,37 +822,37 @@
 <tr>
 <td>pcaKeep</td>
 <td>float</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is 0.98.</td>
+<td>If &lt;= 1, the percentage of variance to retain in initial PCA step. If &gt; 1, the number of dimensions to keep.</td>
 </tr>
 <tr>
 <td>pcaWhiten</td>
 <td>bool</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is false.</td>
+<td>Whether or not to perform whitening during PCA step</td>
 </tr>
 <tr>
 <td>directLDA</td>
 <td>int</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is 0.</td>
+<td>Whether or not to use the Direct LDA algorithm.</td>
 </tr>
 <tr>
 <td>directDrop</td>
 <td>float</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is 0.1.</td>
+<td>Parameter for Direct LDA to specify how many leading vectors in within class matrix to drop. Based on variance.</td>
 </tr>
 <tr>
 <td>inputVariable</td>
 <td>QString</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is "Label".</td>
+<td>Metadata key for subject labels.</td>
 </tr>
 <tr>
 <td>isBinary</td>
 <td>bool</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is false.</td>
+<td>Whether or not to perform binary LDA. Default is multi-class LDA (i.e., distance metric learning).</td>
 </tr>
 <tr>
 <td>normalize</td>
 <td>bool</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is true.</td>
+<td>For binary LDA, whether or not to z-score normalize projection.</td>
 </tr>
 </tbody>
 </table>
@@ -883,12 +982,12 @@
 <tr>
 <td>drop</td>
 <td>int</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is 0.</td>
+<td>The number of leading eigen-dimensions to drop.</td>
 </tr>
 <tr>
 <td>whiten</td>
 <td>bool</td>
-<td>BRENDAN OR JOSH FILL ME IN. Default is false.</td>
+<td>Whether or not to perform PCA whitening (i.e., normalize variance of each dimension to unit norm)</td>
 </tr>
 </tbody>
 </table>
@@ -998,15 +1097,6 @@
 <li><strong>file:</strong> classification/pp5.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://openbiometrics.com">Unknown</a></li>
-<li><strong>properties:</strong> None</li>
-</ul>
-<hr />
-<h1 id="rowwisepcatransform">RowWisePCATransform</h1>
-<p>PCA on each row.</p>
-<ul>
-<li><strong>file:</strong> classification/lda.cpp</li>
-<li><strong>inherits:</strong> <a href="#pcatransform">PCATransform</a></li>
-<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />

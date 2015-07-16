@@ -375,6 +375,8 @@
                 
                     <li><a href="#revertaffinetransform">RevertAffineTransform</a></li>
                 
+                    <li><a href="#rndaffinetransform">RndAffineTransform</a></li>
+                
                     <li><a href="#rndpointtransform">RndPointTransform</a></li>
                 
                     <li><a href="#rndregiontransform">RndRegionTransform</a></li>
@@ -395,9 +397,13 @@
                 
                     <li><a href="#skinmasktransform">SkinMaskTransform</a></li>
                 
+                    <li><a href="#slidingwindowtransform">SlidingWindowTransform</a></li>
+                
                     <li><a href="#sobeltransform">SobelTransform</a></li>
                 
                     <li><a href="#splitchannelstransform">SplitChannelsTransform</a></li>
+                
+                    <li><a href="#splitrowstransform">SplitRowsTransform</a></li>
                 
                     <li><a href="#subdividetransform">SubdivideTransform</a></li>
                 
@@ -684,6 +690,8 @@
                                             
                                                 <li><a href="#revertaffinetransform"><span>RevertAffineTransform</span></a></li>
                                             
+                                                <li><a href="#rndaffinetransform"><span>RndAffineTransform</span></a></li>
+                                            
                                                 <li><a href="#rndpointtransform"><span>RndPointTransform</span></a></li>
                                             
                                                 <li><a href="#rndregiontransform"><span>RndRegionTransform</span></a></li>
@@ -704,9 +712,13 @@
                                             
                                                 <li><a href="#skinmasktransform"><span>SkinMaskTransform</span></a></li>
                                             
+                                                <li><a href="#slidingwindowtransform"><span>SlidingWindowTransform</span></a></li>
+                                            
                                                 <li><a href="#sobeltransform"><span>SobelTransform</span></a></li>
                                             
                                                 <li><a href="#splitchannelstransform"><span>SplitChannelsTransform</span></a></li>
+                                            
+                                                <li><a href="#splitrowstransform"><span>SplitRowsTransform</span></a></li>
                                             
                                                 <li><a href="#subdividetransform"><span>SubdivideTransform</span></a></li>
                                             
@@ -1626,6 +1638,43 @@ parameter must be set to true when calling AffineTransform before this.</p>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
+<h1 id="rndaffinetransform">RndAffineTransform</h1>
+<p>Perform a number of random transformations to the points in metadata as "Affine_0" and "Affine_1"</p>
+<ul>
+<li><strong>file:</strong> imgproc/rndaffine.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>numAffines</td>
+<td>int</td>
+<td>The number of independent random transformations to perform. The result of each transform is stored as its own template in the output TemplateList</td>
+</tr>
+<tr>
+<td>scaleFactor</td>
+<td>float</td>
+<td>Controls the magnitude of the random changes to the affine points</td>
+</tr>
+<tr>
+<td>maxAngle</td>
+<td>int</td>
+<td>the maximum angle between the original line between the two affine points and the new line between the points.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="rndpointtransform">RndPointTransform</h1>
 <p>Generates a random landmark.</p>
 <ul>
@@ -1728,6 +1777,63 @@ parameter must be set to true when calling AffineTransform before this.</p>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
+<h1 id="slidingwindowtransform">SlidingWindowTransform</h1>
+<p>Sliding Window Framework for object detection. Performs an exhaustive search of an image by sliding a window of a given size around the image and then resizing the image and repeating until terminating conditions are met.</p>
+<ul>
+<li><strong>file:</strong> imgproc/slidingwindow.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metatransform/metatransform/">MetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a>, <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>classifier</td>
+<td>Classifier*</td>
+<td>The classifier that determines if a given window is a positive or negative sample. The size of the window is determined using the classifiers <em>windowSize</em> method.</td>
+</tr>
+<tr>
+<td>minSize</td>
+<td>int</td>
+<td>The smallest sized object to detect in pixels</td>
+</tr>
+<tr>
+<td>maxSize</td>
+<td>int</td>
+<td>The largest sized object to detect in pixels. A negative value will set maxSize == image size</td>
+</tr>
+<tr>
+<td>scaleFactor</td>
+<td>float</td>
+<td>The factor to scale the image by during each resize.</td>
+</tr>
+<tr>
+<td>minNeighbors</td>
+<td>int</td>
+<td>Parameter for non-maximum supression</td>
+</tr>
+<tr>
+<td>confidenceThreshold</td>
+<td>float</td>
+<td>A threshold for positive detections. Positive detections returned by the classifier that have confidences below this threshold are considered negative detections.</td>
+</tr>
+<tr>
+<td>eps</td>
+<td>float</td>
+<td>Parameter for non-maximum supression</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="sobeltransform">SobelTransform</h1>
 <p>Approximates the gradient in an image using sobel operator.</p>
 <ul>
@@ -1740,10 +1846,37 @@ parameter must be set to true when calling AffineTransform before this.</p>
 <h1 id="splitchannelstransform">SplitChannelsTransform</h1>
 <p>Split a multi-channel matrix into several single-channel matrices.</p>
 <ul>
-<li><strong>file:</strong> imgproc/splitchannels.cpp</li>
+<li><strong>file:</strong> imgproc/split.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
 <li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="splitrowstransform">SplitRowsTransform</h1>
+<p>Split a multi-row matrix into several single-row or smaller multi-row matrices.</p>
+<ul>
+<li><strong>file:</strong> imgproc/split.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>step</td>
+<td>int</td>
+<td>The numbers of rows to include in each output matrix.</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <h1 id="subdividetransform">SubdivideTransform</h1>

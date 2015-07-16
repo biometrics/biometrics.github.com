@@ -241,6 +241,10 @@
                 
                     <li><a href="#gradienthistogramrepresentation">GradientHistogramRepresentation</a></li>
                 
+                    <li><a href="#haarrepresentation">HaarRepresentation</a></li>
+                
+                    <li><a href="#mblbprepresentation">MBLBPRepresentation</a></li>
+                
                     <li><a href="#randomrepresentation">RandomRepresentation</a></li>
                 
             </ul>
@@ -308,6 +312,10 @@
                                             
                                                 <li><a href="#gradienthistogramrepresentation"><span>GradientHistogramRepresentation</span></a></li>
                                             
+                                                <li><a href="#haarrepresentation"><span>HaarRepresentation</span></a></li>
+                                            
+                                                <li><a href="#mblbprepresentation"><span>MBLBPRepresentation</span></a></li>
+                                            
                                                 <li><a href="#randomrepresentation"><span>RandomRepresentation</span></a></li>
                                             
                                         </ul>
@@ -322,13 +330,118 @@
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
+<h1 id="haarrepresentation">HaarRepresentation</h1>
+<p>An implementation of Haar Features for Viola-Jones cascade object detection</p>
+<ul>
+<li><strong>file:</strong> representation/haar.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/representation/representation/">Representation</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a></li>
+<li><strong>see:</strong> <a href="https://www.cs.cmu.edu/~efros/courses/LBMV07/Papers/viola-cvpr-01.pdf">Rapid Object Detection using a Boosted Cascade of Simple Features</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Paul Viola, Michael Jones</em><br>
+ <strong>Rapid Object Detection using a Boosted Cascade of Simple Features</strong>
+ CVPR, 2001</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>winWidth</td>
+<td>int</td>
+<td>The width of the input image. The total feature space is based on this and the winHeight</td>
+</tr>
+<tr>
+<td>winHeight</td>
+<td>int</td>
+<td>The height of the input image. The total feature space is based on this and the winWidth.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="mblbprepresentation">MBLBPRepresentation</h1>
+<p>An implementation of MBLBP as an OpenBR <a href="../../api_docs/cpp_api/representation/representation/">Representation</a></p>
+<ul>
+<li><strong>file:</strong> representation/mblbp.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/representation/representation/">Representation</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a></li>
+<li><strong>see:</strong> <a href="http://www.cbsr.ia.ac.cn/users/lzhang/papers/ICB07/ICB07_Liao.pdf">Learning Multi-scale Block Local Binary Patterns for Face Recognition</a></li>
+<li>
+<p><strong>read:</strong></p>
+<ol>
+<li><em>Shengcai Liao, Xiangxin Zhu, Zhen Lei, Lun Zhang, Stan Z. Li</em><br>
+ <strong>Learning Multi-scale Block Local Binary Patterns for Face Recognition</strong>
+ ICB, 2007</li>
+</ol>
+</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>winWidth</td>
+<td>int</td>
+<td>The width of the input image. The total feature space is based on this and the winHeight</td>
+</tr>
+<tr>
+<td>winHeight</td>
+<td>int</td>
+<td>The height of the input image. The total feature space is based on this and the winWidth.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="randomrepresentation">RandomRepresentation</h1>
-<p>Computes first order gradient histogram features using an integral image</p>
+<p>A meta <a href="../../api_docs/cpp_api/representation/representation/">Representation</a> that creates a smaller, random feature space from the full feature space of a given representation.</p>
 <ul>
 <li><strong>file:</strong> representation/random.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/representation/representation/">Representation</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
-<li><strong>properties:</strong> None</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>representation</td>
+<td>Representation*</td>
+<td>The representation from which to create the random feature space</td>
+</tr>
+<tr>
+<td>count</td>
+<td>int</td>
+<td>The size of the random feature space</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <!-- Contributors -->
