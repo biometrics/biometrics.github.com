@@ -157,6 +157,8 @@
                 
                     <li><a href="#lognntransform">LogNNTransform</a></li>
                 
+                    <li><a href="#meanshiftclusteringtransform">MeanShiftClusteringTransform</a></li>
+                
                     <li><a href="#onlinerodtransform">OnlineRODTransform</a></li>
                 
                     <li><a href="#randomcentroidstransform">RandomCentroidsTransform</a></li>
@@ -322,6 +324,8 @@
                                             
                                                 <li><a href="#lognntransform"><span>LogNNTransform</span></a></li>
                                             
+                                                <li><a href="#meanshiftclusteringtransform"><span>MeanShiftClusteringTransform</span></a></li>
+                                            
                                                 <li><a href="#onlinerodtransform"><span>OnlineRODTransform</span></a></li>
                                             
                                                 <li><a href="#randomcentroidstransform"><span>RandomCentroidsTransform</span></a></li>
@@ -419,6 +423,49 @@
 <td>fileName</td>
 <td>QString</td>
 <td>The name of the log file. An empty fileName won't be written to. Default is "".</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="meanshiftclusteringtransform">MeanShiftClusteringTransform</h1>
+<p>A transform implementing the mean shift clustering algorithm.</p>
+<ul>
+<li><strong>file:</strong> cluster/meanshift.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/timevaryingtransform/timevaryingtransform/">TimeVaryingTransform</a></li>
+<li><strong>author(s):</strong> [Jordan Cheney][JordanCheney]</li>
+<li><strong>see:</strong> <a href="http://spin.atomicobject.com/2015/05/26/mean-shift-clustering/"></a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>distance</td>
+<td>br::Distance*</td>
+<td>The distance used to compute the distance between templates</td>
+</tr>
+<tr>
+<td>kernelBandwidth</td>
+<td>int</td>
+<td>The size of the kernel used to converge points to a cluster center</td>
+</tr>
+<tr>
+<td>shiftThreshold</td>
+<td>float</td>
+<td>The cutoff threshold distance for a shifted point. A value lower then this threshold indicates a point has finished shifting to a cluster center.</td>
+</tr>
+<tr>
+<td>distanceThreshold</td>
+<td>float</td>
+<td>The distance threshold for a point to join a cluster. A point must be at least this close to another point to be included in the same cluster as that point.</td>
 </tr>
 </tbody>
 </table>

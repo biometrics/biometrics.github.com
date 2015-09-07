@@ -243,6 +243,8 @@
                 
                     <li><a href="#cropblacktransform">CropBlackTransform</a></li>
                 
+                    <li><a href="#cropfromlandmarkstransform">CropFromLandmarksTransform</a></li>
+                
                     <li><a href="#cropfrommasktransform">CropFromMaskTransform</a></li>
                 
                     <li><a href="#cropsquaretransform">CropSquareTransform</a></li>
@@ -302,6 +304,8 @@
                     <li><a href="#hogdescriptortransform">HoGDescriptorTransform</a></li>
                 
                     <li><a href="#humomentstransform">HuMomentsTransform</a></li>
+                
+                    <li><a href="#iftransform">IfTransform</a></li>
                 
                     <li><a href="#inpainttransform">InpaintTransform</a></li>
                 
@@ -392,6 +396,8 @@
                     <li><a href="#siftdescriptortransform">SIFTDescriptorTransform</a></li>
                 
                     <li><a href="#samplefrommasktransform">SampleFromMaskTransform</a></li>
+                
+                    <li><a href="#scalemattransform">ScaleMatTransform</a></li>
                 
                     <li><a href="#scaletransform">ScaleTransform</a></li>
                 
@@ -558,6 +564,8 @@
                                             
                                                 <li><a href="#cropblacktransform"><span>CropBlackTransform</span></a></li>
                                             
+                                                <li><a href="#cropfromlandmarkstransform"><span>CropFromLandmarksTransform</span></a></li>
+                                            
                                                 <li><a href="#cropfrommasktransform"><span>CropFromMaskTransform</span></a></li>
                                             
                                                 <li><a href="#cropsquaretransform"><span>CropSquareTransform</span></a></li>
@@ -617,6 +625,8 @@
                                                 <li><a href="#hogdescriptortransform"><span>HoGDescriptorTransform</span></a></li>
                                             
                                                 <li><a href="#humomentstransform"><span>HuMomentsTransform</span></a></li>
+                                            
+                                                <li><a href="#iftransform"><span>IfTransform</span></a></li>
                                             
                                                 <li><a href="#inpainttransform"><span>InpaintTransform</span></a></li>
                                             
@@ -707,6 +717,8 @@
                                                 <li><a href="#siftdescriptortransform"><span>SIFTDescriptorTransform</span></a></li>
                                             
                                                 <li><a href="#samplefrommasktransform"><span>SampleFromMaskTransform</span></a></li>
+                                            
+                                                <li><a href="#scalemattransform"><span>ScaleMatTransform</span></a></li>
                                             
                                                 <li><a href="#scaletransform"><span>ScaleTransform</span></a></li>
                                             
@@ -928,6 +940,15 @@ All matricies must have the same column counts.</p>
 <li><strong>file:</strong> imgproc/cropblack.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="cropfromlandmarkstransform">CropFromLandmarksTransform</h1>
+<p>Crops around the landmarks numbers provided.</p>
+<ul>
+<li><strong>file:</strong> imgproc/cropfromlandmarks.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
@@ -1201,6 +1222,15 @@ All matricies must have the same column counts.</p>
 <ul>
 <li><strong>file:</strong> imgproc/humoments.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="iftransform">IfTransform</h1>
+<p>Document Me!</p>
+<ul>
+<li><strong>file:</strong> imgproc/if.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
 <li><strong>properties:</strong> None</li>
 </ul>
@@ -1537,7 +1567,30 @@ All matricies must have the same column counts.</p>
 <li><strong>file:</strong> imgproc/roi.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
-<li><strong>properties:</strong> None</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>propName</td>
+<td>QString</td>
+<td>Optional property name for a rectangle in metadata. If no propName is given the transform will use rects stored in the file.rects field or build a rectangle using "X", "Y", "Width", and "Height" fields if they exist.</td>
+</tr>
+<tr>
+<td>copyOnCrop</td>
+<td>bool</td>
+<td>If true make a clone of each crop before appending the crop to dst. This guarantees that the crops will be continuous in memory, which is an occasionally useful property. Default is false.</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <h1 id="ranktransform">RankTransform</h1>
@@ -1755,6 +1808,15 @@ parameter must be set to true when calling AffineTransform before this.</p>
 <li><strong>file:</strong> imgproc/samplefrommask.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="scalemattransform">ScaleMatTransform</h1>
+<p>Scales the mat values by provided factor</p>
+<ul>
+<li><strong>file:</strong> imgproc/scalemat.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />

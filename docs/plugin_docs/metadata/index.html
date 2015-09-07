@@ -277,6 +277,10 @@
                 
                     <li><a href="#nametransform">NameTransform</a></li>
                 
+                    <li><a href="#normalizemetadatatransform">NormalizeMetadataTransform</a></li>
+                
+                    <li><a href="#normalizepointstorecttransform">NormalizePointsToRectTransform</a></li>
+                
                     <li><a href="#normalizepointstransform">NormalizePointsTransform</a></li>
                 
                     <li><a href="#pointdisplacementtransform">PointDisplacementTransform</a></li>
@@ -284,6 +288,10 @@
                     <li><a href="#pointstomatrixtransform">PointsToMatrixTransform</a></li>
                 
                     <li><a href="#procrustestransform">ProcrustesTransform</a></li>
+                
+                    <li><a href="#recttokeystransform">RectToKeysTransform</a></li>
+                
+                    <li><a href="#rectstomatstransform">RectsToMatsTransform</a></li>
                 
                     <li><a href="#rectstotemplatestransform">RectsToTemplatesTransform</a></li>
                 
@@ -302,6 +310,8 @@
                     <li><a href="#restoremattransform">RestoreMatTransform</a></li>
                 
                     <li><a href="#savemattransform">SaveMatTransform</a></li>
+                
+                    <li><a href="#scalemetadatatransform">ScaleMetadataTransform</a></li>
                 
                     <li><a href="#selectpointstransform">SelectPointsTransform</a></li>
                 
@@ -452,6 +462,10 @@
                                             
                                                 <li><a href="#nametransform"><span>NameTransform</span></a></li>
                                             
+                                                <li><a href="#normalizemetadatatransform"><span>NormalizeMetadataTransform</span></a></li>
+                                            
+                                                <li><a href="#normalizepointstorecttransform"><span>NormalizePointsToRectTransform</span></a></li>
+                                            
                                                 <li><a href="#normalizepointstransform"><span>NormalizePointsTransform</span></a></li>
                                             
                                                 <li><a href="#pointdisplacementtransform"><span>PointDisplacementTransform</span></a></li>
@@ -459,6 +473,10 @@
                                                 <li><a href="#pointstomatrixtransform"><span>PointsToMatrixTransform</span></a></li>
                                             
                                                 <li><a href="#procrustestransform"><span>ProcrustesTransform</span></a></li>
+                                            
+                                                <li><a href="#recttokeystransform"><span>RectToKeysTransform</span></a></li>
+                                            
+                                                <li><a href="#rectstomatstransform"><span>RectsToMatsTransform</span></a></li>
                                             
                                                 <li><a href="#rectstotemplatestransform"><span>RectsToTemplatesTransform</span></a></li>
                                             
@@ -477,6 +495,8 @@
                                                 <li><a href="#restoremattransform"><span>RestoreMatTransform</span></a></li>
                                             
                                                 <li><a href="#savemattransform"><span>SaveMatTransform</span></a></li>
+                                            
+                                                <li><a href="#scalemetadatatransform"><span>ScaleMetadataTransform</span></a></li>
                                             
                                                 <li><a href="#selectpointstransform"><span>SelectPointsTransform</span></a></li>
                                             
@@ -626,7 +646,7 @@
 <ul>
 <li><strong>file:</strong> metadata/expandrect.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
-<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a>, <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
@@ -833,6 +853,70 @@ the specified ranges.</p>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
+<h1 id="normalizemetadatatransform">NormalizeMetadataTransform</h1>
+<p>Normalize a floating point metadata item to be between -1 and 1. Useful for classifier labels.</p>
+<ul>
+<li><strong>file:</strong> metadata/normalizemetadata.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputVariable</td>
+<td>QString</td>
+<td>Metadata key for the item to scale. Default is empty string.</td>
+</tr>
+<tr>
+<td>min</td>
+<td>float</td>
+<td>Minimum possible value for the metadata item (will be scaled to -1). Default is -1.</td>
+</tr>
+<tr>
+<td>min</td>
+<td>float</td>
+<td>Maximum possible value for the metadata item (will be scaled to 1). Default is 1.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="normalizepointstorecttransform">NormalizePointsToRectTransform</h1>
+<p>Scales a floating point metadata item by index</p>
+<ul>
+<li><strong>file:</strong> metadata/normalizepointstorect.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>int</td>
+<td>Index of rect to normalize points with. If negative, will normalize the points to the width of the matrix. Default is -1.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="normalizepointstransform">NormalizePointsTransform</h1>
 <p>Normalize points to be relative to a single point</p>
 <ul>
@@ -866,6 +950,25 @@ the specified ranges.</p>
 <li><strong>file:</strong> metadata/procrustes.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/metadatatransform/metadatatransform/">MetadataTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="recttokeystransform">RectToKeysTransform</h1>
+<p>Convert a rect to X, Y, Width, and Height. Handy for saving universal templates.</p>
+<ul>
+<li><strong>file:</strong> metadata/recttokeys.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/imaus10" title="Austin Blanton imaus10@gmail.com">Austin Blanton</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="rectstomatstransform">RectsToMatsTransform</h1>
+<p>For each rectangle bounding box in src, the mat is cropped and appended
+the the template's list of mats.</p>
+<ul>
+<li><strong>file:</strong> metadata/rectstomats.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/bklare" title="Dr. Brendan F. Klare brendan.klare@ieee.org">Brendan Klare</a></li>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
@@ -950,6 +1053,38 @@ vice versa</p>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/caotto" title="Charles A. Otto ottochar@gmail.com">Charles Otto</a></li>
 <li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="scalemetadatatransform">ScaleMetadataTransform</h1>
+<p>Scales a floating point metadata item by factor</p>
+<ul>
+<li><strong>file:</strong> metadata/scalemetadata.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>inputVariable</td>
+<td>QString</td>
+<td>Metadata key for the item to scale. Default is empty string.</td>
+</tr>
+<tr>
+<td>factor</td>
+<td>float</td>
+<td>Floating point factor to scale the item. Default is 1.</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <h1 id="selectpointstransform">SelectPointsTransform</h1>

@@ -355,7 +355,7 @@ $ rm -rf opencv-2.4.11*
 <p>Create a <a href="https://github.com/">GitHub</a> account, follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.</p>
 <pre><code>$ git clone https://github.com/biometrics/openbr.git
 $ cd openbr
-$ git checkout 0.5
+$ git checkout 1.0
 $ git submodule init
 $ git submodule update
 </code></pre>
@@ -401,9 +401,21 @@ $ sudo cpack -G TGZ
 </li>
 <li>
 <p>(Optional) Build OpenBR documentation!</p>
+<ol>
+<li>
+<p>Build the docs</p>
+<pre><code>$ pip install mkdocs
+$ cd openbr/docs
+$ sh build_docs.sh
+$ mkdocs serve
+</code></pre>
+</li>
+<li>
+<p>Navigate to <code>http://127.0.0.1:8000</code> in your browser to view the docs.</p>
 </li>
 </ol>
-<p>Need to rewrite this step for the new docs!</p>
+</li>
+</ol>
 <hr />
 <h1 id="osx">OSX</h1>
 <ol>
@@ -413,13 +425,13 @@ $ sudo cpack -G TGZ
 <li>
 <p><a href="http://www.cmake.org/files/v3.0/cmake-3.0.2.tar.gz">Download CMake 3.0.2</a></p>
 <pre><code>    $ cd ~/Downloads
-    $ tar -xf cmake-2.8.11.2.tar.gz
-    $ cd cmake-2.8.11.2
+    $ tar -xf cmake-3.0.2.tar.gz
+    $ cd cmake-3.0.2
     $ ./configure
     $ make -j4
     $ sudo make install
     $ cd ..
-    $ rm -rf cmake-2.8.11.2*
+    $ rm -rf cmake-3.0.2*
 </code></pre>
 </li>
 <li>
@@ -443,7 +455,7 @@ $ rm -rf opencv-2.4.11*
 <p>Create a <a href="https://github.com/">GitHub</a> account, follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.</p>
 <pre><code>$ git clone https://github.com/biometrics/openbr.git
 $ cd openbr
-$ git checkout 0.5
+$ git checkout 1.0
 $ git submodule init
 $ git submodule update
 </code></pre>
@@ -490,9 +502,21 @@ $ sudo cpack -G TGZ
 </li>
 <li>
 <p>(Optional) Build OpenBR documentation!</p>
+<ol>
+<li>
+<p>Build the docs</p>
+<pre><code>$ pip install mkdocs
+$ cd openbr/docs
+$ sh build_docs.sh
+$ mkdocs serve
+</code></pre>
+</li>
+<li>
+<p>Navigate to <code>http://127.0.0.1:8000</code> in your browser to view the docs.</p>
 </li>
 </ol>
-<p>Need to remake this step with the new docs!</p>
+</li>
+</ol>
 <hr />
 <h1 id="windows">Windows</h1>
 <ol>
@@ -533,7 +557,7 @@ $ nmake clean
 <li>Launch "Git Bash" from the Desktop and clone OpenBR:<pre><code>$ cd /c
 $ git clone https://github.com/biometrics/openbr.git
 $ cd openbr
-$ git checkout 0.5
+$ git checkout 1.0
 $ git submodule init
 $ git submodule update
 </code></pre>
@@ -635,7 +659,7 @@ $ rm -rf opencv-2.4.9*
 <p>Create a <a href="https://github.com/">GitHub</a> account, follow their instructions for <a href="https://help.github.com/articles/set-up-git">setting up Git</a>.</p>
 <pre><code>$ git clone https://github.com/biometrics/openbr.git
 $ cd openbr
-$ git checkout 0.5
+$ git checkout 1.0
 $ git submodule init
 $ git submodule update
 </code></pre>

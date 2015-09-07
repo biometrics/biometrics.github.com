@@ -144,9 +144,13 @@
                 
                     <li><a href="#boostedforestclassifier">BoostedForestClassifier</a></li>
                 
-                    <li><a href="#cascadeclassifier">CascadeClassifier</a></li>
+                    <li><a href="#caffebasetransform">CaffeBaseTransform</a></li>
                 
-                    <li><a href="#dffstransform">DFFSTransform</a></li>
+                    <li><a href="#caffeclassifiertransform">CaffeClassifierTransform</a></li>
+                
+                    <li><a href="#caffefvtransform">CaffeFVTransform</a></li>
+                
+                    <li><a href="#cascadeclassifier">CascadeClassifier</a></li>
                 
                     <li><a href="#dlibshaperesourcemaker">DLibShapeResourceMaker</a></li>
                 
@@ -360,9 +364,13 @@
                                             
                                                 <li><a href="#boostedforestclassifier"><span>BoostedForestClassifier</span></a></li>
                                             
-                                                <li><a href="#cascadeclassifier"><span>CascadeClassifier</span></a></li>
+                                                <li><a href="#caffebasetransform"><span>CaffeBaseTransform</span></a></li>
                                             
-                                                <li><a href="#dffstransform"><span>DFFSTransform</span></a></li>
+                                                <li><a href="#caffeclassifiertransform"><span>CaffeClassifierTransform</span></a></li>
+                                            
+                                                <li><a href="#caffefvtransform"><span>CaffeFVTransform</span></a></li>
+                                            
+                                                <li><a href="#cascadeclassifier"><span>CascadeClassifier</span></a></li>
                                             
                                                 <li><a href="#dlibshaperesourcemaker"><span>DLibShapeResourceMaker</span></a></li>
                                             
@@ -543,6 +551,131 @@
 </li>
 </ul>
 <hr />
+<h1 id="caffebasetransform">CaffeBaseTransform</h1>
+<p>The base transform for wrapping the Caffe deep learning library. This transform expects the input to a given Caffe model to be a MemoryDataLayer.
+The output of the forward pass of the Caffe network is stored in dst as a list of matrices, the size of which is equal to the batch_size of the network.
+Children of this transform should process dst to acheieve specifc use cases.</p>
+<ul>
+<li><strong>file:</strong> classification/caffe.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> [Jordan Cheney][JordanCheney]</li>
+<li>
+<p><strong>see:</strong></p>
+<ul>
+<li><a href="../../tutorials/#caffe">Caffe Integration Tutorial</a></li>
+<li><a href="http://caffe.berkeleyvision.org">Caffe website</a></li>
+</ul>
+</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>model</td>
+<td>QString</td>
+<td>path to prototxt model file</td>
+</tr>
+<tr>
+<td>weights</td>
+<td>QString</td>
+<td>path to caffemodel file</td>
+</tr>
+<tr>
+<td>gpuDevice</td>
+<td>int</td>
+<td>ID of GPU to use. gpuDevice &lt; 0 runs on the CPU only.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="caffeclassifiertransform">CaffeClassifierTransform</h1>
+<p>This transform treats the output of the network as a score distribution for an arbitrary number of classes.
+The maximum score and location for each input image is determined and stored in the template metadata. The template
+matrix is not changed. If the network batch size is &gt; 1, the results are stored as lists in the dst template's metadata
+using the keys "Labels" and "Confidences" respectively. The length of these lists is equivalent to the provided batch size.
+If batch size == 1, the results are stored as a float and int using the keys "Label", and "Confidence" respectively.</p>
+<ul>
+<li><strong>file:</strong> classification/caffe.cpp</li>
+<li><strong>inherits:</strong> <a href="#caffebasetransform">CaffeBaseTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/JordanCheney" title="Jordan Cheney jordan.cheney@gmail.com">Jordan Cheney</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>model</td>
+<td>QString</td>
+<td>path to prototxt model file</td>
+</tr>
+<tr>
+<td>weights</td>
+<td>QString</td>
+<td>path to caffemodel file</td>
+</tr>
+<tr>
+<td>gpuDevice</td>
+<td>int</td>
+<td>ID of GPU to use. gpuDevice &lt; 0 runs on the CPU only.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
+<h1 id="caffefvtransform">CaffeFVTransform</h1>
+<p>This transform treats the output of the network as a feature vector and appends it unchanged to dst. Dst will have
+length equal to the batch size of the network.</p>
+<ul>
+<li><strong>file:</strong> classification/caffe.cpp</li>
+<li><strong>inherits:</strong> <a href="#caffebasetransform">CaffeBaseTransform</a></li>
+<li><strong>author(s):</strong> [Jordan Cheney][JordanCheney]</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>model</td>
+<td>QString</td>
+<td>path to prototxt model file</td>
+</tr>
+<tr>
+<td>weights</td>
+<td>QString</td>
+<td>path to caffemodel file</td>
+</tr>
+<tr>
+<td>gpuDevice</td>
+<td>int</td>
+<td>ID of GPU to use. gpuDevice &lt; 0 runs on the CPU only.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="cascadeclassifier">CascadeClassifier</h1>
 <p>A meta <a href="../../api_docs/cpp_api/classifier/classifier/">Classifier</a> that creates a cascade of another <a href="../../api_docs/cpp_api/classifier/classifier/">Classifier</a>. The cascade is a series of stages, each with its own instance of a given classifier. A sample can only reach the next stage if it is classified as positive by the previous stage.</p>
 <ul>
@@ -588,41 +721,6 @@
 <td>maxFAR</td>
 <td>float</td>
 <td>A termination parameter. Calculated as (number of passed negatives) / (total number of checked negatives) for a given stage during training. If that number is below the given maxFAR cascade training is terminated early. This can help prevent overfitting.</td>
-</tr>
-</tbody>
-</table>
-</li>
-</ul>
-<hr />
-<h1 id="dffstransform">DFFSTransform</h1>
-<p>Computes <a href="../../api_docs/cpp_api/distance/distance/">Distance</a> From Feature Space (DFFS)</p>
-<ul>
-<li><strong>file:</strong> classification/lda.cpp</li>
-<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/transform/transform/">Transform</a></li>
-<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
-<li>
-<p><strong>read:</strong></p>
-<ol>
-<li><em>Moghaddam, Baback, and Alex Pentland.</em><br>
- <strong>"Probabilistic visual learning for object representation."</strong>
- Pattern Analysis and Machine Intelligence, IEEE Transactions on 19.7 (1997): 696-710.</li>
-</ol>
-</li>
-<li>
-<p><strong>properties:</strong></p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Type</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>keep</td>
-<td>float</td>
-<td>Sets PCA keep property. Default is 0.95.</td>
 </tr>
 </tbody>
 </table>
