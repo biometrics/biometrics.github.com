@@ -261,11 +261,15 @@
                 
                     <li><a href="#hogpersondetectortransform">HOGPersonDetectorTransform</a></li>
                 
+                    <li><a href="#ipdtransform">IPDTransform</a></li>
+                
                     <li><a href="#ifmetadatatransform">IfMetadataTransform</a></li>
                 
                     <li><a href="#impostoruniquenessmeasuretransform">ImpostorUniquenessMeasureTransform</a></li>
                 
                     <li><a href="#jsontransform">JSONTransform</a></li>
+                
+                    <li><a href="#justtransform">JustTransform</a></li>
                 
                     <li><a href="#keepmetadatatransform">KeepMetadataTransform</a></li>
                 
@@ -313,11 +317,15 @@
                 
                     <li><a href="#scalemetadatatransform">ScaleMetadataTransform</a></li>
                 
+                    <li><a href="#scalerectstransform">ScaleRectsTransform</a></li>
+                
                     <li><a href="#selectpointstransform">SelectPointsTransform</a></li>
                 
                     <li><a href="#setmetadatatransform">SetMetadataTransform</a></li>
                 
                     <li><a href="#setpointsinrecttransform">SetPointsInRectTransform</a></li>
+                
+                    <li><a href="#squarefrompointstransform">SquareFromPointsTransform</a></li>
                 
                     <li><a href="#stasmtransform">StasmTransform</a></li>
                 
@@ -446,11 +454,15 @@
                                             
                                                 <li><a href="#hogpersondetectortransform"><span>HOGPersonDetectorTransform</span></a></li>
                                             
+                                                <li><a href="#ipdtransform"><span>IPDTransform</span></a></li>
+                                            
                                                 <li><a href="#ifmetadatatransform"><span>IfMetadataTransform</span></a></li>
                                             
                                                 <li><a href="#impostoruniquenessmeasuretransform"><span>ImpostorUniquenessMeasureTransform</span></a></li>
                                             
                                                 <li><a href="#jsontransform"><span>JSONTransform</span></a></li>
+                                            
+                                                <li><a href="#justtransform"><span>JustTransform</span></a></li>
                                             
                                                 <li><a href="#keepmetadatatransform"><span>KeepMetadataTransform</span></a></li>
                                             
@@ -498,11 +510,15 @@
                                             
                                                 <li><a href="#scalemetadatatransform"><span>ScaleMetadataTransform</span></a></li>
                                             
+                                                <li><a href="#scalerectstransform"><span>ScaleRectsTransform</span></a></li>
+                                            
                                                 <li><a href="#selectpointstransform"><span>SelectPointsTransform</span></a></li>
                                             
                                                 <li><a href="#setmetadatatransform"><span>SetMetadataTransform</span></a></li>
                                             
                                                 <li><a href="#setpointsinrecttransform"><span>SetPointsInRectTransform</span></a></li>
+                                            
+                                                <li><a href="#squarefrompointstransform"><span>SquareFromPointsTransform</span></a></li>
                                             
                                                 <li><a href="#stasmtransform"><span>StasmTransform</span></a></li>
                                             
@@ -728,12 +744,12 @@ the specified ranges.</p>
 </thead>
 <tbody>
 <tr>
-<td>key1,key2</td>
+<td>key1</td>
 <td>QString</td>
 <td>The meta-data key(s) to filter on</td>
 </tr>
 <tr>
-<td>value1,value2</td>
+<td>value1</td>
 <td>float</td>
 <td>The values to compare the values of key1 and key2 entires against</td>
 </tr>
@@ -743,7 +759,7 @@ the specified ranges.</p>
 <td>The comparison operation to perform. "le" -&gt;  val(key1) &lt;= value1, "lt" -&gt; val(key1) &lt; value1,</td>
 </tr>
 <tr>
-<td>"ge" -&gt; val(key1) &gt;= value1, "gt" -&gt; val(key1) &gt; value1.</td>
+<td>"ge" -&gt; val(key1) &gt;= value1, "gt" -&gt; val(key1) &gt; value1, "eq" -&gt; val(key) == value1.</td>
 <td></td>
 <td></td>
 </tr>
@@ -780,6 +796,53 @@ the specified ranges.</p>
 <li><strong>properties:</strong> None</li>
 </ul>
 <hr />
+<h1 id="ipdtransform">IPDTransform</h1>
+<p>Calculate interpupillary distance or the distance between two arbitrary points.</p>
+<ul>
+<li><strong>file:</strong> metadata/ipd.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a></li>
+<li><strong>author(s):</strong> [Ben Klein][bhklein]</li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>named</td>
+<td>bool</td>
+<td>Are the points named?</td>
+</tr>
+<tr>
+<td>firstEye</td>
+<td>QString</td>
+<td>First point's metadata key.</td>
+</tr>
+<tr>
+<td>secondEye</td>
+<td>QString</td>
+<td>Second point's metadata key.</td>
+</tr>
+<tr>
+<td>key</td>
+<td>QString</td>
+<td>Metadata key for distance.</td>
+</tr>
+<tr>
+<td>indices</td>
+<td>QList<int></td>
+<td>Indices of points in metadata if not named.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="ifmetadatatransform">IfMetadataTransform</h1>
 <p>Clear <a href="../../api_docs/cpp_api/template/template/">Template</a> without the required metadata.</p>
 <ul>
@@ -802,6 +865,15 @@ the specified ranges.</p>
 <p>Represent the metadata as JSON template data.</p>
 <ul>
 <li><strong>file:</strong> metadata/json.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
+<li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="justtransform">JustTransform</h1>
+<p>Preserve the contents of the input template, updating just the specified metadata keys.</p>
+<ul>
+<li><strong>file:</strong> metadata/savemat.cpp</li>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetatransform/untrainablemetatransform/">UntrainableMetaTransform</a></li>
 <li><strong>author(s):</strong> <a href="https://github.com/jklontz" title="Joshua C. Klontz, jklontz@ieee.org">Josh Klontz</a></li>
 <li><strong>properties:</strong> None</li>
@@ -1087,6 +1159,58 @@ vice versa</p>
 </li>
 </ul>
 <hr />
+<h1 id="scalerectstransform">ScaleRectsTransform</h1>
+<p>Scales a rectangle either by pixel value or factor.</p>
+<ul>
+<li><strong>file:</strong> metadata/scalerects.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainabletransform/untrainabletransform/">UntrainableTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>index</td>
+<td>int</td>
+<td>Index of rect to scale.</td>
+</tr>
+<tr>
+<td>left</td>
+<td>int</td>
+<td>Number of pixels to scale the left of the rect.</td>
+</tr>
+<tr>
+<td>top</td>
+<td>int</td>
+<td>Number of pixels to scale the top of the rect.</td>
+</tr>
+<tr>
+<td>right</td>
+<td>int</td>
+<td>Number of pixels to scale the right of the rect.</td>
+</tr>
+<tr>
+<td>bottom</td>
+<td>int</td>
+<td>Number of pixels to scale the bottom of the rect.</td>
+</tr>
+<tr>
+<td>factor</td>
+<td>float</td>
+<td>Scale factor.</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+<hr />
 <h1 id="selectpointstransform">SelectPointsTransform</h1>
 <p>Retains only landmarks/points at the provided indices</p>
 <ul>
@@ -1112,6 +1236,43 @@ vice versa</p>
 <li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a></li>
 <li><strong>author(s):</strong> [Jordan Cheney][JordanCheney]</li>
 <li><strong>properties:</strong> None</li>
+</ul>
+<hr />
+<h1 id="squarefrompointstransform">SquareFromPointsTransform</h1>
+<p>Creates a bounding square around three points (typically the two eyes and the chin).</p>
+<ul>
+<li><strong>file:</strong> metadata/squarefrompoints.cpp</li>
+<li><strong>inherits:</strong> <a href="../../api_docs/cpp_api/untrainablemetadatatransform/untrainablemetadatatransform/">UntrainableMetadataTransform</a></li>
+<li><strong>author(s):</strong> <a href="https://github.com/sklum" title="Scott J. Klum scott.klum@gmail.com">Scott Klum</a></li>
+<li>
+<p><strong>properties:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>eyeL</td>
+<td>int</td>
+<td>index of left eye point.</td>
+</tr>
+<tr>
+<td>eyeR</td>
+<td>int</td>
+<td>Index of right eye point.</td>
+</tr>
+<tr>
+<td>chin</td>
+<td>int</td>
+<td>Index of chin point.</td>
+</tr>
+</tbody>
+</table>
+</li>
 </ul>
 <hr />
 <h1 id="stasmtransform">StasmTransform</h1>
