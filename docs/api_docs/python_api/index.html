@@ -355,6 +355,14 @@ br.br_free_template(mycatstmpl)
 br.br_free_template_list(query)
 br.br_finalize()
 </code></pre>
+<p>Some functions were made more pythonic and thus differ slightly from the C API. In particular, the C functions that populate a string buffer have that logic abstracted away. For example, <code>br_get_filename(char * buffer, int buffer_length, br_template tmpl)</code> in C becomes <code>filename = br.br_get_filename(tmpl)</code> in Python. Here are the functions that differ from the C API:</p>
+<ul>
+<li>br_most_recent_message</li>
+<li>br_objects</li>
+<li>br_scratch_path</li>
+<li>br_get_filename</li>
+<li>br_get_metadata_string</li>
+</ul>
 <p>To enable the module, add <code>-DBR_INSTALL_BRPY=ON</code> to your cmake command (or use the ccmake GUI - highly recommended).</p>
 <p>Currently only OS X and Linux are supported.</p>
                             
